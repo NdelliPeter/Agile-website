@@ -97,6 +97,8 @@
     ],
     "testimonials": {
       "heading": "Ce que disent les clients",
+      "title": "Dans les mots de ceux que nous servons.",
+      "empty": "Bientôt disponible — les témoignages clients sont en cours de préparation à partir de missions antérieures.",
       "note": "En attente : à fournir par Madame Simo à partir de missions antérieures.",
       "items": [
         { "quote": "", "name": "" },
@@ -106,6 +108,7 @@
     },
     "aboutPreview": {
       "heading": "Notre fondatrice",
+      "title": "Claudine Simo Mamo, fondatrice et associée gérante.",
       "shortBio": "Claudine Simo Mamo est expert-comptable certifiée CEMAC et membre Fellow de l'Association of Chartered Certified Accountants (ACCA), avec plus de 37 ans d'expérience en audit, comptabilité, conseil et formation en Afrique centrale. Elle est fondatrice et associée gérante d'AGILE, où elle accompagne les institutions financières et les organisations en croissance dans le renforcement de leurs systèmes, l'amélioration de leur gouvernance et la construction d'une performance durable. À ce stade de sa carrière, son ambition dépasse les chiffres : elle se consacre au développement des personnes, au mentorat des jeunes professionnels et à la construction d'une culture de responsabilité où chacun peut accéder au leadership."
     }
   },
