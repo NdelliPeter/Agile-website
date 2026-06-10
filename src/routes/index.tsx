@@ -208,18 +208,32 @@ function HomePage() {
                 size="lg"
               />
 
-              <dl className="mt-10 grid grid-cols-3 gap-6 border-y border-border py-8">
-                {(t("home.africaFocus.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
-                  <div key={i}>
-                    <dt className="font-display text-2xl font-medium tracking-tight text-foreground md:text-3xl">
-                      {s.value}
-                    </dt>
-                    <dd className="mt-2 text-[12px] leading-snug text-muted-foreground md:text-[13px]">
-                      {s.label}
-                    </dd>
-                  </div>
+              <Accordion
+                type="single"
+                collapsible
+                defaultValue="pillar-0"
+                className="mt-10 w-full border-t border-border"
+              >
+                {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
+                  <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
+                    <AccordionTrigger className="py-5 hover:no-underline md:py-6">
+                      <div className="flex w-full items-center gap-5 text-left">
+                        <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                          0{i + 1}
+                        </span>
+                        <span className="font-display text-base font-medium text-foreground md:text-lg">
+                          {p.title}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-6">
+                      <p className="ml-[2.75rem] max-w-2xl text-[14px] leading-relaxed text-muted-foreground md:text-[15px]">
+                        {p.body}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </dl>
+              </Accordion>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <p className="font-display text-base text-foreground md:text-lg">
@@ -236,57 +250,26 @@ function HomePage() {
             </div>
 
             <div className="md:col-span-6">
-              <div className="relative rounded-2xl border border-border bg-background p-6 md:p-8">
+              <div className="relative">
                 <AfricaMap className="h-auto w-full" />
-                <div className="mt-6 border-t border-border pt-5">
-                  <div className="font-display text-sm uppercase tracking-[0.22em] text-primary">
-                    {t("home.africaFocus.map.caption")}
-                  </div>
-                  <p className="mt-2 text-[14px] leading-relaxed text-foreground">
-                    {t("home.africaFocus.map.subcaption")}
-                  </p>
-                  <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-muted-foreground">
-                    <span className="inline-flex items-center gap-2">
-                      <span className="inline-block h-3 w-3 rounded-sm bg-primary" />
-                      {t("home.africaFocus.map.legendHighlight")}
-                    </span>
-                    <span className="inline-flex items-center gap-2">
-                      <span className="inline-block h-3 w-3 rounded-sm bg-foreground/10" />
-                      {t("home.africaFocus.map.legendOther")}
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Full-width pillar accordions */}
-          <Accordion
-            type="single"
-            collapsible
-            defaultValue="pillar-0"
-            className="mt-16 w-full border-t border-border"
-          >
-            {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
-              <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
-                <AccordionTrigger className="py-6 hover:no-underline md:py-7">
-                  <div className="flex w-full items-center gap-6 text-left">
-                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                      0{i + 1}
-                    </span>
-                    <span className="font-display text-lg font-medium text-foreground md:text-xl">
-                      {p.title}
-                    </span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pb-8">
-                  <p className="ml-[3.25rem] max-w-3xl text-[15px] leading-relaxed text-muted-foreground md:text-base">
-                    {p.body}
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
+          {/* KPI indicators — full width below */}
+          <dl className="mt-16 grid grid-cols-1 gap-8 border-t border-border pt-10 sm:grid-cols-3 sm:gap-10">
+            {(t("home.africaFocus.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
+              <div key={i}>
+                <dt className="font-display text-3xl font-medium tracking-tight text-foreground md:text-4xl">
+                  {s.value}
+                </dt>
+                <dd className="mt-3 text-[13px] leading-snug text-muted-foreground md:text-sm">
+                  {s.label}
+                </dd>
+              </div>
             ))}
-          </Accordion>
+          </dl>
+
         </div>
       </section>
     </AppLayout>
