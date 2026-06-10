@@ -69,24 +69,32 @@ function AboutPage() {
       {/* Founder bio */}
       <section className="border-t border-border">
         <div className="container-page grid grid-cols-1 gap-12 py-20 md:grid-cols-12 md:gap-16 md:py-28">
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <img
               src={founderImg}
               alt="Claudine Simo Mamo"
               width={1200}
               height={1500}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full rounded-sm object-cover"
+              style={{ borderRadius: "1px 35px 1px 35px" }}
             />
           </div>
-          <div className="md:col-span-7 md:pt-6">
-            <SectionHeading eyebrow="Leadership" title={t("about.founderBio.heading")} size="md" />
+          <div className="md:col-span-8 md:pt-2">
+            <div className="eyebrow mb-4 text-primary">Leadership</div>
+            <h2 className="font-display text-3xl font-medium leading-tight text-foreground md:text-4xl">
+              Claudine Simo Mamo
+            </h2>
+            <p className="mt-2 text-base font-medium text-muted-foreground md:text-lg">
+              Founder &amp; Managing Partner
+            </p>
             <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
               {t("about.founderBio.body")}
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Vision / Mission */}
       <section className="container-page py-20 md:py-28">
