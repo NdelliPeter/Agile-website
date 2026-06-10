@@ -15,13 +15,12 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
           <li
             key={i}
             style={{ borderRadius: "1px 35px 1px 35px" }}
-            className="group relative border border-teal-300 bg-gradient-to-br from-teal-200 to-teal-300 p-5 transition-colors hover:bg-none hover:bg-teal-800 hover:border-teal-800 dark:from-teal-900/40 dark:to-teal-800/30 dark:border-teal-800 dark:hover:bg-teal-500 dark:hover:border-teal-500"
-
+            className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:bg-[#036c5f] hover:border-[#036c5f]"
           >
             <StepNumber n={i + 1} />
-            <h4 className="mt-2 text-base font-medium text-foreground group-hover:text-white">{s.label}</h4>
+            <h4 className="mt-2 text-base font-medium text-white">{s.label}</h4>
             {s.detail && (
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground group-hover:text-white/90">
+              <p className="mt-1.5 text-sm leading-relaxed text-white/90">
                 {s.detail}
               </p>
             )}
@@ -58,7 +57,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               {/* Card */}
               <article
-                className="group relative border border-teal-300 bg-gradient-to-br from-teal-200 to-teal-300 p-5 transition-colors hover:-translate-y-0.5 hover:bg-none hover:bg-teal-800 hover:border-teal-800 dark:from-teal-900/40 dark:to-teal-800/30 dark:border-teal-800 dark:hover:bg-teal-500 dark:hover:border-teal-500"
+                className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:-translate-y-0.5 hover:bg-[#036c5f] hover:border-[#036c5f]"
                 style={{
                   gridColumn: `${i + 1} / span 1`,
                   gridRow: isTop ? "1 / 2" : "3 / 4",
@@ -67,11 +66,11 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
                 }}
               >
                 <StepNumber n={i + 1} />
-                <h4 className="mt-2 text-base font-medium leading-snug text-foreground group-hover:text-white">
+                <h4 className="mt-2 text-base font-medium leading-snug text-white">
                   {s.label}
                 </h4>
                 {s.detail && (
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground group-hover:text-white/90">
+                  <p className="mt-1.5 text-sm leading-relaxed text-white/90">
                     {s.detail}
                   </p>
                 )}
@@ -103,7 +102,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
 
 function StepNumber({ n }: { n: number }) {
   return (
-    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-primary/10 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-primary">
+    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-white/20 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-white">
       {String(n).padStart(2, "0")}
     </span>
   );
