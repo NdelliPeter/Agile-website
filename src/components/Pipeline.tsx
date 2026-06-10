@@ -18,9 +18,9 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:bg-[#036c5f] hover:border-[#036c5f]"
           >
             <StepNumber n={i + 1} />
-            <h4 className="mt-2 text-base font-medium text-foreground group-hover:text-white">{s.label}</h4>
+            <h4 className="mt-2 text-base font-medium text-white">{s.label}</h4>
             {s.detail && (
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground group-hover:text-white/90">
+              <p className="mt-1.5 text-sm leading-relaxed text-white/90">
                 {s.detail}
               </p>
             )}
