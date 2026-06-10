@@ -57,7 +57,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               {/* Card */}
               <article
-                className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:-translate-y-0.5 hover:bg-[#036c5f] hover:border-[#036c5f]"
+                className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:-translate-y-0.5 hover:bg-[#036c5f] hover:border-[#036c5f] dark:border-teal-800 dark:bg-gradient-to-br dark:from-teal-900/40 dark:to-teal-800/30 dark:hover:bg-teal-500 dark:hover:border-teal-500 dark:hover:from-teal-500 dark:hover:to-teal-500"
                 style={{
                   gridColumn: `${i + 1} / span 1`,
                   gridRow: isTop ? "1 / 2" : "3 / 4",
