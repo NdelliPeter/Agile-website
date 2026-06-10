@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -220,24 +221,6 @@ function HomePage() {
                 ))}
               </dl>
 
-              <ul className="mt-10 space-y-6">
-                {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
-                  <li key={i} className="grid grid-cols-[auto_1fr] gap-5">
-                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                      0{i + 1}
-                    </span>
-                    <div>
-                      <h3 className="font-display text-base font-medium text-foreground md:text-lg">
-                        {p.title}
-                      </h3>
-                      <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
-                        {p.body}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <p className="font-display text-base text-foreground md:text-lg">
                   {t("home.africaFocus.ctaHeadline")}
@@ -276,6 +259,34 @@ function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Full-width pillar accordions */}
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="pillar-0"
+            className="mt-16 w-full border-t border-border"
+          >
+            {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
+              <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
+                <AccordionTrigger className="py-6 hover:no-underline md:py-7">
+                  <div className="flex w-full items-center gap-6 text-left">
+                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                      0{i + 1}
+                    </span>
+                    <span className="font-display text-lg font-medium text-foreground md:text-xl">
+                      {p.title}
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-8">
+                  <p className="ml-[3.25rem] max-w-3xl text-[15px] leading-relaxed text-muted-foreground md:text-base">
+                    {p.body}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
     </AppLayout>
