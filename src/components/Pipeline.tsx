@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { ArrowRight } from "lucide-react";
 
 export type PipelineStep = {
   label: string;
@@ -7,21 +8,101 @@ export type PipelineStep = {
 
 export function Pipeline({ steps }: { steps: PipelineStep[] }) {
   return (
-    <ol className="grid gap-4 md:grid-cols-[repeat(auto-fit,minmax(0,1fr))] md:gap-0">
-      {steps.map((s, i) => (
-        <Fragment key={i}>
-          <li className="relative flex flex-col gap-2 border-t border-border pt-5 md:border-r md:border-t md:px-5 md:pr-6 md:last:border-r-0">
-            <span className="font-display text-[11px] font-medium tracking-[0.18em] text-primary">
-              {String(i + 1).padStart(2, "0")}
-            </span>
-            <h4 className="text-base font-medium leading-snug text-foreground">{s.label}</h4>
+    <div className="relative w-full">
+      {/* Mobile: simple vertical stack */}
+      <ol className="flex flex-col gap-4 md:hidden">
+        {steps.map((s, i) => (
+          <li
+            key={i}
+            className="relative rounded-lg border border-border bg-card p-5 shadow-sm"
+          >
+            <StepNumber n={i + 1} />
+            <h4 className="mt-2 text-base font-medium text-foreground">{s.label}</h4>
             {s.detail && (
-              <p className="text-sm leading-relaxed text-muted-foreground">{s.detail}</p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                {s.detail}
+              </p>
             )}
           </li>
-        </Fragment>
-      ))}
-    </ol>
+        ))}
+      </ol>
+
+      {/* Desktop: zigzag flow */}
+      <div
+        className="relative hidden md:grid"
+        style={{
+          gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
+          gridTemplateRows: "1fr 56px 1fr",
+          columnGap: "1.5rem",
+        }}
+      >
+        {/* Central rail */}
+        <div
+          className="pointer-events-none relative"
+          style={{
+            gridColumn: `1 / span ${steps.length}`,
+            gridRow: "2 / 3",
+          }}
+        >
+          <div className="absolute left-[8%] right-[8%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30" />
+          <div className="absolute right-[6%] top-1/2 -translate-y-1/2 text-primary">
+            <ArrowRight className="h-4 w-4" />
+          </div>
+        </div>
+
+        {steps.map((s, i) => {
+          const isTop = i % 2 === 0;
+          return (
+            <Fragment key={i}>
+              {/* Card */}
+              <article
+                className="group relative rounded-lg border border-border bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+                style={{
+                  gridColumn: `${i + 1} / span 1`,
+                  gridRow: isTop ? "1 / 2" : "3 / 4",
+                  alignSelf: isTop ? "end" : "start",
+                }}
+              >
+                <StepNumber n={i + 1} />
+                <h4 className="mt-2 text-base font-medium leading-snug text-foreground">
+                  {s.label}
+                </h4>
+                {s.detail && (
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {s.detail}
+                  </p>
+                )}
+              </article>
+
+              {/* Vertical connector from card to rail */}
+              <span
+                aria-hidden
+                className="pointer-events-none relative"
+                style={{
+                  gridColumn: `${i + 1} / span 1`,
+                  gridRow: "2 / 3",
+                }}
+              >
+                <span
+                  className={`absolute left-1/2 w-px -translate-x-1/2 bg-primary/40 ${
+                    isTop ? "top-0 bottom-1/2" : "top-1/2 bottom-0"
+                  }`}
+                />
+                <span className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary bg-background" />
+              </span>
+            </Fragment>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function StepNumber({ n }: { n: number }) {
+  return (
+    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-primary/10 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-primary">
+      {String(n).padStart(2, "0")}
+    </span>
   );
 }
 
