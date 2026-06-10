@@ -218,14 +218,12 @@ function ServiceDetailPage() {
           }}
         />
         <div className="container-page relative py-20 md:py-28">
-          <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <div className="eyebrow mb-3 text-primary">Delivery pipeline</div>
-              <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-5xl">
-                How we deliver this engagement.
-              </h2>
-            </div>
-            <div className="font-display text-sm text-muted-foreground">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <div className="eyebrow mb-3 text-primary">Delivery pipeline</div>
+            <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-5xl">
+              How we deliver this engagement.
+            </h2>
+            <div className="mt-4 font-display text-sm text-muted-foreground">
               Five disciplined stages · zero surprises
             </div>
           </div>
@@ -235,27 +233,25 @@ function ServiceDetailPage() {
 
       {/* ============ FAQ ============ */}
       <section className="container-page py-20 md:py-28">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-4">
-            <div className="eyebrow mb-3 text-primary">FAQ</div>
-            <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
-              Common questions, <span className="italic text-primary">answered.</span>
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Don't see your question? Our partners are available for a confidential
-              call within 48 hours.
-            </p>
-          </div>
-          <div className="md:col-span-8">
-            <FAQAccordion items={faqs} />
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="eyebrow mb-3 text-primary">FAQ</div>
+          <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
+            Common questions, <span className="italic text-primary">answered.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+            Don't see your question? Our partners are available for a confidential
+            call within 48 hours.
+          </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-3xl">
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 
       {/* ============ CTA ============ */}
       <section className="container-page pb-24">
         <div
-          className="relative overflow-hidden p-10 md:p-16"
+          className="relative overflow-hidden p-10 text-center md:p-16"
           style={{
             borderRadius: "1px 35px 1px 35px",
             background:
@@ -270,24 +266,20 @@ function ServiceDetailPage() {
               backgroundSize: "60px 60px",
             }}
           />
-          <div className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <div className="mb-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
-                Ready when you are
-              </div>
-              <p className="font-display text-3xl font-light leading-tight text-white md:text-5xl">
-                {t("services.overview.ctaHeadline")}
-              </p>
+          <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-8">
+            <div className="text-xs font-medium uppercase tracking-[0.22em] text-white/70">
+              Ready when you are
             </div>
-            <div className="md:col-span-4 md:text-right">
-              <Link
-                to="/contact"
-                className="inline-flex h-14 items-center gap-3 bg-white px-7 text-sm font-medium text-[var(--brand-primary-hover)] transition hover:bg-white/90"
-                style={{ borderRadius: "1px 35px 1px 35px" }}
-              >
-                {t("services.overview.ctaButton")} <ArrowUpRight size={18} />
-              </Link>
-            </div>
+            <p className="font-display text-3xl font-light leading-tight text-white md:text-5xl">
+              {t("services.overview.ctaHeadline")}
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex h-14 items-center gap-3 bg-white px-7 text-sm font-medium text-[var(--brand-primary-hover)] transition hover:bg-white/90"
+              style={{ borderRadius: "1px 35px 1px 35px" }}
+            >
+              {t("services.overview.ctaButton")} <ArrowUpRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
