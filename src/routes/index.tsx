@@ -132,9 +132,9 @@ function HomePage() {
       <section className="border-t border-border bg-secondary/30">
         <div className="container-page py-20 md:py-28">
           <SectionHeading
-            eyebrow="How we work"
-            title="A clear pipeline, from first conversation to lasting impact."
-            intro="Every engagement follows a disciplined sequence so outcomes are predictable, auditable, and built to last."
+            eyebrow={t("home.engagement.heading")}
+            title={t("home.engagement.title")}
+            intro={t("home.engagement.intro")}
             size="lg"
           />
           <div className="mt-12">
