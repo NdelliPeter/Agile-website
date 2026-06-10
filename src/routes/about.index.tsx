@@ -156,31 +156,26 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Team CTA */}
       <section className="border-t border-border">
         <div className="container-page py-20 md:py-28">
-          <SectionHeading
-            eyebrow={t("about.team.heading")}
-            title="A team built on mentorship and excellence."
-            size="md"
-          />
-          {filledTeam.length === 0 ? (
-            <p className="mt-10 max-w-xl text-sm italic text-muted-foreground">
-              Coming soon — team profiles will be added as they are confirmed.
-            </p>
-          ) : (
-            <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-10">
-              {filledTeam.map((m, i) => (
-                <div key={i}>
-                  <div className="aspect-[4/5] w-full bg-secondary" />
-                  <h4 className="mt-4 font-display text-base font-medium">{m.name}</h4>
-                  <p className="text-sm text-muted-foreground">{m.role}</p>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <SectionHeading
+              eyebrow={t("about.team.heading")}
+              title="A team built on mentorship and excellence."
+              size="md"
+            />
+            <Link
+              to="/about/team"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)]"
+              style={{ borderRadius: "1px 35px 1px 35px" }}
+            >
+              Meet our team <ArrowUpRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
+
 
       {/* Social responsibility */}
       <section className="border-t border-border bg-secondary/30">
