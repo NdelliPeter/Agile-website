@@ -221,24 +221,6 @@ function HomePage() {
                 ))}
               </dl>
 
-              <ul className="mt-10 space-y-6">
-                {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
-                  <li key={i} className="grid grid-cols-[auto_1fr] gap-5">
-                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                      0{i + 1}
-                    </span>
-                    <div>
-                      <h3 className="font-display text-base font-medium text-foreground md:text-lg">
-                        {p.title}
-                      </h3>
-                      <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
-                        {p.body}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <p className="font-display text-base text-foreground md:text-lg">
                   {t("home.africaFocus.ctaHeadline")}
