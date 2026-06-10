@@ -100,7 +100,7 @@ export function ServiceWheel() {
                     {t(`home.servicesPreview.cards.${key}.title`)}
                   </span>
                   <span className="mt-1.5 block text-[11px] leading-snug text-muted-foreground md:text-[12px]">
-                    {SUMMARIES[key]}
+                    {t(`home.servicesPreview.summaries.${key}`)}
                   </span>
                 </Link>
               </div>
