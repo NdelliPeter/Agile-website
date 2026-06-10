@@ -211,7 +211,7 @@ function HomePage() {
           <div className="md:col-span-7 md:pt-6">
             <SectionHeading
               eyebrow={t("home.aboutPreview.heading")}
-              title="Claudine Simo Mamo, Founder & Managing Partner."
+              title={t("home.aboutPreview.title")}
               size="lg"
             />
             <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
