@@ -9,17 +9,19 @@ export function BrandMark({
   variant = "full",
   className,
   size = 36,
+  forceLight = false,
 }: {
   variant?: Variant;
   className?: string;
   size?: number;
+  forceLight?: boolean;
 }) {
   const { theme } = useApp();
   let src = logoLight.url;
-  let alt = "AGILE";
+  const alt = "AGILE";
 
   if (variant === "mark") {
-    src = theme === "dark" ? markGrey.url : markDark.url;
+    src = theme === "dark" || forceLight ? markGrey.url : markDark.url;
   } else if (variant === "muted") {
     src = markGrey.url;
   } else {

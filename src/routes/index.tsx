@@ -42,9 +42,9 @@ function HomePage() {
   const filledTestimonials = testimonials.filter((x) => x.quote);
 
   return (
-    <AppLayout>
-      {/* HERO */}
-      <section className="relative -mt-[64px] flex min-h-[88svh] items-end overflow-hidden">
+    <AppLayout overlayHeader>
+      {/* HERO — full bleed, header floats over it */}
+      <section className="relative flex min-h-[78vh] items-center overflow-hidden">
         <img
           src={heroImg}
           alt=""
@@ -52,25 +52,22 @@ function HomePage() {
           height={1080}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1F1A14]/85 via-[#1F1A14]/40 to-[#1F1A14]/15" />
-        <div className="container-page relative z-10 w-full pb-16 pt-32 md:pb-24 md:pt-40">
-          <div className="max-w-4xl">
-            <div className="eyebrow mb-6 text-[#E4EDEC]" style={{ color: "#E4EDEC" }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#15120F]/85 via-[#15120F]/45 to-[#15120F]/20" />
+        <div className="container-page relative z-10 w-full py-24 md:py-32">
+          <div className="max-w-3xl">
+            <div className="eyebrow mb-5" style={{ color: "#E4EDEC" }}>
               {t("common.brandFull")}
             </div>
-            <h1
-              className="display-xl text-[#F6F6F6]"
-              style={{ color: "#F6F6F6" }}
-            >
+            <h1 className="display-xl" style={{ color: "#F6F4F1" }}>
               {t("home.hero.headline")}
             </h1>
             <p
-              className="mt-7 max-w-2xl text-lg leading-relaxed md:text-xl"
+              className="mt-6 max-w-xl text-base leading-relaxed md:text-lg"
               style={{ color: "#E4EDEC" }}
             >
               {t("home.hero.subheadline")}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
+            <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link
                 to="/contact"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#50908C] px-6 text-sm font-medium text-white transition-colors hover:bg-[#3F7370]"
