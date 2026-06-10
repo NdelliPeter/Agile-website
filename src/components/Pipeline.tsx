@@ -102,7 +102,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
 
 function StepNumber({ n }: { n: number }) {
   return (
-    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-primary/10 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-primary">
+    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-white/20 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-white">
       {String(n).padStart(2, "0")}
     </span>
   );
