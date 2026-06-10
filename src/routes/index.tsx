@@ -5,8 +5,8 @@ import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
+import { AfricaMap } from "@/components/AfricaMap";
 import heroImg from "@/assets/hero-douala.jpg";
-import founderImg from "@/assets/founder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -195,34 +195,86 @@ function HomePage() {
         )}
       </section>
 
-      {/* FOUNDER */}
-      <section className="border-t border-border">
-        <div className="container-page grid grid-cols-1 gap-12 py-20 md:grid-cols-12 md:gap-16 md:py-28">
-          <div className="md:col-span-5">
-            <img
-              src={founderImg}
-              alt="Claudine Simo Mamo"
-              width={1200}
-              height={1500}
-              loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
-            />
-          </div>
-          <div className="md:col-span-7 md:pt-6">
-            <SectionHeading
-              eyebrow={t("home.aboutPreview.heading")}
-              title={t("home.aboutPreview.title")}
-              size="lg"
-            />
-            <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
-              {t("home.aboutPreview.shortBio")}
-            </p>
-            <Link
-              to="/about"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-            >
-              {t("common.nav.about")} <ArrowRight size={14} />
-            </Link>
+      {/* AFRICA FOCUS — audit & risk importance */}
+      <section className="border-t border-border bg-secondary/40">
+        <div className="container-page py-20 md:py-28">
+          <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-6">
+              <SectionHeading
+                eyebrow={t("home.africaFocus.eyebrow")}
+                title={t("home.africaFocus.title")}
+                intro={t("home.africaFocus.intro")}
+                size="lg"
+              />
+
+              <dl className="mt-10 grid grid-cols-3 gap-6 border-y border-border py-8">
+                {(t("home.africaFocus.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
+                  <div key={i}>
+                    <dt className="font-display text-2xl font-medium tracking-tight text-foreground md:text-3xl">
+                      {s.value}
+                    </dt>
+                    <dd className="mt-2 text-[12px] leading-snug text-muted-foreground md:text-[13px]">
+                      {s.label}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+
+              <ul className="mt-10 space-y-6">
+                {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
+                  <li key={i} className="grid grid-cols-[auto_1fr] gap-5">
+                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                      0{i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-base font-medium text-foreground md:text-lg">
+                        {p.title}
+                      </h3>
+                      <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
+                        {p.body}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <p className="font-display text-base text-foreground md:text-lg">
+                  {t("home.africaFocus.ctaHeadline")}
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  {t("home.africaFocus.ctaButton")}
+                  <ArrowUpRight size={16} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="md:col-span-6">
+              <div className="relative rounded-2xl border border-border bg-background p-6 md:p-8">
+                <AfricaMap className="h-auto w-full" />
+                <div className="mt-6 border-t border-border pt-5">
+                  <div className="font-display text-sm uppercase tracking-[0.22em] text-primary">
+                    {t("home.africaFocus.map.caption")}
+                  </div>
+                  <p className="mt-2 text-[14px] leading-relaxed text-foreground">
+                    {t("home.africaFocus.map.subcaption")}
+                  </p>
+                  <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-muted-foreground">
+                    <span className="inline-flex items-center gap-2">
+                      <span className="inline-block h-3 w-3 rounded-sm bg-primary" />
+                      {t("home.africaFocus.map.legendHighlight")}
+                    </span>
+                    <span className="inline-flex items-center gap-2">
+                      <span className="inline-block h-3 w-3 rounded-sm bg-foreground/10" />
+                      {t("home.africaFocus.map.legendOther")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
