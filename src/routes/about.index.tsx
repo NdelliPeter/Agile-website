@@ -1,9 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { VerticalPipeline } from "@/components/Pipeline";
 import founderImg from "@/assets/founder.jpg";
+
 
 export const Route = createFileRoute("/about/")({
   head: () => ({
