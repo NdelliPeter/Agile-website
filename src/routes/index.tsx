@@ -4,7 +4,7 @@ import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
-import { SERVICE_KEYS, SERVICE_IMAGES } from "@/lib/services-data";
+import { ServiceWheel } from "@/components/ServiceWheel";
 import heroImg from "@/assets/hero-douala.jpg";
 import founderImg from "@/assets/founder.jpg";
 
