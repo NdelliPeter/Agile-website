@@ -195,7 +195,7 @@ function ServiceDetailPage() {
           </div>
 
           <div className="md:col-span-7">
-            <p className="font-display text-2xl font-light leading-snug text-foreground md:text-[28px]">
+            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
               {t(`services.items.${key}.detail`)}
             </p>
 
