@@ -44,7 +44,7 @@ function HomePage() {
   return (
     <AppLayout overlayHeader>
       {/* HERO — full bleed, header floats over it */}
-      <section className="relative flex min-h-[78vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[88vh] items-end overflow-hidden">
         <img
           src={heroImg}
           alt=""
@@ -52,8 +52,8 @@ function HomePage() {
           height={1080}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#15120F]/85 via-[#15120F]/45 to-[#15120F]/20" />
-        <div className="container-page relative z-10 w-full py-24 md:py-32">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0907]/90 via-[#15120F]/55 to-[#15120F]/25" />
+        <div className="container-page relative z-10 w-full pb-44 pt-36 md:pb-52 md:pt-44">
           <div className="max-w-3xl">
             <div className="eyebrow mb-5" style={{ color: "#E4EDEC" }}>
               {t("common.brandFull")}
@@ -84,21 +84,32 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* STATS */}
-      <section className="container-page py-20 md:py-28">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
-            <div key={i} className="border-t border-border pt-6">
-              <div className="font-display text-5xl font-medium tracking-tight text-foreground md:text-6xl">
-                {s.value}
+        {/* STATS — overlay on hero, contrast-safe in both themes */}
+        <div className="absolute inset-x-0 bottom-0 z-10">
+          <div className="container-page">
+            <div className="rounded-t-2xl border border-b-0 border-white/15 bg-[#0B0907]/55 px-6 py-7 backdrop-blur-md md:px-10 md:py-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
+                {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
+                  <div
+                    key={i}
+                    className={
+                      "md:px-2 " +
+                      (i > 0 ? "border-t border-white/15 pt-6 md:border-l md:border-t-0 md:pl-10 md:pt-0" : "")
+                    }
+                  >
+                    <div className="font-display text-4xl font-medium tracking-tight text-white md:text-5xl">
+                      {s.value}
+                    </div>
+                    <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/80">{s.label}</p>
+                  </div>
+                ))}
               </div>
-              <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">{s.label}</p>
             </div>
-          ))}
+          </div>
         </div>
       </section>
+
 
       {/* SERVICES — numbered editorial rows */}
       <section className="container-page py-20 md:py-28">
