@@ -25,26 +25,17 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   }, [pathname]);
 
   useEffect(() => {
-    if (!overlay) {
-      setScrolled(true);
-      return;
-    }
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    setScrolled(true);
   }, [overlay]);
 
-  // When floating over hero (overlay && !scrolled): transparent, light ink.
-  // After scroll (or non-overlay pages): solid surface, normal tokens.
-  const onHero = overlay && !scrolled;
+  // Header is always solid (no transparent overlay state).
+  const onHero = false;
 
-  const pillBg = onHero
-    ? "bg-transparent border-white/15"
-    : "bg-card/85 border-border backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.02),0_10px_30px_-14px_rgba(20,15,10,0.22)]";
-  const fgText = onHero ? "text-white" : "text-foreground";
-  const mutedText = onHero ? "text-white/75" : "text-muted-foreground";
-  const borderTone = onHero ? "border-white/25" : "border-border";
+  const pillBg =
+    "bg-card border-border shadow-[0_1px_0_rgba(0,0,0,0.02),0_10px_30px_-14px_rgba(20,15,10,0.22)]";
+  const fgText = "text-foreground";
+  const mutedText = "text-muted-foreground";
+  const borderTone = "border-border";
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 pt-4 md:pt-5">
