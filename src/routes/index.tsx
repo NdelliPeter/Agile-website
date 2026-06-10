@@ -235,18 +235,6 @@ function HomePage() {
                 ))}
               </Accordion>
 
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <p className="font-display text-base text-foreground md:text-lg">
-                  {t("home.africaFocus.ctaHeadline")}
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  {t("home.africaFocus.ctaButton")}
-                  <ArrowUpRight size={16} />
-                </Link>
-              </div>
             </div>
 
             <div className="md:col-span-6">
@@ -269,6 +257,21 @@ function HomePage() {
               </div>
             ))}
           </dl>
+
+          {/* CTA — full width below KPIs */}
+          <div className="mt-12 flex w-full flex-col items-start justify-between gap-5 border-t border-border pt-10 md:flex-row md:items-center">
+            <p className="font-display text-lg text-foreground md:text-xl">
+              {t("home.africaFocus.ctaHeadline")}
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              {t("home.africaFocus.ctaButton")}
+              <ArrowUpRight size={16} />
+            </Link>
+          </div>
+
 
         </div>
       </section>
