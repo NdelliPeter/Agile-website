@@ -43,9 +43,9 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutIndexRoute = AboutIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AboutRoute,
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesServiceKeyRoute = ServicesServiceKeyRouteImport.update({
   id: '/services/$serviceKey',
@@ -117,6 +117,7 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRoute
   InsightsRoute: typeof InsightsRoute
   ServicesServiceKeyRoute: typeof ServicesServiceKeyRoute
+  AboutIndexRoute: typeof AboutIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -159,10 +160,10 @@ declare module '@tanstack/react-router' {
     }
     '/about/': {
       id: '/about/'
-      path: '/'
+      path: '/about'
       fullPath: '/about/'
       preLoaderRoute: typeof AboutIndexRouteImport
-      parentRoute: typeof AboutRoute
+      parentRoute: typeof rootRouteImport
     }
     '/services/$serviceKey': {
       id: '/services/$serviceKey'
@@ -180,18 +181,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRoute,
   InsightsRoute: InsightsRoute,
   ServicesServiceKeyRoute: ServicesServiceKeyRoute,
+  AboutIndexRoute: AboutIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
