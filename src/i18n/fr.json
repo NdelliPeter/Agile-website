@@ -23,12 +23,23 @@
 
   "home": {
     "hero": {
-      "headline": "Sécuriser la valeur, favoriser la croissance, bâtir la confiance dans la CEMAC et au-delà.",
+      "headline": "Bâtir la confiance, sécuriser la valeur, favoriser la croissance dans la CEMAC et au-delà.",
       "subheadline": "Votre partenaire en audit et conseil dans la région CEMAC et au-delà. Nous réalisons des audits légaux, la gestion des risques, l'optimisation de la performance, la planification patrimoniale et des solutions de gouvernance.",
       "cta": "Demander une consultation"
     },
     "servicesPreview": {
       "heading": "Services clés",
+      "wheelCta": "Collaborez avec nous",
+      "hubLabel": "Services clés",
+      "hubHint": "Survol · Clic",
+      "summaries": {
+        "audit": "Audits légaux et contractuels alignés sur l'OHADA.",
+        "agro": "Certification SYSCOHADA et ESG pour les chaînes de valeur.",
+        "risk": "Cartographie des risques, solvabilité et LBC/FT sous COBAC, CIMA, COSUMAF.",
+        "performance": "Budgétisation, fiscalité et ingénierie comptable.",
+        "heritage": "Évaluation d'actifs et planification successorale sécurisée.",
+        "humanCapital": "Formation finance et gouvernance pour conseils et équipes."
+      },
       "cards": {
         "audit": {
           "title": "Audit et Assurance",
@@ -55,6 +66,17 @@
           "desc": "Nous professionnalisons les équipes et les organes de gouvernance grâce à la formation à la finance pour les managers, au coaching technique des équipes financières et à la formation à la gouvernance des administrateurs."
         }
       }
+    },
+    "engagement": {
+      "heading": "Notre méthode",
+      "title": "Un parcours clair, de la première conversation à un impact durable.",
+      "intro": "Chaque mission suit une séquence disciplinée pour des résultats prévisibles, traçables et durables.",
+      "steps": [
+        { "label": "Découvrir", "detail": "Écouter, cadrer et cartographier votre contexte réglementaire et opérationnel." },
+        { "label": "Diagnostiquer", "detail": "Évaluer systèmes, risques et contrôles au regard de OHADA, COBAC, CIMA et COSUMAF." },
+        { "label": "Livrer", "detail": "Réaliser les missions d'audit, de conseil ou de formation avec rigueur et clarté." },
+        { "label": "Pérenniser", "detail": "Suivre les résultats, renforcer les capacités internes et maintenir une performance conforme." }
+      ]
     },
     "whyChooseUs": {
       "heading": "Pourquoi les institutions font confiance à AGILE",
