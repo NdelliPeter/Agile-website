@@ -4,6 +4,13 @@ import { Clock, Mail, MapPin } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import contactImg from "@/assets/contact-hero.jpg";
 
 export const Route = createFileRoute("/contact")({
@@ -104,18 +111,18 @@ function ContactPage() {
                 </div>
                 <div>
                   <label className="eyebrow mb-2 block">{t("contact.form.service")}</label>
-                  <select
-                    value={form.service}
-                    onChange={(e) => update("service", e.target.value)}
-                    className="w-full border-b border-border bg-transparent py-3 text-[15px] text-foreground outline-none focus:border-primary"
-                  >
-                    <option value="">—</option>
-                    {serviceOptions.map((o) => (
-                      <option key={o} value={o}>
-                        {o}
-                      </option>
-                    ))}
-                  </select>
+                  <Select value={form.service} onValueChange={(v) => update("service", v)}>
+                    <SelectTrigger className="h-12 w-full rounded-md border border-border bg-card px-3 text-[15px] text-foreground">
+                      <SelectValue placeholder="—" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-popover text-popover-foreground">
+                      {serviceOptions.map((o) => (
+                        <SelectItem key={o} value={o}>
+                          {o}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div>
                   <label className="eyebrow mb-2 block">{t("contact.form.message")}</label>
