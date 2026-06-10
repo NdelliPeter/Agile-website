@@ -54,7 +54,7 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0907]/90 via-[#15120F]/55 to-[#15120F]/25" />
         <div className="container-page relative z-10 w-full pb-44 pt-36 md:pb-52 md:pt-44">
-          <div className="max-w-3xl">
+          <div className="max-w-none">
             <div className="eyebrow mb-5" style={{ color: "#E4EDEC" }}>
               {t("common.brandFull")}
             </div>
@@ -62,7 +62,7 @@ function HomePage() {
               {t("home.hero.headline")}
             </h1>
             <p
-              className="mt-6 max-w-xl text-base leading-relaxed md:text-lg"
+              className="mt-6 max-w-2xl text-base leading-relaxed md:text-lg"
               style={{ color: "#E4EDEC" }}
             >
               {t("home.hero.subheadline")}
@@ -111,50 +111,29 @@ function HomePage() {
       </section>
 
 
-      {/* SERVICES — numbered editorial rows */}
+      {/* SERVICES — interactive spinning wheel */}
       <section className="container-page py-20 md:py-28">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-5">
-            <SectionHeading
-              eyebrow={t("home.servicesPreview.heading")}
-              title={t("services.overview.headline")}
-              size="lg"
-            />
-            <Link
-              to="/services"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-            >
-              {t("common.cta.readMore")} <ArrowRight size={14} />
-            </Link>
-          </div>
-          <div className="md:col-span-7">
-            <div className="border-t border-border">
-              {SERVICE_KEYS.map((key, i) => (
-                <Link
-                  key={key}
-                  to="/services/$serviceKey"
-                  params={{ serviceKey: key }}
-                  className="group grid grid-cols-[auto_1fr_auto] items-start gap-5 border-b border-border py-7 transition-colors hover:bg-secondary/40 md:gap-8 md:py-8"
-                >
-                  <div className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-medium leading-snug text-foreground md:text-2xl">
-                      {t(`home.servicesPreview.cards.${key}.title`)}
-                    </h3>
-                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-                      {t(`home.servicesPreview.cards.${key}.desc`)}
-                    </p>
-                  </div>
-                  <ArrowUpRight
-                    size={20}
-                    className="mt-2 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
-                  />
-                </Link>
-              ))}
-            </div>
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionHeading
+            eyebrow={t("home.servicesPreview.heading")}
+            title={t("services.overview.headline")}
+            size="lg"
+            align="center"
+          />
+          <p className="mt-5 text-sm text-muted-foreground md:text-base">
+            Hover the wheel to set it in motion, then choose a service to explore.
+          </p>
+        </div>
+        <div className="mt-14 md:mt-20">
+          <ServiceWheel />
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          >
+            {t("common.cta.readMore")} <ArrowRight size={14} />
+          </Link>
         </div>
       </section>
 
