@@ -147,7 +147,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         </div>
 
         {open && (
-          <div className="mt-2 rounded-3xl border border-border bg-card p-4 shadow-lg lg:hidden">
+          <div className="mx-5 mb-2 rounded-2xl border border-border bg-card p-4 shadow-lg md:mx-10 lg:hidden">
             <nav className="flex flex-col">
               {navItems.map((item) => (
                 <Link
