@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 import { useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
@@ -7,12 +7,10 @@ export function Footer() {
   const t = useT();
   const linkedin = t("contact.social.linkedin");
   const facebook = t("contact.social.facebook");
-  const instagram = t("contact.social.instagram");
 
   const socials = [
     { url: linkedin, Icon: Linkedin, label: "LinkedIn" },
     { url: facebook, Icon: Facebook, label: "Facebook" },
-    { url: instagram, Icon: Instagram, label: "Instagram" },
   ].filter((s) => s.url && s.url.length > 0);
 
   return (
@@ -63,7 +61,9 @@ export function Footer() {
 
           <div className="md:col-span-3">
             <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-              {t("common.nav.contact")}
+              {t("footer.companyHeading") !== "footer.companyHeading"
+                ? t("footer.companyHeading")
+                : "Company"}
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
@@ -97,9 +97,9 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-[var(--brand-tint)] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
-                    <Icon size={16} />
+                    <Icon size={17} />
                   </a>
                 ))}
               </div>

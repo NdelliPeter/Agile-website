@@ -13,85 +13,127 @@ const navItems = [
   { to: "/contact", key: "common.nav.contact" },
 ] as const;
 
-export function Header() {
+export function Header({ overlay = false }: { overlay?: boolean }) {
   const t = useT();
   const { lang, setLang, theme, toggleTheme } = useApp();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!overlay) {
+      setScrolled(true);
+      return;
+    }
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [overlay]);
+
+  // When floating over hero (overlay && !scrolled): transparent, light ink.
+  // After scroll (or non-overlay pages): solid surface, normal tokens.
+  const onHero = overlay && !scrolled;
+
+  const pillBg = onHero
+    ? "bg-transparent border-white/15"
+    : "bg-card/85 border-border backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.02),0_10px_30px_-14px_rgba(20,15,10,0.22)]";
+  const fgText = onHero ? "text-white" : "text-foreground";
+  const mutedText = onHero ? "text-white/75" : "text-muted-foreground";
+  const borderTone = onHero ? "border-white/25" : "border-border";
+
   return (
-    <header className="sticky top-0 z-50 pt-3 md:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 pt-4 md:pt-5">
       <div className="container-page">
-        <div className="flex items-center justify-between gap-3 rounded-full border border-border bg-card/85 px-3 py-2 shadow-[0_1px_0_rgba(0,0,0,0.02),0_8px_24px_-12px_rgba(57,47,37,0.18)] backdrop-blur-md md:px-4 md:py-2.5">
-          <Link to="/" className="flex items-center gap-2.5 pl-1" aria-label="AGILE">
-            <BrandMark variant="full" size={34} />
-            <span className="hidden text-[15px] font-semibold tracking-tight text-foreground sm:inline">
+        <div
+          className={
+            "flex items-center justify-between gap-4 rounded-full border px-4 py-3 transition-colors duration-300 md:px-5 md:py-3.5 " +
+            pillBg
+          }
+        >
+          <Link to="/" className="flex items-center gap-3 pl-1" aria-label="AGILE">
+            <BrandMark variant="full" size={42} forceLight={onHero} />
+            <span
+              className={
+                "hidden text-[16px] font-semibold tracking-tight sm:inline " + fgText
+              }
+            >
               AGILE
             </span>
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => {
-              const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
+              const active =
+                item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
+              const base = "rounded-full px-4 py-2 text-[14px] transition-colors ";
+              const cls = active
+                ? onHero
+                  ? "bg-white/15 text-white"
+                  : "bg-secondary text-foreground"
+                : onHero
+                  ? "text-white/80 hover:text-white"
+                  : "text-muted-foreground hover:text-foreground";
               return (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className={
-                    "rounded-full px-3.5 py-1.5 text-[13.5px] transition-colors " +
-                    (active
-                      ? "bg-secondary text-foreground"
-                      : "text-muted-foreground hover:text-foreground")
-                  }
-                >
+                <Link key={item.to} to={item.to} className={base + cls}>
                   {t(item.key)}
                 </Link>
               );
             })}
           </nav>
 
-          <div className="flex items-center gap-1.5">
-            <div className="hidden items-center rounded-full border border-border bg-background/60 p-0.5 text-[11px] font-medium md:flex">
-              <button
-                type="button"
-                onClick={() => setLang("en")}
-                className={
-                  "rounded-full px-2 py-0.5 transition-colors " +
-                  (lang === "en" ? "bg-foreground text-background" : "text-muted-foreground")
-                }
-                aria-pressed={lang === "en"}
-              >
-                {t("common.lang.en")}
-              </button>
-              <button
-                type="button"
-                onClick={() => setLang("fr")}
-                className={
-                  "rounded-full px-2 py-0.5 transition-colors " +
-                  (lang === "fr" ? "bg-foreground text-background" : "text-muted-foreground")
-                }
-                aria-pressed={lang === "fr"}
-              >
-                {t("common.lang.fr")}
-              </button>
+          <div className="flex items-center gap-2">
+            <div
+              className={
+                "hidden items-center rounded-full border p-0.5 text-[11.5px] font-medium md:flex " +
+                borderTone
+              }
+            >
+              {(["en", "fr"] as const).map((l) => {
+                const on = lang === l;
+                return (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => setLang(l)}
+                    className={
+                      "rounded-full px-2.5 py-1 transition-colors " +
+                      (on
+                        ? onHero
+                          ? "bg-white text-[#15120F]"
+                          : "bg-foreground text-background"
+                        : mutedText)
+                    }
+                    aria-pressed={on}
+                  >
+                    {t(`common.lang.${l}`)}
+                  </button>
+                );
+              })}
             </div>
 
             <button
               type="button"
               onClick={toggleTheme}
-              className="hidden h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground md:inline-flex"
+              className={
+                "hidden h-10 w-10 items-center justify-center rounded-full border transition-colors md:inline-flex " +
+                borderTone +
+                " " +
+                mutedText +
+                (onHero ? " hover:text-white" : " hover:text-foreground")
+              }
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
 
             <Link
               to="/contact"
-              className="hidden h-9 items-center justify-center rounded-full bg-primary px-4 text-[13px] font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)] md:inline-flex"
+              className="hidden h-11 items-center justify-center rounded-full bg-primary px-5 text-[13.5px] font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)] md:inline-flex"
             >
               {t("common.cta.consultation")}
             </Link>
@@ -99,11 +141,16 @@ export function Header() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground lg:hidden"
+              className={
+                "inline-flex h-11 w-11 items-center justify-center rounded-full border lg:hidden " +
+                borderTone +
+                " " +
+                fgText
+              }
               aria-label="Menu"
               aria-expanded={open}
             >
-              {open ? <X size={17} /> : <Menu size={17} />}
+              {open ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
@@ -123,39 +170,32 @@ export function Header() {
             </nav>
             <div className="mt-4 flex items-center justify-between gap-2">
               <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
-                <button
-                  type="button"
-                  onClick={() => setLang("en")}
-                  className={
-                    "rounded-full px-3 py-1 " +
-                    (lang === "en" ? "bg-foreground text-background" : "text-muted-foreground")
-                  }
-                >
-                  {t("common.lang.en")}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setLang("fr")}
-                  className={
-                    "rounded-full px-3 py-1 " +
-                    (lang === "fr" ? "bg-foreground text-background" : "text-muted-foreground")
-                  }
-                >
-                  {t("common.lang.fr")}
-                </button>
+                {(["en", "fr"] as const).map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => setLang(l)}
+                    className={
+                      "rounded-full px-3 py-1 " +
+                      (lang === l ? "bg-foreground text-background" : "text-muted-foreground")
+                    }
+                  >
+                    {t(`common.lang.${l}`)}
+                  </button>
+                ))}
               </div>
               <button
                 type="button"
                 onClick={toggleTheme}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border"
                 aria-label="Toggle theme"
               >
-                {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
               </button>
             </div>
             <Link
               to="/contact"
-              className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground"
+              className="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground"
             >
               {t("common.cta.consultation")}
             </Link>

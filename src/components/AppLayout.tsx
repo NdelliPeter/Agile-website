@@ -2,11 +2,17 @@ import type { ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
-export function AppLayout({ children }: { children: ReactNode }) {
+export function AppLayout({
+  children,
+  overlayHeader = false,
+}: {
+  children: ReactNode;
+  overlayHeader?: boolean;
+}) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <Header />
-      <main className="flex-1">{children}</main>
+      <Header overlay={overlayHeader} />
+      <main className={"flex-1 " + (overlayHeader ? "" : "pt-28 md:pt-32")}>{children}</main>
       <Footer />
     </div>
   );
