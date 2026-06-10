@@ -32,17 +32,17 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const onHero = false;
 
   const pillBg =
-    "bg-card border-border shadow-[0_1px_0_rgba(0,0,0,0.02),0_10px_30px_-14px_rgba(20,15,10,0.22)]";
+    "bg-card border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02),0_8px_24px_-18px_rgba(20,15,10,0.25)]";
   const fgText = "text-foreground";
   const mutedText = "text-muted-foreground";
   const borderTone = "border-border";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 pt-4 md:pt-5">
-      <div className="container-page">
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="w-full">
         <div
           className={
-            "flex items-center justify-between gap-4 rounded-full border px-4 py-3 transition-colors duration-300 md:px-5 md:py-3.5 " +
+            "flex w-full items-center justify-between gap-4 px-5 py-3 transition-colors duration-300 md:px-10 md:py-3.5 " +
             pillBg
           }
         >
