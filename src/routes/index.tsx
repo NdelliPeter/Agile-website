@@ -174,12 +174,12 @@ function HomePage() {
       <section className="container-page py-20 md:py-28">
         <SectionHeading
           eyebrow={t("home.testimonials.heading")}
-          title="In the words of those we serve."
+          title={t("home.testimonials.title")}
           size="md"
         />
         {filledTestimonials.length === 0 ? (
           <p className="mt-10 max-w-xl text-sm italic text-muted-foreground">
-            Coming soon — client testimonials are being prepared from prior engagements.
+            {t("home.testimonials.empty")}
           </p>
         ) : (
           <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
