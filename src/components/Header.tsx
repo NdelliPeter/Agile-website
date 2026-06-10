@@ -1,17 +1,28 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useApp, useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
-const navItems = [
+type NavChild = { to: string; label: string };
+type NavItem = { to: string; key: string; children?: NavChild[] };
+
+const navItems: readonly NavItem[] = [
   { to: "/", key: "common.nav.home" },
-  { to: "/about", key: "common.nav.about" },
+  {
+    to: "/about",
+    key: "common.nav.about",
+    children: [
+      { to: "/about", label: "About AGILE" },
+      { to: "/about/team", label: "Our team" },
+    ],
+  },
   { to: "/services", key: "common.nav.services" },
   { to: "/industries", key: "common.nav.industries" },
   { to: "/insights", key: "common.nav.insights" },
   { to: "/contact", key: "common.nav.contact" },
 ] as const;
+
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const t = useT();
