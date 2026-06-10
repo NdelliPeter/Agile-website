@@ -80,11 +80,35 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 : onHero
                   ? "text-white/80 hover:text-white"
                   : "text-muted-foreground hover:text-foreground";
+              if (item.children) {
+                return (
+                  <div key={item.to} className="group relative">
+                    <Link to={item.to} className={base + cls + " inline-flex items-center gap-1"}>
+                      {t(item.key)}
+                      <ChevronDown size={14} className="opacity-70" />
+                    </Link>
+                    <div className="invisible absolute left-0 top-full z-50 min-w-[200px] pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+                      <div className="overflow-hidden border border-border bg-card py-2 shadow-lg" style={{ borderRadius: "1px 16px 1px 16px" }}>
+                        {item.children.map((c) => (
+                          <Link
+                            key={c.to}
+                            to={c.to}
+                            className="block px-4 py-2 text-[13.5px] text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                          >
+                            {c.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
               return (
                 <Link key={item.to} to={item.to} className={base + cls}>
                   {t(item.key)}
                 </Link>
               );
+
             })}
           </nav>
 
