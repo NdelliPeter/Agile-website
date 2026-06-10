@@ -259,6 +259,34 @@ function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Full-width pillar accordions */}
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="pillar-0"
+            className="mt-16 w-full border-t border-border"
+          >
+            {(t("home.africaFocus.pillars", { returnObjects: true }) as Array<{ title: string; body: string }>).map((p, i) => (
+              <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
+                <AccordionTrigger className="py-6 hover:no-underline md:py-7">
+                  <div className="flex w-full items-center gap-6 text-left">
+                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                      0{i + 1}
+                    </span>
+                    <span className="font-display text-lg font-medium text-foreground md:text-xl">
+                      {p.title}
+                    </span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-8">
+                  <p className="ml-[3.25rem] max-w-3xl text-[15px] leading-relaxed text-muted-foreground md:text-base">
+                    {p.body}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
     </AppLayout>
