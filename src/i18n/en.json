@@ -97,6 +97,8 @@
     ],
     "testimonials": {
       "heading": "What Clients Say",
+      "title": "In the words of those we serve.",
+      "empty": "Coming soon — client testimonials are being prepared from prior engagements.",
       "note": "Pending: to be supplied by Madam Simo from prior engagements.",
       "items": [
         { "quote": "", "name": "" },
@@ -106,6 +108,7 @@
     },
     "aboutPreview": {
       "heading": "Meet Our Founder",
+      "title": "Claudine Simo Mamo, Founder & Managing Partner.",
       "shortBio": "Claudine Simo Mamo is a CEMAC certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting, advisory and training across Central Africa. She is Founder and Managing Partner of AGILE, where she supports financial institutions and growing organisations in strengthening their systems, improving governance and building sustainable performance. At this stage of her career her focus goes beyond numbers: she is committed to developing people, mentoring young professionals, and building a culture of responsibility where individuals grow into leadership."
     }
   },
