@@ -27,16 +27,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const t = useT();
 
-  const pipelineSteps = [
-    { label: t("common.cta.consultation"), detail: t("services.overview.intro").slice(0, 90) + "…" },
-  ];
-  // Use a clean fixed engagement pipeline:
-  const engagement = [
-    { label: "Discover", detail: "Listen, scope, and map your regulatory and operational context." },
-    { label: "Diagnose", detail: "Assess systems, risks and controls against OHADA, COBAC, CIMA and COSUMAF." },
-    { label: "Deliver", detail: "Execute audit, advisory or training engagements with rigour and clarity." },
-    { label: "Sustain", detail: "Monitor outcomes, build internal capacity and sustain compliant performance." },
-  ];
+  const engagement = (t("home.engagement.steps", { returnObjects: true }) as Array<{ label: string; detail: string }>) || [];
 
   const testimonials = (t("home.testimonials.items", { returnObjects: true }) as Array<{ quote: string; name: string }>) || [];
   const filledTestimonials = testimonials.filter((x) => x.quote);
@@ -121,7 +112,7 @@ function HomePage() {
             align="center"
           />
           <p className="mt-5 text-sm text-muted-foreground md:text-base">
-            Hover the wheel to set it in motion, then choose a service to explore.
+            {t("home.servicesPreview.wheelCta")}
           </p>
         </div>
         <div className="mt-14 md:mt-20">
@@ -141,9 +132,9 @@ function HomePage() {
       <section className="border-t border-border bg-secondary/30">
         <div className="container-page py-20 md:py-28">
           <SectionHeading
-            eyebrow="How we work"
-            title="A clear pipeline, from first conversation to lasting impact."
-            intro="Every engagement follows a disciplined sequence so outcomes are predictable, auditable, and built to last."
+            eyebrow={t("home.engagement.heading")}
+            title={t("home.engagement.title")}
+            intro={t("home.engagement.intro")}
             size="lg"
           />
           <div className="mt-12">
@@ -183,12 +174,12 @@ function HomePage() {
       <section className="container-page py-20 md:py-28">
         <SectionHeading
           eyebrow={t("home.testimonials.heading")}
-          title="In the words of those we serve."
+          title={t("home.testimonials.title")}
           size="md"
         />
         {filledTestimonials.length === 0 ? (
           <p className="mt-10 max-w-xl text-sm italic text-muted-foreground">
-            Coming soon — client testimonials are being prepared from prior engagements.
+            {t("home.testimonials.empty")}
           </p>
         ) : (
           <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
@@ -220,7 +211,7 @@ function HomePage() {
           <div className="md:col-span-7 md:pt-6">
             <SectionHeading
               eyebrow={t("home.aboutPreview.heading")}
-              title="Claudine Simo Mamo, Founder & Managing Partner."
+              title={t("home.aboutPreview.title")}
               size="lg"
             />
             <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">

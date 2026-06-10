@@ -20,15 +20,6 @@ const ICONS: Record<ServiceKey, LucideIcon> = {
   humanCapital: Users,
 };
 
-// Short summaries (kept punchy so cards stay legible on the wheel)
-const SUMMARIES: Record<ServiceKey, string> = {
-  audit: "Statutory & contractual audits aligned with OHADA.",
-  agro: "SYSCOHADA certification & ESG for value chains.",
-  risk: "Risk mapping, solvency & AML/CFT under COBAC, CIMA, COSUMAF.",
-  performance: "Budgeting, tax and accounting engineering.",
-  heritage: "Asset valuation and secured succession planning.",
-  humanCapital: "Finance training & governance for boards and teams.",
-};
 
 export function ServiceWheel() {
   const t = useT();
@@ -109,7 +100,7 @@ export function ServiceWheel() {
                     {t(`home.servicesPreview.cards.${key}.title`)}
                   </span>
                   <span className="mt-1.5 block text-[11px] leading-snug text-muted-foreground md:text-[12px]">
-                    {SUMMARIES[key]}
+                    {t(`home.servicesPreview.summaries.${key}`)}
                   </span>
                 </Link>
               </div>
@@ -123,9 +114,9 @@ export function ServiceWheel() {
         <div className="flex h-36 w-36 flex-col items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_24px_60px_-24px_rgba(20,15,10,0.5)] md:h-44 md:w-44">
           <div className="font-display text-[10px] uppercase tracking-[0.3em] opacity-80">AGILE</div>
           <div className="mt-1.5 px-3 text-center font-display text-base font-medium leading-tight md:text-lg">
-            Key Services
+            {t("home.servicesPreview.hubLabel")}
           </div>
-          <div className="mt-2 text-[9px] uppercase tracking-[0.26em] opacity-65">Hover · Click</div>
+          <div className="mt-2 text-[9px] uppercase tracking-[0.26em] opacity-65">{t("home.servicesPreview.hubHint")}</div>
         </div>
       </div>
     </div>

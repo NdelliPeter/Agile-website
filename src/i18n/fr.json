@@ -2,7 +2,7 @@
   "common": {
     "brand": "AGILE",
     "brandFull": "AGILE — Audit, Conseil, Gouvernance et Excellence du Leadership",
-    "tagline": "Sécuriser la valeur, favoriser la croissance, bâtir la confiance dans la CEMAC et au-delà.",
+    "tagline": "Bâtir la confiance, sécuriser la valeur, favoriser la croissance dans la CEMAC et au-delà.",
     "region": "la CEMAC et au-delà",
     "nav": {
       "home": "Accueil",
@@ -23,12 +23,23 @@
 
   "home": {
     "hero": {
-      "headline": "Sécuriser la valeur, favoriser la croissance, bâtir la confiance dans la CEMAC et au-delà.",
+      "headline": "Bâtir la confiance, sécuriser la valeur, favoriser la croissance dans la CEMAC et au-delà.",
       "subheadline": "Votre partenaire en audit et conseil dans la région CEMAC et au-delà. Nous réalisons des audits légaux, la gestion des risques, l'optimisation de la performance, la planification patrimoniale et des solutions de gouvernance.",
       "cta": "Demander une consultation"
     },
     "servicesPreview": {
       "heading": "Services clés",
+      "wheelCta": "Collaborez avec nous",
+      "hubLabel": "Services clés",
+      "hubHint": "Survol · Clic",
+      "summaries": {
+        "audit": "Audits légaux et contractuels alignés sur l'OHADA.",
+        "agro": "Certification SYSCOHADA et ESG pour les chaînes de valeur.",
+        "risk": "Cartographie des risques, solvabilité et LBC/FT sous COBAC, CIMA, COSUMAF.",
+        "performance": "Budgétisation, fiscalité et ingénierie comptable.",
+        "heritage": "Évaluation d'actifs et planification successorale sécurisée.",
+        "humanCapital": "Formation finance et gouvernance pour conseils et équipes."
+      },
       "cards": {
         "audit": {
           "title": "Audit et Assurance",
@@ -56,6 +67,17 @@
         }
       }
     },
+    "engagement": {
+      "heading": "Notre méthode",
+      "title": "Un parcours clair, de la première conversation à un impact durable.",
+      "intro": "Chaque mission suit une séquence disciplinée pour des résultats prévisibles, traçables et durables.",
+      "steps": [
+        { "label": "Découvrir", "detail": "Écouter, cadrer et cartographier votre contexte réglementaire et opérationnel." },
+        { "label": "Diagnostiquer", "detail": "Évaluer systèmes, risques et contrôles au regard de OHADA, COBAC, CIMA et COSUMAF." },
+        { "label": "Livrer", "detail": "Réaliser les missions d'audit, de conseil ou de formation avec rigueur et clarté." },
+        { "label": "Pérenniser", "detail": "Suivre les résultats, renforcer les capacités internes et maintenir une performance conforme." }
+      ]
+    },
     "whyChooseUs": {
       "heading": "Pourquoi les institutions font confiance à AGILE",
       "paragraph": "AGILE propose une offre complète couvrant l'audit, la gestion des risques, la performance, le patrimoine et la gouvernance. Avec un positionnement clair dans la région CEMAC et au-delà, nous associons expertise réglementaire, spécialisation sectorielle et conseil stratégique pour soutenir les institutions et les actionnaires. Notre focus agro-industrie renforce la sécurité alimentaire et la création de valeur dans le cadre OHADA.",
@@ -75,6 +97,8 @@
     ],
     "testimonials": {
       "heading": "Ce que disent les clients",
+      "title": "Dans les mots de ceux que nous servons.",
+      "empty": "Bientôt disponible — les témoignages clients sont en cours de préparation à partir de missions antérieures.",
       "note": "En attente : à fournir par Madame Simo à partir de missions antérieures.",
       "items": [
         { "quote": "", "name": "" },
@@ -84,6 +108,7 @@
     },
     "aboutPreview": {
       "heading": "Notre fondatrice",
+      "title": "Claudine Simo Mamo, fondatrice et associée gérante.",
       "shortBio": "Claudine Simo Mamo est expert-comptable certifiée CEMAC et membre Fellow de l'Association of Chartered Certified Accountants (ACCA), avec plus de 37 ans d'expérience en audit, comptabilité, conseil et formation en Afrique centrale. Elle est fondatrice et associée gérante d'AGILE, où elle accompagne les institutions financières et les organisations en croissance dans le renforcement de leurs systèmes, l'amélioration de leur gouvernance et la construction d'une performance durable. À ce stade de sa carrière, son ambition dépasse les chiffres : elle se consacre au développement des personnes, au mentorat des jeunes professionnels et à la construction d'une culture de responsabilité où chacun peut accéder au leadership."
     }
   },
