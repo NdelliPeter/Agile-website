@@ -110,6 +110,38 @@
       "heading": "Notre fondatrice",
       "title": "Claudine Simo Mamo, fondatrice et associée gérante.",
       "shortBio": "Claudine Simo Mamo est expert-comptable certifiée CEMAC et membre Fellow de l'Association of Chartered Certified Accountants (ACCA), avec plus de 37 ans d'expérience en audit, comptabilité, conseil et formation en Afrique centrale. Elle est fondatrice et associée gérante d'AGILE, où elle accompagne les institutions financières et les organisations en croissance dans le renforcement de leurs systèmes, l'amélioration de leur gouvernance et la construction d'une performance durable. À ce stade de sa carrière, son ambition dépasse les chiffres : elle se consacre au développement des personnes, au mentorat des jeunes professionnels et à la construction d'une culture de responsabilité où chacun peut accéder au leadership."
+    },
+    "africaFocus": {
+      "eyebrow": "Pourquoi c'est essentiel",
+      "title": "Audit et gestion des risques : une priorité stratégique pour l'Afrique.",
+      "intro": "À travers l'Afrique, et en particulier dans la région CEMAC, des pratiques d'audit et de gestion des risques solides ne sont plus optionnelles. Elles protègent les recettes publiques, attirent l'investissement et transforment la croissance en prospérité partagée. L'assurance indépendante donne aux banques, assureurs, établissements de microfinance et groupes agro-industriels la crédibilité nécessaire pour accéder aux capitaux, satisfaire les régulateurs et opérer dans des marchés en pleine évolution.",
+      "stats": [
+        { "value": "≈ 88 Mds $", "label": "Perdus chaque année par l'Afrique en raison des flux financiers illicites, selon la CNUCED — des pertes que des dispositifs d'audit, de LBC/FT et de gouvernance plus solides aident à réduire." },
+        { "value": "6", "label": "États membres de la CEMAC (Cameroun, RCA, Tchad, Guinée équatoriale, Gabon, République du Congo) partageant l'architecture réglementaire OHADA, COBAC, CIMA et COSUMAF." },
+        { "value": "17", "label": "États membres de l'OHADA en Afrique de l'Ouest et centrale appliquant un droit des affaires harmonisé et les normes comptables SYSCOHADA." }
+      ],
+      "pillars": [
+        {
+          "title": "Des institutions solides, des marchés crédibles",
+          "body": "Les audits légaux sous OHADA, COBAC, CIMA et COSUMAF fournissent aux régulateurs, prêteurs et actionnaires une information fiable. Ils réduisent le coût du capital pour les émetteurs africains et facilitent le financement transfrontalier des banques, assureurs et entités cotées."
+        },
+        {
+          "title": "Une discipline du risque adaptée aux environnements fragiles",
+          "body": "La volatilité des changes, les cycles des matières premières, l'exposition climatique et la pression LBC/FT sous les normes GABAC exigent une gestion active des risques. La cartographie, les travaux de solvabilité et les tests de contrôle protègent les dépôts, les primes et les chaînes de valeur agro-industrielles qui ancrent la sécurité alimentaire."
+        },
+        {
+          "title": "Une gouvernance qui construit la confiance",
+          "body": "Des conseils formés, une responsabilité claire et des contrôles intégrant l'ESG aident les institutions africaines à conserver les financements des bailleurs, à respecter les exigences IFRS et SYSCOHADA, et à transformer la conformité en avantage compétitif durable."
+        }
+      ],
+      "map": {
+        "caption": "La CEMAC en bref",
+        "subcaption": "Cameroun · République centrafricaine · Tchad · Guinée équatoriale · Gabon · République du Congo",
+        "legendHighlight": "États membres de la CEMAC",
+        "legendOther": "Reste de l'Afrique"
+      },
+      "ctaHeadline": "Apportez à votre institution une expertise rigoureuse en audit et gestion des risques.",
+      "ctaButton": "Parler à AGILE"
     }
   },
 
