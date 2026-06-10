@@ -185,14 +185,29 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           <div className="mx-5 mb-2 rounded-2xl border border-border bg-card p-4 shadow-lg md:mx-10 lg:hidden">
             <nav className="flex flex-col">
               {navItems.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className="border-b border-border py-3 text-base text-foreground last:border-b-0"
-                >
-                  {t(item.key)}
-                </Link>
+                <div key={item.to} className="border-b border-border last:border-b-0">
+                  <Link
+                    to={item.to}
+                    className="block py-3 text-base text-foreground"
+                  >
+                    {t(item.key)}
+                  </Link>
+                  {item.children && (
+                    <div className="pb-3 pl-4">
+                      {item.children.map((c) => (
+                        <Link
+                          key={c.to}
+                          to={c.to}
+                          className="block py-1.5 text-sm text-muted-foreground"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
+
             </nav>
             <div className="mt-4 flex items-center justify-between gap-2">
               <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
