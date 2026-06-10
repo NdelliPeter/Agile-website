@@ -112,7 +112,7 @@ function HomePage() {
             align="center"
           />
           <p className="mt-5 text-sm text-muted-foreground md:text-base">
-            Hover the wheel to set it in motion, then choose a service to explore.
+            {t("home.servicesPreview.wheelCta")}
           </p>
         </div>
         <div className="mt-14 md:mt-20">
