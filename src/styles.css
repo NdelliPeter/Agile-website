@@ -5,10 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * AGILE design tokens.
- * Brand palette (light): teal #50908C, espresso #392F25, cream #F6F6F6.
- * Dark mode inverts: espresso surface, cream ink, lifted teal accent.
- * One place to reskin: edit values in :root and .dark below.
+ * AGILE design tokens — editorial, quietly premium.
+ * Heading: Fraunces (variable serif). Body: Inter.
+ * Light: warm cream + espresso + teal accent.
+ * Dark: deep espresso black + warm off-white + jewel teal.
+ * Reskin everything via :root and .dark.
  */
 
 @theme inline {
@@ -47,77 +48,81 @@
   --color-brand-ink: var(--brand-ink);
   --color-brand-bg: var(--brand-bg);
   --color-brand-surface: var(--brand-surface);
+  --color-brand-elevated: var(--brand-elevated);
   --color-brand-muted: var(--brand-muted);
   --color-brand-border: var(--brand-border);
 
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Newsreader", ui-serif, Georgia, serif;
+  --font-sans: "Inter", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* AGILE brand */
+  /* AGILE brand — light */
   --brand-primary: #50908C;
   --brand-primary-hover: #3F7370;
   --brand-tint: #E4EDEC;
-  --brand-ink: #392F25;
-  --brand-bg: #F6F6F6;
+  --brand-ink: #2A221B;
+  --brand-bg: #F6F4F1;
   --brand-surface: #FFFFFF;
-  --brand-muted: #8A8178;
-  --brand-border: #E4E2DD;
+  --brand-elevated: #FFFFFF;
+  --brand-muted: #6E665C;
+  --brand-border: #E7E3DC;
 
   /* shadcn semantic mappings (light) */
-  --background: #F6F6F6;
-  --foreground: #392F25;
+  --background: #F6F4F1;
+  --foreground: #2A221B;
   --card: #FFFFFF;
-  --card-foreground: #392F25;
+  --card-foreground: #2A221B;
   --popover: #FFFFFF;
-  --popover-foreground: #392F25;
+  --popover-foreground: #2A221B;
   --primary: #50908C;
   --primary-foreground: #FFFFFF;
   --secondary: #E4EDEC;
-  --secondary-foreground: #392F25;
-  --muted: #EFEDE8;
-  --muted-foreground: #8A8178;
+  --secondary-foreground: #2A221B;
+  --muted: #EFEBE3;
+  --muted-foreground: #6E665C;
   --accent: #E4EDEC;
-  --accent-foreground: #392F25;
+  --accent-foreground: #2A221B;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #FFFFFF;
-  --border: #E4E2DD;
-  --input: #E4E2DD;
+  --border: #E7E3DC;
+  --input: #E7E3DC;
   --ring: #50908C;
 }
 
 .dark {
-  --brand-primary: #6FB0AC;
+  /* AGILE brand — dark (deep warm espresso, jewel teal) */
+  --brand-primary: #6FB3AE;
   --brand-primary-hover: #88C5C1;
-  --brand-tint: #2F3A38;
-  --brand-ink: #F1ECE4;
-  --brand-bg: #1F1A14;
-  --brand-surface: #2A241C;
-  --brand-muted: #A89E92;
-  --brand-border: #3A3229;
+  --brand-tint: #1F302E;
+  --brand-ink: #EDE8E0;
+  --brand-bg: #15120F;
+  --brand-surface: #1E1A16;
+  --brand-elevated: #242019;
+  --brand-muted: #A89F93;
+  --brand-border: #2E2922;
 
-  --background: #1F1A14;
-  --foreground: #F1ECE4;
-  --card: #2A241C;
-  --card-foreground: #F1ECE4;
-  --popover: #2A241C;
-  --popover-foreground: #F1ECE4;
-  --primary: #6FB0AC;
-  --primary-foreground: #1F1A14;
-  --secondary: #2F3A38;
-  --secondary-foreground: #F1ECE4;
-  --muted: #2A241C;
-  --muted-foreground: #A89E92;
-  --accent: #2F3A38;
-  --accent-foreground: #F1ECE4;
+  --background: #15120F;
+  --foreground: #EDE8E0;
+  --card: #1E1A16;
+  --card-foreground: #EDE8E0;
+  --popover: #1E1A16;
+  --popover-foreground: #EDE8E0;
+  --primary: #6FB3AE;
+  --primary-foreground: #15120F;
+  --secondary: #1F302E;
+  --secondary-foreground: #EDE8E0;
+  --muted: #242019;
+  --muted-foreground: #A89F93;
+  --accent: #1F302E;
+  --accent-foreground: #EDE8E0;
   --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: #F1ECE4;
-  --border: #3A3229;
-  --input: #3A3229;
-  --ring: #6FB0AC;
+  --destructive-foreground: #EDE8E0;
+  --border: #2E2922;
+  --input: #2E2922;
+  --ring: #6FB3AE;
 }
 
 @layer base {
@@ -134,13 +139,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
+    font-size: 16px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
+    font-weight: 400;
     letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
   }
 
   ::selection {
@@ -165,33 +173,36 @@
 
 @utility display-xl {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-  font-size: clamp(2.5rem, 6vw + 1rem, 5.75rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
 }
 
 @utility display-lg {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
-  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-variation-settings: "opsz" 100, "SOFT" 50;
 }
 
 @utility display-md {
   font-family: var(--font-display);
   font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-size: clamp(1.375rem, 1.6vw + 0.8rem, 1.875rem);
+  font-variation-settings: "opsz" 72, "SOFT" 50;
 }
 
 @utility eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-brand-primary);
+  color: var(--color-primary);
 }
