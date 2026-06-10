@@ -15,7 +15,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
           <li
             key={i}
             style={{ borderRadius: "1px 35px 1px 35px" }}
-            className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:bg-[#036c5f] hover:border-[#036c5f]"
+            className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:bg-[#036c5f] hover:border-[#036c5f] dark:border-teal-800 dark:bg-gradient-to-br dark:from-teal-900/40 dark:to-teal-800/30 dark:hover:bg-teal-500 dark:hover:border-teal-500 dark:hover:from-teal-500 dark:hover:to-teal-500"
           >
             <StepNumber n={i + 1} />
             <h4 className="mt-2 text-base font-medium text-white">{s.label}</h4>
