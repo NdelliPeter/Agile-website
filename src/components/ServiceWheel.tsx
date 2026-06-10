@@ -20,15 +20,6 @@ const ICONS: Record<ServiceKey, LucideIcon> = {
   humanCapital: Users,
 };
 
-// Short summaries (kept punchy so cards stay legible on the wheel)
-const SUMMARIES: Record<ServiceKey, string> = {
-  audit: "Statutory & contractual audits aligned with OHADA.",
-  agro: "SYSCOHADA certification & ESG for value chains.",
-  risk: "Risk mapping, solvency & AML/CFT under COBAC, CIMA, COSUMAF.",
-  performance: "Budgeting, tax and accounting engineering.",
-  heritage: "Asset valuation and secured succession planning.",
-  humanCapital: "Finance training & governance for boards and teams.",
-};
 
 export function ServiceWheel() {
   const t = useT();
