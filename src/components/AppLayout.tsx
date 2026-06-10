@@ -12,7 +12,7 @@ export function AppLayout({
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Header overlay={overlayHeader} />
-      <main className={"flex-1 " + (overlayHeader ? "" : "pt-28 md:pt-32")}>{children}</main>
+      <main className={"flex-1 " + (overlayHeader ? "" : "pt-20 md:pt-24")}>{children}</main>
       <Footer />
     </div>
   );
