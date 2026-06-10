@@ -27,16 +27,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const t = useT();
 
-  const pipelineSteps = [
-    { label: t("common.cta.consultation"), detail: t("services.overview.intro").slice(0, 90) + "…" },
-  ];
-  // Use a clean fixed engagement pipeline:
-  const engagement = [
-    { label: "Discover", detail: "Listen, scope, and map your regulatory and operational context." },
-    { label: "Diagnose", detail: "Assess systems, risks and controls against OHADA, COBAC, CIMA and COSUMAF." },
-    { label: "Deliver", detail: "Execute audit, advisory or training engagements with rigour and clarity." },
-    { label: "Sustain", detail: "Monitor outcomes, build internal capacity and sustain compliant performance." },
-  ];
+  const engagement = (t("home.engagement.steps", { returnObjects: true }) as Array<{ label: string; detail: string }>) || [];
 
   const testimonials = (t("home.testimonials.items", { returnObjects: true }) as Array<{ quote: string; name: string }>) || [];
   const filledTestimonials = testimonials.filter((x) => x.quote);
