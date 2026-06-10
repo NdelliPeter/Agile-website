@@ -33,12 +33,7 @@ function AboutPage() {
     year: string;
     event: string;
   }>;
-  const team = t("about.team.members", { returnObjects: true }) as Array<{
-    name: string;
-    role: string;
-    bio: string;
-  }>;
-  const filledTeam = team.filter((m) => m.name);
+
 
   return (
     <AppLayout>
