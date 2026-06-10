@@ -5,8 +5,8 @@ import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
+import { AfricaMap } from "@/components/AfricaMap";
 import heroImg from "@/assets/hero-douala.jpg";
-import founderImg from "@/assets/founder.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
