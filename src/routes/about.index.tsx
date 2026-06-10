@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { VerticalPipeline } from "@/components/Pipeline";
 import founderImg from "@/assets/founder.jpg";
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute("/about/")({
   head: () => ({
     meta: [
       { title: "About AGILE | Audit, Advisory & Governance" },
