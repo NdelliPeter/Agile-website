@@ -1,17 +1,28 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useApp, useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
-const navItems = [
+type NavChild = { to: string; label: string };
+type NavItem = { to: string; key: string; children?: NavChild[] };
+
+const navItems: readonly NavItem[] = [
   { to: "/", key: "common.nav.home" },
-  { to: "/about", key: "common.nav.about" },
+  {
+    to: "/about",
+    key: "common.nav.about",
+    children: [
+      { to: "/about", label: "About AGILE" },
+      { to: "/about/team", label: "Our team" },
+    ],
+  },
   { to: "/services", key: "common.nav.services" },
   { to: "/industries", key: "common.nav.industries" },
   { to: "/insights", key: "common.nav.insights" },
   { to: "/contact", key: "common.nav.contact" },
 ] as const;
+
 
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const t = useT();
@@ -69,11 +80,35 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 : onHero
                   ? "text-white/80 hover:text-white"
                   : "text-muted-foreground hover:text-foreground";
+              if (item.children) {
+                return (
+                  <div key={item.to} className="group relative">
+                    <Link to={item.to} className={base + cls + " inline-flex items-center gap-1"}>
+                      {t(item.key)}
+                      <ChevronDown size={14} className="opacity-70" />
+                    </Link>
+                    <div className="invisible absolute left-0 top-full z-50 min-w-[200px] pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+                      <div className="overflow-hidden border border-border bg-card py-2 shadow-lg" style={{ borderRadius: "1px 16px 1px 16px" }}>
+                        {item.children.map((c) => (
+                          <Link
+                            key={c.to}
+                            to={c.to}
+                            className="block px-4 py-2 text-[13.5px] text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                          >
+                            {c.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
               return (
                 <Link key={item.to} to={item.to} className={base + cls}>
                   {t(item.key)}
                 </Link>
               );
+
             })}
           </nav>
 
@@ -150,14 +185,29 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           <div className="mx-5 mb-2 rounded-2xl border border-border bg-card p-4 shadow-lg md:mx-10 lg:hidden">
             <nav className="flex flex-col">
               {navItems.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  className="border-b border-border py-3 text-base text-foreground last:border-b-0"
-                >
-                  {t(item.key)}
-                </Link>
+                <div key={item.to} className="border-b border-border last:border-b-0">
+                  <Link
+                    to={item.to}
+                    className="block py-3 text-base text-foreground"
+                  >
+                    {t(item.key)}
+                  </Link>
+                  {item.children && (
+                    <div className="pb-3 pl-4">
+                      {item.children.map((c) => (
+                        <Link
+                          key={c.to}
+                          to={c.to}
+                          className="block py-1.5 text-sm text-muted-foreground"
+                        >
+                          {c.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
+
             </nav>
             <div className="mt-4 flex items-center justify-between gap-2">
               <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
