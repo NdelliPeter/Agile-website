@@ -24,6 +24,13 @@ export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
+  const offices = t("footer.offices.items", { returnObjects: true }) as Array<{
+    city: string;
+    country: string;
+    role: string;
+  }>;
+  const credentials = t("footer.credentials", { returnObjects: true }) as string[];
+
   const socials = [
     { url: linkedin, Icon: Linkedin, label: "LinkedIn" },
     { url: facebook, Icon: Facebook, label: "Facebook" },
