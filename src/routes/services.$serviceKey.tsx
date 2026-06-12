@@ -151,12 +151,12 @@ function ServiceDetailPage() {
           </h2>
         </div>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8">
-          <div className="w-full max-w-sm md:justify-self-end">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,360px)_minmax(0,1fr)] md:gap-12">
+          <div className="w-full">
             <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
           </div>
-          <div className="md:-ml-16 lg:-ml-24">
-            <p className="max-w-prose text-base leading-relaxed text-muted-foreground md:text-[17px]">
+          <div>
+            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
               {t(`services.items.${key}.detail`)}
             </p>
           </div>
