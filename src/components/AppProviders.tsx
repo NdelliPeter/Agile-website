@@ -15,29 +15,43 @@ type AppCtx = {
 const Ctx = createContext<AppCtx | null>(null);
 
 export function AppProviders({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
-  const [theme, setThemeState] = useState<Theme>("light");
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
-    setThemeState(prefersDark ? "dark" : "light");
-  }, []);
+  const [lang, setLangState] = useState<Lang>(() => {
+    if (typeof window === "undefined") return "en";
+    const stored = window.localStorage.getItem("agile.lang");
+    return stored === "fr" || stored === "en" ? (stored as Lang) : "en";
+  });
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window === "undefined") return "light";
+    const stored = window.localStorage.getItem("agile.theme");
+    if (stored === "light" || stored === "dark") return stored;
+    return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
 
   useEffect(() => {
     if (typeof document === "undefined") return;
     document.documentElement.classList.toggle("dark", theme === "dark");
+    try {
+      window.localStorage.setItem("agile.theme", theme);
+    } catch {}
   }, [theme]);
+
+  useEffect(() => {
+    void i18n.changeLanguage(lang);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
-    void i18n.changeLanguage(l);
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = l;
-    }
+    try {
+      window.localStorage.setItem("agile.lang", l);
+    } catch {}
   }, []);
 
-  const setTheme = useCallback((t: Theme) => setThemeState(t), []);
+  const setTheme = useCallback((t: Theme) => {
+    setThemeState(t);
+  }, []);
   const toggleTheme = useCallback(() => setThemeState((t) => (t === "dark" ? "light" : "dark")), []);
 
   const value = useMemo(
