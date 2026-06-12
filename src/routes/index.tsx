@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
@@ -7,7 +7,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
 import { AfricaMap } from "@/components/AfricaMap";
+import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-douala.jpg";
+
+const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,30 +40,70 @@ function HomePage() {
   return (
     <AppLayout overlayHeader>
       {/* HERO — full bleed, header floats over it */}
-      <section className="relative flex min-h-[88vh] items-end overflow-hidden">
+      <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+
         <img
           src={heroImg}
           alt=""
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full scale-105 object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0907]/90 via-[#15120F]/55 to-[#15120F]/25" />
-        <div className="container-page relative z-10 w-full pb-44 pt-36 md:pb-52 md:pt-44">
-          <div className="max-w-none">
-            <div className="eyebrow mb-5" style={{ color: "#E4EDEC" }}>
+        {/* Layered duotone wash */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0907]/95 via-[#15120F]/65 to-[#15120F]/30" />
+        <div
+          className="absolute inset-0 mix-blend-multiply opacity-40"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, transparent 55%, rgba(11,9,7,0.6) 100%)",
+          }}
+        />
+        {/* 8-col grid overlay */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #fff 1px, transparent 1px)",
+            backgroundSize: "12.5% 100%",
+          }}
+        />
+
+        {/* Kinetic eyebrow ticker — regulatory frameworks scrolling */}
+        <div className="absolute left-0 right-0 top-28 z-10 overflow-hidden border-y border-white/10 bg-black/20 py-3 backdrop-blur-sm md:top-32">
+          <div className="marquee-track text-xs font-medium uppercase tracking-[0.28em] text-white/55">
+            {[...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS].map((f, i) => (
+              <span key={i} className="mx-8 inline-flex items-center gap-8">
+                <span className="inline-block h-1 w-1 rounded-full bg-[var(--brand-primary)]" />
+                {f}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="container-page relative z-10 w-full pb-44 pt-44 md:pb-52 md:pt-52">
+          <Reveal>
+            <div className="eyebrow mb-6" style={{ color: "#E4EDEC" }}>
+              <span className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)] align-middle" />
               {t("common.brandFull")}
             </div>
-            <h1 className="display-xl" style={{ color: "#F6F4F1" }}>
-              {t("home.hero.headline")}
+            <h1 className="display-2xl max-w-5xl" style={{ color: "#F6F4F1" }}>
+              {(t("home.hero.headline") as string).split(" ").map((w, i) => (
+                <span
+                  key={i}
+                  className="word-reveal mr-[0.25em]"
+                  style={{ transitionDelay: `${i * 70}ms` }}
+                >
+                  {w}
+                </span>
+              ))}
             </h1>
             <p
-              className="mt-6 max-w-2xl text-base leading-relaxed md:text-lg"
+              className="mt-7 max-w-2xl text-base leading-relaxed md:text-lg"
               style={{ color: "#E4EDEC" }}
             >
               {t("home.hero.subheadline")}
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 to="/contact"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#50908C] px-6 text-sm font-medium text-white transition-colors hover:bg-[#3F7370]"
@@ -74,13 +118,28 @@ function HomePage() {
                 {t("common.nav.services")}
               </Link>
             </div>
-          </div>
+          </Reveal>
+        </div>
+
+        {/* Scroll cue */}
+        <div className="absolute bottom-[15.5rem] right-6 z-10 hidden flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55 md:flex">
+          <span>Scroll</span>
+          <ArrowDown size={14} className="animate-bounce" />
         </div>
 
         {/* STATS — overlay on hero, contrast-safe in both themes */}
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="container-page">
             <div className="rounded-t-2xl border border-b-0 border-white/15 bg-[#0B0907]/55 px-6 py-7 backdrop-blur-md md:px-10 md:py-8">
+              <div className="mb-5 flex items-center justify-between">
+                <div className="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.28em] text-white/60">
+                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--brand-primary)]" />
+                  AGILE Index · Live
+                </div>
+                <div className="hidden text-[10px] uppercase tracking-[0.22em] text-white/40 md:block">
+                  CEMAC · 2026
+                </div>
+              </div>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
                 {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
                   <div
@@ -101,6 +160,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
 
       {/* SERVICES — interactive spinning wheel */}

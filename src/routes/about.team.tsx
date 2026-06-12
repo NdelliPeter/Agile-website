@@ -60,6 +60,7 @@ const TEAM: Member[] = [
 ];
 
 function TeamPage() {
+  const [founder, ...rest] = TEAM;
   return (
     <AppLayout>
       <section className="container-page pt-20 md:pt-28">
@@ -71,11 +72,65 @@ function TeamPage() {
         />
       </section>
 
+      {/* FEATURED FOUNDER — editorial asymmetric */}
+      <section className="container-page pt-16 md:pt-20">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <div
+              className="overflow-hidden bg-secondary"
+              style={{ borderRadius: "1px 35px 1px 35px" }}
+            >
+              <img
+                src={founder.img}
+                alt={founder.name}
+                width={768}
+                height={960}
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:col-span-7 md:pt-6">
+            <div className="eyebrow-accent mb-5">Founder · Managing Partner</div>
+            <h2 className="font-display text-3xl font-light leading-[1.05] text-foreground md:text-5xl">
+              {founder.name}
+            </h2>
+            <div className="mt-6 h-px w-16 bg-primary" />
+            <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
+              {founder.bio}
+            </p>
+            <dl className="mt-10 grid max-w-md grid-cols-3 gap-px overflow-hidden border border-border bg-border">
+              {[
+                { v: "37+", l: "Years practice" },
+                { v: "FCCA", l: "Fellow ACCA" },
+                { v: "CEMAC", l: "Chartered" },
+              ].map((s) => (
+                <div key={s.l} className="bg-background p-4 text-center">
+                  <dt className="font-display text-xl font-medium text-foreground">{s.v}</dt>
+                  <dd className="mt-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+                    {s.l}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* SECONDARY ROW — partners & senior advisors */}
       <section className="container-page py-20 md:py-28">
+        <div className="mb-10 flex items-end justify-between border-b border-border pb-5">
+          <div className="eyebrow text-primary">Partners &amp; senior advisors</div>
+          <div className="font-display text-sm text-muted-foreground">
+            0{rest.length} leading the practice
+          </div>
+        </div>
         <div className="grid grid-cols-1 gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((m) => (
+          {rest.map((m) => (
             <article key={m.name} className="group flex flex-col">
-              <div className="overflow-hidden bg-secondary" style={{ borderRadius: "1px 35px 1px 35px" }}>
+              <div
+                className="overflow-hidden bg-secondary"
+                style={{ borderRadius: "1px 35px 1px 35px" }}
+              >
                 <img
                   src={m.img}
                   alt={m.name}
@@ -85,14 +140,14 @@ function TeamPage() {
                   className="aspect-[4/5] w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-medium leading-tight text-foreground">
+              <h3 className="mt-6 font-display text-xl font-medium leading-tight text-foreground md:text-2xl">
                 {m.name}
               </h3>
-              <p className="mt-1 text-[13px] font-medium uppercase tracking-[0.16em] text-primary">
+              <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.16em] text-primary">
                 {m.role}
               </p>
               <div className="mt-4 h-px w-10 bg-border" />
-              <p className="mt-4 text-[14.5px] leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
                 {m.bio}
               </p>
             </article>
@@ -102,3 +157,4 @@ function TeamPage() {
     </AppLayout>
   );
 }
+
