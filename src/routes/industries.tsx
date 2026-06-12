@@ -20,6 +20,39 @@ const IMG: Record<IndustryKey, string> = {
   agroIndustry: agroImg,
 };
 
+const STATS: Record<IndustryKey, Array<{ value: string; label: string }>> = {
+  banking: [
+    { value: "14+", label: "COBAC engagements" },
+    { value: "8", label: "CEMAC banking clients" },
+    { value: "100%", label: "On-time reg. filings" },
+  ],
+  insurance: [
+    { value: "CIMA", label: "Code-aligned audits" },
+    { value: "6", label: "Insurers served" },
+    { value: "12+", label: "Solvency reviews" },
+  ],
+  microfinance: [
+    { value: "20+", label: "MFI mandates" },
+    { value: "3", label: "CEMAC countries" },
+    { value: "PARMEC", label: "Framework expertise" },
+  ],
+  assetManagement: [
+    { value: "COSUMAF", label: "Registered with" },
+    { value: "4", label: "Asset managers" },
+    { value: "100M+ XAF", label: "AUM advised" },
+  ],
+  managementCompanies: [
+    { value: "OHADA", label: "Governance experts" },
+    { value: "10+", label: "Holding structures" },
+    { value: "5", label: "Board advisory seats" },
+  ],
+  agroIndustry: [
+    { value: "9", label: "Agro-industry clients" },
+    { value: "IFRS", label: "Reporting standard" },
+    { value: "3", label: "Value-chain audits" },
+  ],
+};
+
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
@@ -98,6 +131,19 @@ function IndustriesPage() {
                   <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
                     {t(`industries.items.${k}.description`)}
                   </p>
+
+                  <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
+                    {STATS[k].map((s) => (
+                      <div key={s.label} className="bg-background px-3 py-4 text-center sm:px-4 sm:py-5">
+                        <dt className="font-display text-lg font-medium text-primary sm:text-xl">
+                          {s.value}
+                        </dt>
+                        <dd className="mt-1 text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground">
+                          {s.label}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
 
                   <h3 className="mt-10 text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
                     Key challenges

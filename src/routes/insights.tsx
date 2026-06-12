@@ -73,37 +73,88 @@ function InsightsPage() {
       </section>
 
       <section className="container-page pb-20">
-        <div className="border-t border-border">
-          {articles.map((a, i) => (
-            <article
-              key={i}
-              className="group grid grid-cols-1 gap-8 border-b border-border py-10 md:grid-cols-12 md:gap-12 md:py-14"
-            >
-              <div className="md:col-span-5">
+        {articles.length > 0 && (
+          <article className="group grid grid-cols-1 gap-8 border-t border-border pt-10 md:grid-cols-12 md:gap-12 md:pt-14">
+            <div className="md:col-span-7">
+              <img
+                src={INSIGHT_IMAGES[0]}
+                alt=""
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+            </div>
+            <div className="md:col-span-5 md:pt-2">
+              <div className="inline-flex items-center gap-2 font-display text-[11px] font-medium uppercase tracking-[0.22em] text-primary">
+                <span className="inline-block h-1.5 w-6 bg-primary" />
+                Featured · {articles[0].keyword}
+              </div>
+              <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-foreground md:text-[40px] md:leading-[1.1]">
+                {articles[0].title}
+              </h2>
+              <p className="mt-5 text-[15.5px] leading-relaxed text-muted-foreground">
+                {articles[0].summary}
+              </p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                {t("common.cta.readMore")} <ArrowRight size={14} />
+              </span>
+            </div>
+          </article>
+        )}
+
+        {articles.length > 1 && (
+          <div className="mt-16 grid grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-2 md:gap-12">
+            {articles.slice(1, 3).map((a, i) => (
+              <article key={i} className="group">
                 <img
-                  src={INSIGHT_IMAGES[i % INSIGHT_IMAGES.length]}
+                  src={INSIGHT_IMAGES[(i + 1) % INSIGHT_IMAGES.length]}
                   alt=""
                   loading="lazy"
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[5/3] w-full object-cover"
                 />
-              </div>
-              <div className="md:col-span-7 md:pt-2">
-                <div className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                  {String(i + 1).padStart(2, "0")} · {a.keyword}
+                <div className="mt-5 font-display text-[11px] font-medium uppercase tracking-[0.2em] text-primary">
+                  {String(i + 2).padStart(2, "0")} · {a.keyword}
                 </div>
-                <h3 className="mt-3 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+                <h3 className="mt-3 font-display text-xl font-medium leading-snug text-foreground md:text-2xl">
                   {a.title}
                 </h3>
-                <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-[14.5px] leading-relaxed text-muted-foreground">
                   {a.summary}
                 </p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
-                  {t("common.cta.readMore")} <ArrowRight size={14} />
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {articles.length > 3 && (
+          <div className="mt-16 border-t border-border">
+            <div className="mb-6 mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              Archive
+            </div>
+            <ul className="divide-y divide-border border-y border-border">
+              {articles.slice(3).map((a, i) => (
+                <li key={i}>
+                  <a
+                    href="#"
+                    className="group grid grid-cols-[60px_1fr_auto] items-baseline gap-6 py-5 transition-colors hover:bg-secondary/40"
+                  >
+                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                      {String(i + 4).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <div className="font-display text-base font-medium text-foreground md:text-lg">
+                        {a.title}
+                      </div>
+                      <div className="mt-1 text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
+                        {a.keyword}
+                      </div>
+                    </div>
+                    <ArrowRight size={16} className="hidden text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary md:inline" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </section>
 
       {/* Case studies */}
