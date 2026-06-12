@@ -11,6 +11,8 @@ import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-douala.jpg";
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
+const STAT_SHORT = ["Years experience", "Frameworks", "Sectors served"];
+
 
 
 export const Route = createFileRoute("/")({
@@ -68,9 +70,9 @@ function HomePage() {
           }}
         />
 
-        {/* Kinetic eyebrow ticker — regulatory frameworks scrolling */}
-        <div className="absolute left-0 right-0 top-28 z-10 overflow-hidden border-y border-white/10 bg-black/20 py-3 backdrop-blur-sm md:top-32">
-          <div className="marquee-track text-xs font-medium uppercase tracking-[0.28em] text-white/55">
+        {/* Kinetic eyebrow ticker — directly under the header */}
+        <div className="absolute left-0 right-0 top-[64px] z-10 overflow-hidden border-y border-white/10 bg-black/30 py-2 backdrop-blur-sm md:top-[72px]">
+          <div className="marquee-track text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">
             {[...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS].map((f, i) => (
               <span key={i} className="mx-8 inline-flex items-center gap-8">
                 <span className="inline-block h-1 w-1 rounded-full bg-[var(--brand-primary)]" />
@@ -80,7 +82,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="container-page relative z-10 w-full pb-44 pt-44 md:pb-52 md:pt-52">
+        <div className="container-page relative z-10 w-full pb-32 pt-36 md:pb-36 md:pt-44">
           <Reveal>
             <div className="eyebrow mb-6" style={{ color: "#E4EDEC" }}>
               <span className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)] align-middle" />
@@ -122,42 +124,45 @@ function HomePage() {
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-[15.5rem] right-6 z-10 hidden flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55 md:flex">
+        <div className="absolute bottom-[8.5rem] right-6 z-10 hidden flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55 md:flex">
           <span>Scroll</span>
           <ArrowDown size={14} className="animate-bounce" />
         </div>
 
-        {/* STATS — overlay on hero, contrast-safe in both themes */}
+        {/* STATS — compact one-line index strip */}
         <div className="absolute inset-x-0 bottom-0 z-10">
           <div className="container-page">
-            <div className="rounded-t-2xl border border-b-0 border-white/15 bg-[#0B0907]/55 px-6 py-7 backdrop-blur-md md:px-10 md:py-8">
-              <div className="mb-5 flex items-center justify-between">
-                <div className="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.28em] text-white/60">
+            <div className="rounded-t-xl border border-b-0 border-white/15 bg-[#0B0907]/60 px-5 py-3 backdrop-blur-md md:px-8 md:py-3.5">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6">
+                <div className="flex shrink-0 items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-white/60">
                   <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--brand-primary)]" />
                   AGILE Index · Live
                 </div>
-                <div className="hidden text-[10px] uppercase tracking-[0.22em] text-white/40 md:block">
+                <div className="grid grid-cols-3 gap-4 md:flex-1 md:gap-8">
+                  {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
+                    <div
+                      key={i}
+                      className={
+                        "flex items-baseline gap-2.5 " +
+                        (i > 0 ? "md:border-l md:border-white/15 md:pl-8" : "")
+                      }
+                    >
+                      <span className="font-display text-2xl font-medium tracking-tight text-white md:text-3xl">
+                        {s.value}
+                      </span>
+                      <span className="text-[10.5px] uppercase tracking-[0.16em] text-white/70 md:text-[11px]">
+                        {STAT_SHORT[i] ?? s.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="hidden shrink-0 text-[10px] uppercase tracking-[0.22em] text-white/40 md:block">
                   CEMAC · 2026
                 </div>
               </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
-                {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
-                  <div
-                    key={i}
-                    className={
-                      "md:px-2 " +
-                      (i > 0 ? "border-t border-white/15 pt-6 md:border-l md:border-t-0 md:pl-10 md:pt-0" : "")
-                    }
-                  >
-                    <div className="font-display text-4xl font-medium tracking-tight text-white md:text-5xl">
-                      {s.value}
-                    </div>
-                    <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/80">{s.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
+
         </div>
       </section>
 
