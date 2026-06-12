@@ -102,7 +102,7 @@ function ServiceDetailPage() {
           }}
         />
 
-        <div className="container-page relative z-10 flex min-h-[88vh] flex-col items-center justify-end pb-16 pt-32 text-center md:pb-24 md:pt-40">
+        <div className="container-page relative z-10 flex min-h-[66vh] flex-col items-center justify-end pb-12 pt-28 text-center md:pb-16 md:pt-32">
           <Link
             to="/services"
             className="mb-8 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-white/70 transition hover:text-white"
@@ -118,12 +118,12 @@ function ServiceDetailPage() {
             <span className="h-px w-12 bg-white/40" />
           </div>
           <h1
-            className="mx-auto max-w-4xl font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
+            className="w-full font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
           >
             {t(`services.items.${key}.title`).replace(/\s*\(.*?\)\s*/g, "")}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+          <p className="mt-6 w-full text-base leading-relaxed text-white/85 md:text-lg">
             {t(`services.items.${key}.short`)}
           </p>
 
