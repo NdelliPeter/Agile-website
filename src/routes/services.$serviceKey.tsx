@@ -152,7 +152,7 @@ function ServiceDetailPage() {
         </div>
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8">
-          <div className="md:justify-self-end">
+          <div className="w-full max-w-sm md:justify-self-end">
             <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
           </div>
           <div>
