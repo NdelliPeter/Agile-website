@@ -109,16 +109,18 @@ export function ServiceWheel() {
         })}
       </div>
 
-      {/* Center hub (static) */}
+      {/* Center hub — AGILE logo */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex h-36 w-36 flex-col items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_24px_60px_-24px_rgba(20,15,10,0.5)] md:h-44 md:w-44">
-          <div className="font-display text-[10px] uppercase tracking-[0.3em] opacity-80">AGILE</div>
-          <div className="mt-1.5 px-3 text-center font-display text-base font-medium leading-tight md:text-lg">
-            {t("home.servicesPreview.hubLabel")}
-          </div>
-          <div className="mt-2 text-[9px] uppercase tracking-[0.26em] opacity-65">{t("home.servicesPreview.hubHint")}</div>
+        <div className="relative grid h-36 w-36 place-items-center md:h-44 md:w-44">
+          <div className="absolute inset-0 rounded-full bg-primary/15 blur-2xl" />
+          <img
+            src="/__l5e/assets-v1/cfd0e33f-0bca-44c9-b8db-94ec8df24400/agile-logo-circle.png"
+            alt="AGILE"
+            className="relative h-full w-full object-contain drop-shadow-[0_18px_40px_rgba(20,15,10,0.25)]"
+          />
         </div>
       </div>
+
     </div>
   );
 }
