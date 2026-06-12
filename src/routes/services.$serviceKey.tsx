@@ -276,7 +276,7 @@ function ServiceSlideshow({ images, alt }: { images: string[]; alt: string }) {
     return () => clearInterval(id);
   }, [images.length]);
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
+    <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
       {images.map((src, i) => (
         <img
           key={src}
