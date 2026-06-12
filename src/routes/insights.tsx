@@ -24,7 +24,7 @@ export const Route = createFileRoute("/insights")({
           "Expert insights on CIMA, COBAC, COSUMAF and OHADA compliance for financial institutions across CEMAC and beyond.",
       },
       { property: "og:title", content: "Insights | AGILE" },
-      { property: "og:image", content: insight1 },
+      { property: "og:image", content: insightsHero },
     ],
   }),
   component: InsightsPage,
