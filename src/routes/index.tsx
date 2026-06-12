@@ -71,7 +71,7 @@ function HomePage() {
         />
 
         {/* Kinetic eyebrow ticker — directly under the header */}
-        <div className="absolute left-0 right-0 top-[64px] z-10 overflow-hidden border-y border-white/10 bg-black/30 py-2 backdrop-blur-sm md:top-[72px]">
+        <div className="absolute left-0 right-0 top-[70px] z-10 overflow-hidden border-y border-white/10 bg-black/30 py-2 backdrop-blur-sm md:top-[78px]">
           <div className="marquee-track text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">
             {[...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS].map((f, i) => (
               <span key={i} className="mx-8 inline-flex items-center gap-8">
