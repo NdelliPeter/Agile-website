@@ -147,13 +147,6 @@ export function AfricaMap({ className = "" }: { className?: string }) {
         <div className="text-[10px] font-medium uppercase tracking-[0.22em] text-primary">
           {hover?.cemac ? t("ui.map.cemacMember") : t("ui.map.africa")}
         </div>
-
-      <div className="pointer-events-none absolute bottom-3 right-3 min-w-[180px] max-w-[240px] rounded-md border border-border bg-background/95 px-4 py-3 text-left shadow-lg backdrop-blur transition-opacity duration-200"
-        style={{ opacity: hover ? 1 : 0 }}
-      >
-        <div className="text-[10px] font-medium uppercase tracking-[0.22em] text-primary">
-          {hover?.cemac ? "CEMAC member" : "Africa"}
-        </div>
         <div className="mt-1 font-display text-base font-medium text-foreground">
           {hover?.name ?? "—"}
         </div>
