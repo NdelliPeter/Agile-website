@@ -1,10 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowUpRight, ArrowDown, Check } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { Pipeline } from "@/components/Pipeline";
-import { SERVICE_IMAGES, SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
+import { SERVICE_IMAGES, SERVICE_GALLERY, SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
 
 export const Route = createFileRoute("/services/$serviceKey")({
   beforeLoad: ({ params }) => {
@@ -23,15 +24,6 @@ export const Route = createFileRoute("/services/$serviceKey")({
 function capitalize(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
-
-const SERVICE_INDEX: Record<ServiceKey, string> = {
-  audit: "01",
-  agro: "02",
-  risk: "03",
-  performance: "04",
-  heritage: "05",
-  humanCapital: "06",
-};
 
 const SERVICE_PRINCIPLES: Record<ServiceKey, { k: string; v: string }[]> = {
   audit: [
@@ -118,17 +110,12 @@ function ServiceDetailPage() {
             <ArrowLeft size={14} /> {t("common.nav.services")}
           </Link>
 
-          <div className="mb-6 flex items-center justify-center gap-4">
-            <span
-              className="font-display text-5xl font-light text-[var(--brand-primary)] md:text-6xl"
-              style={{ textShadow: "0 2px 24px rgba(0,0,0,0.5)" }}
-            >
-              {SERVICE_INDEX[key]}
-            </span>
-            <span className="h-px w-16 bg-white/40" />
+          <div className="mb-6 flex items-center justify-center gap-3">
+            <span className="h-px w-12 bg-white/40" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               AGILE Service
             </span>
+            <span className="h-px w-12 bg-white/40" />
           </div>
           <h1
             className="mx-auto max-w-4xl font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
@@ -156,15 +143,21 @@ function ServiceDetailPage() {
 
       {/* ============ OVERVIEW ============ */}
       <section className="container-page py-20 md:py-28">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="eyebrow mb-4 text-primary">The mandate</div>
           <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
             Why institutions{" "}
             <span className="italic text-primary">choose us</span> for this.
           </h2>
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-[17px]">
-            {t(`services.items.${key}.detail`)}
-          </p>
+        </div>
+
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
+          <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
+          <div>
+            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
+              {t(`services.items.${key}.detail`)}
+            </p>
+          </div>
         </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
@@ -273,5 +266,44 @@ function ServiceDetailPage() {
       </section>
 
     </AppLayout>
+  );
+}
+
+function ServiceSlideshow({ images, alt }: { images: string[]; alt: string }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdx((i) => (i + 1) % images.length), 4500);
+    return () => clearInterval(id);
+  }, [images.length]);
+  return (
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
+      {images.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className={
+            "absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 " +
+            (i === idx ? "opacity-100" : "opacity-0")
+          }
+        />
+      ))}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Slide ${i + 1}`}
+            onClick={() => setIdx(i)}
+            className={
+              "h-1.5 rounded-full transition-all " +
+              (i === idx ? "w-6 bg-white" : "w-1.5 bg-white/50 hover:bg-white/80")
+            }
+          />
+        ))}
+      </div>
+    </div>
   );
 }
