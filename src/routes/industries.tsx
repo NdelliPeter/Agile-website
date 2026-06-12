@@ -162,7 +162,7 @@ function IndustriesPage() {
             }
           >
             <div className="container-page py-20 md:py-28">
-              <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
                 <div className="md:col-span-5">
                   <img
                     src={IMG[k]}
@@ -192,31 +192,34 @@ function IndustriesPage() {
                       </div>
                     ))}
                   </dl>
-
-                  <h3 className="mt-10 text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-                    {t("ui.industries.keyChallenges")}
-                  </h3>
-                  <ul className="mt-4 divide-y divide-border border-y border-border">
-                    {challenges.map((c, j) => (
-                      <li key={j} className="grid grid-cols-[28px_1fr] gap-3 py-4">
-                        <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                          {String(j + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-sm leading-relaxed text-foreground">{c}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p className="mt-8 rounded-2xl border border-border bg-background/60 p-5 text-sm leading-relaxed text-foreground">
-                    <span className="eyebrow mr-2 text-primary">{t("ui.industries.frameworks")}</span>
-                    {t(`industries.items.${k}.frameworks`)}
-                  </p>
-
-                  <div className="mt-8">
-                    <FAQAccordion items={[faq]} />
-                  </div>
                 </div>
               </div>
+
+              <div className="mt-16">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+                  {t("ui.industries.keyChallenges")}
+                </h3>
+                <ul className="mt-4 divide-y divide-border border-y border-border">
+                  {challenges.map((c, j) => (
+                    <li key={j} className="grid grid-cols-[40px_1fr] gap-6 py-5 md:grid-cols-[60px_1fr]">
+                      <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                        {String(j + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-[15px] leading-relaxed text-foreground md:text-base">{c}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-8 rounded-2xl border border-border bg-background/60 p-5 text-sm leading-relaxed text-foreground md:text-base">
+                  <span className="eyebrow mr-2 text-primary">{t("ui.industries.frameworks")}</span>
+                  {t(`industries.items.${k}.frameworks`)}
+                </p>
+
+                <div className="mt-8">
+                  <FAQAccordion items={[faq]} />
+                </div>
+              </div>
+
             </div>
           </section>
         );
