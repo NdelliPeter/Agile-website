@@ -80,13 +80,13 @@ function InsightsPage() {
                 src={INSIGHT_IMAGES[0]}
                 alt=""
                 loading="lazy"
-                className="aspect-[16/10] w-full object-cover"
+                className="aspect-[16/10] w-full object-cover duotone"
               />
             </div>
             <div className="md:col-span-5 md:pt-2">
               <div className="inline-flex items-center gap-2 font-display text-[11px] font-medium uppercase tracking-[0.22em] text-primary">
                 <span className="inline-block h-1.5 w-6 bg-primary" />
-                Featured · {articles[0].keyword}
+                {t("ui.insights.featured")} · {articles[0].keyword}
               </div>
               <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-foreground md:text-[40px] md:leading-[1.1]">
                 {articles[0].title}
@@ -109,7 +109,7 @@ function InsightsPage() {
                   src={INSIGHT_IMAGES[(i + 1) % INSIGHT_IMAGES.length]}
                   alt=""
                   loading="lazy"
-                  className="aspect-[5/3] w-full object-cover"
+                  className="aspect-[5/3] w-full object-cover duotone"
                 />
                 <div className="mt-5 font-display text-[11px] font-medium uppercase tracking-[0.2em] text-primary">
                   {String(i + 2).padStart(2, "0")} · {a.keyword}
@@ -128,7 +128,7 @@ function InsightsPage() {
         {articles.length > 3 && (
           <div className="mt-16 border-t border-border">
             <div className="mb-6 mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-              Archive
+              {t("ui.insights.archive")}
             </div>
             <ul className="divide-y divide-border border-y border-border">
               {articles.slice(3).map((a, i) => (
