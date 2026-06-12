@@ -268,3 +268,42 @@ function ServiceDetailPage() {
     </AppLayout>
   );
 }
+
+function ServiceSlideshow({ images, alt }: { images: string[]; alt: string }) {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdx((i) => (i + 1) % images.length), 4500);
+    return () => clearInterval(id);
+  }, [images.length]);
+  return (
+    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
+      {images.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          className={
+            "absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 " +
+            (i === idx ? "opacity-100" : "opacity-0")
+          }
+        />
+      ))}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Slide ${i + 1}`}
+            onClick={() => setIdx(i)}
+            className={
+              "h-1.5 rounded-full transition-all " +
+              (i === idx ? "w-6 bg-white" : "w-1.5 bg-white/50 hover:bg-white/80")
+            }
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
