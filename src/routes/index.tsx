@@ -11,6 +11,8 @@ import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-douala.jpg";
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
+const STAT_SHORT = ["Years experience", "Frameworks", "Sectors served"];
+
 
 
 export const Route = createFileRoute("/")({
