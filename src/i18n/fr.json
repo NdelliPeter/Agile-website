@@ -496,8 +496,90 @@
     "copyright": "© 2026 AGILE — Audit, Conseil, Gouvernance et Excellence du Leadership. Tous droits réservés.",
     "privacyPolicy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "termsNote": "À rédiger."
+    "termsNote": "À rédiger.",
+    "newsletter": {
+      "eyebrow": "Le Brief AGILE",
+      "headline": "Évolutions réglementaires, éclairages d'audit et notes de gouvernance — une fois par mois, jamais de bruit.",
+      "placeholder": "vous@institution.com",
+      "subscribe": "S'abonner",
+      "subscribed": "Abonné",
+      "privacy": "Pas de spam. Désabonnement en un clic."
+    },
+    "columns": {
+      "company": "Entreprise",
+      "resources": "Ressources"
+    },
+    "links": {
+      "ourTeam": "Notre équipe",
+      "annualReport": "Rapport annuel",
+      "regulatoryWatch": "Veille réglementaire",
+      "pressMedia": "Presse et médias"
+    },
+    "offices": {
+      "heading": "Bureaux",
+      "items": [
+        { "city": "Douala", "country": "Cameroun", "role": "Siège" },
+        { "city": "Yaoundé", "country": "Cameroun", "role": "Bureau de représentation" },
+        { "city": "Libreville", "country": "Gabon", "role": "Affilié" }
+      ]
+    },
+    "credentials": [
+      "Membre · ONECCA Cameroun",
+      "Experts-comptables CEMAC",
+      "FCCA · Fellow ACCA",
+      "Certifié OHADA"
+    ]
   },
+
+  "ui": {
+    "map": {
+      "cemacMember": "État membre CEMAC",
+      "africa": "Afrique"
+    },
+    "insights": {
+      "featured": "À la une",
+      "archive": "Archives"
+    },
+    "industries": {
+      "sector": "Secteur",
+      "keyChallenges": "Défis clés",
+      "frameworks": "Cadres de référence",
+      "stats": {
+        "banking": [
+          { "value": "14+", "label": "Missions COBAC" },
+          { "value": "8", "label": "Banques CEMAC clientes" },
+          { "value": "100%", "label": "Déclarations dans les délais" }
+        ],
+        "insurance": [
+          { "value": "CIMA", "label": "Audits conformes au Code" },
+          { "value": "6", "label": "Assureurs accompagnés" },
+          { "value": "12+", "label": "Revues de solvabilité" }
+        ],
+        "microfinance": [
+          { "value": "20+", "label": "Mandats EMF" },
+          { "value": "3", "label": "Pays CEMAC" },
+          { "value": "PARMEC", "label": "Expertise du cadre" }
+        ],
+        "assetManagement": [
+          { "value": "COSUMAF", "label": "Agréé auprès de" },
+          { "value": "4", "label": "Gestionnaires d'actifs" },
+          { "value": "100M+ XAF", "label": "Encours conseillés" }
+        ],
+        "managementCompanies": [
+          { "value": "OHADA", "label": "Experts en gouvernance" },
+          { "value": "10+", "label": "Structures holding" },
+          { "value": "5", "label": "Sièges d'administrateur" }
+        ],
+        "agroIndustry": [
+          { "value": "9", "label": "Clients agro-industriels" },
+          { "value": "IFRS", "label": "Norme de reporting" },
+          { "value": "3", "label": "Audits de chaîne de valeur" }
+        ]
+      }
+    }
+  },
+
+
 
   "meta": {
     "home": { "title": "AGILE | Audit et Conseil dans la CEMAC et au-delà", "description": "Audits légaux, gestion des risques, conformité et conseil pour banques, assureurs, EMF et agro-industrie dans la CEMAC et au-delà." },
