@@ -43,7 +43,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const onHero = false;
 
   const pillBg =
-    "bg-card border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02),0_8px_24px_-18px_rgba(20,15,10,0.25)]";
+    "bg-background/75 backdrop-blur-xl border-b border-border/60 supports-[backdrop-filter]:bg-background/60";
+
   const fgText = "text-foreground";
   const mutedText = "text-muted-foreground";
   const borderTone = "border-border";

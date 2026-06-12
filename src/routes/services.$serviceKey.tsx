@@ -134,16 +134,13 @@ function ServiceDetailPage() {
             className="mx-auto max-w-4xl font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
           >
-            {t(`services.items.${key}.title`)}
+            {t(`services.items.${key}.title`).replace(/\s*\(.*?\)\s*/g, "")}
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
             {t(`services.items.${key}.short`)}
           </p>
 
-          <div
-            className="mt-10 inline-flex items-center gap-3 border border-white/15 bg-white/5 px-5 py-3 backdrop-blur-md"
-            style={{ borderRadius: "1px 35px 1px 35px" }}
-          >
+          <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 backdrop-blur-md">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               Advisory · Assurance · Coaching
@@ -155,6 +152,7 @@ function ServiceDetailPage() {
           </div>
         </div>
       </section>
+
 
       {/* ============ OVERVIEW ============ */}
       <section className="container-page py-20 md:py-28">
@@ -248,41 +246,32 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* ============ CTA ============ */}
-      <section className="container-page pb-24">
-        <div
-          className="relative overflow-hidden p-10 text-center md:p-16"
-          style={{
-            borderRadius: "1px 35px 1px 35px",
-            background:
-              "linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%)",
-          }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-8">
-            <div className="text-xs font-medium uppercase tracking-[0.22em] text-white/70">
-              Ready when you are
+      {/* ============ CTA — editorial, quiet ============ */}
+      <section className="border-t border-border">
+        <div className="container-page py-20 md:py-28">
+          <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-8">
+              <div className="eyebrow-accent mb-4">Ready when you are</div>
+              <p className="font-display text-3xl font-light leading-[1.1] tracking-tight text-foreground md:text-5xl">
+                {t("services.overview.ctaHeadline")}
+              </p>
             </div>
-            <p className="font-display text-3xl font-light leading-tight text-white md:text-5xl">
-              {t("services.overview.ctaHeadline")}
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex h-14 items-center gap-3 bg-white px-7 text-sm font-medium text-[var(--brand-primary-hover)] transition hover:bg-white/90"
-              style={{ borderRadius: "1px 35px 1px 35px" }}
-            >
-              {t("services.overview.ctaButton")} <ArrowUpRight size={18} />
-            </Link>
+            <div className="md:col-span-4 md:justify-self-end">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-3 border-b border-foreground/70 pb-2 text-sm font-medium uppercase tracking-[0.18em] text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                {t("services.overview.ctaButton")}
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
     </AppLayout>
   );
 }

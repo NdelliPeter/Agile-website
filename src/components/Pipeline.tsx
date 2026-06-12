@@ -1,110 +1,80 @@
 import { Fragment } from "react";
-import { ArrowRight } from "lucide-react";
 
 export type PipelineStep = {
   label: string;
   detail?: string;
 };
 
+/**
+ * Editorial horizontal stepper.
+ * - Mobile: vertical rail with numbered markers.
+ * - Desktop: horizontal rule with anchored markers; copy stacks below.
+ * Single visual register, no decorative card shapes — meant to sit
+ * comfortably inside enterprise-tone editorial layouts.
+ */
 export function Pipeline({ steps }: { steps: PipelineStep[] }) {
   return (
     <div className="relative w-full">
-      {/* Mobile: simple vertical stack */}
-      <ol className="flex flex-col gap-4 md:hidden">
+      {/* Mobile */}
+      <ol className="md:hidden">
         {steps.map((s, i) => (
           <li
             key={i}
-            style={{ borderRadius: "1px 35px 1px 35px" }}
-            className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:bg-[#036c5f] hover:border-[#036c5f] dark:border-teal-800 dark:bg-gradient-to-br dark:from-teal-900/40 dark:to-teal-800/30 dark:hover:bg-teal-500 dark:hover:border-teal-500 dark:hover:from-teal-500 dark:hover:to-teal-500"
+            className="relative grid grid-cols-[36px_1fr] gap-5 pb-10 last:pb-0"
           >
-            <StepNumber n={i + 1} />
-            <h4 className="mt-2 text-base font-medium text-white">{s.label}</h4>
-            {s.detail && (
-              <p className="mt-1.5 text-sm leading-relaxed text-white/90">
-                {s.detail}
-              </p>
-            )}
+            <span
+              aria-hidden
+              className="absolute left-[17px] top-9 bottom-0 w-px bg-border last:hidden"
+            />
+            <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[11px] font-medium tracking-[0.14em] text-primary">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="pt-1.5">
+              <div className="font-display text-base font-medium text-foreground">
+                {s.label}
+              </div>
+              {s.detail && (
+                <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">
+                  {s.detail}
+                </p>
+              )}
+            </div>
           </li>
         ))}
       </ol>
 
-      {/* Desktop: zigzag flow */}
-      <div
-        className="relative hidden md:grid"
-        style={{
-          gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
-          gridTemplateRows: "1fr 56px 1fr",
-          columnGap: "1.5rem",
-        }}
-      >
-        {/* Central rail */}
-        <div
-          className="pointer-events-none relative"
-          style={{
-            gridColumn: `1 / span ${steps.length}`,
-            gridRow: "2 / 3",
-          }}
+      {/* Desktop */}
+      <div className="relative hidden md:block">
+        {/* Connector rail */}
+        <div className="absolute left-0 right-0 top-[18px] h-px bg-border" aria-hidden />
+        <ol
+          className="relative grid gap-8"
+          style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}
         >
-          <div className="absolute left-[8%] right-[8%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30" />
-          <div className="absolute right-[6%] top-1/2 -translate-y-1/2 text-primary">
-            <ArrowRight className="h-4 w-4" />
-          </div>
-        </div>
-
-        {steps.map((s, i) => {
-          const isTop = i % 2 === 0;
-          return (
+          {steps.map((s, i) => (
             <Fragment key={i}>
-              {/* Card */}
-              <article
-                className="group relative border border-[#048c7f] bg-[#048c7f] p-5 transition-colors hover:-translate-y-0.5 hover:bg-[#036c5f] hover:border-[#036c5f] dark:border-teal-800 dark:bg-gradient-to-br dark:from-teal-900/40 dark:to-teal-800/30 dark:hover:bg-teal-500 dark:hover:border-teal-500 dark:hover:from-teal-500 dark:hover:to-teal-500"
-                style={{
-                  gridColumn: `${i + 1} / span 1`,
-                  gridRow: isTop ? "1 / 2" : "3 / 4",
-                  alignSelf: isTop ? "end" : "start",
-                  borderRadius: "1px 35px 1px 35px",
-                }}
-              >
-                <StepNumber n={i + 1} />
-                <h4 className="mt-2 text-base font-medium leading-snug text-white">
-                  {s.label}
-                </h4>
-                {s.detail && (
-                  <p className="mt-1.5 text-sm leading-relaxed text-white/90">
-                    {s.detail}
-                  </p>
-                )}
-              </article>
-
-              {/* Vertical connector from card to rail */}
-              <span
-                aria-hidden
-                className="pointer-events-none relative"
-                style={{
-                  gridColumn: `${i + 1} / span 1`,
-                  gridRow: "2 / 3",
-                }}
-              >
+              <li className="group relative">
                 <span
-                  className={`absolute left-1/2 w-px -translate-x-1/2 bg-primary/40 ${
-                    isTop ? "top-0 bottom-1/2" : "top-1/2 bottom-0"
-                  }`}
-                />
-                <span className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary bg-background" />
-              </span>
+                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[11px] font-medium tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="mt-6">
+                  <div className="font-display text-[17px] font-medium leading-snug text-foreground">
+                    {s.label}
+                  </div>
+                  {s.detail && (
+                    <p className="mt-2 max-w-[26ch] text-[14px] leading-relaxed text-muted-foreground">
+                      {s.detail}
+                    </p>
+                  )}
+                </div>
+              </li>
             </Fragment>
-          );
-        })}
+          ))}
+        </ol>
       </div>
     </div>
-  );
-}
-
-function StepNumber({ n }: { n: number }) {
-  return (
-    <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-white/20 px-2 font-display text-[11px] font-semibold tracking-[0.14em] text-white">
-      {String(n).padStart(2, "0")}
-    </span>
   );
 }
 

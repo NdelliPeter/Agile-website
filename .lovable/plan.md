@@ -1,76 +1,97 @@
-# AGILE — Bilingual Audit & Advisory Marketing Site
 
-A static, content-driven marketing site built on TanStack Start. Editorial direction inspired by senderoconsulting.com (large display type, generous whitespace, full-bleed photographic hero, hairline-divided sections instead of visible card chrome), adapted to AGILE's teal + espresso + cream identity with full light/dark mode and a polished mobile experience.
+# Forensic Design Review — AGILE
 
-## Visual direction
+I went through Home, Services index, a Service detail page (Audit), Our Team, and the global chrome (Header / Footer / typography / tokens). The foundation is solid — restrained palette, serif/sans pairing, regional positioning — but the execution sits at "good agency template," not Deloitte / EY / Bain / Brunswick territory. Below is the gap analysis, grouped by severity, followed by a focused fix plan.
 
-- **Header**: floating pill nav, modestly sized — roughly 56–64px tall on desktop, slightly tighter on mobile. Contains logo (left), nav (center), EN/FR + theme toggle + "Request a Consultation" CTA (right). Collapses to a hamburger drawer on small screens.
-- **Cards**: avoided. Sections are built from typography, hairline rules (`--brand-border`), generous spacing, and quiet hover states. Service "cards" become numbered editorial rows; industries are a typographic list with anchor jumps; testimonials are pull-quotes with no surrounding box.
-- **Imagery**: woven throughout but never decorative-only. Each photo earns its place:
-  - Hero: full-bleed photograph of Douala / CEMAC business district with a soft espresso gradient for headline legibility.
-  - About → founder + team grid uses real photographic portraits (empty slots stay quietly hidden).
-  - Each Service detail page opens with a single wide editorial image tied to its theme (audit, agro, risk, performance, heritage, human capital).
-  - Each Industry section anchors to a small inline image of its sector (banking towers, agro fields, etc.).
-  - Insights articles get one cover image each.
-  - Contact hero gets a calm exterior/cityscape shot.
-  - All generated with the image tool, optimized, lazy-loaded, with descriptive alt text.
-- **Process pipelines**: where the content naturally describes a sequence, render a horizontal pipeline graphic (numbered nodes connected by hairline rules + arrow glyphs). Used on:
-  - Home → "How we work" 4-step engagement pipeline (Discover → Diagnose → Deliver → Sustain).
-  - Each Service detail → small 3–5 step delivery pipeline above the deliverables list.
-  - About → milestones timeline rendered as a vertical pipeline.
-- **Logos**: three brand marks uploaded — used contextually so the mark always reads cleanly:
-  - `wHITEaGILE.png` (full circular mark with wordmark, light background) → header on light mode, footer on dark mode, About founder section.
-  - `BLACKaGILE.png` (symbol only, no circle) → small favicon / inline accents.
-  - `GREYaGILE.png` (muted symbol) → watermark uses (section dividers, faint backgrounds).
-  - Light/dark mode swaps automatically via a small `<BrandMark>` component reading the active theme.
-  - All three uploaded via `lovable-assets` so they stay off the repo.
+---
 
-## Theming (design tokens)
+## A. Critical issues (break the "world-class" perception)
 
-In `src/styles.css` using Tailwind v4 `@theme`:
-- `--brand-primary` `#50908C`, `--brand-primary-hover` `#3F7370`, `--brand-primary-tint` `#E4EDEC`, `--brand-ink` `#392F25`, `--brand-bg` `#F6F6F6`, `--brand-surface` `#FFFFFF`, `--brand-muted` `#8A8178`, `--brand-border` `#E4E2DD`.
-- `.dark` overrides: bg `#1F1A14`, surface `#2A241C`, ink cream, border `#3A3229`, primary lifted to `#6FB0AC`.
-- Mapped via `@theme inline` onto shadcn token names so primitives inherit automatically.
-- Typography: Space Grotesk (display) + Inter (body), loaded via `<link>` in the root route head.
+1. **No motion design language.** Pages render flat — no scroll reveals, no easing, no parallax, no cursor states, no hover micro-interactions on links/cards. Enterprise-premium sites (McKinsey, Brunswick, Accenture Song) all use restrained motion as a *signature*. Right now the site feels like static HTML from 2014.
+2. **Hero is generic.** A stock skyline + centered serif headline + two pill buttons. No proprietary visual asset (data viz, map, mark animation, kinetic type), no eyebrow rhythm, no scroll affordance. The hero must do 80% of the brand work — currently it does ~20%.
+3. **Pipeline component is the worst offender.** Asymmetric leaf-shaped teal cards on a diagonal track look like a 2018 Dribbble shot, not enterprise governance. Clashes with the editorial serif tone everywhere else. This single component undermines credibility on the home page *and* every service page.
+4. **Service-detail pages are monotone.** After your centralization pass, every section is now `eyebrow → serif h2 → centered paragraph → hairline`. Six identical rhythms stacked = visual fatigue. Needs at least one asymmetric / full-bleed / data-driven moment per page to breathe.
+5. **CTA band is heavy and dated.** Big solid teal block with mismatched corner radii (`1px 35px 1px 35px`) reads as a 2019 trend artifact. Premium brands use quieter CTAs (hairline, inverted card, or full-bleed image with anchored copy).
+6. **Team page is a 3-column portrait grid with a lonely 4th card.** Orphan row + uniform crops + no hierarchy between Founder and others. Enterprise team pages stagger (editorial), or use horizontal scroll, or rank by seniority with size.
 
-## Information architecture
+## B. High-impact polish gaps
 
-```
-/                          home
-/about                     about
-/services                  services overview
-/services/$serviceKey      services detail (audit | agro | risk | performance | heritage | humanCapital)
-/industries                industries (single page with anchor sections per sector)
-/insights                  insights
-/contact                   contact
-```
+7. **Typographic scale is too narrow.** Hero, section H2 and CTA H2 all land near the same `display-lg` size. No "hero moment" — the eye has nowhere to land first. Need a true `display-2xl` (clamp ~3.5 → 6rem) reserved for the homepage hero and one anchor moment per page.
+8. **Body copy is grey-on-cream at one weight everywhere.** No lead paragraphs, no pull quotes, no drop caps, no inline accent words. Editorial brands (Stripe, Linear, Pitch, Brunswick) vary weight/size within paragraphs to create rhythm.
+9. **Cards/sections lack depth language.** No shadow tokens, no layered surfaces, no subtle grain/noise, no inner hairlines. Everything is flat fills — reads as "Tailwind default" not "designed system."
+10. **No data visualization presence.** A CEMAC audit/risk firm with zero charts, maps with interactivity, KPI counters animating, or sector breakdowns is leaving authority on the table. The Africa map is static — should hover-highlight countries, surface stats, and animate on view.
+11. **ServiceWheel is the only "wow" element and it's underused.** Lives once on home, never reappears as a motif. Premium brands repeat 1-2 signature shapes across the site as a wordless logo system.
+12. **No imagery system.** Stock photos vary in tone/treatment between hero, service detail, team. Need a unified treatment (duotone teal+espresso, consistent grain, consistent crop ratios).
+13. **Footer is generic.** Two columns of links + address + 2 social icons. No newsletter, no "Offices" map dots, no annual report / credentials strip, no language/region selector at the bottom (only in header).
+14. **No social proof scaffolding.** Testimonials block says "Coming soon." This must either ship with placeholder logos / quotes from public CEMAC institutions, or be removed entirely until ready — empty proof reads as "no clients."
 
-Each route's `head()` sets locale-aware title + meta description from `meta.*`. Root layout renders Header, `<Outlet />`, Footer.
+## C. Detail-level craft issues
 
-## Content & i18n
+15. Header pill `bg-card border-b shadow` is fine on light, but on dark it picks up too much elevation — feels disconnected from the page. Should be `backdrop-blur` with translucent surface.
+16. Eyebrow color is brand-teal everywhere — overused. Reserve teal eyebrows for primary CTAs; use muted-foreground uppercase for section eyebrows so the teal *means* something when it appears.
+17. `Fraunces` is set with `opsz: 144` at all sizes — at body H3 sizes this makes letterforms look stretched. Need opsz tied to actual rendered size (smaller opsz at smaller px).
+18. Buttons: only one shape (rounded-full primary). No secondary/tertiary/text-arrow variant in the system. Enterprise sites need at least 3 button registers.
+19. Decorative grid lines on service hero are too faint and only appear in one spot — should be a recurring system motif (consistent 8-col overlay rule).
+20. No `scroll-margin-top` on anchored sections → smooth scroll lands under the fixed header.
+21. Service detail H1 is forced into two lines via `(Securing Information)` — the parenthetical kills the headline. Strip parentheticals or convert into a tagline below.
+22. No favicon system check / OG image / Twitter card per route — affects "world-class" share appearance, not just on-page.
+23. Map area on home: section feels narrow on desktop; map crops oddly; legend missing.
+24. Insights page is presumably a list of cards (not reviewed) — needs editorial layout, not card grid, to feel like a real research practice.
 
-- `react-i18next` + `i18next`, both JSON bundles imported at `src/i18n/index.ts`. Default `en`, session-only language state (no localStorage).
-- All copy comes from `t('…')`; no string literals in JSX.
+---
 
-## Component plan (`src/components/`)
+## Fix plan (phased, so you can approve in tranches)
 
-- `Header.tsx` — floating pill nav, restrained sizing, mobile drawer.
-- `Footer.tsx` — tagline, nav columns, **social icons** (LinkedIn, X/Twitter, Facebook, Instagram — Lucide icons, hairline-bordered round buttons, configurable URLs sourced from `footer.social.*` keys we'll add to both JSON files), copyright, privacy/terms.
-- `BrandMark.tsx` — picks the correct logo asset based on theme + variant.
-- `Hero.tsx` — full-bleed image, oversized headline, dual CTA.
-- `SectionHeading.tsx` — eyebrow + display heading.
-- `ServiceRow.tsx` — numbered editorial row.
-- `Pipeline.tsx` — reusable horizontal/vertical numbered pipeline graphic.
-- `IndustryAnchorList.tsx` + `IndustrySection.tsx`.
-- `StatBlock.tsx`, `Testimonial.tsx` (pull-quote, no box).
-- `FAQAccordion.tsx` (`<details>`-based, hairline dividers).
-- `ContactForm.tsx` — controlled, no native `<form>`, thank-you state.
-- `LanguageToggle.tsx`, `ThemeToggle.tsx`.
+### Phase 1 — Foundation (typography, motion, tokens) — ~1 pass
+- Add `display-2xl` and `display-3xl` utilities; reserve for hero anchors.
+- Add `lead` and `kicker` body utilities (larger lead paragraph, small-caps kicker).
+- Add shadow tokens: `--shadow-card`, `--shadow-elevated`, `--shadow-glow-primary`.
+- Add a noise/grain SVG overlay token usable on hero sections.
+- Install `motion` (Framer Motion) and create a `<Reveal>` primitive (fade+rise on intersection) used site-wide for section entrances.
+- Fix Fraunces `opsz` to scale with size (utilities per scale).
+- Add `scroll-margin-top` global rule for `[id]` targets.
+- Tighten Header on dark: translucent + backdrop-blur; thinner border.
+- Eyebrow rule: muted-uppercase default; teal only for "live"/CTA contexts.
 
-## Empty-state handling
+### Phase 2 — Hero & signature moments
+- Rebuild home hero: full-bleed cinematic image with duotone treatment, animated split serif headline (per-word reveal), kinetic eyebrow ticker (regulatory frameworks scrolling), scroll cue, and a small live "AGILE INDEX" stat panel anchored bottom-right (auditable institutions / frameworks / sectors — already in the stat strip, just promoted).
+- Rebuild service-detail hero: editorial half-image / half-type split, large numeric service index (01–06) as a typographic anchor, no parentheticals in H1.
 
-Empty arrays/strings in the JSON (testimonials, team, case studies, blank timeline years, missing phone/email, missing social URLs) render a muted "Coming soon" note or are hidden — never invented.
+### Phase 3 — Pipeline + CTA rebuild
+- Replace `Pipeline` leaf cards with a clean horizontal stepper: numeric markers, thin connecting rule, copy below, hover state reveals an extra line of detail. Same component reused on home and every service page.
+- Replace CTA band: full-bleed image with anchored serif copy and a thin underline link (no big rounded teal block), OR a quiet two-column hairline card on cream.
 
-## Out of scope
+### Phase 4 — Team page redesign
+- Editorial roster: large featured Founder row (asymmetric: portrait left, long-form bio + credentials right, signature image), then a 3-up secondary row with smaller portraits, then space for "Advisors" small list. No orphan 4th card.
+- Add hover state revealing role detail / LinkedIn.
 
-No CMS, auth, DB, payments, no live blog backend, no Lovable Cloud.
+### Phase 5 — Africa map + data presence
+- Make `AfricaMap` interactive: hover country → tooltip with stat; highlight CEMAC bloc on load with subtle pulse; legend + source line.
+- Add one animated KPI counter strip with `IntersectionObserver` count-up.
+
+### Phase 6 — Imagery + system motifs
+- Apply unified duotone treatment to all photography (teal shadows, cream highlights).
+- Re-export team portraits at one consistent crop + treatment.
+- Establish the AGILE "wheel" mark as a recurring background motif at 4% opacity on section dividers.
+
+### Phase 7 — Footer + chrome
+- Expand footer: 4 columns (Services / Company / Resources / Contact) + newsletter row + offices strip + credentials line ("Member of …").
+- Add per-route OG images derived from hero asset.
+
+### Phase 8 — Insights + Industries pass
+- Convert Insights from card grid to editorial layout (1 featured + 2 secondary + chronological list).
+- Industries: add per-sector mini-stats and a "what we deliver here" link per card.
+
+---
+
+## What I need from you
+
+Tell me which phases to ship and in what order. My recommendation is:
+
+**Tranche 1:** Phase 1 + Phase 3 (foundation + kill the Pipeline + fix CTA). This single tranche removes the biggest credibility drags.
+
+**Tranche 2:** Phase 2 + Phase 4 (hero moments + team).
+
+**Tranche 3:** Phase 5 + 6 + 7 + 8 (depth, polish, scale).
+
+Approve a tranche (or pick specific items) and I'll execute.
