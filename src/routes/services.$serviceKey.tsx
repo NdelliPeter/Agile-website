@@ -143,15 +143,21 @@ function ServiceDetailPage() {
 
       {/* ============ OVERVIEW ============ */}
       <section className="container-page py-20 md:py-28">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="eyebrow mb-4 text-primary">The mandate</div>
           <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
             Why institutions{" "}
             <span className="italic text-primary">choose us</span> for this.
           </h2>
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-[17px]">
-            {t(`services.items.${key}.detail`)}
-          </p>
+        </div>
+
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
+          <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
+          <div>
+            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
+              {t(`services.items.${key}.detail`)}
+            </p>
+          </div>
         </div>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
