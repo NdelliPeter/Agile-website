@@ -4,18 +4,6 @@ import { ArrowRight, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 import { useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
-const OFFICES = [
-  { city: "Douala", country: "Cameroon", role: "Head office" },
-  { city: "Yaoundé", country: "Cameroon", role: "Representative office" },
-  { city: "Libreville", country: "Gabon", role: "Affiliate" },
-];
-
-const CREDENTIALS = [
-  "Member · ONECCA Cameroon",
-  "CEMAC Chartered Accountants",
-  "FCCA · Fellow ACCA",
-  "OHADA Certified",
-];
 
 export function Footer() {
   const t = useT();
