@@ -142,7 +142,7 @@ function AboutPage() {
       </section>
 
       {/* About header */}
-      <section className="container-page pt-12 md:pt-16">
+      <section className="container-page pt-0">
         <SectionHeading
           eyebrow={t("common.nav.about")}
           title={t("about.header.title")}
