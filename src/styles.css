@@ -277,3 +277,28 @@
   }
 }
 
+/* Word-by-word reveal for split headlines */
+@utility word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em);
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-revealed="true"] .word-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* Marquee for kinetic ticker */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-x 38s linear infinite;
+}
+
+
