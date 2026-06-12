@@ -1,10 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowUpRight, ArrowDown, Check } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { Pipeline } from "@/components/Pipeline";
-import { SERVICE_IMAGES, SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
+import { SERVICE_IMAGES, SERVICE_GALLERY, SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
 
 export const Route = createFileRoute("/services/$serviceKey")({
   beforeLoad: ({ params }) => {
