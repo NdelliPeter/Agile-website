@@ -152,7 +152,7 @@ function ServiceDetailPage() {
         </div>
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8">
-          <div className="md:justify-self-end">
+          <div className="w-full max-w-sm md:justify-self-end">
             <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
           </div>
           <div>
@@ -278,7 +278,7 @@ function ServiceSlideshow({ images, alt }: { images: string[]; alt: string }) {
     return () => clearInterval(id);
   }, [images.length]);
   return (
-    <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
+    <div className="relative aspect-square w-full overflow-hidden rounded-sm bg-secondary shadow-[0_30px_80px_-30px_rgba(20,15,10,0.35)]">
       {images.map((src, i) => (
         <img
           key={src}
