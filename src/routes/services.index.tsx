@@ -57,8 +57,6 @@ function ServicesPage() {
               <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
                 {t("common.nav.services")}
-                <span className="h-px w-10 bg-white/30" />
-                <span className="text-white/45">06 disciplines</span>
               </div>
               <h1
                 className="display-2xl max-w-3xl text-white"
