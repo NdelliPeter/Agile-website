@@ -77,7 +77,7 @@ function ServiceDetailPage() {
   return (
     <AppLayout overlayHeader>
       {/* ============ HERO ============ */}
-      <section className="relative isolate min-h-[88vh] w-full overflow-hidden">
+      <section className="relative isolate min-h-[66vh] w-full overflow-hidden">
         <img
           src={SERVICE_IMAGES[key]}
           alt=""
