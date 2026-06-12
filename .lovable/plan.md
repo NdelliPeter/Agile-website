@@ -1,6 +1,6 @@
-Fix the collapsed image column in `src/routes/services.$serviceKey.tsx`:
+I’ll make one targeted layout change in `src/routes/services.$serviceKey.tsx`:
 
-1. Change the image-column wrapper from `<div className="md:justify-self-end">` to `<div className="w-full max-w-sm md:justify-self-end">` so the slideshow has a width to fill.
-2. Remove `max-w-sm` from `ServiceSlideshow`'s root container (keep `w-full`).
-
-No other changes.
+1. Keep the image/slideshow wrapper exactly where it is now.
+2. Move only the text column left toward the image on desktop by adding a small negative left margin/offset to the text wrapper.
+3. Leave mobile layout unchanged so the stacked image/text flow remains clean.
+4. Verify the picture is still visible and in the same position, with the text closer to it.
