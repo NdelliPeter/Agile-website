@@ -248,41 +248,32 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* ============ CTA ============ */}
-      <section className="container-page pb-24">
-        <div
-          className="relative overflow-hidden p-10 text-center md:p-16"
-          style={{
-            borderRadius: "1px 35px 1px 35px",
-            background:
-              "linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%)",
-          }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-8">
-            <div className="text-xs font-medium uppercase tracking-[0.22em] text-white/70">
-              Ready when you are
+      {/* ============ CTA — editorial, quiet ============ */}
+      <section className="border-t border-border">
+        <div className="container-page py-20 md:py-28">
+          <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-8">
+              <div className="eyebrow-accent mb-4">Ready when you are</div>
+              <p className="font-display text-3xl font-light leading-[1.1] tracking-tight text-foreground md:text-5xl">
+                {t("services.overview.ctaHeadline")}
+              </p>
             </div>
-            <p className="font-display text-3xl font-light leading-tight text-white md:text-5xl">
-              {t("services.overview.ctaHeadline")}
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex h-14 items-center gap-3 bg-white px-7 text-sm font-medium text-[var(--brand-primary-hover)] transition hover:bg-white/90"
-              style={{ borderRadius: "1px 35px 1px 35px" }}
-            >
-              {t("services.overview.ctaButton")} <ArrowUpRight size={18} />
-            </Link>
+            <div className="md:col-span-4 md:justify-self-end">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-3 border-b border-foreground/70 pb-2 text-sm font-medium uppercase tracking-[0.18em] text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                {t("services.overview.ctaButton")}
+                <ArrowUpRight
+                  size={18}
+                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
     </AppLayout>
   );
 }
