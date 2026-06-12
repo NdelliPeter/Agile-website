@@ -80,41 +80,41 @@ function ServicesPage() {
 
       <section className="container-page py-20 md:py-28">
         <div className="border-t border-border">
-          {SERVICE_KEYS.map((key, i) => (
-            <Link
-              key={key}
-              to="/services/$serviceKey"
-              params={{ serviceKey: key }}
-              className="group grid grid-cols-1 gap-6 border-b border-border py-10 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-10 md:py-14"
-            >
-              <div className="md:col-span-1 font-display text-xs font-medium tracking-[0.18em] text-primary md:pt-1">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <div className="md:col-span-6">
-                <h3 className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
-                  {t(`services.items.${key}.title`)}
-                </h3>
-                <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-                  {t(`services.items.${key}.short`)}
-                </p>
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
-                  {t("common.cta.readMore")}{" "}
-                  <ArrowUpRight
-                    size={14}
-                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          {SERVICE_KEYS.map((key, i) => {
+            const imageFirst = i % 2 === 1;
+            return (
+              <Link
+                key={key}
+                to="/services/$serviceKey"
+                params={{ serviceKey: key }}
+                className="group grid grid-cols-1 items-center gap-8 border-b border-border py-10 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-12 md:py-14"
+              >
+                <div className={`md:col-span-7 ${imageFirst ? "md:order-2" : ""}`}>
+                  <h3 className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+                    {t(`services.items.${key}.title`)}
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+                    {t(`services.items.${key}.short`)}
+                  </p>
+                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                    {t("common.cta.readMore")}{" "}
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </div>
+                </div>
+                <div className={`md:col-span-5 ${imageFirst ? "md:order-1" : ""}`}>
+                  <img
+                    src={SERVICE_IMAGES[key]}
+                    alt=""
+                    loading="lazy"
+                    className="aspect-[16/10] w-full object-cover"
                   />
                 </div>
-              </div>
-              <div className="md:col-span-5">
-                <img
-                  src={SERVICE_IMAGES[key]}
-                  alt=""
-                  loading="lazy"
-                  className="aspect-[16/10] w-full object-cover"
-                />
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
