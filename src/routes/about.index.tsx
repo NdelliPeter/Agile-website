@@ -141,6 +141,35 @@ function AboutPage() {
         `}</style>
       </section>
 
+      {/* About header */}
+      <section className="container-page pt-20 md:pt-28">
+        <SectionHeading
+          eyebrow={t("common.nav.about")}
+          title={t("about.header.title")}
+          intro={t("about.header.intro")}
+          size="xl"
+        />
+      </section>
+
+      {/* Story */}
+      <section className="container-page py-20 md:py-28">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <SectionHeading eyebrow="Our story" title={t("about.story.heading")} size="md" />
+          </div>
+          <div className="md:col-span-7">
+            <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
+              {t("about.story.body")}
+            </p>
+            <blockquote className="mt-10 border-l-2 border-primary pl-6 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+              “{t("about.quote")}”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+
+
 
       {/* Vision / Mission */}
       <section className="container-page py-20 md:py-28">
