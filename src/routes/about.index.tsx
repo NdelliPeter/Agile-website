@@ -63,33 +63,108 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Founder bio */}
-      <section className="border-t border-border">
-        <div className="container-page grid grid-cols-1 gap-12 py-20 md:grid-cols-12 md:gap-16 md:py-28">
-          <div className="md:col-span-4">
-            <img
-              src={founderImg}
-              alt="Claudine Simo Mamo"
-              width={1200}
-              height={1500}
-              loading="lazy"
-              className="aspect-[4/5] w-full rounded-sm object-cover"
-              style={{ borderRadius: "1px 35px 1px 35px" }}
-            />
+      {/* Brand signature — animated logo motif */}
+      <section className="relative overflow-hidden border-t border-border bg-foreground text-background">
+        {/* Aurora glow field */}
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <div className="absolute -left-32 top-1/2 h-[640px] w-[640px] -translate-y-1/2 rounded-full bg-primary/30 blur-[140px] animate-[pulse_8s_ease-in-out_infinite]" />
+          <div className="absolute -right-40 top-10 h-[520px] w-[520px] rounded-full bg-primary/20 blur-[120px] animate-[pulse_10s_ease-in-out_infinite]" />
+        </div>
+        {/* Subtle grid */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+
+        <div className="container-page relative grid grid-cols-1 items-center gap-16 py-24 md:grid-cols-12 md:py-32">
+          {/* Logo stage */}
+          <div className="md:col-span-5">
+            <div className="relative mx-auto aspect-square w-full max-w-[420px]">
+              {/* Rotating rings */}
+              <div
+                aria-hidden
+                className="absolute inset-0 rounded-full border border-primary/30"
+                style={{ animation: "spin 28s linear infinite" }}
+              />
+              <div
+                aria-hidden
+                className="absolute inset-6 rounded-full border border-primary/20"
+                style={{ animation: "spin 40s linear infinite reverse" }}
+              />
+              <div
+                aria-hidden
+                className="absolute inset-12 rounded-full border border-dashed border-primary/15"
+                style={{ animation: "spin 60s linear infinite" }}
+              />
+              {/* Halo */}
+              <div
+                aria-hidden
+                className="absolute inset-10 rounded-full bg-primary/20 blur-3xl"
+                style={{ animation: "pulse 4s ease-in-out infinite" }}
+              />
+              {/* Logo */}
+              <div className="absolute inset-0 grid place-items-center">
+                <img
+                  src="/__l5e/assets-v1/cfd0e33f-0bca-44c9-b8db-94ec8df24400/agile-logo-circle.png"
+                  alt="AGILE"
+                  className="h-[58%] w-[58%] object-contain drop-shadow-[0_0_40px_rgba(255,255,255,0.25)]"
+                  style={{ animation: "float 6s ease-in-out infinite" }}
+                />
+              </div>
+              {/* Orbit dot */}
+              <div
+                aria-hidden
+                className="absolute inset-0"
+                style={{ animation: "spin 16s linear infinite" }}
+              >
+                <span className="absolute left-1/2 top-0 -ml-1.5 h-3 w-3 rounded-full bg-primary shadow-[0_0_20px_rgba(94,234,212,0.8)]" />
+              </div>
+            </div>
           </div>
-          <div className="md:col-span-8 md:pt-2">
-            <div className="eyebrow mb-4 text-primary">Leadership</div>
-            <h2 className="font-display text-3xl font-medium leading-tight text-foreground md:text-4xl">
-              Claudine Simo Mamo
+
+          {/* Manifesto */}
+          <div className="md:col-span-7">
+            <div className="eyebrow mb-5 text-primary">The AGILE mark</div>
+            <h2 className="font-display text-3xl font-light leading-[1.1] tracking-tight md:text-5xl">
+              A circle for trust.
+              <br />
+              <span className="italic text-primary">A spark for progress.</span>
             </h2>
-            <p className="mt-2 text-base font-medium text-muted-foreground md:text-lg">
-              Founder &amp; Managing Partner
+            <div className="mt-8 h-px w-16 bg-primary" />
+            <p className="mt-8 max-w-xl text-[15.5px] leading-relaxed text-background/75 md:text-base">
+              Our mark draws from the African horizon — a continuous line that holds
+              discipline, governance and momentum in a single gesture. It is the
+              signature we carry into every audit, every boardroom, every milestone.
             </p>
-            <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
-              {t("about.founderBio.body")}
-            </p>
+
+            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-px overflow-hidden border border-background/10 bg-background/10">
+              {[
+                { v: "2026", l: "Founded" },
+                { v: "CEMAC", l: "Chartered" },
+                { v: "FCCA", l: "Fellowship" },
+              ].map((s) => (
+                <div key={s.l} className="bg-foreground p-5 text-center">
+                  <dt className="font-display text-xl font-medium text-background">{s.v}</dt>
+                  <dd className="mt-1 text-[10.5px] uppercase tracking-[0.18em] text-background/55">
+                    {s.l}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
+
+        <style>{`
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+        `}</style>
       </section>
 
 
