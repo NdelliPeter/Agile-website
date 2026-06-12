@@ -110,17 +110,12 @@ function ServiceDetailPage() {
             <ArrowLeft size={14} /> {t("common.nav.services")}
           </Link>
 
-          <div className="mb-6 flex items-center justify-center gap-4">
-            <span
-              className="font-display text-5xl font-light text-[var(--brand-primary)] md:text-6xl"
-              style={{ textShadow: "0 2px 24px rgba(0,0,0,0.5)" }}
-            >
-              {SERVICE_INDEX[key]}
-            </span>
-            <span className="h-px w-16 bg-white/40" />
+          <div className="mb-6 flex items-center justify-center gap-3">
+            <span className="h-px w-12 bg-white/40" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               AGILE Service
             </span>
+            <span className="h-px w-12 bg-white/40" />
           </div>
           <h1
             className="mx-auto max-w-4xl font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
