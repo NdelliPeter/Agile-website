@@ -153,8 +153,8 @@ function ServiceDetailPage() {
 
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
           <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
-          <div>
-            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
+          <div className="md:pl-4 lg:pl-8">
+            <p className="max-w-prose text-base leading-relaxed text-muted-foreground md:text-[17px]">
               {t(`services.items.${key}.detail`)}
             </p>
           </div>
