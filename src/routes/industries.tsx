@@ -104,6 +104,9 @@ function IndustriesPage() {
           q: string;
           a: string;
         };
+        const stats = (t(`ui.industries.stats.${k}`, {
+          returnObjects: true,
+        }) as Array<{ value: string; label: string }>) || STATS[k];
         return (
           <section
             id={k}
@@ -120,11 +123,11 @@ function IndustriesPage() {
                     src={IMG[k]}
                     alt=""
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-cover"
+                    className="aspect-[4/3] w-full object-cover duotone"
                   />
                 </div>
                 <div className="md:col-span-7">
-                  <div className="eyebrow mb-4">{String(i + 1).padStart(2, "0")} · Sector</div>
+                  <div className="eyebrow mb-4">{String(i + 1).padStart(2, "0")} · {t("ui.industries.sector")}</div>
                   <h2 className="display-md text-foreground">
                     {t(`industries.items.${k}.title`)}
                   </h2>
@@ -133,7 +136,7 @@ function IndustriesPage() {
                   </p>
 
                   <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
-                    {STATS[k].map((s) => (
+                    {stats.map((s) => (
                       <div key={s.label} className="bg-background px-3 py-4 text-center sm:px-4 sm:py-5">
                         <dt className="font-display text-lg font-medium text-primary sm:text-xl">
                           {s.value}
@@ -146,7 +149,7 @@ function IndustriesPage() {
                   </dl>
 
                   <h3 className="mt-10 text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-                    Key challenges
+                    {t("ui.industries.keyChallenges")}
                   </h3>
                   <ul className="mt-4 divide-y divide-border border-y border-border">
                     {challenges.map((c, j) => (
@@ -160,7 +163,7 @@ function IndustriesPage() {
                   </ul>
 
                   <p className="mt-8 rounded-2xl border border-border bg-background/60 p-5 text-sm leading-relaxed text-foreground">
-                    <span className="eyebrow mr-2 text-primary">Frameworks</span>
+                    <span className="eyebrow mr-2 text-primary">{t("ui.industries.frameworks")}</span>
                     {t(`industries.items.${k}.frameworks`)}
                   </p>
 
