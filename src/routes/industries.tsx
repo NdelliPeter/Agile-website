@@ -65,6 +65,7 @@ export const Route = createFileRoute("/industries")({
           "Sector expertise for banking, insurance, microfinance, asset management, management companies and agro industry under OHADA, COBAC, CIMA, COSUMAF.",
       },
       { property: "og:title", content: "Industries | AGILE" },
+      { property: "og:image", content: industriesHero },
     ],
   }),
   component: IndustriesPage,
@@ -73,7 +74,57 @@ export const Route = createFileRoute("/industries")({
 function IndustriesPage() {
   const t = useT();
   return (
-    <AppLayout>
+    <AppLayout overlayHeader>
+      {/* HERO */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={industriesHero}
+          alt=""
+          width={1920}
+          height={1024}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/55 to-black/80" />
+        <div
+          className="absolute inset-0 mix-blend-multiply opacity-50"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, rgba(42,34,27,0.2) 55%, rgba(11,9,7,0.65) 100%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+            backgroundSize: "120px 120px",
+          }}
+        />
+        <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
+          <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-8">
+              <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
+                {t("common.nav.industries")}
+              </div>
+              <h1
+                className="display-2xl max-w-3xl text-white"
+                style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
+              >
+                {t("industries.overview.headline")}
+              </h1>
+            </div>
+            <div className="md:col-span-4">
+              <p className="max-w-md text-base leading-relaxed text-white/85 md:text-[17px]">
+                {t("industries.overview.intro")}
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
+            <ArrowDown size={12} className="animate-bounce" /> Explore sectors
+          </div>
+        </div>
+      </section>
       <section className="container-page pt-20 md:pt-28">
         <SectionHeading
           eyebrow={t("common.nav.industries")}
