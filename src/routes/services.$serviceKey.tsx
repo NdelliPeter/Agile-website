@@ -25,15 +25,6 @@ function capitalize(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-const SERVICE_INDEX: Record<ServiceKey, string> = {
-  audit: "01",
-  agro: "02",
-  risk: "03",
-  performance: "04",
-  heritage: "05",
-  humanCapital: "06",
-};
-
 const SERVICE_PRINCIPLES: Record<ServiceKey, { k: string; v: string }[]> = {
   audit: [
     { k: "Independence", v: "No conflicts. No shortcuts." },
