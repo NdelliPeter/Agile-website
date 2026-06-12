@@ -125,14 +125,6 @@ function IndustriesPage() {
           </div>
         </div>
       </section>
-      <section className="container-page pt-20 md:pt-28">
-        <SectionHeading
-          eyebrow={t("common.nav.industries")}
-          title={t("industries.overview.headline")}
-          intro={t("industries.overview.intro")}
-          size="xl"
-        />
-      </section>
 
       {/* anchor nav */}
       <section className="sticky top-[78px] z-30 mt-16 border-y border-border bg-background/90 backdrop-blur">
