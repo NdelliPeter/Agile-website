@@ -496,8 +496,90 @@
     "copyright": "© 2026 AGILE — Audit, Advisory, Governance & Leadership Excellence. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms of Service",
-    "termsNote": "To be drafted."
+    "termsNote": "To be drafted.",
+    "newsletter": {
+      "eyebrow": "The AGILE Brief",
+      "headline": "Regulatory shifts, audit insights and governance briefings — once a month, never noise.",
+      "placeholder": "you@institution.com",
+      "subscribe": "Subscribe",
+      "subscribed": "Subscribed",
+      "privacy": "No spam. Unsubscribe in one click."
+    },
+    "columns": {
+      "company": "Company",
+      "resources": "Resources"
+    },
+    "links": {
+      "ourTeam": "Our Team",
+      "annualReport": "Annual Report",
+      "regulatoryWatch": "Regulatory Watch",
+      "pressMedia": "Press & Media"
+    },
+    "offices": {
+      "heading": "Offices",
+      "items": [
+        { "city": "Douala", "country": "Cameroon", "role": "Head office" },
+        { "city": "Yaoundé", "country": "Cameroon", "role": "Representative office" },
+        { "city": "Libreville", "country": "Gabon", "role": "Affiliate" }
+      ]
+    },
+    "credentials": [
+      "Member · ONECCA Cameroon",
+      "CEMAC Chartered Accountants",
+      "FCCA · Fellow ACCA",
+      "OHADA Certified"
+    ]
   },
+
+  "ui": {
+    "map": {
+      "cemacMember": "CEMAC member",
+      "africa": "Africa"
+    },
+    "insights": {
+      "featured": "Featured",
+      "archive": "Archive"
+    },
+    "industries": {
+      "sector": "Sector",
+      "keyChallenges": "Key challenges",
+      "frameworks": "Frameworks",
+      "stats": {
+        "banking": [
+          { "value": "14+", "label": "COBAC engagements" },
+          { "value": "8", "label": "CEMAC banking clients" },
+          { "value": "100%", "label": "On-time reg. filings" }
+        ],
+        "insurance": [
+          { "value": "CIMA", "label": "Code-aligned audits" },
+          { "value": "6", "label": "Insurers served" },
+          { "value": "12+", "label": "Solvency reviews" }
+        ],
+        "microfinance": [
+          { "value": "20+", "label": "MFI mandates" },
+          { "value": "3", "label": "CEMAC countries" },
+          { "value": "PARMEC", "label": "Framework expertise" }
+        ],
+        "assetManagement": [
+          { "value": "COSUMAF", "label": "Registered with" },
+          { "value": "4", "label": "Asset managers" },
+          { "value": "100M+ XAF", "label": "AUM advised" }
+        ],
+        "managementCompanies": [
+          { "value": "OHADA", "label": "Governance experts" },
+          { "value": "10+", "label": "Holding structures" },
+          { "value": "5", "label": "Board advisory seats" }
+        ],
+        "agroIndustry": [
+          { "value": "9", "label": "Agro-industry clients" },
+          { "value": "IFRS", "label": "Reporting standard" },
+          { "value": "3", "label": "Value-chain audits" }
+        ]
+      }
+    }
+  },
+
+
 
   "meta": {
     "home": { "title": "AGILE | Audit & Advisory in CEMAC and beyond", "description": "Statutory audits, risk management, compliance and advisory for banks, insurers, MFIs and agro industry across CEMAC and beyond." },

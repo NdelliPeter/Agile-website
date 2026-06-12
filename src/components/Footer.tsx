@@ -4,18 +4,6 @@ import { ArrowRight, Facebook, Linkedin, Mail, MapPin } from "lucide-react";
 import { useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
-const OFFICES = [
-  { city: "Douala", country: "Cameroon", role: "Head office" },
-  { city: "Yaoundé", country: "Cameroon", role: "Representative office" },
-  { city: "Libreville", country: "Gabon", role: "Affiliate" },
-];
-
-const CREDENTIALS = [
-  "Member · ONECCA Cameroon",
-  "CEMAC Chartered Accountants",
-  "FCCA · Fellow ACCA",
-  "OHADA Certified",
-];
 
 export function Footer() {
   const t = useT();
@@ -23,6 +11,13 @@ export function Footer() {
   const facebook = t("contact.social.facebook");
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+
+  const offices = t("footer.offices.items", { returnObjects: true }) as Array<{
+    city: string;
+    country: string;
+    role: string;
+  }>;
+  const credentials = t("footer.credentials", { returnObjects: true }) as string[];
 
   const socials = [
     { url: linkedin, Icon: Linkedin, label: "LinkedIn" },
@@ -36,10 +31,10 @@ export function Footer() {
         <div className="container-page grid grid-cols-1 items-center gap-8 py-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-7">
             <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-foreground/70 dark:text-primary">
-              The AGILE Brief
+              {t("footer.newsletter.eyebrow")}
             </div>
             <h3 className="mt-3 font-display text-2xl font-light leading-tight text-primary-foreground dark:text-foreground md:text-3xl">
-              Regulatory shifts, audit insights and governance briefings — once a month, never noise.
+              {t("footer.newsletter.headline")}
             </h3>
           </div>
           <form
@@ -56,18 +51,18 @@ export function Footer() {
                 disabled={subscribed}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@institution.com"
+                placeholder={t("footer.newsletter.placeholder")}
                 className="flex-1 bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none dark:text-foreground dark:placeholder:text-muted-foreground"
               />
               <button
                 type="submit"
                 className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:text-white dark:text-primary"
               >
-                {subscribed ? "Subscribed" : "Subscribe"} <ArrowRight size={14} />
+                {subscribed ? t("footer.newsletter.subscribed") : t("footer.newsletter.subscribe")} <ArrowRight size={14} />
               </button>
             </div>
             <p className="mt-2 text-[11px] text-primary-foreground/60 dark:text-muted-foreground">
-              No spam. Unsubscribe in one click.
+              {t("footer.newsletter.privacy")}
             </p>
           </form>
         </div>
@@ -140,7 +135,7 @@ export function Footer() {
           {/* Company */}
           <div className="md:col-span-2">
             <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary-foreground dark:text-foreground">
-              Company
+              {t("footer.columns.company")}
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
@@ -150,7 +145,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/about/team" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
-                  Our Team
+                  {t("footer.links.ourTeam")}
                 </Link>
               </li>
               <li>
@@ -169,7 +164,7 @@ export function Footer() {
           {/* Resources */}
           <div className="md:col-span-3">
             <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary-foreground dark:text-foreground">
-              Resources
+              {t("footer.columns.resources")}
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
@@ -179,17 +174,17 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
-                  Annual Report
+                  {t("footer.links.annualReport")}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
-                  Regulatory Watch
+                  {t("footer.links.regulatoryWatch")}
                 </a>
               </li>
               <li>
                 <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
-                  Press &amp; Media
+                  {t("footer.links.pressMedia")}
                 </a>
               </li>
             </ul>
@@ -199,10 +194,10 @@ export function Footer() {
         {/* Offices strip */}
         <div className="mt-14 border-t border-primary-foreground/20 pt-8 dark:border-border">
           <div className="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-foreground/60 dark:text-muted-foreground">
-            Offices
+            {t("footer.offices.heading")}
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {OFFICES.map((o) => (
+            {offices.map((o) => (
               <div key={o.city} className="flex items-start gap-3">
                 <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-primary-foreground/80 dark:bg-primary" />
                 <div>
@@ -223,7 +218,7 @@ export function Footer() {
 
         {/* Credentials strip */}
         <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-primary-foreground/20 pt-6 text-[10.5px] font-medium uppercase tracking-[0.2em] text-primary-foreground/65 dark:border-border dark:text-muted-foreground">
-          {CREDENTIALS.map((c, i) => (
+          {credentials.map((c, i) => (
             <span key={c} className="inline-flex items-center gap-3">
               {i > 0 && <span className="h-1 w-1 rounded-full bg-primary-foreground/40 dark:bg-border" />}
               {c}
