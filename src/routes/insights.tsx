@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, ArrowDown, Mail } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
+import insightsHero from "@/assets/insights-hero.jpg";
 import insight1 from "@/assets/insight-1.jpg";
 import insight2 from "@/assets/insight-2.jpg";
 import insight3 from "@/assets/insight-3.jpg";
