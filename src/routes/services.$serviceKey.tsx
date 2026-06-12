@@ -134,16 +134,13 @@ function ServiceDetailPage() {
             className="mx-auto max-w-4xl font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
           >
-            {t(`services.items.${key}.title`)}
+            {t(`services.items.${key}.title`).replace(/\s*\(.*?\)\s*/g, "")}
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
             {t(`services.items.${key}.short`)}
           </p>
 
-          <div
-            className="mt-10 inline-flex items-center gap-3 border border-white/15 bg-white/5 px-5 py-3 backdrop-blur-md"
-            style={{ borderRadius: "1px 35px 1px 35px" }}
-          >
+          <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 backdrop-blur-md">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               Advisory · Assurance · Coaching
@@ -155,6 +152,7 @@ function ServiceDetailPage() {
           </div>
         </div>
       </section>
+
 
       {/* ============ OVERVIEW ============ */}
       <section className="container-page py-20 md:py-28">
