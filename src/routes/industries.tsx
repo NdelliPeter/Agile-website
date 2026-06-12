@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowDown } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { INDUSTRY_KEYS, type IndustryKey } from "@/lib/services-data";
+import industriesHero from "@/assets/industries-hero.jpg";
 import bankingImg from "@/assets/industry-banking.jpg";
 import insuranceImg from "@/assets/industry-insurance.jpg";
 import microfinanceImg from "@/assets/industry-microfinance.jpg";
