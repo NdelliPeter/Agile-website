@@ -6,6 +6,7 @@ import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
+import { ServiceOrbit } from "@/components/ServiceOrbit";
 import { AfricaMap } from "@/components/AfricaMap";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
@@ -123,6 +124,13 @@ function HomePage() {
               </Link>
             </div>
           </Reveal>
+        </div>
+
+        {/* Animated service orbit — top right, below header */}
+        <div className="pointer-events-none absolute right-6 top-[120px] z-10 hidden lg:block xl:right-12">
+          <div className="pointer-events-auto">
+            <ServiceOrbit size={380} />
+          </div>
         </div>
 
         {/* Scroll cue */}
