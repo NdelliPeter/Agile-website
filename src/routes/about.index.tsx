@@ -37,34 +37,8 @@ function AboutPage() {
 
   return (
     <AppLayout>
-      <section className="container-page pt-20 md:pt-28">
-        <SectionHeading
-          eyebrow={t("common.nav.about")}
-          title={t("about.header.title")}
-          intro={t("about.header.intro")}
-          size="xl"
-        />
-      </section>
-
-      {/* Story */}
-      <section className="container-page py-20 md:py-28">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-5">
-            <SectionHeading eyebrow="Our story" title={t("about.story.heading")} size="md" />
-          </div>
-          <div className="md:col-span-7">
-            <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
-              {t("about.story.body")}
-            </p>
-            <blockquote className="mt-10 border-l-2 border-primary pl-6 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
-              “{t("about.quote")}”
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* Brand signature — animated logo motif */}
-      <section className="relative overflow-hidden border-t border-border bg-foreground text-background">
+      {/* Brand signature — animated logo motif (first on page) */}
+      <section className="relative overflow-hidden bg-foreground text-background">
         {/* Aurora glow field */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
           <div className="absolute -left-32 top-1/2 h-[640px] w-[640px] -translate-y-1/2 rounded-full bg-primary/30 blur-[140px] animate-[pulse_8s_ease-in-out_infinite]" />
@@ -166,6 +140,35 @@ function AboutPage() {
           }
         `}</style>
       </section>
+
+      {/* About header */}
+      <section className="container-page pt-20 md:pt-28">
+        <SectionHeading
+          eyebrow={t("common.nav.about")}
+          title={t("about.header.title")}
+          intro={t("about.header.intro")}
+          size="xl"
+        />
+      </section>
+
+      {/* Story */}
+      <section className="container-page py-20 md:py-28">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <SectionHeading eyebrow="Our story" title={t("about.story.heading")} size="md" />
+          </div>
+          <div className="md:col-span-7">
+            <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
+              {t("about.story.body")}
+            </p>
+            <blockquote className="mt-10 border-l-2 border-primary pl-6 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+              “{t("about.quote")}”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+
 
 
       {/* Vision / Mission */}
