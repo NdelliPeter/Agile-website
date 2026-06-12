@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowDown } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
@@ -7,7 +7,11 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
 import { AfricaMap } from "@/components/AfricaMap";
+import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-douala.jpg";
+
+const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
