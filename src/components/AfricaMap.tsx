@@ -1,5 +1,7 @@
 import { useState } from "react";
 import mapData from "@/lib/africa-map.json";
+import { useT } from "./AppProviders";
+
 
 type PathItem = { iso: string; name: string; d: string; cemac: boolean };
 type LabelItem = { iso: string; label: string; x: number; y: number };
@@ -22,6 +24,7 @@ const CEMAC_FACTS: Record<string, { gdpRank: string; sector: string }> = {
 };
 
 export function AfricaMap({ className = "" }: { className?: string }) {
+  const t = useT();
   const { width, height, paths, labels } = data;
   const [hover, setHover] = useState<PathItem | null>(null);
 
@@ -130,13 +133,20 @@ export function AfricaMap({ className = "" }: { className?: string }) {
       <div className="pointer-events-none absolute left-3 top-3 flex items-center gap-3 rounded-full border border-border bg-background/90 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] backdrop-blur">
         <span className="inline-flex items-center gap-1.5 text-foreground">
           <span className="inline-block h-2 w-2 rounded-sm bg-primary" />
-          CEMAC
+          {t("home.africaFocus.map.legendHighlight")}
         </span>
         <span className="inline-flex items-center gap-1.5 text-muted-foreground">
           <span className="inline-block h-2 w-2 rounded-sm bg-[color-mix(in_oklab,var(--foreground)_18%,transparent)]" />
-          Africa
+          {t("ui.map.africa")}
         </span>
       </div>
+
+      <div className="pointer-events-none absolute bottom-3 right-3 min-w-[180px] max-w-[240px] rounded-md border border-border bg-background/95 px-4 py-3 text-left shadow-lg backdrop-blur transition-opacity duration-200"
+        style={{ opacity: hover ? 1 : 0 }}
+      >
+        <div className="text-[10px] font-medium uppercase tracking-[0.22em] text-primary">
+          {hover?.cemac ? t("ui.map.cemacMember") : t("ui.map.africa")}
+        </div>
 
       <div className="pointer-events-none absolute bottom-3 right-3 min-w-[180px] max-w-[240px] rounded-md border border-border bg-background/95 px-4 py-3 text-left shadow-lg backdrop-blur transition-opacity duration-200"
         style={{ opacity: hover ? 1 : 0 }}
