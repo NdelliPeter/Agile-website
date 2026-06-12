@@ -84,13 +84,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Statutory audits, risk management, compliance and advisory for banks, insurers, MFIs and agro industry across CEMAC and beyond.",
       },
-      { property: "og:title", content: "AGILE | Audit & Advisory" },
+      { property: "og:title", content: "AGILE | Audit & Advisory in CEMAC and beyond" },
       {
         property: "og:description",
         content: "Securing value, empowering growth, building trust in CEMAC and beyond.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AGILE | Audit & Advisory in CEMAC and beyond" },
+      { name: "description", content: "A sophisticated, mature, and appealing web application with a subtle, minimalist design and excellent mobile responsiveness." },
+      { property: "og:description", content: "A sophisticated, mature, and appealing web application with a subtle, minimalist design and excellent mobile responsiveness." },
+      { name: "twitter:description", content: "A sophisticated, mature, and appealing web application with a subtle, minimalist design and excellent mobile responsiveness." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b095652b-9882-41b0-8cd0-5c801b0c14fe/id-preview-3d663451--e2df79c8-5077-495d-9643-8f6373f459ce.lovable.app-1781273023616.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b095652b-9882-41b0-8cd0-5c801b0c14fe/id-preview-3d663451--e2df79c8-5077-495d-9643-8f6373f459ce.lovable.app-1781273023616.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
