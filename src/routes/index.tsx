@@ -8,7 +8,9 @@ import { Pipeline } from "@/components/Pipeline";
 import { ServiceWheel } from "@/components/ServiceWheel";
 import { AfricaMap } from "@/components/AfricaMap";
 import { Reveal } from "@/components/Reveal";
+import { CountUp } from "@/components/CountUp";
 import heroImg from "@/assets/hero-douala.jpg";
+
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
 const STAT_SHORT = ["Years experience", "Frameworks", "Sectors served"];
@@ -147,9 +149,11 @@ function HomePage() {
                         (i > 0 ? "md:border-l md:border-white/15 md:pl-8" : "")
                       }
                     >
-                      <span className="font-display text-2xl font-medium tracking-tight text-white md:text-3xl">
-                        {s.value}
-                      </span>
+                      <CountUp
+                        value={s.value}
+                        className="font-display text-2xl font-medium tracking-tight text-white md:text-3xl"
+                      />
+
                       <span className="text-[10.5px] uppercase tracking-[0.16em] text-white/70 md:text-[11px]">
                         {STAT_SHORT[i] ?? s.label}
                       </span>
@@ -314,8 +318,9 @@ function HomePage() {
             {(t("home.africaFocus.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
               <div key={i}>
                 <dt className="font-display text-3xl font-medium tracking-tight text-foreground md:text-4xl">
-                  {s.value}
+                  <CountUp value={s.value} />
                 </dt>
+
                 <dd className="mt-3 text-[13px] leading-snug text-muted-foreground md:text-sm">
                   {s.label}
                 </dd>
