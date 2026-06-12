@@ -40,9 +40,8 @@ function HomePage() {
   return (
     <AppLayout overlayHeader>
       {/* HERO — full bleed, header floats over it */}
-      <section className="relative flex min-h-[88vh] items-end overflow-hidden">
-      {/* HERO — full bleed, header floats over it */}
       <section className="relative flex min-h-[92vh] items-end overflow-hidden">
+
         <img
           src={heroImg}
           alt=""
