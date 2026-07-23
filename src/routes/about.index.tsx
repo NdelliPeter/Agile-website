@@ -34,7 +34,6 @@ function AboutPage() {
     event: string;
   }>;
 
-
   return (
     <AppLayout>
       {/* Brand signature — animated logo motif (first on page) */}
@@ -111,9 +110,7 @@ function AboutPage() {
             </h2>
             <div className="mt-8 h-px w-16 bg-primary" />
             <p className="mt-8 max-w-xl text-[15.5px] leading-relaxed text-background/75 md:text-base">
-              Our mark draws from the African horizon — a continuous line that holds
-              discipline, governance and momentum in a single gesture. It is the
-              signature we carry into every audit, every boardroom, every milestone.
+              Our mark draws from the African horizon — a continuous line that holds discipline, governance and momentum in a single gesture. It is the signature we carry into every audit, every boardroom, every milestone.
             </p>
 
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-px overflow-hidden border border-background/10 bg-background/10">
@@ -142,7 +139,7 @@ function AboutPage() {
       </section>
 
       {/* About header */}
-      <section className="container-page pt-0">
+      <section className="container-page pt-5">
         <SectionHeading
           eyebrow={t("common.nav.about")}
           title={t("about.header.title")}
@@ -167,9 +164,6 @@ function AboutPage() {
           </div>
         </div>
       </section>
-
-
-
 
       {/* Vision / Mission */}
       <section className="container-page py-20 md:py-28">

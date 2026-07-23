@@ -174,11 +174,8 @@ function HomePage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
-
-
 
       {/* SERVICES — interactive spinning wheel */}
       <section className="container-page py-20 md:py-28">

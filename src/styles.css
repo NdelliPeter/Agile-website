@@ -52,7 +52,7 @@
   --color-brand-muted: var(--brand-muted);
   --color-brand-border: var(--brand-border);
 
-  --font-display: "Fraunces", "Newsreader", ui-serif, Georgia, serif;
+  --font-display: "Lato", sans-serif;
   --font-sans: "Inter", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -144,15 +144,30 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.02em;
   }
-  h1 { font-variation-settings: "opsz" 144, "SOFT" 50; }
-  h2 { font-variation-settings: "opsz" 96, "SOFT" 50; }
-  h3 { font-variation-settings: "opsz" 48, "SOFT" 50; }
-  h4 { font-variation-settings: "opsz" 24, "SOFT" 50; }
+
+  h1 {
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+
+  h2 {
+    font-variation-settings: "opsz" 96, "SOFT" 50;
+  }
+
+  h3 {
+    font-variation-settings: "opsz" 48, "SOFT" 50;
+  }
+
+  h4 {
+    font-variation-settings: "opsz" 24, "SOFT" 50;
+  }
 
   /* Anchored scroll lands below the fixed header */
   :where(section, h1, h2, h3, h4, [id]) {
@@ -171,6 +186,7 @@
   margin-inline: auto;
   padding-inline: 1.25rem;
   max-width: 80rem;
+
   @media (min-width: 768px) {
     padding-inline: 2rem;
   }
@@ -257,7 +273,8 @@
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-              transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+
   &[data-revealed="true"] {
     opacity: 1;
     transform: none;
@@ -266,6 +283,7 @@
 
 @utility grain {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -283,8 +301,9 @@
   opacity: 0;
   transform: translateY(0.6em);
   transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
-              transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 [data-revealed="true"] .word-reveal {
   opacity: 1;
   transform: none;
@@ -292,9 +311,15 @@
 
 /* Marquee for kinetic ticker */
 @keyframes marquee-x {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
+
 @utility marquee-track {
   display: inline-flex;
   white-space: nowrap;
@@ -311,25 +336,23 @@
   isolation: isolate;
   filter: saturate(0.7) contrast(1.02);
   background-color: var(--brand-ink);
+
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(
-      135deg,
-      color-mix(in oklab, var(--primary) 38%, transparent) 0%,
-      color-mix(in oklab, var(--brand-ink) 32%, transparent) 100%
-    );
+    background: linear-gradient(135deg,
+        color-mix(in oklab, var(--primary) 38%, transparent) 0%,
+        color-mix(in oklab, var(--brand-ink) 32%, transparent) 100%);
     mix-blend-mode: multiply;
   }
 }
+
 /* When .duotone is applied directly to an <img>, the ::after pseudo
    won't render — replicate via box-shadow inset + filter. */
 img.duotone {
-  filter: saturate(0.55) contrast(1.05)
-    sepia(0.12)
-    hue-rotate(135deg);
+  filter: saturate(0.55) contrast(1.05) sepia(0.12) hue-rotate(135deg);
 }
 
 /* AGILE wheel as a quiet background motif (~4% opacity).
@@ -337,6 +360,7 @@ img.duotone {
 @utility wheel-bg {
   position: relative;
   isolation: isolate;
+
   &::before {
     content: "";
     position: absolute;
@@ -355,13 +379,31 @@ img.duotone {
 
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
