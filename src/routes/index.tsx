@@ -10,7 +10,7 @@ import { ServiceOrbit } from "@/components/ServiceOrbit";
 import { AfricaMap } from "@/components/AfricaMap";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
-import heroImg from "@/assets/hero-douala.jpg";
+import heroImg from "@/assets/IMG_0797.jpg";
 
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];

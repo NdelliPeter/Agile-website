@@ -1,6 +1,4 @@
-import logoLight from "@/assets/agile-logo-circle.png.asset.json";
-import markDark from "@/assets/agile-mark-dark.png.asset.json";
-import markGrey from "@/assets/agile-mark.png.asset.json";
+import logo from "@/assets/logo.png";
 import { useApp } from "./AppProviders";
 
 type Variant = "full" | "mark" | "muted";
@@ -17,16 +15,8 @@ export function BrandMark({
   forceLight?: boolean;
 }) {
   const { theme } = useApp();
-  let src = logoLight.url;
   const alt = "AGILE";
-
-  if (variant === "mark") {
-    src = theme === "dark" || forceLight ? markGrey.url : markDark.url;
-  } else if (variant === "muted") {
-    src = markGrey.url;
-  } else {
-    src = logoLight.url;
-  }
+  const src = logo;
 
   return (
     <img
