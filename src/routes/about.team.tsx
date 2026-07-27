@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppLayout } from "@/components/AppLayout";
 import { SectionHeading } from "@/components/SectionHeading";
-import founderImg from "@/assets/founder.jpg";
-import team1 from "@/assets/team-1.jpg";
+import founderImg from "@/assets/Mme Simo.png";
+import team1 from "@/assets/Alex-Michel Ngningha.png";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 
@@ -36,27 +36,27 @@ const TEAM: Member[] = [
   {
     name: "Claudine Simo Mamo",
     role: "Founder & Managing Partner",
-    bio: "CEMAC certified Chartered Accountant and Fellow of ACCA with 37+ years across audit, accounting and advisory in Central Africa.",
+    bio: "Mrs Simo is a CEMAC-certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting, advisory across Central Africa and training. Today, she operates as an Independent Chartered Accountant and Founder and Managing Partner of AGILE (Audit, Advisory, Governance & Leadership Excellence), where she supports financial institutions and growing organisations in strengthening their systems, improving governance, and building sustainable performance. Her career reflects both discipline and progression. At this stage of her career, her focus goes beyond numbers. She is deeply committed to developing people, mentoring young professionals, building a culture of responsibility, and contributing to organisations where individuals are empowered to grow into leadership.",
     img: founderImg,
   },
   {
-    name: "Emmanuel Nkomo",
-    role: "Partner, Audit & Assurance",
-    bio: "Twenty years auditing banks, insurers and asset managers across the CEMAC region; specialist in OHADA and IFRS engagements.",
+    name: "Alex-Michel Ngningha",
+    role: "Senior Manager at EY",
+    bio: "Actuarial Manager with strong analytical skills, result-driven and an acute ability to connect with clients",
     img: team1,
   },
   {
-    name: "Aïcha Toure",
-    role: "Director, Governance & Risk",
-    bio: "Governance and risk advisor to financial institutions and growth-stage organisations, with deep COBAC and CIMA expertise.",
+    name: "Ange Alima Afana",
+    role: "Group Head – Risk Analysis & Reporting, Baobab Group (Microfinance / Fintech) | Dakar, Senegal",
+    bio: "Strategic leader with over 14 years experience at the crossroads of financial risk, organisational transformation, and corporate governance within international groups (Wells Fargo, BNP Paribas, ICBC Standard Bank, Louis Dreyfus, Baobab Group). With a proven ability to design and drive ambitious risk strategies, to orchestrate complex operational transformations, and to generate measurable value in demanding multicultural and regulatory environments. Her background also spans capital markets, commodities trading, microfinance, and fintech.",
     img: team2,
   },
-  {
-    name: "Joseph Mbarga",
-    role: "Senior Advisor, Performance",
-    bio: "Three decades guiding agro-industry, utilities and microfinance leadership teams toward sustainable, measurable performance.",
-    img: team3,
-  },
+  // {
+  //   name: "Joseph Mbarga",
+  //   role: "Senior Advisor, Performance",
+  //   bio: "Three decades guiding agro-industry, utilities and microfinance leadership teams toward sustainable, measurable performance.",
+  //   img: team3,
+  // },
 ];
 
 function TeamPage() {
