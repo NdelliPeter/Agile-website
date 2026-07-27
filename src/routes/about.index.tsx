@@ -5,6 +5,7 @@ import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { VerticalPipeline } from "@/components/Pipeline";
 import founderImg from "@/assets/founder.jpg";
+import logoImg from "@/assets/logo.png";
 
 
 export const Route = createFileRoute("/about/")({
@@ -18,6 +19,7 @@ export const Route = createFileRoute("/about/")({
       },
       { property: "og:title", content: "About AGILE" },
       { property: "og:image", content: founderImg },
+      { property: "og:image", content: logoImg },
     ],
   }),
   component: AboutPage,
@@ -83,7 +85,7 @@ function AboutPage() {
               {/* Logo */}
               <div className="absolute inset-0 grid place-items-center">
                 <img
-                  src="/__l5e/assets-v1/cfd0e33f-0bca-44c9-b8db-94ec8df24400/agile-logo-circle.png"
+                  src={logoImg}
                   alt="AGILE"
                   className="h-[58%] w-[58%] object-contain drop-shadow-[0_0_40px_rgba(255,255,255,0.25)]"
                   style={{ animation: "float 6s ease-in-out infinite" }}

@@ -12,7 +12,10 @@
       "insights": "Analyses",
       "contact": "Contact"
     },
-    "lang": { "en": "EN", "fr": "FR" },
+    "lang": {
+      "en": "EN",
+      "fr": "FR"
+    },
     "cta": {
       "consultation": "Demander une consultation",
       "appointment": "Prendre rendez-vous",
@@ -20,7 +23,6 @@
       "readMore": "En savoir plus"
     }
   },
-
   "home": {
     "hero": {
       "headline": "Bâtir la confiance, sécuriser la valeur, favoriser la croissance dans la CEMAC et au-delà.",
@@ -72,10 +74,22 @@
       "title": "Un parcours clair, de la première conversation à un impact durable.",
       "intro": "Chaque mission suit une séquence disciplinée pour des résultats prévisibles, traçables et durables.",
       "steps": [
-        { "label": "Découvrir", "detail": "Écouter, cadrer et cartographier votre contexte réglementaire et opérationnel." },
-        { "label": "Diagnostiquer", "detail": "Évaluer systèmes, risques et contrôles au regard de OHADA, COBAC, CIMA et COSUMAF." },
-        { "label": "Livrer", "detail": "Réaliser les missions d'audit, de conseil ou de formation avec rigueur et clarté." },
-        { "label": "Pérenniser", "detail": "Suivre les résultats, renforcer les capacités internes et maintenir une performance conforme." }
+        {
+          "label": "Découvrir",
+          "detail": "Écouter, cadrer et cartographier votre contexte réglementaire et opérationnel."
+        },
+        {
+          "label": "Diagnostiquer",
+          "detail": "Évaluer systèmes, risques et contrôles au regard de OHADA, COBAC, CIMA et COSUMAF."
+        },
+        {
+          "label": "Livrer",
+          "detail": "Réaliser les missions d'audit, de conseil ou de formation avec rigueur et clarté."
+        },
+        {
+          "label": "Pérenniser",
+          "detail": "Suivre les résultats, renforcer les capacités internes et maintenir une performance conforme."
+        }
       ]
     },
     "whyChooseUs": {
@@ -91,9 +105,18 @@
       }
     },
     "stats": [
-      { "value": "37+", "label": "Années d'expérience de la fondatrice et des associés" },
-      { "value": "5", "label": "Cadres réglementaires couverts : OHADA, COBAC, CIMA, COSUMAF, GABAC" },
-      { "value": "6", "label": "Secteurs servis, de la banque à l'agro-industrie et aux projets sur financement de bailleurs" }
+      {
+        "value": "37+",
+        "label": "Années d'expérience de la fondatrice et des associés"
+      },
+      {
+        "value": "5",
+        "label": "Cadres réglementaires couverts : OHADA, COBAC, CIMA, COSUMAF, GABAC"
+      },
+      {
+        "value": "6",
+        "label": "Secteurs servis, de la banque à l'agro-industrie et aux projets sur financement de bailleurs"
+      }
     ],
     "testimonials": {
       "heading": "Ce que disent les clients",
@@ -101,9 +124,18 @@
       "empty": "Bientôt disponible — les témoignages clients sont en cours de préparation à partir de missions antérieures.",
       "note": "En attente : à fournir par Madame Simo à partir de missions antérieures.",
       "items": [
-        { "quote": "", "name": "" },
-        { "quote": "", "name": "" },
-        { "quote": "", "name": "" }
+        {
+          "quote": "",
+          "name": ""
+        },
+        {
+          "quote": "",
+          "name": ""
+        },
+        {
+          "quote": "",
+          "name": ""
+        }
       ]
     },
     "aboutPreview": {
@@ -116,9 +148,18 @@
       "title": "Audit et gestion des risques : une priorité stratégique pour l'Afrique.",
       "intro": "À travers l'Afrique, et en particulier dans la région CEMAC, des pratiques d'audit et de gestion des risques solides ne sont plus optionnelles. Elles protègent les recettes publiques, attirent l'investissement et transforment la croissance en prospérité partagée. L'assurance indépendante donne aux banques, assureurs, établissements de microfinance et groupes agro-industriels la crédibilité nécessaire pour accéder aux capitaux, satisfaire les régulateurs et opérer dans des marchés en pleine évolution.",
       "stats": [
-        { "value": "≈ 88 Mds $", "label": "Perdus chaque année par l'Afrique en raison des flux financiers illicites, selon la CNUCED — des pertes que des dispositifs d'audit, de LBC/FT et de gouvernance plus solides aident à réduire." },
-        { "value": "6", "label": "États membres de la CEMAC (Cameroun, RCA, Tchad, Guinée équatoriale, Gabon, République du Congo) partageant l'architecture réglementaire OHADA, COBAC, CIMA et COSUMAF." },
-        { "value": "17", "label": "États membres de l'OHADA en Afrique de l'Ouest et centrale appliquant un droit des affaires harmonisé et les normes comptables SYSCOHADA." }
+        {
+          "value": "≈ 88 Mds $",
+          "label": "Perdus chaque année par l'Afrique en raison des flux financiers illicites, selon la CNUCED — des pertes que des dispositifs d'audit, de LBC/FT et de gouvernance plus solides aident à réduire."
+        },
+        {
+          "value": "6",
+          "label": "États membres de la CEMAC (Cameroun, RCA, Tchad, Guinée équatoriale, Gabon, République du Congo) partageant l'architecture réglementaire OHADA, COBAC, CIMA et COSUMAF."
+        },
+        {
+          "value": "17",
+          "label": "États membres de l'OHADA en Afrique de l'Ouest et centrale appliquant un droit des affaires harmonisé et les normes comptables SYSCOHADA."
+        }
       ],
       "pillars": [
         {
@@ -144,7 +185,6 @@
       "ctaButton": "Parler à AGILE"
     }
   },
-
   "about": {
     "header": {
       "title": "À propos d'AGILE",
@@ -163,12 +203,30 @@
       "heading": "Étapes clés",
       "note": "En attente : confirmer les dates et événements avec Madame Simo.",
       "items": [
-        { "year": "1988", "event": "Début de carrière dans l'enseignement." },
-        { "year": "1994", "event": "Transition vers la gestion de projets." },
-        { "year": "2012", "event": "Intégration d'ECA, expertise construite au sein du réseau EY." },
-        { "year": "2013", "event": "Nomination comme directrice associée et responsable de l'audit pour le Cameroun et le Tchad." },
-        { "year": "2023", "event": "Nomination comme associée chez ECA S.A." },
-        { "year": "2026", "event": "Création d'AGILE comme expert-comptable indépendante et associée gérante." }
+        {
+          "year": "1988",
+          "event": "Début de carrière dans l'enseignement."
+        },
+        {
+          "year": "1994",
+          "event": "Transition vers la gestion de projets."
+        },
+        {
+          "year": "2012",
+          "event": "Intégration d'ECA, expertise construite au sein du réseau EY."
+        },
+        {
+          "year": "2013",
+          "event": "Nomination comme directrice associée et responsable de l'audit pour le Cameroun et le Tchad."
+        },
+        {
+          "year": "2023",
+          "event": "Nomination comme associée chez ECA S.A."
+        },
+        {
+          "year": "2026",
+          "event": "Création d'AGILE comme expert-comptable indépendante et associée gérante."
+        }
       ]
     },
     "vision": {
@@ -183,21 +241,52 @@
       "heading": "Nos valeurs fondamentales",
       "intro": "Chez AGILE, ces cinq valeurs sont le socle de notre travail dans la CEMAC et au-delà, avec une exigence d'excellence professionnelle au service de la réussite des clients et d'une croissance durable.",
       "items": [
-        { "name": "Adaptabilité", "desc": "Nous anticipons les évolutions réglementaires et de marché et y répondons par des solutions structurées et concrètes qui maintiennent nos clients en avance et résilients." },
-        { "name": "Gratitude", "desc": "Nous redonnons par le service à la communauté, le mentorat des jeunes et une attention sincère aux clients et aux communautés que nous servons." },
-        { "name": "Intégrité", "desc": "Nous défendons l'honnêteté, la fiabilité et les normes professionnelles les plus élevées dans chaque mission, en préservant la confiance avant tout." },
-        { "name": "Leadership", "desc": "Nous formons des leaders, en développant les équipes et les organes de gouvernance pour que chacun progresse du premier poste jusqu'à la responsabilité." },
-        { "name": "Excellence", "desc": "Nous livrons des résultats mesurables, dans les délais et à un niveau constamment élevé, transformant l'expertise en valeur durable pour les clients." }
+        {
+          "name": "Adaptabilité",
+          "desc": "Nous anticipons les évolutions réglementaires et de marché et y répondons par des solutions structurées et concrètes qui maintiennent nos clients en avance et résilients."
+        },
+        {
+          "name": "Gratitude",
+          "desc": "Nous redonnons par le service à la communauté, le mentorat des jeunes et une attention sincère aux clients et aux communautés que nous servons."
+        },
+        {
+          "name": "Intégrité",
+          "desc": "Nous défendons l'honnêteté, la fiabilité et les normes professionnelles les plus élevées dans chaque mission, en préservant la confiance avant tout."
+        },
+        {
+          "name": "Leadership",
+          "desc": "Nous formons des leaders, en développant les équipes et les organes de gouvernance pour que chacun progresse du premier poste jusqu'à la responsabilité."
+        },
+        {
+          "name": "Excellence",
+          "desc": "Nous livrons des résultats mesurables, dans les délais et à un niveau constamment élevé, transformant l'expertise en valeur durable pour les clients."
+        }
       ]
     },
     "team": {
       "heading": "Notre équipe",
       "note": "En attente : noms, fonctions, biographies et photos des membres à fournir.",
       "members": [
-        { "name": "", "role": "", "bio": "" },
-        { "name": "", "role": "", "bio": "" },
-        { "name": "", "role": "", "bio": "" },
-        { "name": "", "role": "", "bio": "" }
+        {
+          "name": "",
+          "role": "",
+          "bio": ""
+        },
+        {
+          "name": "",
+          "role": "",
+          "bio": ""
+        },
+        {
+          "name": "",
+          "role": "",
+          "bio": ""
+        },
+        {
+          "name": "",
+          "role": "",
+          "bio": ""
+        }
       ]
     },
     "socialResponsibility": {
@@ -205,7 +294,6 @@
       "body": "Chez AGILE, nous consacrons une journée par mois à un service communautaire structuré dans la région CEMAC, reflet de nos valeurs et de la vision de notre fondatrice. Cela comprend des ateliers d'éducation financière pour les jeunes et les entrepreneurs, du conseil pro bono pour les startups de microfinance et les petites entreprises agro, et des séances de mentorat pour développer le leadership dans les communautés mal desservies. Notre équipe donne de son temps et de son expertise pour renforcer les systèmes financiers et sensibiliser aux fondamentaux de la conformité, comme les bases de l'OHADA. L'objectif est concret : doter les personnes d'outils pour une croissance durable, bâtir une culture de responsabilité et montrer que des avenirs porteurs de sens peuvent naître de débuts modestes."
     }
   },
-
   "services": {
     "overview": {
       "headline": "Expert en GRC, audit et conseil : naviguer dans des environnements réglementaires complexes",
@@ -224,9 +312,18 @@
           "Audits contractuels : diligence raisonnable d'acquisition, audits de projets et revues limitées."
         ],
         "faqs": [
-          { "q": "Qu'est-ce que l'audit et l'assurance ?", "a": "Les services d'audit et d'assurance évaluent l'exactitude, la fiabilité et la conformité de l'information financière et des processus. L'audit fournit une revue indépendante des enregistrements et des contrôles, tandis que l'assurance donne aux parties prenantes la confiance que l'information est crédible, complète et conforme aux normes requises. Ensemble, ils renforcent la transparence, réduisent le risque et consolident la confiance." },
-          { "q": "Que comprennent les services d'audit et d'assurance ?", "a": "Ils comprennent des contrôles indépendants des états financiers, du contrôle interne, de la conformité et des processus opérationnels. Ils aident les organisations à satisfaire aux obligations légales et réglementaires, à identifier les faiblesses et à améliorer la décision. Les exemples courants incluent audits légaux, audits internes, revues de conformité et missions d'assurance limitée. Ils renforcent la confiance des investisseurs, régulateurs, prêteurs et dirigeants." },
-          { "q": "Quels sont les principaux types d'audits ?", "a": "Les principaux types sont l'audit financier, l'audit de conformité, l'audit opérationnel et l'audit judiciaire. L'audit financier examine l'exactitude des états. L'audit de conformité vérifie le respect des règles et réglementations. L'audit opérationnel évalue l'efficacité et l'efficience. L'audit judiciaire enquête sur des fraudes ou des irrégularités présumées. Chacun protège l'intégrité de l'entreprise à sa manière." }
+          {
+            "q": "Qu'est-ce que l'audit et l'assurance ?",
+            "a": "Les services d'audit et d'assurance évaluent l'exactitude, la fiabilité et la conformité de l'information financière et des processus. L'audit fournit une revue indépendante des enregistrements et des contrôles, tandis que l'assurance donne aux parties prenantes la confiance que l'information est crédible, complète et conforme aux normes requises. Ensemble, ils renforcent la transparence, réduisent le risque et consolident la confiance."
+          },
+          {
+            "q": "Que comprennent les services d'audit et d'assurance ?",
+            "a": "Ils comprennent des contrôles indépendants des états financiers, du contrôle interne, de la conformité et des processus opérationnels. Ils aident les organisations à satisfaire aux obligations légales et réglementaires, à identifier les faiblesses et à améliorer la décision. Les exemples courants incluent audits légaux, audits internes, revues de conformité et missions d'assurance limitée. Ils renforcent la confiance des investisseurs, régulateurs, prêteurs et dirigeants."
+          },
+          {
+            "q": "Quels sont les principaux types d'audits ?",
+            "a": "Les principaux types sont l'audit financier, l'audit de conformité, l'audit opérationnel et l'audit judiciaire. L'audit financier examine l'exactitude des états. L'audit de conformité vérifie le respect des règles et réglementations. L'audit opérationnel évalue l'efficacité et l'efficience. L'audit judiciaire enquête sur des fraudes ou des irrégularités présumées. Chacun protège l'intégrité de l'entreprise à sa manière."
+          }
         ],
         "keywords": "audit et assurance, audit légal CAC, types d'audits, audit OHADA, audit des états financiers"
       },
@@ -242,9 +339,18 @@
           "Appui à la conformité ESG pour améliorer la gouvernance, la transparence et la durabilité."
         ],
         "faqs": [
-          { "q": "Qu'est-ce que le SYSCOHADA ?", "a": "Le SYSCOHADA est le système comptable harmonisé utilisé dans les États membres de l'OHADA en Afrique de l'Ouest et centrale. Il fournit des règles communes d'information financière, rendant les comptes plus cohérents, transparents et comparables entre entreprises et pays. Il aide les organisations à respecter les exigences comptables régionales tout en améliorant la qualité et la fiabilité de l'information financière." },
-          { "q": "Que signifie une sûreté ou garantie ?", "a": "Une sûreté est un actif qu'un emprunteur affecte en garantie d'un prêt. En cas de défaut, le prêteur peut réaliser cet actif pour recouvrer sa créance. Elle réduit le risque de crédit et facilite l'accès au financement. Les exemples courants incluent terrains, véhicules, équipements, stocks ou autres biens de valeur." },
-          { "q": "Que sont les audits ESG ?", "a": "Les audits ESG sont des revues indépendantes des pratiques environnementales, sociales et de gouvernance d'une organisation. Ils évaluent si les politiques, l'information et la performance sont exactes, responsables et alignées sur les normes de durabilité. Ils aident les entreprises à identifier les risques, améliorer la transparence et renforcer la confiance des investisseurs, régulateurs et parties prenantes." }
+          {
+            "q": "Qu'est-ce que le SYSCOHADA ?",
+            "a": "Le SYSCOHADA est le système comptable harmonisé utilisé dans les États membres de l'OHADA en Afrique de l'Ouest et centrale. Il fournit des règles communes d'information financière, rendant les comptes plus cohérents, transparents et comparables entre entreprises et pays. Il aide les organisations à respecter les exigences comptables régionales tout en améliorant la qualité et la fiabilité de l'information financière."
+          },
+          {
+            "q": "Que signifie une sûreté ou garantie ?",
+            "a": "Une sûreté est un actif qu'un emprunteur affecte en garantie d'un prêt. En cas de défaut, le prêteur peut réaliser cet actif pour recouvrer sa créance. Elle réduit le risque de crédit et facilite l'accès au financement. Les exemples courants incluent terrains, véhicules, équipements, stocks ou autres biens de valeur."
+          },
+          {
+            "q": "Que sont les audits ESG ?",
+            "a": "Les audits ESG sont des revues indépendantes des pratiques environnementales, sociales et de gouvernance d'une organisation. Ils évaluent si les politiques, l'information et la performance sont exactes, responsables et alignées sur les normes de durabilité. Ils aident les entreprises à identifier les risques, améliorer la transparence et renforcer la confiance des investisseurs, régulateurs et parties prenantes."
+          }
         ],
         "keywords": "SYSCOHADA, sûretés et garanties, audits ESG, agro-industrie OHADA, financement de chaîne de valeur"
       },
@@ -260,9 +366,18 @@
           "Intégrité LCB-FT : Dispositifs robustes de lutte contre le blanchiment d'argent et le financement du terrorisme pour atténuer la criminalité financière et renforcer la gouvernance."
         ],
         "faqs": [
-          { "q": "Que signifie COBAC ?", "a": "La COBAC est la Commission Bancaire de l'Afrique Centrale. C'est l'autorité de supervision bancaire de la région CEMAC ; elle contrôle les établissements de crédit pour assurer le respect des règles prudentielles, de saines pratiques bancaires et la stabilité financière. La COBAC joue un rôle clé dans la réglementation bancaire, la supervision des risques et la protection des déposants en Afrique centrale." },
-          { "q": "Quels sont les outils courants d'évaluation des risques ?", "a": "Les outils d'évaluation des risques aident à identifier, mesurer et gérer les risques opérationnels, financiers, cyber et de conformité. Les options courantes incluent matrices qualitatives, modèles de notation quantitatifs, cartes de chaleur, listes de contrôle, questionnaires de contrôle interne et logiciels de gestion des risques. Le bon outil dépend du secteur, de l'environnement réglementaire et du niveau de détail requis." },
-          { "q": "Que sont les audits de conformité ?", "a": "Les audits de conformité sont des revues indépendantes qui vérifient si une organisation respecte les lois, réglementations, politiques internes et normes du secteur. Ils confirment que les opérations, processus financiers et pratiques de gouvernance respectent les règles requises, réduisant le risque juridique, améliorant la redevabilité et renforçant la confiance des régulateurs, investisseurs et parties prenantes." }
+          {
+            "q": "Que signifie COBAC ?",
+            "a": "La COBAC est la Commission Bancaire de l'Afrique Centrale. C'est l'autorité de supervision bancaire de la région CEMAC ; elle contrôle les établissements de crédit pour assurer le respect des règles prudentielles, de saines pratiques bancaires et la stabilité financière. La COBAC joue un rôle clé dans la réglementation bancaire, la supervision des risques et la protection des déposants en Afrique centrale."
+          },
+          {
+            "q": "Quels sont les outils courants d'évaluation des risques ?",
+            "a": "Les outils d'évaluation des risques aident à identifier, mesurer et gérer les risques opérationnels, financiers, cyber et de conformité. Les options courantes incluent matrices qualitatives, modèles de notation quantitatifs, cartes de chaleur, listes de contrôle, questionnaires de contrôle interne et logiciels de gestion des risques. Le bon outil dépend du secteur, de l'environnement réglementaire et du niveau de détail requis."
+          },
+          {
+            "q": "Que sont les audits de conformité ?",
+            "a": "Les audits de conformité sont des revues indépendantes qui vérifient si une organisation respecte les lois, réglementations, politiques internes et normes du secteur. Ils confirment que les opérations, processus financiers et pratiques de gouvernance respectent les règles requises, réduisant le risque juridique, améliorant la redevabilité et renforçant la confiance des régulateurs, investisseurs et parties prenantes."
+          }
         ],
         "keywords": "COBAC, outils d'évaluation des risques, audits de conformité, solvabilité CIMA, LBC FT GABAC"
       },
@@ -276,9 +391,18 @@
           "Ingénierie comptable : nous élaborons des architectures financières de haute précision, incluant des processus de clôture mensuelle optimisés, des consolidations complexes et des systèmes sophistiqués de comptabilité analytique."
         ],
         "faqs": [
-          { "q": "Qu'est-ce que la budgétisation et le suivi ?", "a": "La budgétisation et le suivi consistent à planifier les recettes et les dépenses, puis à suivre la performance réelle par rapport au budget approuvé. Cela aide les organisations à maîtriser les coûts, repérer tôt les écarts et prendre des décisions éclairées. En pratique, cela soutient une meilleure gestion de trésorerie, une redevabilité renforcée et des prévisions plus justes." },
-          { "q": "Quel est l'objet de la conformité fiscale au Cameroun ?", "a": "La conformité fiscale garantit que les particuliers et les entreprises remplissent leurs obligations légales, déclarent correctement et paient dans les délais. Elle permet d'éviter les pénalités, soutient les recettes publiques et renforce la transparence. Une bonne conformité fiscale améliore aussi la crédibilité, réduit le risque réglementaire et soutient la stabilité financière à long terme." },
-          { "q": "Qui est responsable de la conformité fiscale ?", "a": "La conformité fiscale relève à la fois de l'entreprise et de sa direction. Dirigeants, équipes financières, comptables et conseillers fiscaux contribuent tous à des enregistrements exacts, des déclarations correctes et des paiements à temps. Dans les grandes organisations, la responsabilité peut être partagée, mais l'obligation finale incombe au contribuable et à sa direction." }
+          {
+            "q": "Qu'est-ce que la budgétisation et le suivi ?",
+            "a": "La budgétisation et le suivi consistent à planifier les recettes et les dépenses, puis à suivre la performance réelle par rapport au budget approuvé. Cela aide les organisations à maîtriser les coûts, repérer tôt les écarts et prendre des décisions éclairées. En pratique, cela soutient une meilleure gestion de trésorerie, une redevabilité renforcée et des prévisions plus justes."
+          },
+          {
+            "q": "Quel est l'objet de la conformité fiscale au Cameroun ?",
+            "a": "La conformité fiscale garantit que les particuliers et les entreprises remplissent leurs obligations légales, déclarent correctement et paient dans les délais. Elle permet d'éviter les pénalités, soutient les recettes publiques et renforce la transparence. Une bonne conformité fiscale améliore aussi la crédibilité, réduit le risque réglementaire et soutient la stabilité financière à long terme."
+          },
+          {
+            "q": "Qui est responsable de la conformité fiscale ?",
+            "a": "La conformité fiscale relève à la fois de l'entreprise et de sa direction. Dirigeants, équipes financières, comptables et conseillers fiscaux contribuent tous à des enregistrements exacts, des déclarations correctes et des paiements à temps. Dans les grandes organisations, la responsabilité peut être partagée, mais l'obligation finale incombe au contribuable et à sa direction."
+          }
         ],
         "keywords": "budgétisation et suivi, conformité fiscale Cameroun, services de conformité, ingénierie comptable"
       },
@@ -292,9 +416,18 @@
           "Planification successorale : Nous concevons des schémas de transmission sur mesure, en privilégiant des stratégies fiscalement sécurisées qui garantissent un transfert efficace, conforme et fluide du patrimoine et du contrôle de gestion."
         ],
         "faqs": [
-          { "q": "Quelles sont deux grandes méthodes d'évaluation d'actifs ?", "a": "Deux grandes méthodes sont la méthode du coût et la méthode de la valeur de marché. La méthode du coût évalue un actif selon son prix d'achat initial ou son coût de remplacement. La méthode de la valeur de marché estime le prix de cession dans un marché ouvert. Ces méthodes servent à la planification, au reporting financier, à la planification successorale et aux décisions d'investissement." },
-          { "q": "Que sont les actifs patrimoniaux ?", "a": "Les actifs patrimoniaux sont des biens d'importance historique, culturelle, artistique, scientifique ou environnementale. Ils sont souvent détenus dans l'intérêt général et préservés pour les générations futures plutôt que pour un usage commercial. Leur unicité rend leur évaluation difficile, mais ils requièrent une reconnaissance, un contrôle et une information appropriés en reporting financier le cas échéant." },
-          { "q": "Qu'est-ce que la planification de la succession d'entreprise ?", "a": "La planification de la succession d'entreprise prépare le transfert de direction ou de propriété lorsqu'un dirigeant part à la retraite, devient indisponible ou se retire. Elle aide à préserver la stabilité, protéger la valeur et éviter les ruptures. Une bonne planification soutient la continuité, l'efficacité fiscale et la croissance à long terme en assurant les bonnes personnes et structures." }
+          {
+            "q": "Quelles sont deux grandes méthodes d'évaluation d'actifs ?",
+            "a": "Deux grandes méthodes sont la méthode du coût et la méthode de la valeur de marché. La méthode du coût évalue un actif selon son prix d'achat initial ou son coût de remplacement. La méthode de la valeur de marché estime le prix de cession dans un marché ouvert. Ces méthodes servent à la planification, au reporting financier, à la planification successorale et aux décisions d'investissement."
+          },
+          {
+            "q": "Que sont les actifs patrimoniaux ?",
+            "a": "Les actifs patrimoniaux sont des biens d'importance historique, culturelle, artistique, scientifique ou environnementale. Ils sont souvent détenus dans l'intérêt général et préservés pour les générations futures plutôt que pour un usage commercial. Leur unicité rend leur évaluation difficile, mais ils requièrent une reconnaissance, un contrôle et une information appropriés en reporting financier le cas échéant."
+          },
+          {
+            "q": "Qu'est-ce que la planification de la succession d'entreprise ?",
+            "a": "La planification de la succession d'entreprise prépare le transfert de direction ou de propriété lorsqu'un dirigeant part à la retraite, devient indisponible ou se retire. Elle aide à préserver la stabilité, protéger la valeur et éviter les ruptures. Une bonne planification soutient la continuité, l'efficacité fiscale et la croissance à long terme en assurant les bonnes personnes et structures."
+          }
         ],
         "keywords": "méthodes d'évaluation d'actifs, actifs patrimoniaux, planification successorale, transmission d'entreprise"
       },
@@ -308,15 +441,23 @@
           "Formation à la gouvernance : nous proposons des conseils spécialisés aux administrateurs et aux conseils d'administration, en mettant l'accent sur la supervision fiduciaire et l'évolution des exigences réglementaires."
         ],
         "faqs": [
-          { "q": "Quelles formations de managers soutiennent la croissance des collaborateurs ?", "a": "Les formations utiles incluent le développement du leadership, la gestion de la performance, la communication, la culture financière et le coaching d'équipe. Les meilleurs programmes aident les managers à mieux décider, soutenir le développement des collaborateurs et accroître la productivité. Une bonne formation est concrète, pertinente pour le secteur et axée sur des résultats réels plutôt que sur la théorie." },
-          { "q": "Quelle formation convient le mieux aux managers ?", "a": "Cela dépend du rôle, mais le leadership, la communication, la délégation, la gestion des conflits et la gestion financière comptent parmi les plus utiles. Les managers profitent aussi de la pensée stratégique, de la gestion des personnes et de la conformité. Une formation efficace améliore la confiance, la redevabilité et la performance des équipes." },
-          { "q": "Qu'est-ce que la formation à la gouvernance ?", "a": "La formation à la gouvernance est un apprentissage structuré qui aide administrateurs, membres du conseil et dirigeants à comprendre leurs responsabilités, devoirs réglementaires et rôles de supervision. Elle couvre redevabilité, conformité, gestion des risques, éthique et contrôle interne, renforçant la performance du conseil, la décision et le leadership de l'organisation." }
+          {
+            "q": "Quelles formations de managers soutiennent la croissance des collaborateurs ?",
+            "a": "Les formations utiles incluent le développement du leadership, la gestion de la performance, la communication, la culture financière et le coaching d'équipe. Les meilleurs programmes aident les managers à mieux décider, soutenir le développement des collaborateurs et accroître la productivité. Une bonne formation est concrète, pertinente pour le secteur et axée sur des résultats réels plutôt que sur la théorie."
+          },
+          {
+            "q": "Quelle formation convient le mieux aux managers ?",
+            "a": "Cela dépend du rôle, mais le leadership, la communication, la délégation, la gestion des conflits et la gestion financière comptent parmi les plus utiles. Les managers profitent aussi de la pensée stratégique, de la gestion des personnes et de la conformité. Une formation efficace améliore la confiance, la redevabilité et la performance des équipes."
+          },
+          {
+            "q": "Qu'est-ce que la formation à la gouvernance ?",
+            "a": "La formation à la gouvernance est un apprentissage structuré qui aide administrateurs, membres du conseil et dirigeants à comprendre leurs responsabilités, devoirs réglementaires et rôles de supervision. Elle couvre redevabilité, conformité, gestion des risques, éthique et contrôle interne, renforçant la performance du conseil, la décision et le leadership de l'organisation."
+          }
         ],
         "keywords": "formation des managers, formation à la gouvernance, finance pour managers, développement des compétences, gouvernance d'entreprise Cameroun"
       }
     }
   },
-
   "industries": {
     "overview": {
       "headline": "Transformer les connaissances financières en avantage stratégique",
@@ -416,54 +557,119 @@
       }
     }
   },
-
   "insights": {
     "title": "Analyses",
     "intro": "Analyses sur la conformité assurance CIMA, la structuration microfinance COBAC, la gestion d'actifs COSUMAF, les audits OHADA et l'expertise réglementaire CEMAC, avec des conseils concrets sur la gestion des risques, la solvabilité, le reporting de portefeuille et l'efficacité opérationnelle des institutions financières.",
     "authorBio": "Claudine Simo Mamo est expert-comptable certifiée CEMAC et membre Fellow de l'ACCA, avec plus de 37 ans d'expérience en audit, comptabilité et conseil en Afrique centrale. Elle est aujourd'hui fondatrice et associée gérante d'AGILE, accompagnant les institutions dans le renforcement de leurs systèmes, l'amélioration de leur gouvernance et la construction d'une performance durable.",
-    "categories": ["Audit", "Risques et Conformité", "Performance", "Patrimoine", "Gouvernance", "Agro-industrie"],
+    "categories": [
+      "Audit",
+      "Risques et Conformité",
+      "Performance",
+      "Patrimoine",
+      "Gouvernance",
+      "Agro-industrie"
+    ],
     "articles": [
-      { "title": "Guide de conformité CIMA pour les assureurs CEMAC : éviter les pénalités en 2026", "summary": "Revue des provisions techniques, analyse de solvabilité et tarification actuarielle sous CIMA. Cet article aborde les pièges courants de conformité, les étapes concrètes des déclarations réglementaires et pourquoi l'efficacité opérationnelle protège votre agrément. Lecture essentielle pour les assureurs de la CEMAC et au-delà.", "keyword": "conformité CIMA assureurs CEMAC" },
-      { "title": "Structuration microfinance COBAC : renforcer les EMF face au risque de liquidité", "summary": "Cartographie des risques COBAC, tests de résistance et stratégies de structuration financière pour les établissements de microfinance. Découvrez des techniques de renforcement opérationnel, des audits conformes OHADA et comment se développer durablement, essentiel pour les EMF gérant la pression sur la liquidité.", "keyword": "structuration microfinance COBAC" },
-      { "title": "Reporting de portefeuille COSUMAF pour les gestionnaires d'actifs", "summary": "Audits de conformité COSUMAF, contrôles internes et évaluations d'actifs indépendantes. Ce guide couvre la structuration des fonds, les relations investisseurs et le reporting OHADA, utile aux gestionnaires d'actifs et sociétés de gestion recherchant transparence et croissance.", "keyword": "reporting de portefeuille COSUMAF" },
-      { "title": "Audits légaux OHADA : les essentiels du CAC pour les acteurs financiers de la CEMAC et au-delà", "summary": "Audits légaux (CAC), diagnostics des systèmes comptables et certification SYSCOHADA. Aborde les avantages de conformité, l'amélioration des pistes d'audit et la prévention des risques pour banques, assureurs et EMF assurant la fiabilité financière sous OHADA.", "keyword": "audits légaux OHADA CAC" },
-      { "title": "Audits ESG en agro-industrie : sécuriser les chaînes de valeur dans la CEMAC", "summary": "Audits SYSCOHADA, sûretés et conformité ESG pour les complexes agro. Aborde les accords PPP, le droit des sûretés et la performance, utile aux parties prenantes renforçant la sécurité alimentaire et la création de valeur sous OHADA.", "keyword": "audits ESG agro-industrie CEMAC" }
+      {
+        "title": "Guide de conformité CIMA pour les assureurs CEMAC : éviter les pénalités en 2026",
+        "summary": "Revue des provisions techniques, analyse de solvabilité et tarification actuarielle sous CIMA. Cet article aborde les pièges courants de conformité, les étapes concrètes des déclarations réglementaires et pourquoi l'efficacité opérationnelle protège votre agrément. Lecture essentielle pour les assureurs de la CEMAC et au-delà.",
+        "keyword": "conformité CIMA assureurs CEMAC"
+      },
+      {
+        "title": "Structuration microfinance COBAC : renforcer les EMF face au risque de liquidité",
+        "summary": "Cartographie des risques COBAC, tests de résistance et stratégies de structuration financière pour les établissements de microfinance. Découvrez des techniques de renforcement opérationnel, des audits conformes OHADA et comment se développer durablement, essentiel pour les EMF gérant la pression sur la liquidité.",
+        "keyword": "structuration microfinance COBAC"
+      },
+      {
+        "title": "Reporting de portefeuille COSUMAF pour les gestionnaires d'actifs",
+        "summary": "Audits de conformité COSUMAF, contrôles internes et évaluations d'actifs indépendantes. Ce guide couvre la structuration des fonds, les relations investisseurs et le reporting OHADA, utile aux gestionnaires d'actifs et sociétés de gestion recherchant transparence et croissance.",
+        "keyword": "reporting de portefeuille COSUMAF"
+      },
+      {
+        "title": "Audits légaux OHADA : les essentiels du CAC pour les acteurs financiers de la CEMAC et au-delà",
+        "summary": "Audits légaux (CAC), diagnostics des systèmes comptables et certification SYSCOHADA. Aborde les avantages de conformité, l'amélioration des pistes d'audit et la prévention des risques pour banques, assureurs et EMF assurant la fiabilité financière sous OHADA.",
+        "keyword": "audits légaux OHADA CAC"
+      },
+      {
+        "title": "Audits ESG en agro-industrie : sécuriser les chaînes de valeur dans la CEMAC",
+        "summary": "Audits SYSCOHADA, sûretés et conformité ESG pour les complexes agro. Aborde les accords PPP, le droit des sûretés et la performance, utile aux parties prenantes renforçant la sécurité alimentaire et la création de valeur sous OHADA.",
+        "keyword": "audits ESG agro-industrie CEMAC"
+      }
     ],
     "caseStudies": {
       "heading": "Études de cas",
       "note": "En attente : à fournir (anonymisées si nécessaire).",
       "items": [
-        { "title": "", "challenge": "", "approach": "", "outcome": "" },
-        { "title": "", "challenge": "", "approach": "", "outcome": "" }
+        {
+          "title": "",
+          "challenge": "",
+          "approach": "",
+          "outcome": ""
+        },
+        {
+          "title": "",
+          "challenge": "",
+          "approach": "",
+          "outcome": ""
+        }
       ]
     },
     "faqs": [
-      { "q": "Qu'est-ce qu'un audit légal (CAC) ?", "a": "Un audit légal (CAC) est un audit légal annuel requis pour certaines entités, dont les banques, assureurs, établissements de microfinance et sociétés cotées. Il vérifie la fiabilité de l'information financière et la conformité aux lois et normes applicables. Dans la CEMAC et au-delà, les audits légaux renforcent la transparence, la redevabilité et la confiance des parties prenantes." },
-      { "q": "Que sont les diagnostics des systèmes comptables ?", "a": "Le diagnostic des systèmes comptables est une revue de l'organisation financière, de la piste d'audit et de la fiabilité des états financiers d'une organisation. Il aide à identifier les faiblesses des processus comptables, du contrôle interne et des structures de reporting. Il est essentiel pour améliorer l'exactitude, renforcer la gouvernance et soutenir de meilleures décisions." },
-      { "q": "Que sont les audits contractuels ?", "a": "Les audits contractuels sont des revues indépendantes pour des transactions ou missions spécifiques, telles que la diligence raisonnable d'acquisition, les audits de projets et les revues limitées. Ils aident à évaluer le risque, confirmer la fiabilité des données et prendre des décisions commerciales éclairées, particulièrement utiles lors d'investissements, de partenariats et de grands projets." },
-      { "q": "Qu'est-ce que l'audit et la certification SYSCOHADA ?", "a": "L'audit et la certification SYSCOHADA sont un service spécialisé pour les complexes agro-industriels sous OHADA. Ils assurent la conformité aux normes comptables harmonisées et soutiennent un reporting exact, aidant les entreprises agro-industrielles à renforcer leur performance, sécuriser leurs actifs et améliorer leur crédibilité auprès des investisseurs, prêteurs et régulateurs." },
-      { "q": "Que signifie une sûreté dans le financement agricole ?", "a": "Une sûreté désigne la protection légale accordée aux prêteurs par des actifs affectés en garantie dans le financement agricole. Elle aide à sécuriser les prêts et réduire le risque de crédit. Notre expertise en droit des sûretés soutient des montages fiables qui protègent prêteurs et emprunteurs tout en améliorant l'accès au financement." },
-      { "q": "Qu'est-ce que la structuration juridique en agro-industrie ?", "a": "La structuration juridique en agro-industrie consiste à rédiger des contrats de chaîne de valeur et des accords de partenariat public-privé qui soutiennent les relations commerciales et protègent les intérêts. Elle garantit des montages clairs, exécutoires et alignés sur le cadre OHADA, améliorant la stabilité, la conformité et la création de valeur durable." },
-      { "q": "Qu'est-ce qu'un audit de conformité ESG ?", "a": "Un audit de conformité ESG examine la manière dont les risques environnementaux, sociaux et de gouvernance sont identifiés, gérés et reportés. Il aide les organisations à améliorer leur reporting de durabilité, renforcer la redevabilité et répondre aux attentes des parties prenantes. En agro-industrie et ailleurs, il soutient une croissance responsable et une résilience durable." },
-      { "q": "Que sont les services de conformité COBAC ?", "a": "Les services de conformité COBAC accompagnent les banques et établissements de microfinance dans le respect des exigences bancaires de la CEMAC. Ils incluent cartographie des risques, tests de résistance, gestion de la liquidité et prévention du risque opérationnel, aidant les institutions à renforcer le contrôle prudentiel, réduire l'exposition et améliorer la stabilité financière." },
-      { "q": "Que sont les services actuariels et de conformité CIMA ?", "a": "Les services actuariels et de conformité CIMA accompagnent les assureurs par la revue des provisions techniques, l'analyse de solvabilité et la tarification actuarielle. Ils aident les assureurs à répondre aux attentes réglementaires, gérer le risque et maintenir leur solidité financière, essentiels à la conformité, au reporting exact et à la stabilité durable." },
-      { "q": "Qu'est-ce que la planification successorale ?", "a": "La planification successorale est le processus de structuration et de sécurisation du transfert d'actifs professionnels ou personnels dans le temps. Elle inclut l'évaluation d'actifs, le diagnostic patrimonial et la transmission optimisée sur le plan fiscal, aidant à protéger le patrimoine, réduire les conflits et assurer la continuité entre générations ou changements de propriété." }
+      {
+        "q": "Qu'est-ce qu'un audit légal (CAC) ?",
+        "a": "Un audit légal (CAC) est un audit légal annuel requis pour certaines entités, dont les banques, assureurs, établissements de microfinance et sociétés cotées. Il vérifie la fiabilité de l'information financière et la conformité aux lois et normes applicables. Dans la CEMAC et au-delà, les audits légaux renforcent la transparence, la redevabilité et la confiance des parties prenantes."
+      },
+      {
+        "q": "Que sont les diagnostics des systèmes comptables ?",
+        "a": "Le diagnostic des systèmes comptables est une revue de l'organisation financière, de la piste d'audit et de la fiabilité des états financiers d'une organisation. Il aide à identifier les faiblesses des processus comptables, du contrôle interne et des structures de reporting. Il est essentiel pour améliorer l'exactitude, renforcer la gouvernance et soutenir de meilleures décisions."
+      },
+      {
+        "q": "Que sont les audits contractuels ?",
+        "a": "Les audits contractuels sont des revues indépendantes pour des transactions ou missions spécifiques, telles que la diligence raisonnable d'acquisition, les audits de projets et les revues limitées. Ils aident à évaluer le risque, confirmer la fiabilité des données et prendre des décisions commerciales éclairées, particulièrement utiles lors d'investissements, de partenariats et de grands projets."
+      },
+      {
+        "q": "Qu'est-ce que l'audit et la certification SYSCOHADA ?",
+        "a": "L'audit et la certification SYSCOHADA sont un service spécialisé pour les complexes agro-industriels sous OHADA. Ils assurent la conformité aux normes comptables harmonisées et soutiennent un reporting exact, aidant les entreprises agro-industrielles à renforcer leur performance, sécuriser leurs actifs et améliorer leur crédibilité auprès des investisseurs, prêteurs et régulateurs."
+      },
+      {
+        "q": "Que signifie une sûreté dans le financement agricole ?",
+        "a": "Une sûreté désigne la protection légale accordée aux prêteurs par des actifs affectés en garantie dans le financement agricole. Elle aide à sécuriser les prêts et réduire le risque de crédit. Notre expertise en droit des sûretés soutient des montages fiables qui protègent prêteurs et emprunteurs tout en améliorant l'accès au financement."
+      },
+      {
+        "q": "Qu'est-ce que la structuration juridique en agro-industrie ?",
+        "a": "La structuration juridique en agro-industrie consiste à rédiger des contrats de chaîne de valeur et des accords de partenariat public-privé qui soutiennent les relations commerciales et protègent les intérêts. Elle garantit des montages clairs, exécutoires et alignés sur le cadre OHADA, améliorant la stabilité, la conformité et la création de valeur durable."
+      },
+      {
+        "q": "Qu'est-ce qu'un audit de conformité ESG ?",
+        "a": "Un audit de conformité ESG examine la manière dont les risques environnementaux, sociaux et de gouvernance sont identifiés, gérés et reportés. Il aide les organisations à améliorer leur reporting de durabilité, renforcer la redevabilité et répondre aux attentes des parties prenantes. En agro-industrie et ailleurs, il soutient une croissance responsable et une résilience durable."
+      },
+      {
+        "q": "Que sont les services de conformité COBAC ?",
+        "a": "Les services de conformité COBAC accompagnent les banques et établissements de microfinance dans le respect des exigences bancaires de la CEMAC. Ils incluent cartographie des risques, tests de résistance, gestion de la liquidité et prévention du risque opérationnel, aidant les institutions à renforcer le contrôle prudentiel, réduire l'exposition et améliorer la stabilité financière."
+      },
+      {
+        "q": "Que sont les services actuariels et de conformité CIMA ?",
+        "a": "Les services actuariels et de conformité CIMA accompagnent les assureurs par la revue des provisions techniques, l'analyse de solvabilité et la tarification actuarielle. Ils aident les assureurs à répondre aux attentes réglementaires, gérer le risque et maintenir leur solidité financière, essentiels à la conformité, au reporting exact et à la stabilité durable."
+      },
+      {
+        "q": "Qu'est-ce que la planification successorale ?",
+        "a": "La planification successorale est le processus de structuration et de sécurisation du transfert d'actifs professionnels ou personnels dans le temps. Elle inclut l'évaluation d'actifs, le diagnostic patrimonial et la transmission optimisée sur le plan fiscal, aidant à protéger le patrimoine, réduire les conflits et assurer la continuité entre générations ou changements de propriété."
+      }
     ],
     "newsletter": {
       "cta": "Gardez une longueur d'avance avec nos mises à jour expertes sur la conformité CEMAC. Abonnez-vous à AGILE Analyses.",
       "privacy": "Nous collectons votre adresse e-mail uniquement pour vous envoyer des analyses de conformité (CIMA, COBAC, OHADA). Vos données ne seront ni partagées ni vendues. Vous pouvez vous désabonner à tout moment, demander leur suppression ou y accéder. Tous les détails figurent dans notre Politique de confidentialité."
     }
   },
-
   "contact": {
     "headline": "AGILE : Sécuriser la valeur, favoriser la croissance, bâtir la confiance dans la CEMAC et au-delà",
     "subheadline": "Prêt à renforcer votre conformité CIMA, COBAC ou OHADA ? Contactez AGILE pour des solutions d'audit, de risque et de performance adaptées à votre structure.",
     "info": {
       "address": "1682, Avenue De Gaulle, Bonanjo, Douala",
-      "phoneOffice": "",
-      "phoneMobile": "",
+      "phoneOffice": "+237 233 431 099",
+      "phoneMobile": "+237 233 431 099",
       "emailGeneral": "info@agile-cm.com",
-      "emailDirect": "",
+      "emailDirect": "claudine.simo@agile.com",
       "hours": "Du lundi au vendredi, de 8h00 à 17h00",
       "note": "En attente : le domaine est agile-cm.com ; confirmer la structure finale des e-mails et les numéros de téléphone avant la mise en ligne."
     },
@@ -491,7 +697,6 @@
       "instagram": ""
     }
   },
-
   "footer": {
     "tagline": "Sécuriser la valeur, favoriser la croissance et bâtir la confiance dans la CEMAC et au-delà.",
     "copyright": "© 2026 AGILE — Audit, Conseil, Gouvernance et Excellence du Leadership. Tous droits réservés.",
@@ -519,9 +724,21 @@
     "offices": {
       "heading": "Bureaux",
       "items": [
-        { "city": "Douala", "country": "Cameroun", "role": "Siège" },
-        { "city": "Yaoundé", "country": "Cameroun", "role": "Bureau de représentation" },
-        { "city": "Libreville", "country": "Gabon", "role": "Affilié" }
+        {
+          "city": "Douala",
+          "country": "Cameroun",
+          "role": "Siège"
+        },
+        {
+          "city": "Yaoundé",
+          "country": "Cameroun",
+          "role": "Bureau de représentation"
+        },
+        {
+          "city": "Libreville",
+          "country": "Gabon",
+          "role": "Affilié"
+        }
       ]
     },
     "credentials": [
@@ -531,7 +748,6 @@
       "Certifié OHADA"
     ]
   },
-
   "ui": {
     "map": {
       "cemacMember": "État membre CEMAC",
@@ -547,47 +763,116 @@
       "frameworks": "Cadres de référence",
       "stats": {
         "banking": [
-          { "value": "14+", "label": "Missions COBAC" },
-          { "value": "8", "label": "Banques CEMAC clientes" },
-          { "value": "100%", "label": "Déclarations dans les délais" }
+          {
+            "value": "14+",
+            "label": "Missions COBAC"
+          },
+          {
+            "value": "8",
+            "label": "Banques CEMAC clientes"
+          },
+          {
+            "value": "100%",
+            "label": "Déclarations dans les délais"
+          }
         ],
         "insurance": [
-          { "value": "CIMA", "label": "Audits conformes au Code" },
-          { "value": "6", "label": "Assureurs accompagnés" },
-          { "value": "12+", "label": "Revues de solvabilité" }
+          {
+            "value": "CIMA",
+            "label": "Audits conformes au Code"
+          },
+          {
+            "value": "6",
+            "label": "Assureurs accompagnés"
+          },
+          {
+            "value": "12+",
+            "label": "Revues de solvabilité"
+          }
         ],
         "microfinance": [
-          { "value": "20+", "label": "Mandats EMF" },
-          { "value": "3", "label": "Pays CEMAC" },
-          { "value": "PARMEC", "label": "Expertise du cadre" }
+          {
+            "value": "20+",
+            "label": "Mandats EMF"
+          },
+          {
+            "value": "3",
+            "label": "Pays CEMAC"
+          },
+          {
+            "value": "PARMEC",
+            "label": "Expertise du cadre"
+          }
         ],
         "assetManagement": [
-          { "value": "COSUMAF", "label": "Agréé auprès de" },
-          { "value": "4", "label": "Gestionnaires d'actifs" },
-          { "value": "100M+ XAF", "label": "Encours conseillés" }
+          {
+            "value": "COSUMAF",
+            "label": "Agréé auprès de"
+          },
+          {
+            "value": "4",
+            "label": "Gestionnaires d'actifs"
+          },
+          {
+            "value": "100M+ XAF",
+            "label": "Encours conseillés"
+          }
         ],
         "managementCompanies": [
-          { "value": "OHADA", "label": "Experts en gouvernance" },
-          { "value": "10+", "label": "Structures holding" },
-          { "value": "5", "label": "Sièges d'administrateur" }
+          {
+            "value": "OHADA",
+            "label": "Experts en gouvernance"
+          },
+          {
+            "value": "10+",
+            "label": "Structures holding"
+          },
+          {
+            "value": "5",
+            "label": "Sièges d'administrateur"
+          }
         ],
         "agroIndustry": [
-          { "value": "9", "label": "Clients agro-industriels" },
-          { "value": "IFRS", "label": "Norme de reporting" },
-          { "value": "3", "label": "Audits de chaîne de valeur" }
+          {
+            "value": "9",
+            "label": "Clients agro-industriels"
+          },
+          {
+            "value": "IFRS",
+            "label": "Norme de reporting"
+          },
+          {
+            "value": "3",
+            "label": "Audits de chaîne de valeur"
+          }
         ]
       }
     }
   },
-
-
-
   "meta": {
-    "home": { "title": "AGILE | Audit et Conseil dans la CEMAC et au-delà", "description": "Audits légaux, gestion des risques, conformité et conseil pour banques, assureurs, EMF et agro-industrie dans la CEMAC et au-delà." },
-    "about": { "title": "À propos d'AGILE | Audit, Conseil et Gouvernance", "description": "Fondé en 2026 et dirigé par Claudine Simo Mamo, AGILE accompagne les institutions en audit, gouvernance et performance durable." },
-    "services": { "title": "Services | AGILE Audit et Conseil", "description": "Audit et assurance, agro-industrie, risques et conformité, performance, patrimoine et gouvernance dans la CEMAC et au-delà." },
-    "industries": { "title": "Secteurs | Expertise sectorielle AGILE", "description": "Expertise sectorielle banque, assurance, microfinance, gestion d'actifs, sociétés de gestion et agro-industrie sous OHADA, COBAC, CIMA, COSUMAF." },
-    "insights": { "title": "Analyses | Conformité financière AGILE", "description": "Analyses expertes sur la conformité CIMA, COBAC, COSUMAF et OHADA pour les institutions financières de la CEMAC et au-delà." },
-    "contact": { "title": "Contacter AGILE | Audit et Conseil CEMAC", "description": "Contactez AGILE à Douala pour des solutions d'audit, de risque et de conseil dans la CEMAC et au-delà." }
+    "home": {
+      "title": "AGILE | Audit et Conseil dans la CEMAC et au-delà",
+      "description": "Audits légaux, gestion des risques, conformité et conseil pour banques, assureurs, EMF et agro-industrie dans la CEMAC et au-delà."
+    },
+    "about": {
+      "title": "À propos d'AGILE | Audit, Conseil et Gouvernance",
+      "description": "Fondé en 2026 et dirigé par Claudine Simo Mamo, AGILE accompagne les institutions en audit, gouvernance et performance durable."
+    },
+    "services": {
+      "title": "Services | AGILE Audit et Conseil",
+      "description": "Audit et assurance, agro-industrie, risques et conformité, performance, patrimoine et gouvernance dans la CEMAC et au-delà."
+    },
+    "industries": {
+      "title": "Secteurs | Expertise sectorielle AGILE",
+      "description": "Expertise sectorielle banque, assurance, microfinance, gestion d'actifs, sociétés de gestion et agro-industrie sous OHADA, COBAC, CIMA, COSUMAF."
+    },
+    "insights": {
+      "title": "Analyses | Conformité financière AGILE",
+      "description": "Analyses expertes sur la conformité CIMA, COBAC, COSUMAF et OHADA pour les institutions financières de la CEMAC et au-delà."
+    },
+    "contact": {
+      "title": "Contacter AGILE | Audit et Conseil CEMAC",
+      "description": "Contactez AGILE à Douala pour des solutions d'audit, de risque et de conseil dans la CEMAC et au-delà."
+    }
   }
 }

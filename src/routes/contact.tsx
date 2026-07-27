@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Clock, Mail, MapPin } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -66,6 +66,15 @@ function ContactPage() {
                 <span className="text-[15.5px] leading-relaxed text-foreground">
                   {t("contact.info.address")}
                 </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone size={18} className="mt-0.5 shrink-0 text-primary" />
+                <a
+                  href={`tel:${t("contact.info.phoneMobile")}`}
+                  className="text-[15.5px] leading-relaxed text-foreground hover:text-primary"
+                >
+                  {t("contact.info.phoneMobile")}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={18} className="mt-0.5 shrink-0 text-primary" />
