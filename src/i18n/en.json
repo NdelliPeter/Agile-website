@@ -25,8 +25,8 @@
   },
   "home": {
     "hero": {
-      "headline": "AGILE | Securing Value. Empowering Growth. Building Trust. Your Partner in Audit and Advisory Excellence across CEMAC and beyond.",
-      "subheadline": "Welcome to AGILE. We bridge the gap between regulatory compliance and strategic ambition. As your partner in audit, advisory, and governance, we provide the technical expertise from statutory oversight to performance engineering that institutions require to mitigate risk, foster trust, and thrive in an evolving market",
+      "headline": "Securing Value. EmpoweringGrowth.BuildingTrust&ExcellenceacrossCEMACandbeyond.",
+      "subheadline": "We bridge the gap between regulatory compliance and strategic ambition. Your partner in audit, advisory, and governance, providing technical expertise: Statutory oversight to performance engineering required to mitigate risk, foster trust & thrive in an evolving market.",
       "cta": "Request a Consultation"
     },
     "servicesPreview": {
@@ -67,6 +67,10 @@
         "humanCapital": {
           "title": "Human Capital and Governance",
           "desc": "We professionalise teams and governing bodies through finance training for managers, technical coaching for finance teams, and governance training for directors."
+        },
+        "diligence&Business": {
+          "title": "Due Diligence and Business Development",
+          "desc": "We support business growth and investment through due diligence, business development advisory, and strategic support for market entry, partnerships and capital raising."
         }
       }
     },
@@ -126,16 +130,16 @@
       "note": "Pending: to be supplied by Madam Simo from prior engagements.",
       "items": [
         {
-          "quote": "",
-          "name": ""
+          "quote": "I served as Managing Director of aYo Insurance Brokers Cameroon (MTN Group) from July 2022 to September 2025.During our company’s statutory audit, Claudine Simo Mamo’s professionalism and command of our regulatory challenges immediately earned our trust. Beyond her technical rigour, her greatest strengths are the quality of her listening and her ability to explain complex matters clearly. She was a valuable asset in the early stages of our young micro-insurance company. Claudine Simo Mamo is a professional I recommend without hesitation.",
+          "name": "Laetissia ENONGA  Former Managing Director,   aYo Insurance Brokers Cameroon"
         },
         {
-          "quote": "",
-          "name": ""
+          "quote": "The collaboration with Claudine Simo Mamo has been long-standing, spanning nearly two decades of statutory audits within our Life and Non-Life insurance companies in Cameroon. Through the key phases of our growth and the most complex regulatory developments, Ms. Simo consistently delivered support marked by exceptional continuity and high-level guidance. Her impeccable technical rigor enabled us to meet our obligations A information, while maintaining the absolute independence and objectivity essential to her role as statutory auditor. A trusted long-term partner.",
+          "name": "Mr. Richard LOWE, Founder and Chairman of the ACTIVA Group"
         },
         {
-          "quote": "",
-          "name": ""
+          "quote": "Managing a banking subsidiary requires constantly balancing the local regulator’s strict requirements with the reporting imperatives of our parent company. In this complex exercise, the professionalism of Claudine Simo Mamo was decisive. Through her in-depth mastery of the COBAC regulatory framework and her understanding of our Group’s standards, she approached our audit with constructive rigour. Her great availability and ability to explain things clearly made it possible to secure our financial statements while respecting very manding closing deadlines. This quality of work strengthened the confidence of our Board of Directors, while also providing the compliance assurances required by the Regulator and facilitating dialogue with our parent company. A highly valuable professional whom I recommend without hesitation.",
+          "name": "Victor Noumoué, Designated Chief Executive Officer, former Société Générale Cameroun (SGC), subsidiary of the Société Générale Group"
         }
       ]
     },

@@ -270,6 +270,8 @@ function HomePage() {
         )}
       </section>
 
+
+
       {/* AFRICA FOCUS — audit & risk importance */}
       <section className="border-t border-border bg-secondary/40">
         <div className="container-page py-20 md:py-28">

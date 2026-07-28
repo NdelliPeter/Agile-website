@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useT } from "@/components/AppProviders";
 import { SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
+import logoImg from "@/assets/logo.png";
 
 const ICONS: Record<ServiceKey, LucideIcon> = {
   audit: ShieldCheck,
@@ -25,6 +26,7 @@ export function ServiceWheel() {
   const t = useT();
   const count = SERVICE_KEYS.length;
   const radius = 38; // % from center to node anchor
+
 
   return (
     <div className="group relative mx-auto aspect-square w-full max-w-[760px] select-none">
