@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useT } from "./AppProviders";
 import { SERVICE_KEYS, type ServiceKey } from "@/lib/services-data";
+import logoImg from "@/assets/logo.png";
 
 /**
  * Animated logo motif with multiple orbiting rings.
@@ -22,32 +23,32 @@ export function ServiceOrbit({
     reverse?: boolean;
     nodes: Array<{ key: ServiceKey; angle: number }>;
   }> = [
-    {
-      radiusPct: 96,
-      duration: 38,
-      nodes: [
-        { key: "audit", angle: 0 },
-        { key: "risk", angle: 180 },
-      ],
-    },
-    {
-      radiusPct: 78,
-      duration: 28,
-      reverse: true,
-      nodes: [
-        { key: "performance", angle: 90 },
-        { key: "heritage", angle: 270 },
-      ],
-    },
-    {
-      radiusPct: 60,
-      duration: 22,
-      nodes: [
-        { key: "agro", angle: 45 },
-        { key: "humanCapital", angle: 225 },
-      ],
-    },
-  ];
+      {
+        radiusPct: 96,
+        duration: 38,
+        nodes: [
+          { key: "audit", angle: 0 },
+          { key: "risk", angle: 180 },
+        ],
+      },
+      {
+        radiusPct: 78,
+        duration: 28,
+        reverse: true,
+        nodes: [
+          { key: "performance", angle: 90 },
+          { key: "heritage", angle: 270 },
+        ],
+      },
+      {
+        radiusPct: 60,
+        duration: 22,
+        nodes: [
+          { key: "agro", angle: 45 },
+          { key: "humanCapital", angle: 225 },
+        ],
+      },
+    ];
 
   return (
     <div
@@ -85,9 +86,8 @@ export function ServiceOrbit({
             <div
               className="absolute inset-0"
               style={{
-                animation: `spin ${ring.duration}s linear infinite${
-                  ring.reverse ? " reverse" : ""
-                }`,
+                animation: `spin ${ring.duration}s linear infinite${ring.reverse ? " reverse" : ""
+                  }`,
               }}
             >
               {ring.nodes.map((n) => {
@@ -107,9 +107,8 @@ export function ServiceOrbit({
                     {/* Counter-rotate so tooltip stays upright */}
                     <div
                       style={{
-                        animation: `spin ${ring.duration}s linear infinite${
-                          ring.reverse ? "" : " reverse"
-                        }`,
+                        animation: `spin ${ring.duration}s linear infinite${ring.reverse ? "" : " reverse"
+                          }`,
                       }}
                     >
                       <Link
@@ -152,7 +151,7 @@ export function ServiceOrbit({
       {/* Centered logo */}
       <div className="pointer-events-none absolute inset-0 grid place-items-center">
         <img
-          src="/__l5e/assets-v1/cfd0e33f-0bca-44c9-b8db-94ec8df24400/agile-logo-circle.png"
+          src={logoImg}
           alt="AGILE"
           className="h-[40%] w-[40%] object-contain drop-shadow-[0_0_40px_rgba(94,234,212,0.45)]"
           style={{ animation: "float 6s ease-in-out infinite" }}

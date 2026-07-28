@@ -116,7 +116,7 @@ export function ServiceWheel() {
         <div className="relative grid h-36 w-36 place-items-center md:h-44 md:w-44">
           <div className="absolute inset-0 rounded-full bg-primary/15 blur-2xl" />
           <img
-            src="/__l5e/assets-v1/cfd0e33f-0bca-44c9-b8db-94ec8df24400/agile-logo-circle.png"
+            src={logoImg}
             alt="AGILE"
             className="relative h-full w-full object-contain drop-shadow-[0_18px_40px_rgba(20,15,10,0.25)]"
           />
