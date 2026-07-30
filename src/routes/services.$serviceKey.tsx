@@ -56,6 +56,11 @@ const SERVICE_PRINCIPLES: Record<ServiceKey, { k: string; v: string }[]> = {
     { k: "Governance-ready", v: "Boards that actually function." },
     { k: "Coached, not taught", v: "Skills that stick." },
   ],
+  diligenceBusiness: [
+    { k: "Data-driven", v: "Objective insights, not opinions." },
+    { k: "Risk-focused", v: "Identify threats before they materialize." },
+    { k: "Growth-oriented", v: "Opportunities for expansion and partnerships." },
+  ],
 };
 
 function ServiceDetailPage() {

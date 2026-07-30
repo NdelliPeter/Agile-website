@@ -40,7 +40,8 @@
         "risk": "Cartographie des risques, solvabilité et LBC/FT sous COBAC, CIMA, COSUMAF.",
         "performance": "Budgétisation, fiscalité et ingénierie comptable.",
         "heritage": "Évaluation d'actifs et planification successorale sécurisée.",
-        "humanCapital": "Formation finance et gouvernance pour conseils et équipes."
+        "humanCapital": "Formation finance et gouvernance pour conseils et équipes.",
+        "diligenceBusiness": "Diligence raisonnable et hub de développement commercial"
       },
       "cards": {
         "audit": {
@@ -66,6 +67,10 @@
         "humanCapital": {
           "title": "Capital humain et Gouvernance",
           "desc": "Nous professionnalisons les équipes et les organes de gouvernance grâce à la formation à la finance pour les managers, au coaching technique des équipes financières et à la formation à la gouvernance des administrateurs."
+        },
+        "diligenceBusiness": {
+          "title": "Diligence et Développement",
+          "desc": "Nous soutenons les transactions et la croissance des entreprises grâce à la diligence raisonnable, à l'analyse de marché, à l'identification d'opportunités et au développement commercial pour les institutions financières, les investisseurs et les entreprises en croissance."
         }
       }
     },
@@ -728,16 +733,6 @@
           "city": "Douala",
           "country": "Cameroun",
           "role": "Siège"
-        },
-        {
-          "city": "Yaoundé",
-          "country": "Cameroun",
-          "role": "Bureau de représentation"
-        },
-        {
-          "city": "Libreville",
-          "country": "Gabon",
-          "role": "Affilié"
         }
       ]
     },

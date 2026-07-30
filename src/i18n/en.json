@@ -41,7 +41,7 @@
         "performance": "Budgeting, tax and accounting engineering.",
         "heritage": "Asset valuation and secured succession planning.",
         "humanCapital": "Finance training & governance for boards and teams.",
-        "diligence&Business": "Due Diligence & Business Development Hub"
+        "diligenceBusiness": "Due Diligence & Business Development Hub"
       },
       "cards": {
         "audit": {
@@ -68,8 +68,8 @@
           "title": "Human Capital and Governance",
           "desc": "We professionalise teams and governing bodies through finance training for managers, technical coaching for finance teams, and governance training for directors."
         },
-        "diligence&Business": {
-          "title": "Due Diligence and Business Development",
+        "diligenceBusiness": {
+          "title": "Due Diligence and Business",
           "desc": "We support business growth and investment through due diligence, business development advisory, and strategic support for market entry, partnerships and capital raising."
         }
       }
@@ -469,6 +469,28 @@
           }
         ],
         "keywords": "manager training, governance training, finance for managers, skills development, corporate governance Cameroon"
+      },
+      "diligenceBusiness": {
+        "title": "Due Diligence & Business Development Hub",
+        "short": "Due Diligence Services: Mitigate Risk, Ensure Compliance. In an increasingly complex regulatory landscape, our Due Diligence services provide the objective, data-driven insights you need to mitigate risk, protect your reputation, and ensure compliance with local and international standards. Area of Focus ",
+        "detail": "Our due diligence and business advisory services are designed to provide clarity and confidence in complex transactions: \nFinancial Due Diligence: We conduct thorough reviews of financial statements, cash flows, and accounting practices to assess the financial health of target companies. \nOperational Due Diligence: We evaluate operational processes, supply chains, and management practices to identify potential risks and opportunities for improvement. \nRegulatory Compliance Assessment: We ensure that target companies adhere to relevant laws and regulations, mitigating legal and reputational risks. \nStrategic Advisory: We provide insights on market positioning, competitive analysis, and growth strategies to support informed decision-making.",
+        "deliverables": [
+          "Accelerated Onboarding Cycles: Manual due diligence is a major bottleneck in business operations.",
+          "Comprehensive Regulatory Audit Trails:  Our service provides a centralized, digital repository of all research, screening results, and risk scores.",
+          "Mitigation of Financial and Reputational Exposure: By accessing high-quality global data, clients identify hidden risks before they manifest. This includes: - Sanctions screening: Avoiding dealings with blocked individuals or entities. - Adverse media monitoring: Identifying negative press related to corruption, fraud, or unethical labor practices before they impact the client's brand.- Beneficial Ownership discovery: Uncovering the real people behind shell companies to prevent money laundering.",
+          "Continuous Risk Monitoring (Beyond Point-in-Time): Our service provides ongoing, automated alerts. 5. Standardized Risk-Based Decisioning: Our platform enables clients to define and enforce a standard risk appetite. Agile leversages on an uniform scoring criteria across every customer and supplier."
+        ],
+        "faqs": [
+          {
+            "q": "What exactly is due diligence?",
+            "a": "In the business and financial world, due diligence is a systematic process of investigation, research, and analysis performed before entering into a business transaction or relationship."
+          },
+          {
+            "q": "Why It Matters",
+            "a": "Key components include financial analysis, operational assessment, legal compliance review, market evaluation, and risk identification. Each component provides critical insights into the overall health and viability of the target entity."
+          }
+        ],
+        "keywords": "due diligence services, business advisory, financial analysis, operational assessment, regulatory compliance"
       }
     }
   },
@@ -742,16 +764,6 @@
           "city": "Douala",
           "country": "Cameroon",
           "role": "Head office"
-        },
-        {
-          "city": "Yaoundé",
-          "country": "Cameroon",
-          "role": "Representative office"
-        },
-        {
-          "city": "Libreville",
-          "country": "Gabon",
-          "role": "Affiliate"
         }
       ]
     },

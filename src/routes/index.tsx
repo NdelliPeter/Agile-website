@@ -349,7 +349,6 @@ function HomePage() {
             </Link>
           </div>
 
-
         </div>
       </section>
     </AppLayout>

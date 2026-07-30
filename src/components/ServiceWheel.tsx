@@ -6,6 +6,7 @@ import {
   TrendingUp,
   Landmark,
   Users,
+  BriefcaseBusiness,
   type LucideIcon,
 } from "lucide-react";
 import { useT } from "@/components/AppProviders";
@@ -19,6 +20,7 @@ const ICONS: Record<ServiceKey, LucideIcon> = {
   performance: TrendingUp,
   heritage: Landmark,
   humanCapital: Users,
+  diligenceBusiness: BriefcaseBusiness,
 };
 
 

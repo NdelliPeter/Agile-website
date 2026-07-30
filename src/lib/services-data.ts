@@ -16,6 +16,7 @@ import cemacHeritage1 from "@/assets/cemac-heritage-1.jpg";
 import cemacHeritage2 from "@/assets/cemac-heritage-2.jpg";
 import cemacHuman1 from "@/assets/cemac-human-1.jpg";
 import cemacHuman2 from "@/assets/cemac-human-2.jpg";
+import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
 
 export const SERVICE_KEYS = [
   "audit",
@@ -24,6 +25,7 @@ export const SERVICE_KEYS = [
   "performance",
   "heritage",
   "humanCapital",
+  "diligenceBusiness",
 ] as const;
 
 export type ServiceKey = (typeof SERVICE_KEYS)[number];
@@ -35,6 +37,7 @@ export const SERVICE_IMAGES: Record<ServiceKey, string> = {
   performance: performanceImg,
   heritage: heritageImg,
   humanCapital: humanImg,
+  diligenceBusiness: diligenceBusinessImg,
 };
 
 export const SERVICE_GALLERY: Record<ServiceKey, string[]> = {
@@ -44,6 +47,7 @@ export const SERVICE_GALLERY: Record<ServiceKey, string[]> = {
   performance: [performanceImg, cemacPerf1, cemacPerf2],
   heritage: [heritageImg, cemacHeritage1, cemacHeritage2],
   humanCapital: [humanImg, cemacHuman1, cemacHuman2],
+  diligenceBusiness: [diligenceBusinessImg],
 };
 
 export const INDUSTRY_KEYS = [
@@ -53,6 +57,7 @@ export const INDUSTRY_KEYS = [
   "assetManagement",
   "managementCompanies",
   "agroIndustry",
+  "diligenceBusiness",
 ] as const;
 
 export type IndustryKey = (typeof INDUSTRY_KEYS)[number];
