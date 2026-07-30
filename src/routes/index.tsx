@@ -10,7 +10,7 @@ import { ServiceOrbit } from "@/components/ServiceOrbit";
 import { AfricaMap } from "@/components/AfricaMap";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
-import heroImg from "@/assets/IMG_0797.jpg";
+import heroImg from "@/assets/IMG_6965.jpg";
 
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
@@ -75,7 +75,7 @@ function HomePage() {
 
         {/* Kinetic eyebrow ticker — directly under the header */}
         <div className="absolute left-0 right-0 top-[70px] z-10 overflow-hidden border-y border-white/10 bg-black/30 py-2 backdrop-blur-sm md:top-[78px]">
-          <div className="marquee-track text-[11px] font-medium uppercase tracking-[0.28em] text-white/55">
+          <div className="marquee-track text-[16px] font-medium uppercase tracking-[0.28em] text-white/55">
             {[...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS, ...FRAMEWORKS].map((f, i) => (
               <span key={i} className="mx-8 inline-flex items-center gap-8">
                 <span className="inline-block h-1 w-1 rounded-full bg-[var(--brand-primary)]" />
@@ -87,10 +87,10 @@ function HomePage() {
 
         <div className="container-page relative z-10 w-full pb-32 pt-36 md:pb-36 md:pt-44">
           <Reveal>
-            <div className="eyebrow mb-6" style={{ color: "#E4EDEC" }}>
+            {/* <div className="eyebrow mb-6" style={{ color: "#E4EDEC" }}>
               <span className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)] align-middle" />
               {t("common.brandFull")}
-            </div>
+            </div> */}
             <h1 className="display-2xl max-w-5xl" style={{ color: "#F6F4F1" }}>
               {(t("home.hero.headline") as string).split(" ").map((w, i) => (
                 <span
@@ -260,10 +260,10 @@ function HomePage() {
           <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
             {filledTestimonials.map((q, i) => (
               <figure key={i}>
-                <blockquote className="font-display text-xl font-medium leading-snug text-foreground">
+                <blockquote className="font-display text-[15px] font-medium leading-snug text-foreground">
                   “{q.quote}”
                 </blockquote>
-                <figcaption className="mt-4 text-sm text-muted-foreground">— {q.name}</figcaption>
+                <figcaption className="mt-4 text-md text-bold text-muted-foreground">— {q.name}</figcaption>
               </figure>
             ))}
           </div>

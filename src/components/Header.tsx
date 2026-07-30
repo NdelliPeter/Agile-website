@@ -62,7 +62,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             <BrandMark variant="full" size={42} forceLight={onHero} />
             <span
               className={
-                "hidden text-[16px] font-semibold tracking-tight sm:inline " + fgText
+                "hidden text-[18px] font-semibold tracking-tight sm:inline " + fgText
               }
             >
               AGILE
@@ -73,7 +73,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             {navItems.map((item) => {
               const active =
                 item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
-              const base = "rounded-full px-4 py-2 text-[14px] transition-colors ";
+              const base = "rounded-full px-4 py-2 text-[15px] transition-colors ";
               const cls = active
                 ? onHero
                   ? "bg-white/15 text-white"

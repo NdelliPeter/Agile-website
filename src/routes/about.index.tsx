@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { VerticalPipeline } from "@/components/Pipeline";
 import founderImg from "@/assets/founder.jpg";
 import logoImg from "@/assets/logo.png";
+import aboutHeroImg from "@/assets/Alex Uzbek 1 Noir & Blanc.jpeg"
 
 
 export const Route = createFileRoute("/about/")({
@@ -50,9 +51,8 @@ function AboutPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.08]"
           style={{
-            backgroundImage:
-              "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
+            backgroundImage: `url(${aboutHeroImg})`,
+            // backgroundSize: "80px 80px",
           }}
         />
 
@@ -143,7 +143,7 @@ function AboutPage() {
       {/* About header */}
       <section className="container-page pt-5">
         <SectionHeading
-          eyebrow={t("common.nav.about")}
+          // eyebrow={t("common.nav.about")}
           title={t("about.header.title")}
           intro={t("about.header.intro")}
           size="xl"
@@ -154,7 +154,7 @@ function AboutPage() {
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <SectionHeading eyebrow="Our story" title={t("about.story.heading")} size="md" />
+            <SectionHeading title={t("about.story.heading")} size="md" />
           </div>
           <div className="md:col-span-7">
             <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
