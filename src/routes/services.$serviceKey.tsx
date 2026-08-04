@@ -115,13 +115,13 @@ function ServiceDetailPage() {
             <ArrowLeft size={14} /> {t("common.nav.services")}
           </Link>
 
-          <div className="mb-6 flex items-center justify-center gap-3">
+          {/* <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-12 bg-white/40" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               AGILE Service
             </span>
             <span className="h-px w-12 bg-white/40" />
-          </div>
+          </div> */}
           <h1
             className="w-full font-display text-4xl font-light leading-[1.05] text-white md:text-6xl lg:text-7xl"
             style={{ textShadow: "0 2px 30px rgba(0,0,0,0.4)" }}
