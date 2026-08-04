@@ -1,4 +1,4 @@
-import auditImg from "@/assets/service-audit.jpg";
+import auditImg from "@/assets/corporate-team-meeting-stockcake.jpg";
 import agroImg from "@/assets/service-agro.jpg";
 import riskImg from "@/assets/service-risk.jpg";
 import performanceImg from "@/assets/service-performance.jpg";
