@@ -3,7 +3,7 @@ import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SERVICE_KEYS, SERVICE_IMAGES } from "@/lib/services-data";
-import servicesHero from "@/assets/services-hero.jpg";
+import servicesHero from "@/assets/ServiceHero.jpg";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
