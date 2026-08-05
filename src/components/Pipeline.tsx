@@ -26,7 +26,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
               aria-hidden
               className="absolute left-[17px] top-9 bottom-0 w-px bg-border last:hidden"
             />
-            <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[16px] font-medium tracking-[0.14em] text-primary">
+            <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[16px] font-bold tracking-[0.14em] text-primary">
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="pt-1.5">
@@ -55,7 +55,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               <li className="group relative">
                 <span
-                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[14px] font-medium tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[14px] font-bold tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>

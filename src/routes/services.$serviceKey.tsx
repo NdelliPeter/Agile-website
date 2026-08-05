@@ -156,7 +156,7 @@ function ServiceDetailPage() {
           </h2>
         </div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,360px)_minmax(0,1fr)] md:gap-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,360px)_minmax(0,1fr)] md:gap-12">
           <div className="w-full">
             <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
           </div>

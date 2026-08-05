@@ -1,9 +1,9 @@
 import auditImg from "@/assets/corporate-team-meeting-stockcake.jpg";
-import agroImg from "@/assets/service-agro.jpg";
-import riskImg from "@/assets/service-risk.jpg";
-import performanceImg from "@/assets/service-performance.jpg";
-import heritageImg from "@/assets/service-heritage.jpg";
-import humanImg from "@/assets/service-human.jpg";
+import agroImg from "@/assets/IMG_7742.jpg";
+import riskImg from "@/assets/Albums&Aventures_AMN_9721_Venise.jpg";
+import performanceImg from "@/assets/images (1).jpg";
+import heritageImg from "@/assets/C00B033B-DC9B-4B32-8AF0-FDE065F54EF6.jpg";
+import humanImg from "@/assets/Albums&Aventures_AF1A4657_Bresil.jpg";
 import cemacAudit1 from "@/assets/cemac-audit-1.jpg";
 import cemacAudit2 from "@/assets/cemac-audit-2.jpg";
 import cemacAgro1 from "@/assets/cemac-agro-1.jpg";

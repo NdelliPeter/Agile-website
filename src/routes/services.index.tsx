@@ -53,20 +53,20 @@ function ServicesPage() {
 
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-8">
+            <div className="md:col-span-10">
               <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
                 {t("common.nav.services")}
               </div>
               <h1
-                className="display-2xl max-w-3xl text-white"
+                className="display-2xl max-w-7xl text-white"
                 style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
               >
                 {t("services.overview.headline")}
               </h1>
             </div>
-            <div className="md:col-span-4">
-              <p className="max-w-md text-base leading-relaxed text-white/85 md:text-[17px]">
+            <div className="md:col-span-10">
+              <p className="max-w-7xl text-base leading-relaxed text-white/85 md:text-[17px]">
                 {t("services.overview.intro")}
               </p>
             </div>
@@ -120,12 +120,12 @@ function ServicesPage() {
 
       <section className="border-t border-border bg-secondary/30">
         <div className="container-page flex flex-col items-start justify-between gap-6 py-16 md:flex-row md:items-end md:py-20">
-          <h2 className="display-md max-w-xl text-foreground">
+          <h2 className="display-md max-w-3xl text-foreground">
             {t("services.overview.ctaHeadline")}
           </h2>
           <Link
             to="/contact"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-md font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
           >
             {t("services.overview.ctaButton")} <ArrowUpRight size={16} />
           </Link>
