@@ -26,7 +26,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
               aria-hidden
               className="absolute left-[17px] top-9 bottom-0 w-px bg-border last:hidden"
             />
-            <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[11px] font-medium tracking-[0.14em] text-primary">
+            <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[16px] font-medium tracking-[0.14em] text-primary">
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="pt-1.5">
@@ -55,7 +55,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               <li className="group relative">
                 <span
-                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[11px] font-medium tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[14px] font-medium tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -86,7 +86,7 @@ export function VerticalPipeline({ steps }: { steps: PipelineStep[] }) {
         <li key={i} className="relative grid grid-cols-[28px_1fr] gap-4 pb-8 last:pb-0">
           <span className="relative z-10 mt-1.5 h-3.5 w-3.5 rounded-full border border-primary bg-background" />
           <div>
-            <div className="font-display text-[11px] font-medium tracking-[0.18em] text-primary">
+            <div className="font-display text-[15px] font-bold tracking-[0.18em] text-primary">
               {s.label}
             </div>
             {s.detail && (

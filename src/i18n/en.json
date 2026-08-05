@@ -125,7 +125,7 @@
     ],
     "testimonials": {
       "heading": "What Clients Say",
-      "title": "In the words of those we serve.",
+      "title": "Voices of Our Partners",
       "empty": "Coming soon — client testimonials are being prepared from prior engagements.",
       "note": "Pending: to be supplied by Madam Simo from prior engagements.",
       "items": [
@@ -192,18 +192,18 @@
   },
   "about": {
     "header": {
-      "title": "About AGILE",
-      "intro": "At AGILE we deliver a complete suite of services across audit, risk management, performance, heritage and governance. With a clear positioning in the CEMAC region and beyond, we combine regulatory expertise, sector specialisation and strategic advisory to support institutions and shareholders. Our agro industry focus strengthens food security and value creation under the OHADA framework."
+      "title": "About Us",
+      "intro": "At Agile, we  deliver a comprehensive suite of services across audit, risk management, performance, heritage, and governance. With a unique positioning in the CEMAC region, we combine regulatory expertise, sectoral specialization, and strategic advisory to empower institutions and shareholders. Our integrated Agro-Industry Focus strengthens food security and value creation under the OHADA framework."
     },
     "story": {
       "heading": "Our Story",
-      "body": "Can someone start from nothing and build something meaningful? That belief inspired the founding of AGILE — Audit, Advisory, Governance & Leadership Excellence in 2026. Co founded by Chartered Accountants, among them Claudine Simo Mamo, a CEMAC certified Chartered Accountant and Fellow of ACCA, AGILE brings together the collective expertise of its partners while reflecting Claudine's 37 years of leadership in finance and accounting across the CEMAC region. She joined AGILE to mentor young professionals and to build leadership capacity, ownership and accountability within teams. As a strategic advisor to banks, insurers, microfinance institutions and asset managers, she strengthens financial systems, supports regulatory compliance under OHADA, COBAC, CIMA and COSUMAF, and drives performance, particularly in agro industry, banking and microfinance structuring. Her vision is clear: sustainable success comes from strong foundations, discipline and continuous growth. At AGILE we secure value, empower growth and build trust, proving that meaningful futures are built from humble beginnings, one strategic step at a time."
+      "body": "Did you know that someone can start from nothing and build something truly meaningful? This belief inspired the founding of AGILE – Audit, Advisory, Governance & Leadership Excellence in 2026. Co‑founded by Chartered Accountants — among them Claudine Simo Mamo, a CEMAC‑certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA) — AGILE embodies the collective expertise of its partners while reflecting Claudine’s 37 years of leadership in finance and accounting across the CEMAC region. Mme Simo joined Agile to mentor young professionals, building leadership capacity, ownership, and accountability within teams. As a strategic advisor to banks, insurance companies, microfinance institutions and asset management, she strengthens financial systems, ensures regulatory compliance (OHADA, COBAC, CIMA, COSUMAF), and drives performance optimisation, particularly in agro-industry, banks and microfinance structuring. Her vision is clear: show that sustainable success comes from strong foundations, discipline, and continuous growth. At Agile, we secure value, empower growth, and build trust – proving that meaningful futures are forged from humble beginnings, one strategic step at a time. At Agile, we lead audit and assurance services in CEMAC and beyond, committed to securing value, empowering growth, and building trust for institutions, shareholders, and agro-industrial leaders in Cameroon."
     },
     "founderBio": {
       "heading": "Claudine Simo Mamo, Founder and Managing Partner",
-      "body": "Claudine Simo Mamo is a CEMAC certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting and advisory across Central Africa. Her career reflects both discipline and progression. She began in education in 1988, moved into project management, and later joined ECA, where she built her expertise over time. As the firm grew within the Ernst & Young (EY) network, she stepped into leadership, serving as Associate Director and Head of Audit for Cameroon and Chad, leading complex engagements across banking, insurance, asset management, agro industry and utilities. In 2023 she became a Partner at ECA S.A., leading audit, statutory audit, accounting and advisory services for major institutions across the region. Today she operates as an Independent Chartered Accountant and Founder and Managing Partner of AGILE, where she supports institutions and growing organisations in strengthening their systems, improving governance and building sustainable performance. At this stage of her career her focus goes beyond numbers. She is committed to developing people, mentoring young professionals and building a culture of responsibility. This commitment is reflected in her active involvement in the governing bodies of the accounting profession and in women's professional associations across the region."
+      "body": "Claudine Simo Mamo is a CEMAC-certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting, and advisory across Central Africa. Her career reflects both discipline and progression. She began her career in education in 1988, before transitioning into project management and later joining ECA IN 2012, where she built her expertise over time. As the firm evolved within the Ernst & Young (EY) network, she grew into leadership roles, serving as Associate Director and Head of Audit for Cameroon and Chad IN 2013, leading complex engagements across banking, insurance, asset management, agro-industry and utilities. In 2023, she reached a key milestone in her journey when she became a Partner at ECA S.A., where she led audit, statutory audit, accounting, and advisory services for major institutions across the region. Today, she operates as an Independent Chartered Accountant and Founder and Managing Partner of AGILE (Audit, Advisory, Governance & Leadership Excellence), where she supports financial institutions and growing organisations in strengthening their systems, improving governance, and building sustainable performance. At this stage of her career, her focus goes beyond numbers. She is deeply committed to developing people, mentoring young professionals, building a culture of responsibility, and contributing to organisations where individuals are empowered to grow into leadership. This commitment is reflected in her active leadership within the accounting profession, where she serves as a Member of ONECCA (National Order of Chartered Accountants of Cameroon), sitting on the Council as Deputy Treasurer, and as a Distinguished Fellow Member of ACCA (FCCA)"
     },
-    "quote": "Someone can start from nothing and become something meaningful in the future.",
+    "quote": "True leadership is the bridge that transforms quiet starts into sustainable excellence.",
     "timeline": {
       "heading": "Milestones",
       "note": "Pending: confirm dates and events with Madam Simo.",
@@ -244,27 +244,27 @@
     },
     "values": {
       "heading": "Our Core Values",
-      "intro": "At AGILE these five values are the foundation of our work across CEMAC and beyond, delivering professional excellence with a focus on client success and sustainable growth.",
+      "intro": "At Agile, we uphold these core values as the foundation of our audit and advisory services across CEMAC and beyond, delivering professional excellence with a focus on client success and sustainable growth.",
       "items": [
         {
-          "name": "Adaptability",
-          "desc": "We anticipate change in regulation and markets and respond with structured, practical solutions that keep clients ahead and resilient."
+          "name": "Proactive",
+          "desc": "We anticipate challenges in financial regulations like OHADA and COBAC, guiding clients ahead of the curve to secure assets and optimise agro-industry value chains efficiently."
         },
         {
-          "name": "Gratitude",
-          "desc": "We give back through community service, youth mentorship and genuine care for the clients and communities we serve."
+          "name": "Performance-driven",
+          "desc": "Our expertise drives measurable results in statutory audits and risk management, ensuring CIMA-compliant operations that enhance profitability and long-term institutional strength."
         },
         {
-          "name": "Integrity",
-          "desc": "We uphold honesty, reliability and the highest professional standards in every engagement, protecting trust above all."
+          "name": "Problem-solving oriented",
+          "desc": "We tackle complex financial hurdles with structured, innovative solutions, from SYSCOHADA certification to microfinance structuring, turning obstacles into strategic opportunities."
         },
         {
-          "name": "Leadership",
-          "desc": "We build leaders, developing teams and governing bodies so people grow from entry level into ownership and responsibility."
+          "name": "Professionalism",
+          "desc": "Upholding the highest standards of expertise and reliability, we provide precise advisory that reflects our 37 years of CEMAC finance leadership."
         },
         {
-          "name": "Excellence",
-          "desc": "We deliver measurable, timely results to a consistently high standard, turning expertise into lasting value for clients."
+          "name": "Timeliness",
+          "desc": "We deliver swift, dependable services, statutory audits, ESG compliance, or succession planning, meeting deadlines without compromise to support your business growth."
         }
       ]
     },

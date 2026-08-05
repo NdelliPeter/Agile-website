@@ -15,8 +15,8 @@ export function SectionHeading({
 }) {
   const sizeClass = size === "xl" ? "display-xl" : size === "lg" ? "display-lg" : "display-md";
   return (
-    <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      {eyebrow && <div className="eyebrow mb-4">{eyebrow}</div>}
+    <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"} >
+      {eyebrow && <div className="eyebrow mb-4" style={{ fontSize: "18px", textTransform: "capitalize" }}>{eyebrow}</div>}
       <h2 className={`${sizeClass} text-foreground`}>{title}</h2>
       {intro && (
         <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">{intro}</p>

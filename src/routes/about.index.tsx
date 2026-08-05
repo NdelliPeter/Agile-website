@@ -49,7 +49,7 @@ function AboutPage() {
         {/* Subtle grid */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
+          className="pointer-events-none absolute inset-0 opacity-[0.3]"
           style={{
             backgroundImage: `url(${aboutHeroImg})`,
             // backgroundSize: "80px 80px",
@@ -171,14 +171,14 @@ function AboutPage() {
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <div className="border-t border-border pt-8">
-            <div className="eyebrow mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+            <div className="eyebrow text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
+            <p className="font-display text-[22px] leading-snug text-foreground ">
               {t("about.vision.body")}
             </p>
           </div>
           <div className="border-t border-border pt-8">
-            <div className="eyebrow mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+            <div className="eyebrow text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
+            <p className="font-display text-[22px] leading-snug text-foreground">
               {t("about.mission.body")}
             </p>
           </div>
@@ -200,7 +200,7 @@ function AboutPage() {
                 key={i}
                 className="border-t border-border pt-5 md:border-r md:px-5 md:pr-6 md:last:border-r-0"
               >
-                <div className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                <div className="font-display text-[14px] font-bold tracking-[0.18em] text-primary">
                   0{i + 1} · {v.name}
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -214,7 +214,7 @@ function AboutPage() {
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <SectionHeading eyebrow={t("about.timeline.heading")} title="A career, in milestones." size="md" />
+            <SectionHeading title="A career, in milestones." size="md" />
           </div>
           <div className="md:col-span-7">
             <VerticalPipeline
@@ -238,7 +238,7 @@ function AboutPage() {
             />
             <Link
               to="/about/team"
-              className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)]"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-md font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)]"
               style={{ borderRadius: "1px 35px 1px 35px" }}
             >
               Meet our team <ArrowUpRight size={16} />

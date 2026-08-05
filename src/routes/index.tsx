@@ -60,12 +60,12 @@ function HomePage() {
           className="absolute inset-0 mix-blend-multiply opacity-40"
           style={{
             background:
-              "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, transparent 55%, rgba(11,9,7,0.6) 100%)",
+              "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, transparent 55%, rgba(11,9,7,0.1) 100%)",
           }}
         />
         {/* 8-col grid overlay */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
+          className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
               "linear-gradient(to right, #fff 1px, transparent 1px)",
@@ -223,7 +223,7 @@ function HomePage() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-6">
             <SectionHeading
-              eyebrow={t("home.whyChooseUs.advantages.heading")}
+              // eyebrow={t("home.whyChooseUs.advantages.heading")}
               title={t("home.whyChooseUs.heading")}
               intro={t("home.whyChooseUs.paragraph")}
             />
@@ -233,7 +233,7 @@ function HomePage() {
               {(t("home.whyChooseUs.advantages.items", { returnObjects: true }) as string[]).map(
                 (item, i) => (
                   <li key={i} className="grid grid-cols-[auto_1fr] gap-5 border-t border-border pt-6">
-                    <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                    <span className="font-display text-s font-medium tracking-[0.18em] text-primary">
                       0{i + 1}
                     </span>
                     <p className="text-[15.5px] leading-relaxed text-foreground">{item}</p>
@@ -260,10 +260,10 @@ function HomePage() {
           <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
             {filledTestimonials.map((q, i) => (
               <figure key={i}>
-                <blockquote className="font-display text-[15px] font-medium leading-snug text-foreground">
+                <blockquote style={{ fontStyle: 'italic', textAlign: 'justify' }} className="font-display text-[15px] font-medium leading-snug text-foreground">
                   “{q.quote}”
                 </blockquote>
-                <figcaption className="mt-4 text-md text-bold text-muted-foreground">— {q.name}</figcaption>
+                <figcaption className="mt-4 text-md font-extrabold text-muted-foreground">— {q.name}</figcaption>
               </figure>
             ))}
           </div>
@@ -294,7 +294,7 @@ function HomePage() {
                   <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
                     <AccordionTrigger className="py-5 hover:no-underline md:py-6">
                       <div className="flex w-full items-center gap-5 text-left">
-                        <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
+                        <span className="font-display text-s font-medium tracking-[0.18em] text-primary">
                           0{i + 1}
                         </span>
                         <span className="font-display text-base font-medium text-foreground md:text-lg">

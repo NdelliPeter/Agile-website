@@ -25,7 +25,7 @@ export function Footer() {
   ].filter((s) => s.url && s.url.length > 0);
 
   return (
-    <footer className="mt-24 border-t border-primary/40 bg-primary text-primary-foreground dark:border-border dark:bg-background dark:text-foreground">
+    <footer style={{ backgroundColor: "#3D2E23" }} className="mt-24 border-t border-primary/40 bg-primary text-primary-foreground dark:border-border dark:bg-background dark:text-foreground">
       {/* Newsletter band */}
       <div className="border-b border-primary-foreground/15 dark:border-border">
         <div className="container-page grid grid-cols-1 items-center gap-8 py-12 md:grid-cols-12 md:gap-16">
