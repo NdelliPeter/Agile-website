@@ -78,20 +78,20 @@ function InsightsPage() {
         />
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-8">
+            <div className="md:col-span-10">
               <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
                 {t("insights.title")}
               </div>
               <h1
-                className="display-2xl max-w-3xl text-white"
+                className="display-2xl max-w-7xl text-white"
                 style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
               >
                 Practical insight for regulated institutions.
               </h1>
             </div>
-            <div className="md:col-span-4">
-              <p className="max-w-md text-base leading-relaxed text-white/85 md:text-[17px]">
+            <div className="md:col-span-10">
+              <p className="max-w-7xl text-base leading-relaxed text-white/85 md:text-[17px]">
                 {t("insights.intro")}
               </p>
             </div>

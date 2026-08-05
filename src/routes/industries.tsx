@@ -12,6 +12,7 @@ import microfinanceImg from "@/assets/industry-microfinance.jpg";
 import assetImg from "@/assets/industry-asset.jpg";
 import mgmtImg from "@/assets/industry-management.jpg";
 import agroImg from "@/assets/industry-agro.jpg";
+import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
 
 const IMG: Record<IndustryKey, string> = {
   banking: bankingImg,
@@ -20,6 +21,7 @@ const IMG: Record<IndustryKey, string> = {
   assetManagement: assetImg,
   managementCompanies: mgmtImg,
   agroIndustry: agroImg,
+  diligenceBusiness: diligenceBusinessImg,
 };
 
 const STATS: Record<IndustryKey, Array<{ value: string; label: string }>> = {
@@ -52,6 +54,11 @@ const STATS: Record<IndustryKey, Array<{ value: string; label: string }>> = {
     { value: "9", label: "Agro-industry clients" },
     { value: "IFRS", label: "Reporting standard" },
     { value: "3", label: "Value-chain audits" },
+  ],
+  diligenceBusiness: [
+    { value: "15+", label: "Due diligence mandates" },
+    { value: "5", label: "M&A advisory clients" },
+    { value: "100%", label: "Confidentiality assured" },
   ],
 };
 
@@ -102,20 +109,20 @@ function IndustriesPage() {
         />
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-8">
+            <div className="md:col-span-10">
               <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
                 {t("common.nav.industries")}
               </div>
               <h1
-                className="display-2xl max-w-3xl text-white"
+                className="display-2xl max-w-7xl text-white"
                 style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
               >
                 {t("industries.overview.headline")}
               </h1>
             </div>
-            <div className="md:col-span-4">
-              <p className="max-w-md text-base leading-relaxed text-white/85 md:text-[17px]">
+            <div className="md:col-span-10">
+              <p className="max-w-7xl text-base leading-relaxed text-white/85 md:text-[17px]">
                 {t("industries.overview.intro")}
               </p>
             </div>
@@ -128,7 +135,7 @@ function IndustriesPage() {
 
       {/* anchor nav */}
       <section className="sticky top-[78px] z-30 mt-16 border-y border-border bg-background/90 backdrop-blur">
-        <div className="container-page flex gap-1 overflow-x-auto py-3 text-sm">
+        <div className="container-page flex gap-1 overflow-x-auto max-w-none justify-center py-3 text-sm">
           {INDUSTRY_KEYS.map((k) => (
             <a
               key={k}
@@ -142,16 +149,17 @@ function IndustriesPage() {
       </section>
 
       {INDUSTRY_KEYS.map((k, i) => {
-        const challenges = (t(`industries.items.${k}.challenges`, {
-          returnObjects: true,
-        }) as string[]) || [];
-        const faq = t(`industries.items.${k}.faq`, { returnObjects: true }) as {
-          q: string;
-          a: string;
-        };
-        const stats = (t(`ui.industries.stats.${k}`, {
-          returnObjects: true,
-        }) as Array<{ value: string; label: string }>) || STATS[k];
+        const challengesRaw = t(`industries.items.${k}.challenges`, { returnObjects: true });
+        const challenges = Array.isArray(challengesRaw) ? challengesRaw : [];
+
+        const faqRaw = t(`industries.items.${k}.faq`, { returnObjects: true });
+        const faq = typeof faqRaw === 'object' && faqRaw !== null && !Array.isArray(faqRaw)
+          ? (faqRaw as { q: string; a: string })
+          : null;
+
+        const statsRaw = t(`ui.industries.stats.${k}`, { returnObjects: true });
+        const stats = Array.isArray(statsRaw) ? statsRaw : (STATS[k] || []);
+
         return (
           <section
             id={k}
@@ -162,7 +170,7 @@ function IndustriesPage() {
             }
           >
             <div className="container-page py-20 md:py-28">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+              <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
                 <div className="md:col-span-5">
                   <img
                     src={IMG[k]}
@@ -180,44 +188,54 @@ function IndustriesPage() {
                     {t(`industries.items.${k}.description`)}
                   </p>
 
-                  <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
-                    {stats.map((s) => (
-                      <div key={s.label} className="bg-background px-3 py-4 text-center sm:px-4 sm:py-5">
-                        <dt className="font-display text-lg font-medium text-primary sm:text-xl">
-                          {s.value}
-                        </dt>
-                        <dd className="mt-1 text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground">
-                          {s.label}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
+                  {stats.length > 0 && (
+                    <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
+                      {stats.map((s) => (
+                        <div key={s.label} className="bg-background px-3 py-4 text-center sm:px-4 sm:py-5">
+                          <dt className="font-display text-lg font-medium text-primary sm:text-xl">
+                            {s.value}
+                          </dt>
+                          <dd className="mt-1 text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground">
+                            {s.label}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                 </div>
               </div>
 
               <div className="mt-16">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
-                  {t("ui.industries.keyChallenges")}
-                </h3>
-                <ul className="mt-4 divide-y divide-border border-y border-border">
-                  {challenges.map((c, j) => (
-                    <li key={j} className="grid grid-cols-[40px_1fr] gap-6 py-5 md:grid-cols-[60px_1fr]">
-                      <span className="font-display text-xs font-medium tracking-[0.18em] text-primary">
-                        {String(j + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-[15px] leading-relaxed text-foreground md:text-base">{c}</span>
-                    </li>
-                  ))}
-                </ul>
+                {challenges.length > 0 && (
+                  <>
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+                      {t("ui.industries.keyChallenges")}
+                    </h3>
+                    <ul className="mt-4 divide-y divide-border border-y border-border">
+                      {challenges.map((c, j) => (
+                        <li key={j} className="grid grid-cols-[40px_1fr] gap-6 py-5 md:grid-cols-[60px_1fr]">
+                          <span className="font-display text-s font-bold tracking-[0.18em] text-primary">
+                            {String(j + 1).padStart(2, "0")}
+                          </span>
+                          <span className="text-[15px] leading-relaxed text-foreground md:text-base">{c}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
 
-                <p className="mt-8 rounded-2xl border border-border bg-background/60 p-5 text-sm leading-relaxed text-foreground md:text-base">
-                  <span className="eyebrow mr-2 text-primary">{t("ui.industries.frameworks")}</span>
-                  {t(`industries.items.${k}.frameworks`)}
-                </p>
+                {t(`industries.items.${k}.frameworks`) !== `industries.items.${k}.frameworks` && (
+                  <p className="mt-8 rounded-2xl border border-border bg-background/60 p-5 text-sm leading-relaxed text-foreground md:text-base">
+                    <span className="eyebrow mr-2 text-primary">{t("ui.industries.frameworks")}</span>
+                    {t(`industries.items.${k}.frameworks`)}
+                  </p>
+                )}
 
-                <div className="mt-8">
-                  <FAQAccordion items={[faq]} />
-                </div>
+                {faq && (
+                  <div className="mt-8">
+                    <FAQAccordion items={[faq]} />
+                  </div>
+                )}
               </div>
 
             </div>

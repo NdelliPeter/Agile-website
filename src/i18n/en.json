@@ -581,6 +581,27 @@
           "q": "How does AGILE support agro industry under OHADA and ESG concerns?",
           "a": "We deliver SYSCOHADA audit and certification, collateral and securities advisory, and legal structuring for value chains and PPP agreements, all under the OHADA framework. We integrate ESG compliance audits to manage environmental, social and governance risks, helping agro industrial businesses protect assets, strengthen governance and support food security and sustainable value creation."
         }
+      },
+      "diligenceBusiness": {
+        "title": "Due Diligence & Business Development Hub",
+        "description": "Due Diligence Services: Mitigate Risk, Ensure Compliance. In an increasingly complex regulatory landscape, our Due Diligence services provide the objective, data-driven insights you need to mitigate risk, protect your reputation, and ensure compliance with local and international standards. Area of Focus ",
+        "challenges": [
+          "Accelerated Onboarding Cycles: Manual due diligence is a major bottleneck in business operations.",
+          "Comprehensive Regulatory Audit Trails:  Our service provides a centralized, digital repository of all research, screening results, and risk scores.",
+          "Mitigation of Financial and Reputational Exposure: By accessing high-quality global data, clients identify hidden risks before they manifest. This includes: - Sanctions screening: Avoiding dealings with blocked individuals or entities. - Adverse media monitoring: Identifying negative press related to corruption, fraud, or unethical labor practices before they impact the client's brand.- Beneficial Ownership discovery: Uncovering the real people behind shell companies to prevent money laundering.",
+          "Continuous Risk Monitoring (Beyond Point-in-Time): Our service provides ongoing, automated alerts. 5. Standardized Risk-Based Decisioning: Our platform enables clients to define and enforce a standard risk appetite. Agile leversages on an uniform scoring criteria across every customer and supplier."
+        ],
+        "faqs": [
+          {
+            "q": "What exactly is due diligence?",
+            "a": "In the business and financial world, due diligence is a systematic process of investigation, research, and analysis performed before entering into a business transaction or relationship."
+          },
+          {
+            "q": "Why It Matters",
+            "a": "Key components include financial analysis, operational assessment, legal compliance review, market evaluation, and risk identification. Each component provides critical insights into the overall health and viability of the target entity."
+          }
+        ],
+        "frameworks": "Due diligence services, business advisory, financial analysis, operational assessment, regulatory compliance"
       }
     }
   },
