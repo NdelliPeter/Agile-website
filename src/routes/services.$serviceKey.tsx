@@ -132,7 +132,7 @@ function ServiceDetailPage() {
             {t(`services.items.${key}.short`)}
           </p>
 
-          <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 backdrop-blur-md">
+          {/* <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 backdrop-blur-md">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
             <span className="text-xs font-medium uppercase tracking-[0.22em] text-white/80">
               Advisory · Assurance · Coaching
@@ -141,7 +141,7 @@ function ServiceDetailPage() {
 
           <div className="mt-12 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-white/50">
             <ArrowDown size={14} className="animate-bounce" /> Scroll
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -196,8 +196,8 @@ function ServiceDetailPage() {
                 <span className="font-display text-base font-medium text-primary">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Check size={12} strokeWidth={3} />
+                <span className="mt-1 flex h-5 w-1 items-center justify-center rounded-full text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+                  {/* <Check size={12} strokeWidth={3} /> */}
                 </span>
                 <span className="text-[15px] leading-relaxed text-foreground">{d}</span>
               </li>
@@ -221,9 +221,9 @@ function ServiceDetailPage() {
             <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-5xl">
               How we deliver this engagement.
             </h2>
-            <div className="mt-4 font-display text-sm text-muted-foreground">
+            {/* <div className="mt-4 font-display text-sm text-muted-foreground">
               Five disciplined stages · zero surprises
-            </div>
+            </div> */}
           </div>
           <Pipeline steps={pipelineSteps} />
         </div>
@@ -232,7 +232,7 @@ function ServiceDetailPage() {
       {/* ============ FAQ ============ */}
       <section className="container-page py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="eyebrow mb-3 text-primary">FAQ</div>
+          {/* <div className="eyebrow mb-3 text-primary">FAQ</div> */}
           <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
             Common questions, <span className="italic text-primary">answered.</span>
           </h2>
