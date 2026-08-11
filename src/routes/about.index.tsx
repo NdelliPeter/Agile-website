@@ -189,7 +189,7 @@ function AboutPage() {
       <section className="border-t border-border bg-secondary/30">
         <div className="container-page py-20 md:py-28">
           <SectionHeading
-            eyebrow={t("about.values.heading")}
+            // eyebrow={t("about.values.heading")}
             title="Five values that shape every engagement."
             intro={t("about.values.intro")}
             size="lg"
@@ -200,7 +200,7 @@ function AboutPage() {
                 key={i}
                 className="border-t border-border pt-5 md:border-r md:px-5 md:pr-6 md:last:border-r-0"
               >
-                <div className="font-display text-[14px] font-bold tracking-[0.18em] text-primary">
+                <div className="font-display text-[17px] font-bold tracking-[0.18em] text-primary">
                   0{i + 1} · {v.name}
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>

@@ -30,7 +30,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="pt-1.5">
-              <div className="font-display text-base font-medium text-foreground">
+              <div className="font-display text-base text-[18px] font-bold text-foreground">
                 {s.label}
               </div>
               {s.detail && (
@@ -55,12 +55,12 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               <li className="group relative">
                 <span
-                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[14px] font-bold tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[16px] font-bold tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="mt-6">
-                  <div className="font-display text-[17px] font-medium leading-snug text-foreground">
+                  <div className="font-display text-[17px] font-bold leading-snug text-foreground">
                     {s.label}
                   </div>
                   {s.detail && (
@@ -86,11 +86,11 @@ export function VerticalPipeline({ steps }: { steps: PipelineStep[] }) {
         <li key={i} className="relative grid grid-cols-[28px_1fr] gap-4 pb-8 last:pb-0">
           <span className="relative z-10 mt-1.5 h-3.5 w-3.5 rounded-full border border-primary bg-background" />
           <div>
-            <div className="font-display text-[15px] font-bold tracking-[0.18em] text-primary">
+            <div className="font-display text-[18px] font-bold tracking-[0.18em] text-primary">
               {s.label}
             </div>
             {s.detail && (
-              <p className="mt-1.5 text-[15px] leading-relaxed text-muted-foreground">
+              <p className="mt-1.5 text-[16px] leading-relaxed text-muted-foreground">
                 {s.detail}
               </p>
             )}

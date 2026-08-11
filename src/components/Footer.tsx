@@ -118,7 +118,7 @@ export function Footer() {
               {t("common.nav.services")}
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {["audit", "agro", "risk", "performance", "heritage", "humanCapital"].map((k) => (
+              {["audit", "agro", "risk", "performance", "heritage", "humanCapital", "diligenceBusiness"].map((k) => (
                 <li key={k}>
                   <Link
                     to="/services/$serviceKey"

@@ -207,7 +207,7 @@ function HomePage() {
       <section className="border-t border-border bg-secondary/30">
         <div className="container-page py-20 md:py-28">
           <SectionHeading
-            eyebrow={t("home.engagement.heading")}
+            // eyebrow={t("home.engagement.heading")}
             title={t("home.engagement.title")}
             intro={t("home.engagement.intro")}
             size="lg"
@@ -233,7 +233,7 @@ function HomePage() {
               {(t("home.whyChooseUs.advantages.items", { returnObjects: true }) as string[]).map(
                 (item, i) => (
                   <li key={i} className="grid grid-cols-[auto_1fr] gap-5 border-t border-border pt-6">
-                    <span className="font-display text-s font-medium tracking-[0.18em] text-primary">
+                    <span className="font-display text-[16px] font-bold tracking-[0.18em] text-primary">
                       0{i + 1}
                     </span>
                     <p className="text-[15.5px] leading-relaxed text-foreground">{item}</p>
@@ -248,7 +248,7 @@ function HomePage() {
       {/* TESTIMONIALS — pull quotes */}
       <section className="container-page py-20 md:py-28">
         <SectionHeading
-          eyebrow={t("home.testimonials.heading")}
+          // eyebrow={t("home.testimonials.heading")}
           title={t("home.testimonials.title")}
           size="md"
         />
@@ -278,7 +278,7 @@ function HomePage() {
           <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <SectionHeading
-                eyebrow={t("home.africaFocus.eyebrow")}
+                // eyebrow={t("home.africaFocus.eyebrow")}
                 title={t("home.africaFocus.title")}
                 intro={t("home.africaFocus.intro")}
                 size="lg"
@@ -294,10 +294,10 @@ function HomePage() {
                   <AccordionItem key={i} value={`pillar-${i}`} className="border-b border-border">
                     <AccordionTrigger className="py-5 hover:no-underline md:py-6">
                       <div className="flex w-full items-center gap-5 text-left">
-                        <span className="font-display text-s font-medium tracking-[0.18em] text-primary">
+                        <span className="font-display text-[15px] font-bold tracking-[0.18em] text-primary">
                           0{i + 1}
                         </span>
-                        <span className="font-display text-base font-medium text-foreground md:text-lg">
+                        <span className="font-display text-base font-bold text-foreground md:text-lg">
                           {p.title}
                         </span>
                       </div>
