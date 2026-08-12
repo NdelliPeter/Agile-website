@@ -60,7 +60,7 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="mt-6">
-                  <div className="font-display text-[17px] font-bold leading-snug text-foreground">
+                  <div className="font-display text-[18px] font-bold leading-snug text-foreground">
                     {s.label}
                   </div>
                   {s.detail && (

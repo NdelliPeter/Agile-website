@@ -167,7 +167,7 @@ function ServiceDetailPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
+        {/* <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
           {principles.map((p) => (
             <div key={p.k} className="bg-background p-6 text-center">
               <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
@@ -178,11 +178,11 @@ function ServiceDetailPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="mb-8 text-center">
-            <div className="eyebrow mb-3 text-primary">Key deliverables</div>
+            <div className="eyebrow mb-3 text-[16px] text-primary">Key deliverables</div>
             <div className="font-display text-sm text-muted-foreground">
               {String(deliverables.length).padStart(2, "0")} outputs
             </div>
@@ -217,7 +217,7 @@ function ServiceDetailPage() {
         />
         <div className="container-page relative py-20 md:py-28">
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <div className="eyebrow mb-3 text-primary">Delivery pipeline</div>
+            {/* <div className="eyebrow mb-3 text-primary">Delivery pipeline</div> */}
             <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-5xl">
               How we deliver this engagement.
             </h2>

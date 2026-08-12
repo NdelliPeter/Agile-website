@@ -16,9 +16,9 @@ import cemacHeritage1 from "@/assets/Albums&Aventures_AF1A9107_Maison champetre.
 import cemacHeritage2 from "@/assets/Albums&Aventures_DSCF3834_Japon1.jpg";
 import cemacHuman1 from "@/assets/short-hero.jpg";
 import cemacHuman2 from "@/assets/Albums&Aventures_AF1A7460_The.jpg";
-import cemacDiligence1 from "@/assets/cemac-human-1.jpg";
-import cemacDiligence2 from "@/assets/cemac-human-2.jpg";
-import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
+import cemacDiligence1 from "@/assets/Diligence1.jpg";
+import cemacDiligence2 from "@/assets/Diligence2.jpg";
+import diligenceBusinessImg from "@/assets/Diligence main.jpg";
 
 export const SERVICE_KEYS = [
   "audit",
