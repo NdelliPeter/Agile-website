@@ -484,8 +484,8 @@
     },
     "items": {
       "banking": {
-        "title": "Defining Resilience in Modern Banking",
-        "description": "In an era of intensifying regulatory oversight and market volatility, banking excellence requires more than standard reporting; it demands proactive risk stewardship and absolute operational discipline. We partner with financial institutions to navigate the complexities of the modern landscape, delivering specialized advisory that translates regulatory compliance and risk management into a source of institutional stability and competitive advantage. \nOur Core Banking Advisory. \nRegulatory & Compliance Architecture: We design and implement robust frameworks to ensure continuous alignment with evolving mandates, mitigating fiscal and operational risk. \nRisk & Liquidity Management: Our practice provides the technical rigor necessary to identify and manage liquidity pressures and operational vulnerabilities. \nPerformance & Reporting Precision: We optimize internal controls and reporting workflows, ensuring your institution delivers high-fidelity information to regulators, governing boards, and external stakeholders. \nOur Commitment \nBy integrating deep technical knowledge with a practical, sector-specific perspective, we help leadership teams transform compliance and risk mandates into tools for confident decision-making. The vision is to strengthen the structural integrity of your bank, ensuring it remains resilient, compliant, and perfectly positioned for sustainable growth.",
+        "title": "Banking, Financial Services",
+        "description": "Amid tighter regulation and market volatility, banking excellence demands proactive risk stewardship and operational discipline. We help financial institutions turn compliance and risk management into institutional stability and competitive advantage. \nOur Core Banking Advisory \nRegulatory & Compliance Architecture: We design robust frameworks that maintain alignment with evolving mandates while reducing financial and operational exposure. \nRisk & Liquidity Management: We identify liquidity pressures and operational vulnerabilities through disciplined analysis and practical controls. \n Performance & Reporting Precision: We strengthen internal controls and reporting workflows, enabling reliable information for regulators, boards, and external stakeholders. \nOur Commitment \n Combining technical expertise with sector-specific insight, we help leadership teams use regulatory and risk mandates to support confident decisions. Our work strengthens each bank’s structural integrity, resilience, and compliance, positioning the institution for sustainable growth while preserving stakeholder trust, operational continuity, accountability, and long-term value.",
         "challenges": [
           "Regulatory compliance: support across COBAC and related prudential requirements so institutions stay aligned with supervisory expectations.",
           "Risk management: risk mapping, stress testing, liquidity management and operational risk prevention to strengthen resilience.",
@@ -500,7 +500,7 @@
       },
       "insurance": {
         "title": "Insurance",
-        "description": "The CIMA insurance market is defined by increasing regulatory complexity and the imperative for technical precision. To thrive, institutions must navigate the rigors of CIMA and GABAC frameworks while simultaneously optimizing solvency and operational performance. At AGILE, we provide the technical architecture and strategic oversight necessary to turn these regulatory demands into a sustained competitive advantage. \nOur Commitment. \nWe bridge the gap between technical actuarial demands and strategic institutional objectives. By securing your technical provisions, optimizing your operational workflows, and ensuring seamless regulatory alignment, AGILE empowers your leadership to act with absolute confidence. \nActuarial & Solvency Advisory: We provide comprehensive technical provision reviews, solvency analysis, and actuarial pricing models, ensuring your institution maintains optimal capital adequacy and liquidity. \nRegulatory Compliance & Governance: We navigate the full spectrum of CIMA and GABAC requirements, providing proactive advisory on AML-CFT frameworks, statutory filings, and prudential compliance to mitigate regulatory risk. \nAudit & Diagnostic Excellence: Our CAC-approved statutory audits ensure absolute financial integrity and adherence to CIMA standards, while our diagnostic services target operational inefficiencies in accounting and control systems. \nPerformance & Risk Management: We deliver advanced risk mapping, stress testing, and integrated performance dashboards, providing leadership with the data-driven insights needed for precise budgeting, variance analysis, and strategic growth.",
+        "description": "The CIMA insurance market demands regulatory discipline, technical precision, and strong operational performance. AGILE provides the architecture and oversight institutions need to meet CIMA and GABAC requirements while strengthening solvency and competitiveness. \nOur Commitment: We align actuarial demands with strategic objectives, secure technical provisions, improve workflows, and support confident leadership decisions. \nActuarial & Solvency Advisory: We review provisions, analyse solvency, and develop pricing models to support capital adequacy and liquidity. \nRegulatory Compliance & Governance: We advise on AML-CFT frameworks, statutory filings, prudential obligations, and regulatory risk. \nAudit & Diagnostic Excellence: Our CAC-approved audits reinforce financial integrity, while diagnostics identify weaknesses in accounting, controls, and operations. \nPerformance & Risk Management: We provide risk mapping, stress testing, dashboards, budgeting support, and variance analysis, giving leaders reliable insights for strategic growth. Together, these services strengthen resilience, transparency, governance, operational efficiency, and stakeholder confidence across the institution over the long term.",
         "challenges": [
           "Regulatory & Compliance Architecture: We provide deep expertise in COBAC and regional prudential frameworks, ensuring your institution remains fully aligned with supervisory expectations and evolving sector-specific obligations.",
           "Integrated Risk Management: We fortify institutional resilience through comprehensive risk mapping, rigorous stress testing, proactive liquidity management, and systematic operational risk prevention.",
@@ -545,8 +545,8 @@
         }
       },
       "managementCompanies": {
-        "title": "Management Companies",
-        "description": "Under COSUMAF, management companies (sociétés de gestion) are distinct from asset managers: they oversee collective investment vehicles such as mutual funds (FCPs) and open ended investment companies (SICAVs), which are common across the region. We support management companies with COSUMAF compliance audits, internal control systems and independent valuations, alongside statutory audits (CAC) and accounting systems diagnostics for OHADA compliant reporting. Our Performance Hub provides budgeting, dashboards and variance analysis to support fund oversight, transparency and investor confidence.",
+        "title": "Brokerage, Funds Management",
+        "description": "Under the COSUMAF framework, management companies differ from asset managers by administering collective investment vehicles, including mutual funds (FCPs) and open-ended investment companies (SICAVs), widely used across the region. We help these firms meet COSUMAF requirements through compliance audits, internal control frameworks, and independent valuations. We also provide statutory audits (CAC) and review accounting systems to support OHADA-compliant financial reporting. Through our Performance Hub, we deliver budgeting, dashboards, and variance analysis to strengthen fund oversight, transparency, and investor confidence.",
         "challenges": [
           "COSUMAF compliance: compliance audits, internal controls and independent valuations for collective investment vehicles.",
           "Fund oversight: reliable reporting for FCPs and SICAVs through statutory audits (CAC) and accounting diagnostics.",
@@ -598,8 +598,8 @@
     }
   },
   "insights": {
-    "title": "Insights",
-    "intro": "Insights on CIMA insurance compliance, COBAC microfinance structuring, COSUMAF asset management, OHADA audits and CEMAC regulatory expertise, with practical guidance on risk management, solvency, portfolio reporting and operational efficiency for financial institutions.",
+    "title": "Strategic Insights for Financial Leaders",
+    "intro": "Explore expert analysis across Central African regulatory frameworks (CIMA, COBAC, COSUMAF, OHADA). We deliver practical guidance to help banks, insurance providers, microfinance networks, and asset managers navigate risk management, ensure solvency, optimize portfolio reporting, and build operational resilience.",
     "authorBio": "Claudine Simo Mamo is a CEMAC certified Chartered Accountant and Fellow of ACCA, with over 37 years of experience in audit, accounting and advisory across Central Africa. Today she is Founder and Managing Partner of AGILE, supporting institutions in strengthening systems, improving governance and building sustainable performance.",
     "categories": [
       "Audit",
@@ -697,8 +697,8 @@
       }
     ],
     "newsletter": {
-      "cta": "Stay ahead with expert CEMAC compliance updates. Subscribe to AGILE Insights.",
-      "privacy": "We collect your email address solely to send compliance insights (CIMA, COBAC, OHADA). Your data will not be shared or sold. You can unsubscribe at any time, request deletion, or access your information. Full details are in our Privacy Policy."
+      "cta": "Stay ahead of evolving regulatory standards. Subscribe to AGILE Insights.",
+      "privacy": "We collect your email address solely to send you expert regulatory and financial insights. Your data is strictly confidential, will never be sold or shared, and you can unsubscribe or request data deletion at any time. Read our full Privacy Policy for details."
     }
   },
   "contact": {

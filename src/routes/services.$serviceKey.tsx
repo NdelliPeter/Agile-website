@@ -86,7 +86,10 @@ function ServiceDetailPage() {
         <img
           src={SERVICE_IMAGES[key]}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover"
+          className={
+            "absolute inset-0 h-full w-full object-cover " +
+            (key === "humanCapital" ? "object-fill" : "")
+          }
         />
         {/* Dark gradient + brand teal wash */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/85" />

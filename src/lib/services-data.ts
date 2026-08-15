@@ -59,7 +59,7 @@ export const INDUSTRY_KEYS = [
   "assetManagement",
   "managementCompanies",
   "agroIndustry",
-  "diligenceBusiness",
+  // "diligenceBusiness",
 ] as const;
 
 export type IndustryKey = (typeof INDUSTRY_KEYS)[number];

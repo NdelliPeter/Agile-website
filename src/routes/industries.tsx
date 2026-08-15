@@ -5,9 +5,9 @@ import { useT } from "@/components/AppProviders";
 
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { INDUSTRY_KEYS, type IndustryKey } from "@/lib/services-data";
-import industriesHero from "@/assets/industries-hero.jpg";
-import bankingImg from "@/assets/industry-banking.jpg";
-import insuranceImg from "@/assets/industry-insurance.jpg";
+import industriesHero from "@/assets/Industries-hero.jpg";
+import bankingImg from "@/assets/IMG_3870.jpg";
+import insuranceImg from "@/assets/CSM_Amazone Cotonou 1.jpeg";
 import microfinanceImg from "@/assets/industry-microfinance.jpg";
 import assetImg from "@/assets/industry-asset.jpg";
 import mgmtImg from "@/assets/industry-management.jpg";
@@ -21,7 +21,7 @@ const IMG: Record<IndustryKey, string> = {
   assetManagement: assetImg,
   managementCompanies: mgmtImg,
   agroIndustry: agroImg,
-  diligenceBusiness: diligenceBusinessImg,
+  // diligenceBusiness: diligenceBusinessImg,
 };
 
 const STATS: Record<IndustryKey, Array<{ value: string; label: string }>> = {
@@ -55,11 +55,11 @@ const STATS: Record<IndustryKey, Array<{ value: string; label: string }>> = {
     { value: "IFRS", label: "Reporting standard" },
     { value: "3", label: "Value-chain audits" },
   ],
-  diligenceBusiness: [
-    { value: "15+", label: "Due diligence mandates" },
-    { value: "5", label: "M&A advisory clients" },
-    { value: "100%", label: "Confidentiality assured" },
-  ],
+  // diligenceBusiness: [
+  //   { value: "15+", label: "Due diligence mandates" },
+  //   { value: "5", label: "M&A advisory clients" },
+  //   { value: "100%", label: "Confidentiality assured" },
+  // ],
 };
 
 export const Route = createFileRoute("/industries")({
@@ -128,7 +128,7 @@ function IndustriesPage() {
             </div>
           </div>
           <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
-            <ArrowDown size={12} className="animate-bounce" /> Explore sectors
+            <ArrowDown size={12} className="animate-bounce" /> Explore our Industries
           </div>
         </div>
       </section>
@@ -180,14 +180,14 @@ function IndustriesPage() {
                   />
                 </div>
                 <div className="md:col-span-7">
-                  <div className="eyebrow mb-4">{String(i + 1).padStart(2, "0")} · {t("ui.industries.sector")}</div>
+                  {/* <div className="eyebrow mb-4">{String(i + 1).padStart(2, "0")} · {t("ui.industries.sector")}</div> */}
                   <h2 className="display-md text-foreground">
                     {t(`industries.items.${k}.title`)}
                   </h2>
                   <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
                     {t(`industries.items.${k}.description`)}
                   </p>
-
+                  {/* 
                   {stats.length > 0 && (
                     <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
                       {stats.map((s) => (
@@ -201,7 +201,7 @@ function IndustriesPage() {
                         </div>
                       ))}
                     </dl>
-                  )}
+                  )} */}
                 </div>
               </div>
 
