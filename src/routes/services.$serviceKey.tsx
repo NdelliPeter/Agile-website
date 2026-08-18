@@ -88,7 +88,7 @@ function ServiceDetailPage() {
           alt=""
           className={
             "absolute inset-0 h-full w-full object-cover " +
-            (key === "humanCapital" ? "object-fill" : "")
+            (key === "humanCapital" ? "object-[center_25%]" : "")
           }
         />
         {/* Dark gradient + brand teal wash */}
@@ -102,13 +102,13 @@ function ServiceDetailPage() {
         />
 
         {/* Decorative grid lines */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        {/* <div className="pointer-events-none absolute inset-0 opacity-[0.08]"
           style={{
             backgroundImage:
               "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
             backgroundSize: "120px 120px",
           }}
-        />
+        /> */}
 
         <div className="container-page relative z-10 flex min-h-[66vh] flex-col items-center justify-end pb-12 pt-28 text-center md:pb-16 md:pt-32">
           <Link
@@ -131,7 +131,7 @@ function ServiceDetailPage() {
           >
             {t(`services.items.${key}.title`).replace(/\s*\(.*?\)\s*/g, "")}
           </h1>
-          <p className="mt-6 w-full text-base leading-relaxed text-white/85 md:text-lg">
+          <p className="mt-6 w-full text-base leading-relaxed text-white/85 md:text-lg ">
             {t(`services.items.${key}.short`)}
           </p>
 
@@ -164,7 +164,7 @@ function ServiceDetailPage() {
             <ServiceSlideshow images={SERVICE_GALLERY[key]} alt={t(`services.items.${key}.title`)} />
           </div>
           <div>
-            <p className="text-base leading-relaxed text-muted-foreground md:text-[17px]">
+            <p className="whitespace-pre-line text-base leading-relaxed text-muted-foreground text-justify md:text-[17px]">
               {t(`services.items.${key}.detail`)}
             </p>
           </div>
@@ -186,9 +186,9 @@ function ServiceDetailPage() {
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="mb-8 text-center">
             <div className="eyebrow mb-3 text-[16px] text-primary">Key deliverables</div>
-            <div className="font-display text-sm text-muted-foreground">
+            {/* <div className="font-display text-sm text-muted-foreground">
               {String(deliverables.length).padStart(2, "0")} outputs
-            </div>
+            </div> */}
           </div>
           <ul className="space-y-1 border-t border-border">
             {deliverables.map((d, i) => (

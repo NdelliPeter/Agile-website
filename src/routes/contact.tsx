@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import contactImg from "@/assets/contact-hero.jpg";
+import contactImg from "@/assets/IMG_2752.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -49,10 +49,11 @@ function ContactPage() {
     <AppLayout>
       <section className="container-page pt-20 md:pt-28">
         <SectionHeading
-          eyebrow={t("common.nav.contact")}
+          // eyebrow={t("common.nav.contact")}
           title={t("contact.headline")}
-          intro={t("contact.subheadline")}
+          // intro={t("contact.subheadline")}
           size="xl"
+          widthClassName="max-w-[80%]"
         />
       </section>
 
@@ -146,7 +147,8 @@ function ContactPage() {
                   type="button"
                   disabled={!canSubmit}
                   onClick={() => setSubmitted(true)}
-                  className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)] disabled:opacity-50"
+                  style={{ backgroundColor: "#3D2E23" }}
+                  className="inline-flex h-12 items-center justify-center rounded-full px-7 text-sm font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)] disabled:opacity-80"
                 >
                   {t("contact.form.submit")}
                 </button>

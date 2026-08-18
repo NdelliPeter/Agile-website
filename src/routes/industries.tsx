@@ -11,7 +11,7 @@ import insuranceImg from "@/assets/CSM_Amazone Cotonou 1.jpeg";
 import microfinanceImg from "@/assets/microfinance.jpg";
 import assetImg from "@/assets/Asset management.jpg";
 import mgmtImg from "@/assets/Indutry Funds.jpg";
-import agroImg from "@/assets/Alex_PCT 1.jpg";
+import agroImg from "@/assets/Alex_PCT  .jpg";
 // import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
 
 const IMG: Record<IndustryKey, string> = {
@@ -99,14 +99,14 @@ function IndustriesPage() {
               "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, rgba(42,34,27,0.2) 55%, rgba(11,9,7,0.65) 100%)",
           }}
         />
-        <div
+        {/* <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
               "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
             backgroundSize: "120px 120px",
           }}
-        />
+        /> */}
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-10">
@@ -176,7 +176,11 @@ function IndustriesPage() {
                     src={IMG[k]}
                     alt=""
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-cover duotone"
+                    className={
+                      "aspect-[4/3] w-full object-cover " +
+                      (k === "banking" ? "duotone " : "") +
+                      (k === "assetManagement" ? "object-top" : "object-[center_15%]")
+                    }
                   />
                 </div>
                 <div className="md:col-span-7">

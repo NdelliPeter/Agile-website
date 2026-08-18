@@ -5,7 +5,7 @@ import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
-import insightsHero from "@/assets/CSM_Yogam 1.jpeg";
+import insightsHero from "@/assets/CSM_Yogam 2.jpeg";
 import insight1 from "@/assets/CSM_Amazone Cotonou 1.jpeg";
 import insight2 from "@/assets/Alex_Uzbek 4 Noir & Blanc Samarcan.jpeg";
 import insight3 from "@/assets/Alex_Uzbek 3 Color Samarcan.jpeg";
@@ -58,7 +58,7 @@ function InsightsPage() {
           alt=""
           width={1920}
           height={1024}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-[center_35%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/55 to-black/80" />
         <div
@@ -68,14 +68,14 @@ function InsightsPage() {
               "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, rgba(42,34,27,0.2) 55%, rgba(11,9,7,0.65) 100%)",
           }}
         />
-        <div
+        {/* <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
             backgroundImage:
               "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
             backgroundSize: "120px 120px",
           }}
-        />
+        /> */}
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-10">
@@ -123,7 +123,7 @@ function InsightsPage() {
                 src={INSIGHT_IMAGES[0]}
                 alt=""
                 loading="lazy"
-                className="aspect-[16/10] w-full object-fit duotone"
+                className="aspect-[16/10] w-full object-cover object-[center_30%] duotone"
               />
             </div>
             <div className="md:col-span-5 md:pt-2">
@@ -152,7 +152,9 @@ function InsightsPage() {
                   src={INSIGHT_IMAGES[(i + 1) % INSIGHT_IMAGES.length]}
                   alt=""
                   loading="lazy"
-                  className="aspect-[5/3] w-full object-cover duotone"
+                  className={
+                    "aspect-[5/3] w-full object-cover " + (i === 1 ? "" : "duotone")
+                  }
                 />
                 <div className="mt-5 font-display text-[15px] font-bold uppercase tracking-[0.2em] text-primary">
                   {String(i + 2).padStart(2, "0")} · {a.keyword}
