@@ -662,8 +662,8 @@
       }
     ],
     "newsletter": {
-      "cta": "Gardez une longueur d'avance avec nos mises à jour expertes sur la conformité CEMAC. Abonnez-vous à AGILE Analyses.",
-      "privacy": "Nous collectons votre adresse e-mail uniquement pour vous envoyer des analyses de conformité (CIMA, COBAC, OHADA). Vos données ne seront ni partagées ni vendues. Vous pouvez vous désabonner à tout moment, demander leur suppression ou y accéder. Tous les détails figurent dans notre Politique de confidentialité."
+      "cta": "Gardez une longueur d'avance sur l'évolution des normes réglementaires. Abonnez-vous à AGILE Insights.",
+      "privacy": "Nous recueillons votre adresse courriel uniquement pour vous envoyer des analyses d'experts en matière de réglementation et de finance. Vos données sont strictement confidentielles, ne seront jamais vendues ni partagées, et vous pouvez vous désabonner ou demander la suppression de vos données à tout moment. Consultez notre politique de confidentialité pour plus de détails."
     }
   },
   "contact": {
@@ -710,7 +710,7 @@
     "termsNote": "À rédiger.",
     "newsletter": {
       "eyebrow": "Le Brief AGILE",
-      "headline": "Évolutions réglementaires, éclairages d'audit et notes de gouvernance.",
+      "headline": "Analyses réglementaires • Perspectives d'audit • Notes d'information à la direction",
       "placeholder": "vous@institution.com",
       "subscribe": "S'abonner",
       "subscribed": "Abonné",

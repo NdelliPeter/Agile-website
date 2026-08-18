@@ -5,10 +5,10 @@ import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
-import insightsHero from "@/assets/insights-hero.jpg";
-import insight1 from "@/assets/insight-1.jpg";
-import insight2 from "@/assets/insight-2.jpg";
-import insight3 from "@/assets/insight-3.jpg";
+import insightsHero from "@/assets/CSM_Yogam 1.jpeg";
+import insight1 from "@/assets/CSM_Amazone Cotonou 1.jpeg";
+import insight2 from "@/assets/Alex_Uzbek 4 Noir & Blanc Samarcan.jpeg";
+import insight3 from "@/assets/Alex_Uzbek 3 Color Samarcan.jpeg";
 import insight4 from "@/assets/insight-4.jpg";
 import insight5 from "@/assets/insight-5.jpg";
 
@@ -123,11 +123,11 @@ function InsightsPage() {
                 src={INSIGHT_IMAGES[0]}
                 alt=""
                 loading="lazy"
-                className="aspect-[16/10] w-full object-cover duotone"
+                className="aspect-[16/10] w-full object-fit duotone"
               />
             </div>
             <div className="md:col-span-5 md:pt-2">
-              <div className="inline-flex items-center gap-2 font-display text-[11px] font-medium uppercase tracking-[0.22em] text-primary">
+              <div className="inline-flex items-center gap-2 font-display text-[15px] font-bold uppercase tracking-[0.22em] text-primary">
                 <span className="inline-block h-1.5 w-6 bg-primary" />
                 {t("ui.insights.featured")} · {articles[0].keyword}
               </div>
@@ -137,9 +137,9 @@ function InsightsPage() {
               <p className="mt-5 text-[15.5px] leading-relaxed text-muted-foreground">
                 {articles[0].summary}
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
+              {/* <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
                 {t("common.cta.readMore")} <ArrowRight size={14} />
-              </span>
+              </span> */}
             </div>
           </article>
         )}
@@ -154,7 +154,7 @@ function InsightsPage() {
                   loading="lazy"
                   className="aspect-[5/3] w-full object-cover duotone"
                 />
-                <div className="mt-5 font-display text-[11px] font-medium uppercase tracking-[0.2em] text-primary">
+                <div className="mt-5 font-display text-[15px] font-bold uppercase tracking-[0.2em] text-primary">
                   {String(i + 2).padStart(2, "0")} · {a.keyword}
                 </div>
                 <h3 className="mt-3 font-display text-xl font-medium leading-snug text-foreground md:text-2xl">
@@ -234,7 +234,7 @@ function InsightsPage() {
         <div className="container-page py-20 md:py-24">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
-              <SectionHeading eyebrow="Newsletter" title={t("insights.newsletter.cta")} size="lg" />
+              <SectionHeading eyebrow="Newsletter" title={t("insights.newsletter.cta")} size="md" />
             </div>
             <div className="md:col-span-6">
               {subscribed ? (
@@ -262,7 +262,7 @@ function InsightsPage() {
                   </button>
                 </div>
               )}
-              <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
+              <p className="mt-5 text-s leading-relaxed text-muted-foreground">
                 {t("insights.newsletter.privacy")}
               </p>
             </div>

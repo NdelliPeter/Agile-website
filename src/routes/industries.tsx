@@ -8,11 +8,11 @@ import { INDUSTRY_KEYS, type IndustryKey } from "@/lib/services-data";
 import industriesHero from "@/assets/Industries-hero.jpg";
 import bankingImg from "@/assets/IMG_3870.jpg";
 import insuranceImg from "@/assets/CSM_Amazone Cotonou 1.jpeg";
-import microfinanceImg from "@/assets/industry-microfinance.jpg";
-import assetImg from "@/assets/industry-asset.jpg";
-import mgmtImg from "@/assets/industry-management.jpg";
-import agroImg from "@/assets/industry-agro.jpg";
-import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
+import microfinanceImg from "@/assets/microfinance.jpg";
+import assetImg from "@/assets/Asset management.jpg";
+import mgmtImg from "@/assets/Indutry Funds.jpg";
+import agroImg from "@/assets/Alex_PCT 1.jpg";
+// import diligenceBusinessImg from "@/assets/office-meeting-discussion-stockcake.jpg";
 
 const IMG: Record<IndustryKey, string> = {
   banking: bankingImg,
@@ -110,10 +110,10 @@ function IndustriesPage() {
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-10">
-              <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
+              {/* <div className="mb-5 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-white/70">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)]" />
                 {t("common.nav.industries")}
-              </div>
+              </div> */}
               <h1
                 className="display-2xl max-w-7xl text-white"
                 style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
