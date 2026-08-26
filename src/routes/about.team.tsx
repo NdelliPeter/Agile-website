@@ -69,7 +69,7 @@ function TeamPage() {
           title="A team shaped by legacy, driven by excellence."
           intro="Our founders and senior executives bring decades of elite cross-border experience, uncompromising rigour, and direct, hands-on oversight to every engagement."
           size="xl"
-          widthClassName="max-w-[70%]"
+          widthClassName="max-w-full md:max-w-[70%]"
         />
       </section>
 

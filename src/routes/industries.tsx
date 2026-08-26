@@ -127,12 +127,12 @@ function IndustriesPage() {
 
       {/* anchor nav */}
       <section className="sticky top-[78px] z-30 mt-16 border-y border-border bg-background/90 backdrop-blur">
-        <div className="container-page flex gap-1 overflow-x-auto max-w-none justify-center py-3 text-sm">
+        <div className="container-page grid grid-cols-2 gap-2 py-3 text-sm sm:grid-cols-3 md:flex md:flex-wrap md:items-center md:justify-center md:gap-1">
           {INDUSTRY_KEYS.map((k) => (
             <a
               key={k}
               href={`#${k}`}
-              className="shrink-0 rounded-full text-[16px] border border-transparent px-3 py-1 text-muted-foreground hover:border-border hover:text-foreground"
+              className="rounded-full border border-transparent px-3 py-1 text-center text-[16px] text-muted-foreground hover:border-border hover:text-foreground"
             >
               {t(`industries.items.${k}.title`)}
             </a>
