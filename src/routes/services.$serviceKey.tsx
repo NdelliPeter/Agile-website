@@ -254,8 +254,8 @@ function ServiceDetailPage() {
         <div className="container-page py-20 md:py-28">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-8">
-              <div className="eyebrow-accent mb-4">Ready when you are</div>
-              <p className="font-display text-3xl font-light leading-[1.1] tracking-tight text-foreground md:text-5xl">
+              {/* <div className="eyebrow-accent mb-4">Ready when you are</div> */}
+              <p className="font-display text-lg font-light leading-[1.1] tracking-tight text-foreground md:text-5xl">
                 {t("services.overview.ctaHeadline")}
               </p>
             </div>

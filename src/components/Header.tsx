@@ -62,7 +62,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             <BrandMark variant="full" size={42} forceLight={onHero} />
             <span
               className={
-                "hidden text-[18px] font-semibold tracking-tight sm:inline " + fgText
+                "hidden text-[22px] font-semibold tracking-tight sm:inline " + fgText
               }
             >
               AGILE
@@ -73,7 +73,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             {navItems.map((item) => {
               const active =
                 item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
-              const base = "rounded-full px-4 py-2 text-[15px] transition-colors ";
+              const base = "rounded-full px-4 py-2 text-[16px] transition-colors ";
               const cls = active
                 ? onHero
                   ? "bg-white/15 text-white"
@@ -94,7 +94,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                           <Link
                             key={c.to}
                             to={c.to}
-                            className="block px-4 py-2 text-[13.5px] text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                            className="block px-4 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                           >
                             {c.label}
                           </Link>
@@ -143,7 +143,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               })}
             </div>
 
-            <button
+            {/* <button
               type="button"
               onClick={toggleTheme}
               className={
@@ -156,11 +156,11 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
+            </button> */}
 
             <Link
               to="/contact"
-              className="hidden h-11 items-center justify-center rounded-full bg-primary px-5 text-[13.5px] font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)] md:inline-flex"
+              className="hidden h-11 items-center justify-center rounded-full bg-primary px-5 text-md font-bold text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)] md:inline-flex"
             >
               {t("common.cta.consultation")}
             </Link>

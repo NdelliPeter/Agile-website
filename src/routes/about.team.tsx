@@ -36,13 +36,13 @@ const TEAM: Member[] = [
   {
     name: "Claudine SIMO MAMO",
     role: "Founder & Managing Partner",
-    bio: "Mrs Simo is a CEMAC-certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting, advisory across Central Africa and training. Today, she operates as an Independent Chartered Accountant and Founder and Managing Partner of AGILE (Audit, Advisory, Governance & Leadership Excellence), where she supports financial institutions and growing organisations in strengthening their systems, improving governance, and building sustainable performance. Her career reflects both discipline and progression. At this stage of her career, her focus goes beyond numbers. She is deeply committed to developing people, mentoring young professionals, building a culture of responsibility, and contributing to organisations where individuals are empowered to grow into leadership.",
+    bio: "Mrs Simo is a CEMAC-certified Chartered Accountant and a Fellow of the Association of Chartered Certified Accountants (ACCA), bringing over 37 years of distinguished experience in audit, accounting, and advisory across Central Africa. As Founder and Managing Partner of AGILE, she advises financial institutions and major organizations on governance, structural resilience, and sustainable performance optimization.Beyond her technical mastery, Mrs Simo is dedicated to institutional capacity-building; fostering a culture of accountability and empowering the next generation of leadership.",
     img: founderImg,
   },
   {
     name: "Alex-Michel NGNINGHA",
-    role: "Senior Actuarial Manager",
-    bio: "A solid expertise in P&C actuarial consulting, risk management, and reinsurance across French and European markets. As a Senior Manager, he leads strategic engagements in Solvency II balance sheet audits, Enterprise Risk Management (ERM), ESG strategy, and M&A valuations. His previous senior roles at Mazars Actuariat, SCOR Global P&C, and Aon Benfield focused on reserving, treaty pricing, internal model validation, and underwriting portfolio management. He holds a master’s degree in actuarial science and finance and is a qualified member of the INSTITUT DES ACTUAIRES",
+    role: "Senior Actuarial Consultant",
+    bio: "A solid expertise in P&C actuarial consulting, risk management, and reinsurance across French and European markets. As a Senior Executive Manager, he leads strategic engagements in Solvency II balance sheet audits, Enterprise Risk Management (ERM), ESG strategy, and M&A valuations. His previous Executive roles at Ernst & Young, Mazars Actuariat, SCOR Global P&C, and Aon Benfield focused on reserving, treaty pricing, internal model validation, and underwriting portfolio management. He holds a master’s degree in actuarial science and finance and is a qualified member of the INSTITUT DES ACTUAIRES.",
     img: team1,
   },
   {
@@ -65,9 +65,9 @@ function TeamPage() {
     <AppLayout>
       <section className="container-page pt-20 md:pt-28">
         <SectionHeading
-          eyebrow="Our team"
-          title="A team built on mentorship and excellence."
-          intro="Partners and senior advisors who lead our engagements — combining discipline, regional depth and a commitment to developing the next generation."
+          // eyebrow="Our team"
+          title="A team shaped by legacy, driven by excellence."
+          intro="Our founders and senior executives bring decades of elite cross-border experience, uncompromising rigour, and direct, hands-on oversight to every engagement."
           size="xl"
           widthClassName="max-w-[70%]"
         />

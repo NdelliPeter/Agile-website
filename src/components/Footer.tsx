@@ -30,9 +30,9 @@ export function Footer() {
       <div className="border-b border-primary-foreground/15 dark:border-border">
         <div className="container-page grid grid-cols-1 items-center gap-8 py-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-7">
-            <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-foreground/70 dark:text-primary">
+            {/* <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-foreground/70 dark:text-primary">
               {t("footer.newsletter.eyebrow")}
-            </div>
+            </div> */}
             <h3 className="mt-3 font-display text-2xl font-light leading-tight text-primary-foreground dark:text-foreground md:text-3xl">
               {t("footer.newsletter.headline")}
             </h3>
@@ -61,9 +61,9 @@ export function Footer() {
                 {subscribed ? t("footer.newsletter.subscribed") : t("footer.newsletter.subscribe")} <ArrowRight size={14} />
               </button>
             </div>
-            <p className="mt-2 text-[11px] text-primary-foreground/60 dark:text-muted-foreground">
+            {/* <p className="mt-2 text-[11px] text-primary-foreground/60 dark:text-muted-foreground">
               {t("footer.newsletter.privacy")}
-            </p>
+            </p> */}
           </form>
         </div>
       </div>
@@ -73,10 +73,10 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           {/* Brand / contact */}
           <div className="md:col-span-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <BrandMark variant="full" size={44} forceLight />
               <span className="text-base font-semibold tracking-tight">AGILE</span>
-            </div>
+            </Link>
             <p className="mt-5 max-w-md text-[14.5px] leading-relaxed text-primary-foreground/80 dark:text-muted-foreground">
               {t("footer.tagline")}
             </p>

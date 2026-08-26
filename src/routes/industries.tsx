@@ -93,20 +93,12 @@ function IndustriesPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/55 to-black/80" />
         <div
-          className="absolute inset-0 mix-blend-multiply opacity-50"
+          className="absolute inset-0 mix-blend-multiply opacity-10"
           style={{
             background:
               "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, rgba(42,34,27,0.2) 55%, rgba(11,9,7,0.65) 100%)",
           }}
         />
-        {/* <div
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-            backgroundSize: "120px 120px",
-          }}
-        /> */}
         <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
           <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-10">
@@ -116,20 +108,20 @@ function IndustriesPage() {
               </div> */}
               <h1
                 className="display-2xl max-w-7xl text-white"
-                style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
+                style={{ fontSize: "clamp(2.25rem, 6vw, 4.375rem)", textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
               >
                 {t("industries.overview.headline")}
               </h1>
             </div>
             <div className="md:col-span-10">
-              <p className="max-w-7xl text-base leading-relaxed text-white/85 md:text-[17px]">
+              <p className="max-w-7xl text-base text-justify leading-relaxed text-white/85 md:text-[17px]">
                 {t("industries.overview.intro")}
               </p>
             </div>
           </div>
-          <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
+          {/* <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
             <ArrowDown size={12} className="animate-bounce" /> Explore our Industries
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -140,7 +132,7 @@ function IndustriesPage() {
             <a
               key={k}
               href={`#${k}`}
-              className="shrink-0 rounded-full border border-transparent px-3 py-1 text-muted-foreground hover:border-border hover:text-foreground"
+              className="shrink-0 rounded-full text-[16px] border border-transparent px-3 py-1 text-muted-foreground hover:border-border hover:text-foreground"
             >
               {t(`industries.items.${k}.title`)}
             </a>
@@ -179,8 +171,7 @@ function IndustriesPage() {
                     className={
                       "aspect-[4/3] w-full object-cover " +
                       (k === "banking" ? "duotone " : "") +
-                      (k === "assetManagement" ? "object-top" : "object-[center_15%]")
-                    }
+                      (k === "assetManagement" ? "object-top" : "object-[center_30%]")                     }
                   />
                 </div>
                 <div className="md:col-span-7">
@@ -188,7 +179,7 @@ function IndustriesPage() {
                   <h2 className="display-md text-foreground">
                     {t(`industries.items.${k}.title`)}
                   </h2>
-                  <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base">
+                  <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base" style={{ whiteSpace: "pre-line", }}>
                     {t(`industries.items.${k}.description`)}
                   </p>
                   {/* 

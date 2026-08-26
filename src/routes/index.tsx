@@ -91,16 +91,15 @@ function HomePage() {
               <span className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)] align-middle" />
               {t("common.brandFull")}
             </div> */}
-            <h1 className="display-2xl max-w-5xl" style={{ color: "#F6F4F1" }}>
-              {(t("home.hero.headline") as string).split(" ").map((w, i) => (
-                <span
-                  key={i}
-                  className="word-reveal mr-[0.25em]"
-                  style={{ transitionDelay: `${i * 70}ms` }}
-                >
-                  {w}
-                </span>
-              ))}
+            <h1
+              className="display-2xl max-w-5xl"
+              style={{
+                color: "#F6F4F1",
+                fontSize: "clamp(2.25rem, 6vw, 4.375rem)",
+                whiteSpace: "pre-line",
+              }}
+            >
+              {t("home.hero.headline")}
             </h1>
             <p
               className="mt-7 max-w-2xl text-base leading-relaxed md:text-lg"
@@ -111,17 +110,17 @@ function HomePage() {
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#50908C] px-6 text-sm font-medium text-white transition-colors hover:bg-[#3F7370]"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#50908C] px-6 text-md font-bold text-white transition-colors hover:bg-[#3F7370]"
               >
                 {t("home.hero.cta")}
                 <ArrowUpRight size={16} />
               </Link>
-              <Link
+              {/* <Link
                 to="/services"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-6 text-sm font-medium text-white transition-colors hover:bg-white/10"
               >
                 {t("common.nav.services")}
-              </Link>
+              </Link> */}
             </div>
           </Reveal>
         </div>
@@ -134,10 +133,10 @@ function HomePage() {
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-[8.5rem] right-6 z-10 hidden flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55 md:flex">
+        {/* <div className="absolute bottom-[8.5rem] right-6 z-10 hidden flex-col items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55 md:flex">
           <span>Scroll</span>
           <ArrowDown size={14} className="animate-bounce" />
-        </div>
+        </div> */}
 
         {/* STATS — compact one-line index strip */}
         <div className="absolute inset-x-0 bottom-0 z-10">
@@ -186,9 +185,9 @@ function HomePage() {
             size="lg"
             align="center"
           />
-          <p className="mt-5 text-sm text-muted-foreground md:text-base">
+          {/* <p className="mt-5 text-sm text-muted-foreground md:text-base">
             {t("home.servicesPreview.wheelCta")}
-          </p>
+          </p> */}
         </div>
         <div className="mt-14 md:mt-20">
           <ServiceWheel />
@@ -209,7 +208,7 @@ function HomePage() {
           <SectionHeading
             // eyebrow={t("home.engagement.heading")}
             title={t("home.engagement.title")}
-            intro={t("home.engagement.intro")}
+            // intro={t("home.engagement.intro")}
             size="lg"
           />
           <div className="mt-12">

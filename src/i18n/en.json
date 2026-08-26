@@ -25,9 +25,9 @@
   },
   "home": {
     "hero": {
-      "headline": "Securing Value. Empowering Growth. Building Trust across CEMAC and beyond.",
+      "headline": "Securing Value. Empowering Growth. \nBuilding Trust across CEMAC and beyond.",
       "subheadline": "AGILE turns regulatory complexity into strategic advantage. As your audit, advisory, and governance partner, we deliver the technical expertise institutions need to reduce risk, strengthen trust, and perform with confidence in a changing market.",
-      "cta": "Request a Consultation"
+      "cta": "Partner with Us"
     },
     "servicesPreview": {
       "heading": "Key Services",
@@ -76,7 +76,7 @@
     },
     "engagement": {
       "heading": "How we work",
-      "title": "A clear pipeline, from first conversation to lasting impact.",
+      "title": "A methodical approach that translates your needs into impactful solutions.",
       "intro": "Every engagement follows a disciplined sequence so outcomes are predictable, auditable, and built to last.",
       "steps": [
         {
@@ -155,7 +155,7 @@
       "stats": [
         {
           "value": "≈ $88B",
-          "label": "Lost by Africa each year to illicit financial flows, according to UNCTAD — losses that stronger audit, AML/CFT and governance frameworks help close."
+          "label": "UNCTAD estimates Africa loses this amount annually to illicit financial flows; losses stronger governance frameworks can reduce."
         },
         {
           "value": "6",
@@ -197,13 +197,13 @@
     },
     "story": {
       "heading": "Our Story",
-      "body": "AGILE embodies the collective expertise of its partners while reflecting Claudine’s 37 years of leadership in finance and accounting across the CEMAC region. Mme Simo joined Agile to mentor young professionals, building leadership capacity, ownership, and accountability within teams. As a strategic advisor to banks, insurance companies, microfinance institutions and asset management, she strengthens financial systems, ensures regulatory compliance (OHADA, COBAC, CIMA, COSUMAF), and drives performance optimisation, particularly in agro-industry, banks and microfinance structuring. Her vision is clear: show that sustainable success comes from strong foundations, discipline, and continuous growth. At Agile, we secure value, empower growth, and build trust – proving that meaningful futures are forged from humble beginnings, one strategic step at a time. At Agile, we lead audit and assurance services in CEMAC and beyond, committed to securing value, empowering growth, and building trust for institutions, shareholders, and agro-industrial leaders in Cameroon."
+      "body": "AGILE combines elite expertise with Claudine Simo Mamo’s 37 years of leadership in finance, accounting, and regulation across the CEMAC region and beyond, including OHADA, COBAC, CIMA, and COSUMAF. Committed to mentoring the next generation, Ms SIMO advises banks, insurers, microfinance institutions, and agro-industrial leaders on governance, compliance, and performance optimisation. Built on strong foundations and rigorous discipline, AGILE safeguards value, enables sustainable growth, and strengthens institutional trust one strategic step at a time."
     },
     "founderBio": {
       "heading": "Claudine Simo Mamo, Founder and Managing Partner",
       "body": "Claudine Simo Mamo is a CEMAC-certified Chartered Accountant and Fellow of the Association of Chartered Certified Accountants (ACCA), with over 37 years of experience in audit, accounting, and advisory across Central Africa. Her career reflects both discipline and progression. She began her career in education in 1988, before transitioning into project management and later joining ECA IN 2012, where she built her expertise over time. As the firm evolved within the Ernst & Young (EY) network, she grew into leadership roles, serving as Associate Director and Head of Audit for Cameroon and Chad IN 2013, leading complex engagements across banking, insurance, asset management, agro-industry and utilities. In 2023, she reached a key milestone in her journey when she became a Partner at ECA S.A., where she led audit, statutory audit, accounting, and advisory services for major institutions across the region. Today, she operates as an Independent Chartered Accountant and Founder and Managing Partner of AGILE (Audit, Advisory, Governance & Leadership Excellence), where she supports financial institutions and growing organisations in strengthening their systems, improving governance, and building sustainable performance. At this stage of her career, her focus goes beyond numbers. She is deeply committed to developing people, mentoring young professionals, building a culture of responsibility, and contributing to organisations where individuals are empowered to grow into leadership. This commitment is reflected in her active leadership within the accounting profession, where she serves as a Member of ONECCA (National Order of Chartered Accountants of Cameroon), sitting on the Council as Deputy Treasurer, and as a Distinguished Fellow Member of ACCA (FCCA)"
     },
-    "quote": "True leadership is the bridge that transforms quiet starts into sustainable excellence.",
+    "quote": "True leadership bridges humble starts and sustainable excellence.",
     "timeline": {
       "heading": "Milestones",
       "note": "Pending: confirm dates and events with Madam Simo.",
@@ -247,24 +247,24 @@
       "intro": "At Agile, we uphold these core values as the foundation of our audit and advisory services across CEMAC and beyond, delivering professional excellence with a focus on client success and sustainable growth.",
       "items": [
         {
-          "name": "Proactive",
-          "desc": "We anticipate challenges in financial regulations like OHADA and COBAC, guiding clients ahead of the curve to secure assets and optimise agro-industry value chains efficiently."
+          "name": "Adaptability",
+          "desc": "Navigating shifting regulatory landscapes and economic dynamics with agility, ensuring our clients stay resilient and responsive to change."
         },
         {
-          "name": "Performance-driven",
-          "desc": "Our expertise drives measurable results in statutory audits and risk management, ensuring CIMA-compliant operations that enhance profitability and long-term institutional strength."
+          "name": "Governance",
+          "desc": "Embedding robust frameworks, strict regulatory compliance, and transparent oversight to safeguard institutions and protect long-term stakeholder value."
         },
         {
-          "name": "Problem-solving oriented",
-          "desc": "We tackle complex financial hurdles with structured, innovative solutions, from SYSCOHADA certification to microfinance structuring, turning obstacles into strategic opportunities."
+          "name": "Integrity",
+          "desc": "Operating with unwavering ethical standards, absolute discretion, and uncompromising professional objectivity in every audit and advisory engagement."
         },
         {
-          "name": "Professionalism",
-          "desc": "Upholding the highest standards of expertise and reliability, we provide precise advisory that reflects our 37 years of CEMAC finance leadership."
+          "name": "Leadership",
+          "desc": "Cultivating accountability, mentoring the next generation of professionals, and guiding boards with vision, authority, and strategic foresight."
         },
         {
-          "name": "Timeliness",
-          "desc": "We deliver swift, dependable services, statutory audits, ESG compliance, or succession planning, meeting deadlines without compromise to support your business growth."
+          "name": "Excellence",
+          "desc": "elivering exceptional technical precision and world-class execution in every boardroom, audit, and milestone."
         }
       ]
     },
@@ -296,15 +296,15 @@
     },
     "socialResponsibility": {
       "heading": "Social Responsibility",
-      "body": "At AGILE we dedicate one day each month to structured community service across the CEMAC region, reflecting our values and our founder's vision. This includes financial literacy workshops for youth and entrepreneurs, pro bono advisory for microfinance startups and small agro businesses, and mentorship sessions to build leadership in underserved communities. Our team gives time and expertise to strengthen financial systems and raise awareness of compliance fundamentals such as the basics of OHADA. The aim is practical: to equip people with tools for sustainable growth, build a culture of accountability, and show that meaningful futures can start from humble beginnings."
+      "body": "Each month, AGILE dedicates one day to community service across the CEMAC region, reflecting our values and founder’s vision. We offer financial literacy workshops, pro bono advice to microfinance startups and small agro-businesses, and leadership mentoring in underserved communities. By sharing expertise in finance and compliance, including OHADA fundamentals, we equip people for sustainable growth, promote accountability, and show that meaningful futures can begin with humble starts."
     }
   },
   "services": {
     "overview": {
       "headline": "Expert GRC, Audit, and Advisory for Complex Regulatory Environments",
       "intro": "We deliver audit, compliance, and risk advisory across the CEMAC and OHADA regions. Supporting banks, insurers, and MFIs, we align operations with COBAC, CIMA, and COSUMAF standards to protect integrity and improve performance.",
-      "ctaHeadline": "Curious what we can do for your organisation?",
-      "ctaButton": "Book an Appointment"
+      "ctaHeadline": "Explore how we can strengthen your enterprise.",
+      "ctaButton": "Partner with Us"
     },
     "items": {
       "audit": {
@@ -485,7 +485,7 @@
     "items": {
       "banking": {
         "title": "Banking, Financial Services",
-        "description": "Amid tighter regulation and market volatility, banking excellence demands proactive risk stewardship and operational discipline. We help financial institutions turn compliance and risk management into institutional stability and competitive advantage. \nOur Core Banking Advisory \nRegulatory & Compliance Architecture: We design robust frameworks that maintain alignment with evolving mandates while reducing financial and operational exposure. \nRisk & Liquidity Management: We identify liquidity pressures and operational vulnerabilities through disciplined analysis and practical controls. \n Performance & Reporting Precision: We strengthen internal controls and reporting workflows, enabling reliable information for regulators, boards, and external stakeholders. \nOur Commitment \n Combining technical expertise with sector-specific insight, we help leadership teams use regulatory and risk mandates to support confident decisions. Our work strengthens each bank’s structural integrity, resilience, and compliance, positioning the institution for sustainable growth while preserving stakeholder trust, operational continuity, accountability, and long-term value.",
+        "description": "Amid tighter regulation and market volatility, banking excellence demands proactive risk stewardship and operational discipline. We help financial institutions turn compliance and risk management into institutional stability and competitive advantage. \nOur Core Banking Advisory Regulatory & Compliance Architecture: We design robust frameworks that maintain alignment with evolving mandates while reducing financial and operational exposure. \nRisk & Liquidity Management: We identify liquidity pressures and operational vulnerabilities through disciplined analysis and practical controls. \n Performance & Reporting Precision: We strengthen internal controls and reporting workflows, enabling reliable information for regulators, boards, and external stakeholders. \nOur Commitment Combining technical expertise with sector-specific insight, we help leadership teams use regulatory and risk mandates to support confident decisions. Our work strengthens each bank’s structural integrity, resilience, and compliance, positioning the institution for sustainable growth while preserving stakeholder trust, operational continuity, accountability, and long-term value.",
         "challenges": [
           "Regulatory compliance: support across COBAC and related prudential requirements so institutions stay aligned with supervisory expectations.",
           "Risk management: risk mapping, stress testing, liquidity management and operational risk prevention to strengthen resilience.",
@@ -500,7 +500,7 @@
       },
       "insurance": {
         "title": "Insurance",
-        "description": "The CIMA insurance market demands regulatory discipline, technical precision, and strong operational performance. AGILE provides the architecture and oversight institutions need to meet CIMA and GABAC requirements while strengthening solvency and competitiveness. \nOur Commitment: We align actuarial demands with strategic objectives, secure technical provisions, improve workflows, and support confident leadership decisions. \nActuarial & Solvency Advisory: We review provisions, analyse solvency, and develop pricing models to support capital adequacy and liquidity. \nRegulatory Compliance & Governance: We advise on AML-CFT frameworks, statutory filings, prudential obligations, and regulatory risk. \nAudit & Diagnostic Excellence: Our CAC-approved audits reinforce financial integrity, while diagnostics identify weaknesses in accounting, controls, and operations. \nPerformance & Risk Management: We provide risk mapping, stress testing, dashboards, budgeting support, and variance analysis, giving leaders reliable insights for strategic growth. Together, these services strengthen resilience, transparency, governance, operational efficiency, and stakeholder confidence across the institution over the long term.",
+        "description": "The CIMA insurance market demands regulatory discipline, technical precision, and strong operational performance. AGILE provides the architecture and oversight institutions need to meet CIMA and GABAC requirements while strengthening solvency and competitiveness. \nOur Commitment: We align actuarial demands with strategic objectives, secure technical provisions, improve workflows, and support confident leadership decisions. \nActuarial & Solvency Advisory: We review provisions, analyse solvency, and develop pricing models to support capital adequacy and liquidity.",
         "challenges": [
           "Regulatory & Compliance Architecture: We provide deep expertise in COBAC and regional prudential frameworks, ensuring your institution remains fully aligned with supervisory expectations and evolving sector-specific obligations.",
           "Integrated Risk Management: We fortify institutional resilience through comprehensive risk mapping, rigorous stress testing, proactive liquidity management, and systematic operational risk prevention.",
@@ -515,7 +515,7 @@
       },
       "microfinance": {
         "title": "Microfinance",
-        "description": "Microfinance Institutions (MFIs) occupy a critical space in the CEMAC financial ecosystem, yet they face the dual challenge of navigating stringent COBAC regulatory mandates while managing inherent liquidity and operational constraints. At AGILE, we provide the technical architecture and strategic oversight necessary to professionalize your operations and transform these regulatory requirements into a foundation for sustainable growth. \nModern Microfinance Institutions (MFIs) operate at the intersection of rapid digital transformation and stringent regulatory oversight. To scale effectively, institutions must balance the agility required for digital lending and mobile-first expansion with the discipline of robust COBAC governance. At AGILE, we provide the technical architecture required to professionalize your core operations, mitigate systemic risks, and drive sustainable, tech-enabled growth.",
+        "description": "Microfinance Institutions (MFIs) occupy a critical space in the CEMAC financial ecosystem, yet they face the dual challenge of navigating stringent COBAC regulatory mandates while managing inherent liquidity and operational constraints. \nAt AGILE, we provide the technical architecture and strategic oversight necessary to professionalize your operations and transform these regulatory requirements into a foundation for sustainable growth. \nModern Microfinance Institutions (MFIs) operate at the intersection of rapid digital transformation and stringent regulatory oversight. To scale effectively, institutions must balance the agility required for digital lending and mobile-first expansion with the discipline of robust COBAC governance. \nAt AGILE, we provide the technical architecture required to professionalize your core operations, mitigate systemic risks, and drive sustainable, tech-enabled growth.",
         "challenges": [
           "Digital Lending & Credit Risk Architecture: We design and refine end-to-end credit scoring frameworks, leveraging behavioral data and alternative analytics to optimize your digital lending portfolio while maintaining superior asset quality and minimizing NPL (Non-Performing Loan) ratios.",
           "Fraud Management & Operational Integrity: We implement proactive fraud management frameworks, internal control monitoring, and anomaly detection systems to safeguard your loan book and operational assets against internal and external threats.",
@@ -530,8 +530,8 @@
         }
       },
       "assetManagement": {
-        "title": "Asset Management",
-        "description": "In CEMAC's asset management sector, firms work under COSUMAF regulation alongside complex portfolio reporting and investor expectations. Asset managers are responsible for the direct management of individual or institutional portfolios. Our Risk, Actuarial and Sectoral Compliance Hub provides compliance audits, internal control systems and independent asset valuations to address regulatory and reporting needs. Our financial markets (COSUMAF) services support OHADA compliant statements through statutory audits (CAC) and accounting systems diagnostics. Our Performance Hub tools, including budgeting dashboards, variance analysis and tax compliance, support transparent investor relations.",
+        "title": "Asset Management & Capital Markets",
+        "description": "CEMAC asset managers navigating complex COSUMAF regulations and investor demands require absolute precision. AGILE delivers institutional-grade oversight tailored to the sector: \n•Risk & Compliance: Compliance audits, robust internal controls, and independent asset valuations to satisfy strict regulatory standards. \n•COSUMAF & Statutory Audits: Specialized statutory audits (CAC) and OHADA-compliant accounting diagnostics. \n•Performance & Investor Transparency: Advanced budgeting dashboards, variance analysis, and tax compliance frameworks to reinforce investor confidence.",
         "challenges": [
           "COSUMAF compliance: compliance audits, internal control systems and independent asset valuations to meet COSUMAF standards.",
           "Portfolio reporting: statutory audits (CAC) and accounting systems diagnostics for reliable, OHADA compliant statements.",
@@ -546,7 +546,7 @@
       },
       "managementCompanies": {
         "title": "Brokerage, Funds Management",
-        "description": "Under the COSUMAF framework, management companies differ from asset managers by administering collective investment vehicles, including mutual funds (FCPs) and open-ended investment companies (SICAVs), widely used across the region. We help these firms meet COSUMAF requirements through compliance audits, internal control frameworks, and independent valuations. We also provide statutory audits (CAC) and review accounting systems to support OHADA-compliant financial reporting. Through our Performance Hub, we deliver budgeting, dashboards, and variance analysis to strengthen fund oversight, transparency, and investor confidence.",
+        "description": "Under the COSUMAF framework, management companies differ from asset managers by administering collective investment vehicles, including mutual funds (FCPs) and open-ended investment companies (SICAVs), widely used across the region. \nWe help these firms meet COSUMAF requirements through compliance audits, internal control frameworks, and independent valuations. \nWe also provide statutory audits (CAC) and review accounting systems to support OHADA-compliant financial reporting. \nThrough our Performance Hub, we deliver budgeting, dashboards, and variance analysis to strengthen fund oversight, transparency, and investor confidence.",
         "challenges": [
           "COSUMAF compliance: compliance audits, internal controls and independent valuations for collective investment vehicles.",
           "Fund oversight: reliable reporting for FCPs and SICAVs through statutory audits (CAC) and accounting diagnostics.",
@@ -561,7 +561,7 @@
       },
       "agroIndustry": {
         "title": "Agro Industry",
-        "description": "Agro industry is a growth engine across CEMAC, central to food security and value creation under the OHADA framework, with rising attention to environmental and social concerns. We support agro industrial businesses with SYSCOHADA audit and certification, collateral and securities advisory for agricultural financing, and legal structuring of value chain contracts and PPP agreements. We integrate ESG compliance audits to manage environmental, social and governance risks, helping clients protect assets, strengthen governance and build resilient, sustainable operations across the value chain.",
+        "description": "Agro industry is a growth engine across CEMAC, central to food security and value creation under the OHADA framework, with rising attention to environmental and social concerns. \nWe support agro industrial businesses with SYSCOHADA audit and certification, collateral and securities advisory for agricultural financing, and legal structuring of value chain contracts and PPP agreements. \nWe integrate ESG compliance audits to manage environmental, social and governance risks, helping clients protect assets, strengthen governance and build resilient, sustainable operations across the value chain.",
         "challenges": [
           "SYSCOHADA certification: specialised audit and certification for agro industrial complexes under OHADA.",
           "Financing security: collateral and securities advisory for agricultural financing.",
@@ -702,7 +702,7 @@
     }
   },
   "contact": {
-    "headline": "AGILE: Securing Value, Empowering Growth, Building Trust in CEMAC and beyond",
+    "headline": "Securing Value, Empowering Growth, Building Trust in CEMAC and beyond",
     "subheadline": "Ready to strengthen your CIMA, COBAC or OHADA compliance? Contact AGILE for audit, risk and performance solutions tailored to your firm.",
     "info": {
       "address": "1682, Avenue De Gaulle, Bonanjo, Douala",
@@ -772,10 +772,9 @@
       ]
     },
     "credentials": [
-      "Member · ONECCA Cameroon",
       "CEMAC Chartered Accountants",
-      "FCCA · Fellow ACCA",
-      "OHADA Certified"
+      "ONECCA Cameroon",
+      "FCCA"
     ]
   },
   "ui": {

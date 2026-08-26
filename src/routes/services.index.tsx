@@ -60,7 +60,7 @@ function ServicesPage() {
               </div> */}
               <h1
                 className="display-2xl max-w-7xl text-white"
-                style={{ textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
+                style={{ fontSize: "clamp(2.25rem, 6vw, 4.375rem)", textShadow: "0 2px 30px rgba(0,0,0,0.45)" }}
               >
                 {t("services.overview.headline")}
               </h1>
@@ -71,9 +71,9 @@ function ServicesPage() {
               </p>
             </div>
           </div>
-          <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
+          {/* <div className="mt-12 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/55">
             <ArrowDown size={12} className="animate-bounce" /> Explore the practice
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -128,7 +128,7 @@ function ServicesPage() {
           </h2>
           <Link
             to="/contact"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-md font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-md font-bold text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
           >
             {t("services.overview.ctaButton")} <ArrowUpRight size={16} />
           </Link>

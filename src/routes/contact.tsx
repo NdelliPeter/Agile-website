@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import contactImg from "@/assets/IMG_2752.jpg";
+import contactImg from "@/assets/NS_Agile meeting room.jpeg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -52,7 +52,7 @@ function ContactPage() {
           // eyebrow={t("common.nav.contact")}
           title={t("contact.headline")}
           // intro={t("contact.subheadline")}
-          size="xl"
+          size="lg"
           widthClassName="max-w-[80%]"
         />
       </section>
@@ -60,8 +60,8 @@ function ContactPage() {
       <section className="container-page py-20 md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <div className="eyebrow mb-4">Office</div>
-            <ul className="space-y-5 border-y border-border py-6">
+            <div className=" text-[18px] text-primary font-bold mb-4">Office</div>
+            <ul className="space-y-2 border-y border-border py-6">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-primary" />
                 <span className="text-[15.5px] leading-relaxed text-foreground">
@@ -120,7 +120,7 @@ function ContactPage() {
                   <Field label={t("contact.form.phone")} value={form.phone} onChange={(v) => update("phone", v)} />
                 </div>
                 <div>
-                  <label className="eyebrow mb-2 block">{t("contact.form.service")}</label>
+                  <label className="text-primary text-[16px] font-bold mb-2 block">{t("contact.form.service")}</label>
                   <Select value={form.service} onValueChange={(v) => update("service", v)}>
                     <SelectTrigger className="h-12 w-full rounded-md border border-border bg-card px-3 text-[15px] text-foreground">
                       <SelectValue placeholder="—" />
@@ -135,7 +135,7 @@ function ContactPage() {
                   </Select>
                 </div>
                 <div>
-                  <label className="eyebrow mb-2 block">{t("contact.form.message")}</label>
+                  <label className="text-primary text-[16px] font-bold mb-2 block">{t("contact.form.message")}</label>
                   <textarea
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
@@ -148,7 +148,7 @@ function ContactPage() {
                   disabled={!canSubmit}
                   onClick={() => setSubmitted(true)}
                   style={{ backgroundColor: "#3D2E23" }}
-                  className="inline-flex h-12 items-center justify-center rounded-full px-7 text-sm font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)] disabled:opacity-80"
+                  className="inline-flex h-12 items-center justify-center rounded-full px-7 text-md font-bold text-primary-foreground hover:bg-[var(--brand-primary-hover)] disabled:opacity-80"
                 >
                   {t("contact.form.submit")}
                 </button>
@@ -184,7 +184,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="eyebrow mb-2 block">{label}</label>
+      <label className="text-primary text-[16px] font-bold mb-2 block">{label}</label>
       <input
         type={type}
         value={value}

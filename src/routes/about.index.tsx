@@ -49,7 +49,7 @@ function AboutPage() {
         {/* Subtle grid */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.3]"
+          className="pointer-events-none absolute inset-0 opacity-[0.45]"
           style={{
             backgroundImage: `url(${aboutHeroImg})`,
             // backgroundSize: "80px 80px",
@@ -104,15 +104,15 @@ function AboutPage() {
 
           {/* Manifesto */}
           <div className="md:col-span-7">
-            <div className="eyebrow mb-5 text-primary">The AGILE mark</div>
+            {/* <div className="eyebrow mb-5 text-primary">The AGILE mark</div> */}
             <h2 className="font-display text-3xl font-light leading-[1.1] tracking-tight md:text-5xl">
-              A circle for trust.
+              A proven Governance
               <br />
-              <span className="italic text-primary">A spark for progress.</span>
+              <span className="italic text-primary">Confident execution.</span>
             </h2>
             <div className="mt-8 h-px w-16 bg-primary" />
-            <p className="mt-8 max-w-xl text-[15.5px] leading-relaxed text-background/75 md:text-base">
-              Our mark draws from the African horizon — a continuous line that holds discipline, governance and momentum in a single gesture. It is the signature we carry into every audit, every boardroom, every milestone.
+            <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-background/75 md:text-base">
+              A continuous line of discipline and momentum. This is our signature across every audit, boardroom, and milestone.
             </p>
 
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-px overflow-hidden border border-background/10 bg-background/10">
@@ -122,7 +122,7 @@ function AboutPage() {
                 { v: "FCCA", l: "Fellowship" },
               ].map((s) => (
                 <div key={s.l} className="bg-foreground p-5 text-center">
-                  <dt className="font-display text-xl font-medium text-background">{s.v}</dt>
+                  <dt className="font-display text-2xl font-bold text-background">{s.v}</dt>
                   <dd className="mt-1 text-[10.5px] uppercase tracking-[0.18em] text-background/55">
                     {s.l}
                   </dd>
@@ -135,7 +135,7 @@ function AboutPage() {
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
           }
         `}</style>
       </section>
@@ -157,7 +157,7 @@ function AboutPage() {
             <SectionHeading title={t("about.story.heading")} size="md" />
           </div>
           <div className="md:col-span-7">
-            <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
+            <p className="text-[15.5px] text-justify leading-relaxed text-foreground md:text-base">
               {t("about.story.body")}
             </p>
             <blockquote className="mt-10 border-l-2 border-primary pl-6 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
@@ -171,14 +171,14 @@ function AboutPage() {
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <div className="border-t border-border pt-8">
-            <div className="eyebrow text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-[22px] leading-snug text-foreground ">
+            <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
+            <p className="font-display text-justify text-[18px] leading-snug text-foreground ">
               {t("about.vision.body")}
             </p>
           </div>
           <div className="border-t border-border pt-8">
-            <div className="eyebrow text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-[22px] leading-snug text-foreground">
+            <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
+            <p className="font-display text-justify text-[18px] leading-snug text-foreground">
               {t("about.mission.body")}
             </p>
           </div>
@@ -200,7 +200,7 @@ function AboutPage() {
                 key={i}
                 className="border-t border-border pt-5 md:border-r md:px-5 md:pr-6 md:last:border-r-0"
               >
-                <div className="font-display text-[17px] font-bold tracking-[0.18em] text-primary">
+                <div className="font-display text-[18px] font-bold tracking-[0.06em] text-primary">
                   0{i + 1} · {v.name}
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -260,7 +260,7 @@ function AboutPage() {
               />
             </div>
             <div className="md:col-span-7">
-              <p className="text-[15.5px] leading-relaxed text-foreground md:text-base">
+              <p className="text-[15.5px] leading-relaxed text-justify text-foreground md:text-base">
                 {t("about.socialResponsibility.body")}
               </p>
             </div>

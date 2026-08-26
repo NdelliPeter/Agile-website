@@ -21,7 +21,7 @@ export function SectionHeading({
       {eyebrow && <div className="eyebrow mb-4" style={{ fontSize: "18px", textTransform: "capitalize" }}>{eyebrow}</div>}
       <h2 className={`${sizeClass} text-foreground`}>{title}</h2>
       {intro && (
-        <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">{intro}</p>
+        <p className="mt-5 text-base leading-relaxed text-justify text-muted-foreground md:text-lg">{intro}</p>
       )}
     </div>
   );

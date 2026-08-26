@@ -55,16 +55,16 @@ export function Pipeline({ steps }: { steps: PipelineStep[] }) {
             <Fragment key={i}>
               <li className="group relative">
                 <span
-                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[16px] font-bold tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                  className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background font-display text-[18px] font-bold tracking-[0.14em] text-primary transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="mt-6">
-                  <div className="font-display text-[18px] font-bold leading-snug text-foreground">
+                  <div className="font-display text-[20px] font-bold leading-snug text-foreground">
                     {s.label}
                   </div>
                   {s.detail && (
-                    <p className="mt-2 max-w-[26ch] text-[14px] leading-relaxed text-muted-foreground">
+                    <p className="mt-2 max-w-[26ch] text-[16px] leading-relaxed text-muted-foreground">
                       {s.detail}
                     </p>
                   )}

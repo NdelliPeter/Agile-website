@@ -31,7 +31,37 @@ export function ServiceWheel() {
 
 
   return (
-    <div className="group relative mx-auto aspect-square w-full max-w-[760px] select-none">
+    <>
+      {/* Mobile/small tablet — stacked list. The radial wheel below needs real
+          room per node (icon + title + summary); below md it just overlaps. */}
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:hidden">
+        {SERVICE_KEYS.map((key) => {
+          const Icon = ICONS[key];
+          return (
+            <Link
+              key={key}
+              to="/services/$serviceKey"
+              params={{ serviceKey: key }}
+              className="group/node flex items-start gap-4 rounded-2xl border border-border bg-background p-4 transition-colors hover:border-primary"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-background text-primary transition-colors group-hover/node:border-primary group-hover/node:bg-primary group-hover/node:text-primary-foreground">
+                <Icon size={20} strokeWidth={1.6} />
+              </span>
+              <div className="min-w-0">
+                <div className="font-display text-[14px] font-medium leading-tight text-foreground transition-colors group-hover/node:text-primary">
+                  {t(`home.servicesPreview.cards.${key}.title`)}
+                </div>
+                <div className="mt-1 text-[12px] leading-snug text-muted-foreground">
+                  {t(`home.servicesPreview.summaries.${key}`)}
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Tablet/desktop — interactive spinning wheel */}
+      <div className="group relative mx-auto hidden aspect-square w-full max-w-[760px] select-none md:block">
       {/* Decorative concentric rings (static) */}
       <svg
         viewBox="0 0 100 100"
@@ -125,6 +155,7 @@ export function ServiceWheel() {
         </div>
       </div>
 
-    </div>
+      </div>
+    </>
   );
 }
