@@ -172,7 +172,7 @@ export function Footer() {
                   {t("common.nav.insights")}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
                   {t("footer.links.annualReport")}
                 </a>
@@ -186,7 +186,7 @@ export function Footer() {
                 <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground dark:text-muted-foreground dark:hover:text-foreground">
                   {t("footer.links.pressMedia")}
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

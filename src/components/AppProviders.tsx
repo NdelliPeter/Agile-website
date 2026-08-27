@@ -20,12 +20,11 @@ export function AppProviders({ children }: { children: ReactNode }) {
     const stored = window.localStorage.getItem("agile.lang");
     return stored === "fr" || stored === "en" ? (stored as Lang) : "en";
   });
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === "undefined") return "light";
-    const stored = window.localStorage.getItem("agile.theme");
-    if (stored === "light" || stored === "dark") return stored;
-    return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
+  // Light is the site's only supported theme for now — the toggle is
+  // commented out in the header, so we no longer follow the OS preference
+  // or a stale stored value; a visitor's system dark-mode setting used to
+  // silently flip them into dark mode with no way back.
+  const [theme, setThemeState] = useState<Theme>("light");
 
   useEffect(() => {
     if (typeof document === "undefined") return;
