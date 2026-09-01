@@ -138,7 +138,7 @@ function TeamPage() {
                   width={768}
                   height={960}
                   loading="lazy"
-                  className="aspect-[4/5] w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+                  className="aspect-[4/5] w-full object-cover transition-all duration-500 md:grayscale md:group-hover:grayscale-0"
                 />
               </div>
               <h3 className="mt-6 font-display text-xl font-bold leading-tight text-foreground md:text-2xl">

@@ -179,7 +179,7 @@ function IndustriesPage() {
                   <h2 className="display-md text-foreground">
                     {t(`industries.items.${k}.title`)}
                   </h2>
-                  <p className="mt-6 text-[15.5px] leading-relaxed text-muted-foreground md:text-base" style={{ whiteSpace: "pre-line", }}>
+                  <p className="mt-6 text-[15.5px] leading-relaxed text-justify text-muted-foreground md:text-base" style={{ whiteSpace: "pre-line", }}>
                     {t(`industries.items.${k}.description`)}
                   </p>
                   {/* 

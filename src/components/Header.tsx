@@ -59,7 +59,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           }
         >
           <Link to="/" className="flex items-center gap-3 pl-1" aria-label="AGILE">
-            <BrandMark variant="full" size={42} forceLight={onHero} />
+            <BrandMark variant="full" size={55} forceLight={onHero} />
             <span
               className={
                 "hidden text-[22px] font-semibold tracking-tight sm:inline " + fgText
@@ -114,7 +114,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <div
+            {/* <div
               className={
                 "hidden items-center rounded-full border p-0.5 text-[11.5px] font-medium md:flex " +
                 borderTone
@@ -141,7 +141,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                   </button>
                 );
               })}
-            </div>
+            </div> */}
 
             {/* <button
               type="button"

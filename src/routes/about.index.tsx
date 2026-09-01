@@ -52,7 +52,9 @@ function AboutPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.45]"
           style={{
             backgroundImage: `url(${aboutHeroImg})`,
-            // backgroundSize: "80px 80px",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         />
 
@@ -172,13 +174,13 @@ function AboutPage() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <div className="border-t border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-justify text-[18px] leading-snug text-foreground ">
+            <p className="font-display text-justify text-base leading-snug text-foreground md:text-lg">
               {t("about.vision.body")}
             </p>
           </div>
           <div className="border-t border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-justify text-[18px] leading-snug text-foreground">
+            <p className="font-display text-justify text-base leading-snug text-foreground md:text-lg">
               {t("about.mission.body")}
             </p>
           </div>
@@ -234,7 +236,7 @@ function AboutPage() {
             <SectionHeading
               eyebrow={t("about.team.heading")}
               title="A team built on mentorship and excellence."
-              size="md"
+              size="lg"
             />
             <Link
               to="/about/team"

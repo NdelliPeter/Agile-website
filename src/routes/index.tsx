@@ -85,7 +85,7 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="container-page relative z-10 w-full pb-32 pt-36 md:pb-36 md:pt-44">
+        <div className="container-page relative z-10 w-full pb-32 pt-[6.3rem] md:pb-36 md:pt-44">
           <Reveal>
             {/* <div className="eyebrow mb-6" style={{ color: "#E4EDEC" }}>
               <span className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-[var(--brand-primary)] align-middle" />
