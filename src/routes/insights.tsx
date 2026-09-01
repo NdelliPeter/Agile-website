@@ -9,8 +9,8 @@ import insightsHero from "@/assets/CSM_Yogam 2.jpeg";
 import insight1 from "@/assets/CSM_Amazone Cotonou 1.jpeg";
 import insight2 from "@/assets/Alex_Uzbek 4 Noir & Blanc Samarcan.jpeg";
 import insight3 from "@/assets/Alex_Uzbek 3 Color Samarcan.jpeg";
-import insight4 from "@/assets/insight-4.jpg";
-import insight5 from "@/assets/insight-5.jpg";
+import insight4 from "@/assets/Alex_Uzbek 3 Color Samarcan.jpeg";
+import insight5 from "@/assets/Alex_Uzbek 3 Color Samarcan.jpeg";
 
 const INSIGHT_IMAGES = [insight1, insight2, insight3, insight4, insight5];
 

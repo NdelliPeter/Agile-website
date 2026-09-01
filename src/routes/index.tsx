@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowUpRight, ArrowRight, ArrowDown, Building2 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AppLayout } from "@/components/AppLayout";
 import { useT } from "@/components/AppProviders";
@@ -256,13 +256,21 @@ function HomePage() {
             {t("home.testimonials.empty")}
           </p>
         ) : (
-          <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-10">
+          <div className="mt-12 flex flex-col gap-6">
             {filledTestimonials.map((q, i) => (
-              <figure key={i}>
-                <blockquote style={{ fontStyle: 'italic', textAlign: 'justify' }} className="font-display text-[15px] font-medium leading-snug text-foreground">
-                  “{q.quote}”
-                </blockquote>
-                <figcaption className="mt-4 text-md font-extrabold text-muted-foreground">— {q.name}</figcaption>
+              <figure
+                key={i}
+                className="flex items-start gap-5 bg-card p-6 shadow-md md:p-8"
+              >
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-primary">
+                  <Building2 size={22} strokeWidth={1.6} />
+                </span>
+                <div>
+                  <blockquote style={{ fontStyle: 'italic', textAlign: 'justify' }} className="font-display text-[17px] font-medium leading-snug text-foreground">
+                    “{q.quote}”
+                  </blockquote>
+                  <figcaption className="mt-4 text-[15px] font-extrabold text-muted-foreground">— {q.name}</figcaption>
+                </div>
               </figure>
             ))}
           </div>

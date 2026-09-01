@@ -143,7 +143,7 @@ function AboutPage() {
       </section>
 
       {/* About header */}
-      <section className="container-page pt-5">
+      <section className="container-page pt-20 md:pt-28">
         <SectionHeading
           // eyebrow={t("common.nav.about")}
           title={t("about.header.title")}
@@ -172,15 +172,15 @@ function AboutPage() {
       {/* Vision / Mission */}
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
-          <div className="border-t border-border pt-8">
+          <div className=" border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-justify text-base leading-snug text-foreground md:text-lg">
+            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-lg">
               {t("about.vision.body")}
             </p>
           </div>
-          <div className="border-t border-border pt-8">
+          <div className=" border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-justify text-base leading-snug text-foreground md:text-lg">
+            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-lg">
               {t("about.mission.body")}
             </p>
           </div>

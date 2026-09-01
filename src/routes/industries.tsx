@@ -5,7 +5,7 @@ import { useT } from "@/components/AppProviders";
 
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { INDUSTRY_KEYS, type IndustryKey } from "@/lib/services-data";
-import industriesHero from "@/assets/Industries-hero.jpg";
+import industriesHero from "@/assets/CSM_Dubai Tours 4.jpg";
 import bankingImg from "@/assets/IMG_3870.jpg";
 import insuranceImg from "@/assets/CSM_Amazone Cotonou 1.jpeg";
 import microfinanceImg from "@/assets/microfinance.jpg";

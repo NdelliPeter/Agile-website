@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppLayout } from "@/components/AppLayout";
 import { SectionHeading } from "@/components/SectionHeading";
-import founderImg from "@/assets/Mme Simo.png";
+import founderImg from "@/assets/Mme Simo.jpg";
 import team1 from "@/assets/Alex-Michel Ngningha.png";
 import team2 from "@/assets/IMG_5542.jpg";
 import team3 from "@/assets/team-3.jpg";
