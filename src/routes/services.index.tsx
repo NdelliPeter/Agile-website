@@ -79,7 +79,7 @@ function ServicesPage() {
 
 
       <section className="container-page py-20 md:py-28">
-        <div className="border-t border-border">
+        <div className="border-t py-0 border-border">
           {SERVICE_KEYS.map((key, i) => {
             const imageFirst = i % 2 === 1;
             return (
@@ -87,7 +87,7 @@ function ServicesPage() {
                 key={key}
                 to="/services/$serviceKey"
                 params={{ serviceKey: key }}
-                className="group grid grid-cols-1 items-center gap-8 border-b border-border py-10 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-12 md:py-14"
+                className="group grid grid-cols-1 items-center gap-8 border-b border-t border-border transition-colors hover:bg-secondary/40 md:grid-cols-12 px-3 md:gap-12 md:my-14"
               >
                 <div className={`md:col-span-7 ${imageFirst ? "md:order-2" : ""}`}>
                   <h3 className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">

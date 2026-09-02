@@ -122,8 +122,8 @@ function ContactPage() {
                 <div>
                   <label className="text-primary text-[16px] font-bold mb-2 block">{t("contact.form.service")}</label>
                   <Select value={form.service} onValueChange={(v) => update("service", v)}>
-                    <SelectTrigger className="h-12 w-full rounded-md border border-border bg-card px-3 text-[15px] text-foreground">
-                      <SelectValue placeholder="—" />
+                    <SelectTrigger className="h-12 w-full rounded-xs border border-border px-3 text-[15px] text-foreground">
+                      <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent className="bg-popover text-popover-foreground">
                       {serviceOptions.map((o) => (
@@ -140,7 +140,7 @@ function ContactPage() {
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     rows={5}
-                    className="w-full resize-none border-b border-border bg-transparent py-3 text-[15px] text-foreground outline-none focus:border-primary"
+                    className="w-full resize-none border border-border bg-transparent py-3 text-[15px] text-foreground outline-none focus:border-primary"
                   />
                 </div>
                 <button
@@ -189,7 +189,7 @@ function Field({
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full border-b border-border bg-transparent py-3 text-[15px] text-foreground outline-none focus:border-primary"
+        className="w-full border border-border bg-transparent px-3 py-3 text-[15px] text-foreground outline-none focus:border-primary"
       />
     </div>
   );

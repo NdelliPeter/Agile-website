@@ -1,4 +1,5 @@
-import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo.png";
+import logoColor from "@/assets/wHITEaGILE.png";
 import { useApp } from "./AppProviders";
 
 type Variant = "full" | "mark" | "muted";
@@ -16,7 +17,9 @@ export function BrandMark({
 }) {
   const { theme } = useApp();
   const alt = "AGILE";
-  const src = logo;
+  // forceLight = mark sits on a dark surface (e.g. the footer) → use the
+  // white version. Otherwise (light surfaces, e.g. the header) → colored.
+  const src = forceLight ? logoWhite : logoColor;
 
   return (
     <img
