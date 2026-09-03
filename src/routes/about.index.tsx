@@ -58,7 +58,7 @@ function AboutPage() {
           }}
         />
 
-        <div className="container-page relative grid grid-cols-1 items-center gap-16 py-24 md:grid-cols-12 md:py-32">
+        <div className="container-page relative grid grid-cols-1 items-center gap-16 pt-[5px] pb-24 md:grid-cols-12 md:py-25">
           {/* Logo stage */}
           <div className="md:col-span-5">
             <div className="relative mx-auto aspect-square w-full max-w-[420px]">
@@ -107,7 +107,7 @@ function AboutPage() {
           {/* Manifesto */}
           <div className="md:col-span-7">
             {/* <div className="eyebrow mb-5 text-primary">The AGILE mark</div> */}
-            <h2 className="font-display text-3xl font-light leading-[1.1] tracking-tight md:text-5xl">
+            <h2 className="font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl">
               A proven Governance
               <br />
               <span className="italic text-primary">Confident execution.</span>
@@ -172,15 +172,15 @@ function AboutPage() {
       {/* Vision / Mission */}
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
-          <div className=" border-border pt-8">
+          <div className="border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-lg">
+            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-base">
               {t("about.vision.body")}
             </p>
           </div>
           <div className=" border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-lg">
+            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-base">
               {t("about.mission.body")}
             </p>
           </div>

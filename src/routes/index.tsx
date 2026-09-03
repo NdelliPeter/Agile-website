@@ -152,7 +152,7 @@ function HomePage() {
                     <div
                       key={i}
                       className={
-                        "flex items-baseline gap-2.5 " +
+                        "flex flex-col items-center gap-1 text-center md:flex-row md:items-baseline md:gap-2.5 md:text-left " +
                         (i > 0 ? "md:border-l md:border-white/15 md:pl-8" : "")
                       }
                     >
@@ -161,7 +161,7 @@ function HomePage() {
                         className="font-display text-2xl font-medium tracking-tight text-white md:text-3xl"
                       />
 
-                      <span className="text-[10.5px] uppercase tracking-[0.16em] text-white/70 md:text-[11px]">
+                      <span className="text-[10.5px] uppercase align-center tracking-[0.16em] text-white/70 md:text-[11px]">
                         {STAT_SHORT[i] ?? s.label}
                       </span>
                     </div>
@@ -262,7 +262,7 @@ function HomePage() {
                 key={i}
                 className="flex items-start gap-5 bg-card p-6 shadow-md md:p-8"
               >
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-primary">
+                <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-primary md:flex">
                   <Building2 size={22} strokeWidth={1.6} />
                 </span>
                 <div>
