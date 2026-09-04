@@ -49,12 +49,9 @@ function AboutPage() {
         {/* Subtle grid */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.45]"
+          className="pointer-events-none absolute inset-0 bg-center bg-no-repeat opacity-[0.45] [background-size:auto_70%] md:[background-size:cover]"
           style={{
             backgroundImage: `url(${aboutHeroImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
           }}
         />
 

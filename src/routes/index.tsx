@@ -161,7 +161,7 @@ function HomePage() {
                         className="font-display text-2xl font-medium tracking-tight text-white md:text-3xl"
                       />
 
-                      <span className="text-[10.5px] uppercase align-center tracking-[0.16em] text-white/70 md:text-[11px]">
+                      <span className="text-[10.5px] uppercase tracking-[0.16em] text-white/70 md:text-[11px]">
                         {STAT_SHORT[i] ?? s.label}
                       </span>
                     </div>

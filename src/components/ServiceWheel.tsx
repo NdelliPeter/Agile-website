@@ -31,37 +31,7 @@ export function ServiceWheel() {
 
 
   return (
-    <>
-      {/* Mobile/small tablet — stacked list. The radial wheel below needs real
-          room per node (icon + title + summary); below md it just overlaps. */}
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:hidden">
-        {SERVICE_KEYS.map((key) => {
-          const Icon = ICONS[key];
-          return (
-            <Link
-              key={key}
-              to="/services/$serviceKey"
-              params={{ serviceKey: key }}
-              className="group/node flex items-start gap-4 rounded-2xl border border-border bg-background p-4 transition-colors hover:border-primary"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-background text-primary transition-colors group-hover/node:border-primary group-hover/node:bg-primary group-hover/node:text-primary-foreground">
-                <Icon size={20} strokeWidth={1.6} />
-              </span>
-              <div className="min-w-0">
-                <div className="font-display text-[14px] font-medium leading-tight text-foreground transition-colors group-hover/node:text-primary">
-                  {t(`home.servicesPreview.cards.${key}.title`)}
-                </div>
-                <div className="mt-1 text-[12px] leading-snug text-muted-foreground">
-                  {t(`home.servicesPreview.summaries.${key}`)}
-                </div>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-
-      {/* Tablet/desktop — interactive spinning wheel */}
-      <div className="group relative mx-auto hidden aspect-square w-full max-w-[760px] select-none md:block">
+      <div className="group relative mx-auto aspect-square w-full max-w-[760px] select-none">
       {/* Decorative concentric rings (static) */}
       <svg
         viewBox="0 0 100 100"
@@ -125,15 +95,17 @@ export function ServiceWheel() {
                 <Link
                   to="/services/$serviceKey"
                   params={{ serviceKey: key }}
-                  className="group/node flex w-40 flex-col items-center text-center md:w-48"
+                  className="group/node flex w-16 flex-col items-center text-center sm:w-24 md:w-40 lg:w-48"
                 >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-background text-primary shadow-[0_12px_30px_-14px_rgba(20,15,10,0.35)] transition-all duration-300 group-hover/node:-translate-y-0.5 group-hover/node:scale-[1.08] group-hover/node:border-primary group-hover/node:bg-primary group-hover/node:text-primary-foreground md:h-16 md:w-16">
-                    <Icon size={24} strokeWidth={1.6} />
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-background text-primary shadow-[0_12px_30px_-14px_rgba(20,15,10,0.35)] transition-all duration-300 group-hover/node:-translate-y-0.5 group-hover/node:scale-[1.08] group-hover/node:border-primary group-hover/node:bg-primary group-hover/node:text-primary-foreground sm:h-11 sm:w-11 md:h-14 md:w-14 lg:h-16 lg:w-16">
+                    <Icon size={16} strokeWidth={1.6} className="sm:hidden" />
+                    <Icon size={22} strokeWidth={1.6} className="hidden sm:block md:hidden" />
+                    <Icon size={24} strokeWidth={1.6} className="hidden md:block" />
                   </span>
-                  <span className="mt-3 block font-display text-[13px] font-medium leading-tight text-foreground transition-colors group-hover/node:text-primary md:text-[14px]">
+                  <span className="mt-2 block font-display text-[9px] font-medium leading-tight text-foreground transition-colors group-hover/node:text-primary sm:text-[11px] md:mt-3 md:text-[13px] lg:text-[14px]">
                     {t(`home.servicesPreview.cards.${key}.title`)}
                   </span>
-                  <span className="mt-1.5 block text-[11px] leading-snug text-muted-foreground md:text-[12px]">
+                  <span className="mt-1.5 hidden text-[11px] leading-snug text-muted-foreground md:block lg:text-[12px]">
                     {t(`home.servicesPreview.summaries.${key}`)}
                   </span>
                 </Link>
@@ -145,7 +117,7 @@ export function ServiceWheel() {
 
       {/* Center hub — AGILE logo */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="relative grid h-36 w-36 place-items-center md:h-44 md:w-44">
+        <div className="relative grid h-16 w-16 place-items-center sm:h-24 sm:w-24 md:h-36 md:w-36 lg:h-44 lg:w-44">
           <div className="absolute inset-0 rounded-full bg-primary/15 blur-2xl" />
           <img
             src={logoImg}
@@ -156,6 +128,5 @@ export function ServiceWheel() {
       </div>
 
       </div>
-    </>
   );
 }
