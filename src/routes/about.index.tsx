@@ -110,7 +110,7 @@ function AboutPage() {
               <span className="italic text-primary">Confident execution.</span>
             </h2>
             <div className="mt-8 h-px w-16 bg-primary" />
-            <p className="mt-8 max-w-xl text-[16px] leading-relaxed text-background/75 md:text-base">
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-background/75 md:text-base">
               A continuous line of discipline and momentum. This is our signature across every audit, boardroom, and milestone.
             </p>
 
@@ -156,7 +156,7 @@ function AboutPage() {
             <SectionHeading title={t("about.story.heading")} size="md" />
           </div>
           <div className="md:col-span-7">
-            <p className="text-[15.5px] text-justify leading-relaxed text-foreground md:text-base">
+            <p className="text-base text-justify leading-relaxed text-muted-foreground md:text-lg">
               {t("about.story.body")}
             </p>
             <blockquote className="mt-10 border-l-2 border-primary pl-6 font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
@@ -171,13 +171,13 @@ function AboutPage() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <div className="border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.vision.heading")}</div>
-            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-base">
+            <p className="text-base text-justify leading-relaxed text-muted-foreground md:text-lg">
               {t("about.vision.body")}
             </p>
           </div>
           <div className=" border-border pt-8">
             <div className="eyebrow tracking-[0px] text-primary text-[28px] font-bold mb-4">{t("about.mission.heading")}</div>
-            <p className="font-display text-justify text-[15.5px] leading-snug text-foreground md:text-base">
+            <p className="text-base text-justify leading-relaxed text-muted-foreground md:text-lg">
               {t("about.mission.body")}
             </p>
           </div>
@@ -259,7 +259,7 @@ function AboutPage() {
               />
             </div>
             <div className="md:col-span-7">
-              <p className="text-[15.5px] leading-relaxed text-justify text-foreground md:text-base">
+              <p className="text-base text-justify leading-relaxed text-muted-foreground md:text-lg">
                 {t("about.socialResponsibility.body")}
               </p>
             </div>
