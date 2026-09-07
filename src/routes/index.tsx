@@ -92,7 +92,7 @@ function HomePage() {
               {t("common.brandFull")}
             </div> */}
             <h1
-              className="display-2xl max-w-5xl"
+              className="display-2xl max-w-6xl"
               style={{
                 color: "#F6F4F1",
                 fontSize: "clamp(2.25rem, 6vw, 4.375rem)",
