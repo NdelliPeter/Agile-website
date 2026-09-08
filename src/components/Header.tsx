@@ -210,7 +210,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               ))}
 
             </nav>
-            <div className="mt-4 flex items-center justify-between gap-2">
+            {/* <div className="mt-4 flex items-center justify-between gap-2">
               <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
                 {(["en", "fr"] as const).map((l) => (
                   <button
@@ -234,7 +234,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               >
                 {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
               </button>
-            </div>
+            </div> */}
             <Link
               to="/contact"
               className="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground"

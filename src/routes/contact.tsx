@@ -140,7 +140,7 @@ function ContactPage() {
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     rows={5}
-                    className="w-full resize-none border border-border bg-transparent py-3 text-[15px] text-foreground outline-none focus:border-primary"
+                    className="w-full resize-none border border-border bg-transparent p-3 text-[15px] text-foreground outline-none focus:border-primary"
                   />
                 </div>
                 <button

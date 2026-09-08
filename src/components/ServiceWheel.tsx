@@ -31,7 +31,7 @@ export function ServiceWheel() {
 
 
   return (
-      <div className="group relative mx-auto aspect-square w-full max-w-[760px] select-none">
+      <div className="group relative mx-auto aspect-square w-full max-w-[760px] select-none overflow-hidden">
       {/* Decorative concentric rings (static) */}
       <svg
         viewBox="0 0 100 100"
@@ -44,7 +44,7 @@ export function ServiceWheel() {
       </svg>
 
       {/* Spinning layer: spokes + nodes rotate together */}
-      <div className="wheel absolute inset-0 will-change-transform [animation:spin_50s_linear_infinite] [animation-play-state:paused] motion-safe:group-hover:[animation-play-state:running]">
+      <div className="wheel absolute inset-0 will-change-transform [animation:spin_50s_linear_infinite] [animation-play-state:paused] max-lg:motion-safe:[animation-play-state:running] motion-safe:lg:group-hover:[animation-play-state:running]">
         <svg
           viewBox="0 0 100 100"
           aria-hidden="true"
@@ -90,7 +90,7 @@ export function ServiceWheel() {
             >
               {/* Counter-rotate inner content so it stays upright while wheel spins */}
               <div
-                className="[animation:spin_50s_linear_infinite_reverse] [animation-play-state:paused] motion-safe:group-hover:[animation-play-state:running]"
+                className="[animation:spin_50s_linear_infinite_reverse] [animation-play-state:paused] max-lg:motion-safe:[animation-play-state:running] motion-safe:lg:group-hover:[animation-play-state:running]"
               >
                 <Link
                   to="/services/$serviceKey"
