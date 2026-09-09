@@ -21,6 +21,25 @@ export const Route = createFileRoute("/services/$serviceKey")({
   component: ServiceDetailPage,
 });
 
+// Renders translated copy that wraps its emphasised phrase in *asterisks*,
+// e.g. "Why institutions *choose us* for this." — keeps the accent styling
+// intact across languages without splitting the sentence into two keys.
+function EmphasisText({ text }: { text: string }) {
+  return (
+    <>
+      {text.split("*").map((part, i) =>
+        i % 2 === 1 ? (
+          <span key={i} className="italic text-primary">
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+}
+
 function capitalize(s: string) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
@@ -71,13 +90,10 @@ function ServiceDetailPage() {
   const faqs = (t(`services.items.${key}.faqs`, { returnObjects: true }) as FAQItem[]) || [];
   const principles = SERVICE_PRINCIPLES[key];
 
-  const pipelineSteps = [
-    { label: "Scope", detail: "Align objectives, materiality and regulatory scope with stakeholders." },
-    { label: "Assess", detail: "Walk through systems, data, controls and prior reporting." },
-    { label: "Test", detail: "Sample, substantively test, model and challenge findings." },
-    { label: "Report", detail: "Issue clear opinions, recommendations and management letters." },
-    { label: "Embed", detail: "Coach teams to sustain compliance and improvements." },
-  ];
+  const pipelineSteps = t("services.pipeline.steps", { returnObjects: true }) as Array<{
+    label: string;
+    detail: string;
+  }>;
 
   return (
     <AppLayout overlayHeader>
@@ -152,10 +168,9 @@ function ServiceDetailPage() {
       {/* ============ OVERVIEW ============ */}
       <section className="container-page py-20 md:py-28">
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <div className="eyebrow mb-4 text-primary">The mandate</div>
+          <div className="eyebrow mb-4 text-primary">{t("services.detail.mandateEyebrow")}</div>
           <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
-            Why institutions{" "}
-            <span className="italic text-primary">choose us</span> for this.
+            <EmphasisText text={t("services.detail.mandateHeading")} />
           </h2>
         </div>
 
@@ -185,7 +200,7 @@ function ServiceDetailPage() {
 
         <div className="mx-auto mt-16 max-w-3xl">
           <div className="mb-8 text-center">
-            <div className="eyebrow mb-3 text-[16px] text-primary">Key deliverables</div>
+            <div className="eyebrow mb-3 text-[16px] text-primary">{t("services.detail.deliverablesEyebrow")}</div>
             {/* <div className="font-display text-sm text-muted-foreground">
               {String(deliverables.length).padStart(2, "0")} outputs
             </div> */}
@@ -222,7 +237,7 @@ function ServiceDetailPage() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             {/* <div className="eyebrow mb-3 text-primary">Delivery pipeline</div> */}
             <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-5xl">
-              How we deliver this engagement.
+              {t("services.detail.processHeading")}
             </h2>
             {/* <div className="mt-4 font-display text-sm text-muted-foreground">
               Five disciplined stages · zero surprises
@@ -237,11 +252,10 @@ function ServiceDetailPage() {
         <div className="mx-auto max-w-3xl text-center">
           {/* <div className="eyebrow mb-3 text-primary">FAQ</div> */}
           <h2 className="font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
-            Common questions, <span className="italic text-primary">answered.</span>
+            <EmphasisText text={t("services.detail.faqHeading")} />
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Don't see your question? Our partners are available for a confidential
-            call within 48 hours.
+            {t("services.detail.faqFooter")}
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-3xl">

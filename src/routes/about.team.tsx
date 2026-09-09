@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppLayout } from "@/components/AppLayout";
 import { SectionHeading } from "@/components/SectionHeading";
+import { useT } from "@/components/AppProviders";
 import founderImg from "@/assets/Mme Simo.jpg";
 import team1 from "@/assets/Alex-Michel Ngningha.png";
 import team2 from "@/assets/IMG_5542.jpg";
-import team3 from "@/assets/team-3.jpg";
 
 export const Route = createFileRoute("/about/team")({
   head: () => ({
@@ -29,45 +29,27 @@ type Member = {
   name: string;
   role: string;
   bio: string;
-  img: string;
+  active?: boolean;
 };
 
-const TEAM: Member[] = [
-  {
-    name: "Claudine SIMO MAMO",
-    role: "Founder & Managing Partner",
-    bio: "Mrs Simo is a CEMAC-certified Chartered Accountant and a Fellow of the Association of Chartered Certified Accountants (ACCA), bringing over 37 years of distinguished experience in audit, accounting, and advisory across Central Africa. As Founder and Managing Partner of AGILE, she advises financial institutions and major organizations on governance, structural resilience, and sustainable performance optimization.Beyond her technical mastery, Mrs Simo is dedicated to institutional capacity-building; fostering a culture of accountability and empowering the next generation of leadership.",
-    img: founderImg,
-  },
-  {
-    name: "Alex-Michel NGNINGHA",
-    role: "Senior Actuarial Consultant",
-    bio: "A solid expertise in P&C actuarial consulting, risk management, and reinsurance across French and European markets. As a Senior Executive Manager, he leads strategic engagements in Solvency II balance sheet audits, Enterprise Risk Management (ERM), ESG strategy, and M&A valuations. His previous Executive roles at Ernst & Young, Mazars Actuariat, SCOR Global P&C, and Aon Benfield focused on reserving, treaty pricing, internal model validation, and underwriting portfolio management. He holds a master’s degree in actuarial science and finance and is a qualified member of the INSTITUT DES ACTUAIRES.",
-    img: team1,
-  },
-  {
-    name: "Ange ALIMA AFANA",
-    role: "Senior Risk Executive & Consultant",
-    bio: "Strategic leader with over 14 years experience at the crossroads of financial risk, organisational transformation, and corporate governance within international groups (Wells Fargo, BNP Paribas, ICBC Standard Bank, Louis Dreyfus, Baobab Group). With a proven ability to design and drive ambitious risk strategies, to orchestrate complex operational transformations, and to generate measurable value in demanding multicultural and regulatory environments. Her background also spans capital markets, commodities trading, microfinance, and fintech.",
-    img: team2,
-  },
-  // {
-  //   name: "Joseph Mbarga",
-  //   role: "Senior Advisor, Performance",
-  //   bio: "Three decades guiding agro-industry, utilities and microfinance leadership teams toward sustainable, measurable performance.",
-  //   img: team3,
-  // },
-];
+// Images stay local (JSON can't hold imports) — matched to members by array position.
+const TEAM_IMAGES = [founderImg, team1, team2];
 
 function TeamPage() {
-  const [founder, ...rest] = TEAM;
+  const t = useT();
+  const members = t("about.team.members", { returnObjects: true }) as Member[];
+  const team = members
+    .map((m, i) => ({ ...m, img: TEAM_IMAGES[i] }))
+    .filter((m) => m.active !== false);
+  const [founder, ...rest] = team;
+
   return (
     <AppLayout>
       <section className="container-page pt-20 md:pt-28">
         <SectionHeading
           // eyebrow="Our team"
-          title="A team shaped by legacy, driven by excellence."
-          intro="Our founders and senior executives bring decades of elite cross-border experience, uncompromising rigour, and direct, hands-on oversight to every engagement."
+          title={t("about.team.page.title")}
+          intro={t("about.team.page.intro")}
           size="xl"
           widthClassName="max-w-full md:max-w-[70%]"
         />
@@ -91,7 +73,7 @@ function TeamPage() {
             </div>
           </div>
           <div className="md:col-span-7 md:pt-6">
-            <div className="eyebrow-accent text-[15px] mb-5">Founder · Managing Partner</div>
+            <div className="eyebrow-accent text-[15px] mb-5">{t("about.team.page.founderEyebrow")}</div>
             <h2 className="font-display text-3xl font-light leading-[1.05] text-foreground md:text-5xl">
               {founder.name}
             </h2>
@@ -101,9 +83,9 @@ function TeamPage() {
             </p>
             <dl className="mt-10 grid max-w-md grid-cols-3 gap-px overflow-hidden border border-border bg-border">
               {[
-                { v: "37+", l: "Years practice" },
-                { v: "FCCA", l: "Fellow ACCA" },
-                { v: "CEMAC", l: "Chartered" },
+                { v: "37+", l: t("about.team.founderStats.yearsPractice") },
+                { v: "FCCA", l: t("about.team.founderStats.fellowAcca") },
+                { v: "CEMAC", l: t("about.team.founderStats.chartered") },
               ].map((s) => (
                 <div key={s.l} className="bg-background p-4 text-center">
                   <dt className="font-display text-xl font-medium text-foreground">{s.v}</dt>
@@ -120,7 +102,7 @@ function TeamPage() {
       {/* SECONDARY ROW — partners & senior advisors */}
       <section className="container-page py-20 md:py-28">
         <div className="mb-10 flex items-end justify-between border-b border-border pb-5">
-          <div className="eyebrow text-[16px] font-bold text-primary">Partners &amp; senior advisors</div>
+          <div className="eyebrow text-[16px] font-bold text-primary">{t("about.team.page.secondaryHeading")}</div>
           <div className="font-display text-sm text-muted-foreground">
             {/* 0{rest.length} leading the practice */}
           </div>
@@ -158,4 +140,3 @@ function TeamPage() {
     </AppLayout>
   );
 }
-

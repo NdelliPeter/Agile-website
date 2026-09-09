@@ -105,20 +105,20 @@ function AboutPage() {
           <div className="md:col-span-7">
             {/* <div className="eyebrow mb-5 text-primary">The AGILE mark</div> */}
             <h2 className="font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl">
-              A proven Governance
+              {t("about.manifesto.title")}
               <br />
-              <span className="italic text-primary">Confident execution.</span>
+              <span className="italic text-primary">{t("about.manifesto.titleAccent")}</span>
             </h2>
             <div className="mt-8 h-px w-16 bg-primary" />
             <p className="mt-8 max-w-xl text-base leading-relaxed text-background/75 md:text-base">
-              A continuous line of discipline and momentum. This is our signature across every audit, boardroom, and milestone.
+              {t("about.manifesto.intro")}
             </p>
 
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-px overflow-hidden border border-background/10 bg-background/10">
               {[
-                { v: "2026", l: "Founded" },
-                { v: "CEMAC", l: "Chartered" },
-                { v: "FCCA", l: "Fellowship" },
+                { v: "2026", l: t("about.manifesto.stats.founded") },
+                { v: "CEMAC", l: t("about.manifesto.stats.chartered") },
+                { v: "FCCA", l: t("about.manifesto.stats.fellowship") },
               ].map((s) => (
                 <div key={s.l} className="bg-foreground p-5 text-center">
                   <dt className="font-display text-2xl font-bold text-background">{s.v}</dt>
@@ -189,7 +189,7 @@ function AboutPage() {
         <div className="container-page py-20 md:py-28">
           <SectionHeading
             // eyebrow={t("about.values.heading")}
-            title="Five values that shape every engagement."
+            title={t("about.values.title")}
             intro={t("about.values.intro")}
             size="lg"
           />
@@ -213,7 +213,7 @@ function AboutPage() {
       <section className="container-page py-20 md:py-28">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <SectionHeading title="A career, in milestones." size="md" />
+            <SectionHeading title={t("about.timeline.title")} size="md" />
           </div>
           <div className="md:col-span-7">
             <VerticalPipeline
@@ -232,7 +232,7 @@ function AboutPage() {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
               eyebrow={t("about.team.heading")}
-              title="A team built on mentorship and excellence."
+              title={t("about.team.cta.title")}
               size="lg"
             />
             <Link
@@ -240,7 +240,7 @@ function AboutPage() {
               className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-md font-medium text-primary-foreground transition-colors hover:bg-[var(--brand-primary-hover)]"
               style={{ borderRadius: "1px 35px 1px 35px" }}
             >
-              Meet our team <ArrowUpRight size={16} />
+              {t("about.team.cta.link")} <ArrowUpRight size={16} />
             </Link>
           </div>
         </div>
@@ -253,7 +253,7 @@ function AboutPage() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
               <SectionHeading
-                eyebrow="Community"
+                eyebrow={t("about.socialResponsibility.eyebrow")}
                 title={t("about.socialResponsibility.heading")}
                 size="md"
               />

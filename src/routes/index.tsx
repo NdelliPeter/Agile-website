@@ -14,7 +14,6 @@ import heroImg from "@/assets/IMG_6965.jpg";
 
 
 const FRAMEWORKS = ["BEAC", "COBAC", "CIMA", "OHADA", "IFRS", "ISA", "GAFI", "BVMAC"];
-const STAT_SHORT = ["Years experience", "Frameworks", "Sectors served"];
 
 
 
@@ -145,10 +144,10 @@ function HomePage() {
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6">
                 <div className="flex shrink-0 items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-white/60">
                   <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--brand-primary)]" />
-                  AGILE Index · Live
+                  {t("home.hero.statsLabel")}
                 </div>
                 <div className="grid grid-cols-3 gap-4 md:flex-1 md:gap-8">
-                  {(t("home.stats", { returnObjects: true }) as Array<{ value: string; label: string }>).map((s, i) => (
+                  {(t("home.stats", { returnObjects: true }) as Array<{ value: string; shortLabel: string; label: string }>).map((s, i) => (
                     <div
                       key={i}
                       className={
@@ -162,7 +161,7 @@ function HomePage() {
                       />
 
                       <span className="text-[10.5px] uppercase tracking-[0.16em] text-white/70 md:text-[11px]">
-                        {STAT_SHORT[i] ?? s.label}
+                        {s.shortLabel}
                       </span>
                     </div>
                   ))}

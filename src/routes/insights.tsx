@@ -225,7 +225,7 @@ function InsightsPage() {
 
       {/* FAQs */}
       <section className="container-page py-20 md:py-24">
-        <SectionHeading eyebrow="FAQ" title="Answers to ten common questions." size="md" />
+        <SectionHeading eyebrow={t("insights.faqSection.eyebrow")} title={t("insights.faqSection.title")} size="md" />
         <div className="mt-10">
           <FAQAccordion items={faqs} />
         </div>
@@ -236,12 +236,12 @@ function InsightsPage() {
         <div className="container-page py-20 md:py-24">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
-              <SectionHeading eyebrow="Newsletter" title={t("insights.newsletter.cta")} size="md" />
+              <SectionHeading eyebrow={t("insights.newsletter.eyebrow")} title={t("insights.newsletter.cta")} size="md" />
             </div>
             <div className="md:col-span-6">
               {subscribed ? (
                 <p className="text-[15.5px] text-foreground">
-                  Thank you — you’re subscribed to AGILE Insights.
+                  {t("insights.newsletter.confirmMessage")}
                 </p>
               ) : (
                 <div className="flex flex-col gap-3 sm:flex-row">
@@ -260,7 +260,7 @@ function InsightsPage() {
                     onClick={() => email && setSubscribed(true)}
                     className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
                   >
-                    Subscribe
+                    {t("insights.newsletter.submit")}
                   </button>
                 </div>
               )}

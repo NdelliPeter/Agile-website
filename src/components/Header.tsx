@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useApp, useT } from "./AppProviders";
 import { BrandMark } from "./BrandMark";
 
-type NavChild = { to: string; label: string };
+type NavChild = { to: string; key: string };
 type NavItem = { to: string; key: string; children?: NavChild[] };
 
 const navItems: readonly NavItem[] = [
@@ -13,8 +13,8 @@ const navItems: readonly NavItem[] = [
     to: "/about",
     key: "common.nav.about",
     children: [
-      { to: "/about", label: "About AGILE" },
-      { to: "/about/team", label: "Our team" },
+      { to: "/about", key: "common.nav.aboutDropdown.overview" },
+      { to: "/about/team", key: "common.nav.aboutDropdown.team" },
     ],
   },
   { to: "/services", key: "common.nav.services" },
@@ -96,7 +96,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                             to={c.to}
                             className="block px-4 py-2 text-[15px] text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                           >
-                            {c.label}
+                            {t(c.key)}
                           </Link>
                         ))}
                       </div>
@@ -201,7 +201,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                           to={c.to}
                           className="block py-1.5 text-sm text-muted-foreground"
                         >
-                          {c.label}
+                          {t(c.key)}
                         </Link>
                       ))}
                     </div>

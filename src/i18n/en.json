@@ -10,7 +10,11 @@
       "services": "Services",
       "industries": "Industries",
       "insights": "Insights",
-      "contact": "Contact"
+      "contact": "Contact",
+      "aboutDropdown": {
+        "overview": "About AGILE",
+        "team": "Our team"
+      }
     },
     "lang": {
       "en": "EN",
@@ -27,7 +31,8 @@
     "hero": {
       "headline": "Securing Value. Empowering Growth. \nBuilding Trust across CEMAC and beyond.",
       "subheadline": "AGILE turns regulatory complexity into strategic advantage. As your audit, advisory, and governance partner, we deliver the technical expertise institutions need to reduce risk, strengthen trust, and perform with confidence in a changing market.",
-      "cta": "Partner with Us"
+      "cta": "Partner with Us",
+      "statsLabel": "AGILE Index · Live"
     },
     "servicesPreview": {
       "heading": "Key Services",
@@ -112,14 +117,17 @@
     "stats": [
       {
         "value": "37+",
+        "shortLabel": "Years experience",
         "label": "Years of founder and partner experience"
       },
       {
         "value": "5",
+        "shortLabel": "Frameworks",
         "label": "Regulatory frameworks covered: OHADA, COBAC, CIMA, COSUMAF, GABAC"
       },
       {
         "value": "6",
+        "shortLabel": "Sectors served",
         "label": "Sectors served, from banking to agro industry and donor funded projects"
       }
     ],
@@ -130,7 +138,7 @@
       "note": "Pending: to be supplied by Madam Simo from prior engagements.",
       "items": [
         {
-          "quote": "I served as Managing Director of aYo Insurance Brokers Cameroon (MTN Group) from July 2022 to September 2025.During our company’s statutory audit, Claudine Simo Mamo’s professionalism and command of our regulatory challenges immediately earned our trust. Beyond her technical rigour, her greatest strengths are the quality of her listening and her ability to explain complex matters clearly. She was a valuable asset in the early stages of our young micro-insurance company. Claudine Simo Mamo is a professional I recommend without hesitation.",
+          "quote": "I served as Managing Director of aYo Insurance Brokers Cameroon (MTN Group) from July 2022 to September 2025. During our company’s statutory audit, Claudine Simo Mamo’s professionalism and command of our regulatory challenges immediately earned our trust. Beyond her technical rigour, her greatest strengths are the quality of her listening and her ability to explain complex matters clearly. She was a valuable asset in the early stages of our young micro-insurance company. Claudine Simo Mamo is a professional I recommend without hesitation.",
           "name": "Laetissia ENONGA  Former Managing Director,   aYo Insurance Brokers Cameroon"
         },
         {
@@ -138,7 +146,7 @@
           "name": "Richard LOWE, Founder and Chairman of the ACTIVA Group"
         },
         {
-          "quote": "Managing a banking subsidiary requires constantly balancing the local regulator’s strict requirements with the reporting imperatives of our parent company. In this complex exercise, the professionalism of Claudine Simo Mamo was decisive. Through her in-depth mastery of the COBAC regulatory framework and her understanding of our Group’s standards, she approached our audit with constructive rigour. Her great availability and ability to explain things clearly made it possible to secure our financial statements while respecting very manding closing deadlines. This quality of work strengthened the confidence of our Board of Directors, while also providing the compliance assurances required by the Regulator and facilitating dialogue with our parent company. A highly valuable professional whom I recommend without hesitation.",
+          "quote": "Managing a banking subsidiary requires constantly balancing the local regulator’s strict requirements with the reporting imperatives of our parent company. In this complex exercise, the professionalism of Claudine Simo Mamo was decisive. Through her in-depth mastery of the COBAC regulatory framework and her understanding of our Group’s standards, she approached our audit with constructive rigour. Her great availability and ability to explain things clearly made it possible to secure our financial statements while respecting very demanding closing deadlines. This quality of work strengthened the confidence of our Board of Directors, while also providing the compliance assurances required by the Regulator and facilitating dialogue with our parent company. A highly valuable professional whom I recommend without hesitation.",
           "name": "Victor Noumoué, Designated Chief Executive Officer, former Société Générale Cameroun (SGC), subsidiary of the Société Générale Group"
         }
       ]
@@ -191,6 +199,16 @@
     }
   },
   "about": {
+    "manifesto": {
+      "title": "A proven Governance",
+      "titleAccent": "Confident execution.",
+      "intro": "A continuous line of discipline and momentum. This is our signature across every audit, boardroom, and milestone.",
+      "stats": {
+        "founded": "Founded",
+        "chartered": "Chartered",
+        "fellowship": "Fellowship"
+      }
+    },
     "header": {
       "title": "About Us",
       "intro": "At Agile, we  deliver a comprehensive suite of services across audit, risk management, performance, heritage, and governance. With a unique positioning in the CEMAC region, we combine regulatory expertise, sectoral specialization, and strategic advisory to empower institutions and shareholders. Our integrated Agro-Industry Focus strengthens food security and value creation under the OHADA framework."
@@ -206,6 +224,7 @@
     "quote": "True leadership bridges humble starts and sustainable excellence.",
     "timeline": {
       "heading": "Milestones",
+      "title": "A career, in milestones.",
       "note": "Pending: confirm dates and events with Madam Simo.",
       "items": [
         {
@@ -244,6 +263,7 @@
     },
     "values": {
       "heading": "Our Core Values",
+      "title": "Five values that shape every engagement.",
       "intro": "At Agile, we uphold these core values as the foundation of our audit and advisory services across CEMAC and beyond, delivering professional excellence with a focus on client success and sustainable growth.",
       "items": [
         {
@@ -270,32 +290,48 @@
     },
     "team": {
       "heading": "Our Team",
-      "note": "Pending: team member names, roles, bios and photos to be supplied.",
+      "cta": {
+        "title": "A team built on mentorship and excellence.",
+        "link": "Meet our team"
+      },
+      "founderStats": {
+        "yearsPractice": "Years practice",
+        "fellowAcca": "Fellow ACCA",
+        "chartered": "Chartered"
+      },
+      "page": {
+        "title": "A team shaped by legacy, driven by excellence.",
+        "intro": "Our founders and senior executives bring decades of elite cross-border experience, uncompromising rigour, and direct, hands-on oversight to every engagement.",
+        "founderEyebrow": "Founder · Managing Partner",
+        "secondaryHeading": "Partners & senior advisors"
+      },
       "members": [
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Claudine SIMO MAMO",
+          "role": "Founder & Managing Partner",
+          "bio": "Mrs Simo is a CEMAC-certified Chartered Accountant and a Fellow of the Association of Chartered Certified Accountants (ACCA), bringing over 37 years of distinguished experience in audit, accounting, and advisory across Central Africa. As Founder and Managing Partner of AGILE, she advises financial institutions and major organizations on governance, structural resilience, and sustainable performance optimization.Beyond her technical mastery, Mrs Simo is dedicated to institutional capacity-building; fostering a culture of accountability and empowering the next generation of leadership."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Alex-Michel NGNINGHA",
+          "role": "Senior Actuarial Consultant",
+          "bio": "A solid expertise in P&C actuarial consulting, risk management, and reinsurance across French and European markets. As a Senior Executive Manager, he leads strategic engagements in Solvency II balance sheet audits, Enterprise Risk Management (ERM), ESG strategy, and M&A valuations. His previous Executive roles at Ernst & Young, Mazars Actuariat, SCOR Global P&C, and Aon Benfield focused on reserving, treaty pricing, internal model validation, and underwriting portfolio management. He holds a master’s degree in actuarial science and finance and is a qualified member of the INSTITUT DES ACTUAIRES."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Ange ALIMA AFANA",
+          "role": "Senior Risk Executive & Consultant",
+          "bio": "Strategic leader with over 14 years experience at the crossroads of financial risk, organisational transformation, and corporate governance within international groups (Wells Fargo, BNP Paribas, ICBC Standard Bank, Louis Dreyfus, Baobab Group). With a proven ability to design and drive ambitious risk strategies, to orchestrate complex operational transformations, and to generate measurable value in demanding multicultural and regulatory environments. Her background also spans capital markets, commodities trading, microfinance, and fintech."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Joseph Mbarga",
+          "role": "Senior Advisor, Performance",
+          "bio": "Three decades guiding agro-industry, utilities and microfinance leadership teams toward sustainable, measurable performance.",
+          "active": false
         }
       ]
     },
     "socialResponsibility": {
       "heading": "Social Responsibility",
+      "eyebrow": "Community",
       "body": "Each month, AGILE dedicates one day to community service across the CEMAC region, reflecting our values and founder’s vision. We offer financial literacy workshops, pro bono advice to microfinance startups and small agro-businesses, and leadership mentoring in underserved communities. By sharing expertise in finance and compliance, including OHADA fundamentals, we equip people for sustainable growth, promote accountability, and show that meaningful futures can begin with humble starts."
     }
   },
@@ -305,6 +341,23 @@
       "intro": "We deliver audit, compliance, and risk advisory across the CEMAC and OHADA regions. Supporting banks, insurers, and MFIs, we align operations with COBAC, CIMA, and COSUMAF standards to protect integrity and improve performance.",
       "ctaHeadline": "Explore how we can strengthen your enterprise.",
       "ctaButton": "Partner with Us"
+    },
+    "detail": {
+      "mandateEyebrow": "The mandate",
+      "mandateHeading": "Why institutions *choose us* for this.",
+      "deliverablesEyebrow": "Key deliverables",
+      "processHeading": "How we deliver this engagement.",
+      "faqHeading": "Common questions, *answered.*",
+      "faqFooter": "Don't see your question? Our partners are available for a confidential call within 48 hours."
+    },
+    "pipeline": {
+      "steps": [
+        { "label": "Scope", "detail": "Align objectives, materiality and regulatory scope with stakeholders." },
+        { "label": "Assess", "detail": "Walk through systems, data, controls and prior reporting." },
+        { "label": "Test", "detail": "Sample, substantively test, model and challenge findings." },
+        { "label": "Report", "detail": "Issue clear opinions, recommendations and management letters." },
+        { "label": "Embed", "detail": "Coach teams to sustain compliance and improvements." }
+      ]
     },
     "items": {
       "audit": {
@@ -697,14 +750,22 @@
       }
     ],
     "newsletter": {
+      "eyebrow": "Newsletter",
       "cta": "Stay ahead of evolving regulatory standards. Subscribe to AGILE Insights.",
+      "confirmMessage": "Thank you — you’re subscribed to AGILE Insights.",
+      "submit": "Subscribe",
       "privacy": "We collect your email address solely to send you expert regulatory and financial insights. Your data is strictly confidential, will never be sold or shared, and you can unsubscribe or request data deletion at any time. Read our full Privacy Policy for details."
+    },
+    "faqSection": {
+      "eyebrow": "FAQ",
+      "title": "Answers to ten common questions."
     }
   },
   "contact": {
     "headline": "Securing Value, Empowering Growth, Building Trust in CEMAC and beyond",
     "subheadline": "Ready to strengthen your CIMA, COBAC or OHADA compliance? Contact AGILE for audit, risk and performance solutions tailored to your firm.",
     "info": {
+      "officeLabel": "Office",
       "address": "1682, Avenue De Gaulle, Bonanjo, Douala",
       "phoneOffice": "+237 233 431 099",
       "phoneMobile": "+237 233 431 099",
@@ -719,8 +780,10 @@
       "company": "Company Name",
       "phone": "Phone Number (optional)",
       "service": "Service of Interest",
+      "servicePlaceholder": "Select a service",
       "message": "Message",
       "submit": "Contact Us",
+      "thankYouHeading": "Thank you.",
       "thankYou": "Thank you for contacting AGILE. Your message has been received and our team will review your request and respond as soon as possible.",
       "serviceOptions": [
         "Audit and Assurance",

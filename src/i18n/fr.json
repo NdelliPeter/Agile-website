@@ -10,7 +10,11 @@
       "services": "Services",
       "industries": "Secteurs",
       "insights": "Analyses",
-      "contact": "Contact"
+      "contact": "Contact",
+      "aboutDropdown": {
+        "overview": "À propos d'AGILE",
+        "team": "Notre équipe"
+      }
     },
     "lang": {
       "en": "EN",
@@ -27,7 +31,8 @@
     "hero": {
       "headline": "Bâtir la confiance, sécuriser la valeur, favoriser la croissance dans la CEMAC et au-delà.",
       "subheadline": "AGILE transforme la complexité réglementaire en avantage stratégique. En tant que partenaire d'audit, de conseil et de gouvernance, nous fournissons l'expertise technique dont les institutions ont besoin pour réduire les risques, renforcer la confiance et fonctionner en toute confiance dans un marché en évolution.",
-      "cta": "Demander une consultation"
+      "cta": "Demander une consultation",
+      "statsLabel": "Indice AGILE · En direct"
     },
     "servicesPreview": {
       "heading": "Services clés",
@@ -112,14 +117,17 @@
     "stats": [
       {
         "value": "37+",
+        "shortLabel": "Ans d'expérience",
         "label": "Années d'expérience de la fondatrice et des associés"
       },
       {
         "value": "5",
+        "shortLabel": "Cadres réglementaires",
         "label": "Cadres réglementaires couverts : OHADA, COBAC, CIMA, COSUMAF, GABAC"
       },
       {
         "value": "6",
+        "shortLabel": "Secteurs servis",
         "label": "Secteurs servis, de la banque à l'agro-industrie et aux projets sur financement de bailleurs"
       }
     ],
@@ -191,6 +199,16 @@
     }
   },
   "about": {
+    "manifesto": {
+      "title": "Une gouvernance éprouvée",
+      "titleAccent": "Une exécution maîtrisée.",
+      "intro": "Une ligne continue de discipline et d'élan. C'est notre signature dans chaque audit, chaque conseil d'administration, chaque étape clé.",
+      "stats": {
+        "founded": "Fondée en",
+        "chartered": "Agréée",
+        "fellowship": "Fellowship"
+      }
+    },
     "header": {
       "title": "À propos d'AGILE",
       "intro": "Chez AGILE, nous proposons une offre complète couvrant l'audit, la gestion des risques, la performance, le patrimoine et la gouvernance. Avec un positionnement clair dans la région CEMAC et au-delà, nous associons expertise réglementaire, spécialisation sectorielle et conseil stratégique pour soutenir les institutions et les actionnaires. Notre focus agro-industrie renforce la sécurité alimentaire et la création de valeur dans le cadre OHADA."
@@ -206,6 +224,7 @@
     "quote": "Quelqu'un peut partir de rien et devenir quelqu'un de significatif à l'avenir.",
     "timeline": {
       "heading": "Étapes clés",
+      "title": "Une carrière, en étapes clés.",
       "note": "En attente : confirmer les dates et événements avec Madame Simo.",
       "items": [
         {
@@ -244,6 +263,7 @@
     },
     "values": {
       "heading": "Nos valeurs fondamentales",
+      "title": "Cinq valeurs qui façonnent chaque mission.",
       "intro": "Chez Agile, nous défendons ces valeurs fondamentales comme socle de nos services d’audit et de conseil à travers la CEMAC et au‑delà, en offrant une excellence professionnelle centrée sur la réussite de nos clients et une croissance durable.",
       "items": [
         {
@@ -270,32 +290,48 @@
     },
     "team": {
       "heading": "Notre équipe",
-      "note": "En attente : noms, fonctions, biographies et photos des membres à fournir.",
+      "cta": {
+        "title": "Une équipe bâtie sur le mentorat et l'excellence.",
+        "link": "Découvrir notre équipe"
+      },
+      "founderStats": {
+        "yearsPractice": "Années de pratique",
+        "fellowAcca": "Fellow ACCA",
+        "chartered": "Agréée"
+      },
+      "page": {
+        "title": "Une équipe façonnée par l'héritage, portée par l'excellence.",
+        "intro": "Nos fondateurs et cadres dirigeants apportent des décennies d'expérience internationale de haut niveau, une rigueur sans compromis et une supervision directe de chaque mission.",
+        "founderEyebrow": "Fondatrice · Associée gérante",
+        "secondaryHeading": "Associés et conseillers seniors"
+      },
       "members": [
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Claudine SIMO MAMO",
+          "role": "Fondatrice et Associée gérante",
+          "bio": "Madame Simo est Expert-comptable diplômée CEMAC et Fellow de l'Association of Chartered Certified Accountants (ACCA), forte de plus de 37 ans d'expérience reconnue en audit, comptabilité et conseil en Afrique centrale. En tant que Fondatrice et Associée gérante d'AGILE, elle conseille les institutions financières et les grandes organisations en matière de gouvernance, de résilience structurelle et d'optimisation durable de la performance. Au-delà de sa maîtrise technique, Madame Simo se consacre au renforcement des capacités institutionnelles, en cultivant une culture de responsabilité et en donnant aux jeunes professionnels les moyens d'accéder à des postes de direction."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Alex-Michel NGNINGHA",
+          "role": "Consultant actuariel senior",
+          "bio": "Une solide expertise en conseil actuariel IARD, gestion des risques et réassurance sur les marchés français et européens. En tant que Manager Exécutif senior, il pilote des missions stratégiques en audit de bilan Solvabilité II, gestion des risques d'entreprise (ERM), stratégie ESG et valorisations M&A. Ses précédentes fonctions exécutives chez Ernst & Young, Mazars Actuariat, SCOR Global P&C et Aon Benfield étaient axées sur le provisionnement, la tarification des traités, la validation des modèles internes et la gestion de portefeuilles de souscription. Il est titulaire d'un master en sciences actuarielles et finance et membre qualifié de l'INSTITUT DES ACTUAIRES."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Ange ALIMA AFANA",
+          "role": "Cadre dirigeante et consultante senior en risques",
+          "bio": "Dirigeante stratégique forte de plus de 14 ans d'expérience à la croisée du risque financier, de la transformation organisationnelle et de la gouvernance d'entreprise au sein de groupes internationaux (Wells Fargo, BNP Paribas, ICBC Standard Bank, Louis Dreyfus, Baobab Group). Elle a fait ses preuves dans la conception et le pilotage de stratégies de risque ambitieuses, l'orchestration de transformations opérationnelles complexes et la création de valeur mesurable dans des environnements multiculturels et réglementaires exigeants. Son parcours couvre également les marchés de capitaux, le négoce de matières premières, la microfinance et la fintech."
         },
         {
-          "name": "",
-          "role": "",
-          "bio": ""
+          "name": "Joseph Mbarga",
+          "role": "Conseiller senior, Performance",
+          "bio": "Trois décennies à accompagner les équipes dirigeantes de l'agro-industrie, des services publics et de la microfinance vers une performance durable et mesurable.",
+          "active": false
         }
       ]
     },
     "socialResponsibility": {
       "heading": "Responsabilité sociale",
+      "eyebrow": "Communauté",
       "body": "Chez AGILE, nous consacrons une journée par mois à un service communautaire structuré dans la région CEMAC, reflet de nos valeurs et de la vision de notre fondatrice. Cela comprend des ateliers d'éducation financière pour les jeunes et les entrepreneurs, du conseil pro bono pour les startups de microfinance et les petites entreprises agro, et des séances de mentorat pour développer le leadership dans les communautés mal desservies. Notre équipe donne de son temps et de son expertise pour renforcer les systèmes financiers et sensibiliser aux fondamentaux de la conformité, comme les bases de l'OHADA. L'objectif est concret : doter les personnes d'outils pour une croissance durable, bâtir une culture de responsabilité et montrer que des avenirs porteurs de sens peuvent naître de débuts modestes."
     }
   },
@@ -305,6 +341,23 @@
       "intro": "Opérant à l'intersection de la rigueur réglementaire et de la croissance stratégique, notre cabinet offre une expertise complète en audit et conformité à travers les régions CEMAC et OHADA. Nous sommes spécialisés dans les audits légaux et la mitigation des risques pour les banques, les assureurs et les IMF, en garantissant une conformité totale aux normes COBAC, CIMA et COSUMAF. Notre mission est de protéger l'intégrité institutionnelle tout en optimisant la performance grâce à une supervision technique approfondie et à un conseil innovant et conscient des risques.",
       "ctaHeadline": "Curieux de ce que nous pouvons faire pour votre organisation ?",
       "ctaButton": "Prendre rendez-vous"
+    },
+    "detail": {
+      "mandateEyebrow": "Le mandat",
+      "mandateHeading": "Pourquoi les institutions *nous choisissent* pour cela.",
+      "deliverablesEyebrow": "Livrables clés",
+      "processHeading": "Comment nous menons cette mission.",
+      "faqHeading": "Questions fréquentes, *nos réponses.*",
+      "faqFooter": "Vous ne trouvez pas votre question ? Nos associés sont disponibles pour un appel confidentiel sous 48 heures."
+    },
+    "pipeline": {
+      "steps": [
+        { "label": "Cadrage", "detail": "Aligner les objectifs, la matérialité et le périmètre réglementaire avec les parties prenantes." },
+        { "label": "Diagnostic", "detail": "Examiner les systèmes, les données, les contrôles et les rapports antérieurs." },
+        { "label": "Tests", "detail": "Échantillonner, tester de manière substantive, modéliser et challenger les constats." },
+        { "label": "Rapport", "detail": "Émettre des opinions claires, des recommandations et des lettres de direction." },
+        { "label": "Ancrage", "detail": "Accompagner les équipes pour pérenniser la conformité et les améliorations." }
+      ]
     },
     "items": {
       "audit": {
@@ -662,14 +715,22 @@
       }
     ],
     "newsletter": {
+      "eyebrow": "Newsletter",
       "cta": "Gardez une longueur d'avance sur l'évolution des normes réglementaires. Abonnez-vous à AGILE Insights.",
+      "confirmMessage": "Merci — vous êtes abonné(e) à AGILE Insights.",
+      "submit": "S'abonner",
       "privacy": "Nous recueillons votre adresse courriel uniquement pour vous envoyer des analyses d'experts en matière de réglementation et de finance. Vos données sont strictement confidentielles, ne seront jamais vendues ni partagées, et vous pouvez vous désabonner ou demander la suppression de vos données à tout moment. Consultez notre politique de confidentialité pour plus de détails."
+    },
+    "faqSection": {
+      "eyebrow": "FAQ",
+      "title": "Réponses à dix questions fréquentes."
     }
   },
   "contact": {
     "headline": "AGILE : Sécuriser la valeur, favoriser la croissance, bâtir la confiance dans la CEMAC et au-delà",
     "subheadline": "Prêt à renforcer votre conformité CIMA, COBAC ou OHADA ? Contactez AGILE pour des solutions d'audit, de risque et de performance adaptées à votre structure.",
     "info": {
+      "officeLabel": "Bureau",
       "address": "1682, Avenue De Gaulle, Bonanjo, Douala",
       "phoneOffice": "+237 233 431 099",
       "phoneMobile": "+237 233 431 099",
@@ -684,8 +745,10 @@
       "company": "Nom de l'entreprise",
       "phone": "Numéro de téléphone (facultatif)",
       "service": "Service souhaité",
+      "servicePlaceholder": "Sélectionner un service",
       "message": "Message",
       "submit": "Envoyer le message",
+      "thankYouHeading": "Merci.",
       "thankYou": "Merci d'avoir contacté AGILE. Votre message a bien été reçu et notre équipe examinera votre demande et y répondra dans les meilleurs délais.",
       "serviceOptions": [
         "Audit et Assurance",

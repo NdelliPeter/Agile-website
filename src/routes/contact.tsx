@@ -60,7 +60,7 @@ function ContactPage() {
       <section className="container-page py-20 md:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <div className=" text-[18px] text-primary font-bold mb-4">Office</div>
+            <div className=" text-[18px] text-primary font-bold mb-4">{t("contact.info.officeLabel")}</div>
             <ul className="space-y-2 border-y border-border py-6">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-primary" />
@@ -105,7 +105,7 @@ function ContactPage() {
             {submitted ? (
               <div className="border-y border-border py-16 text-center">
                 <h3 className="font-display text-2xl font-medium text-foreground md:text-3xl">
-                  Thank you.
+                  {t("contact.form.thankYouHeading")}
                 </h3>
                 <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
                   {t("contact.form.thankYou")}
@@ -123,7 +123,7 @@ function ContactPage() {
                   <label className="text-primary text-[16px] font-bold mb-2 block">{t("contact.form.service")}</label>
                   <Select value={form.service} onValueChange={(v) => update("service", v)}>
                     <SelectTrigger className="h-12 w-full rounded-xs border border-border px-3 text-[15px] text-foreground">
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder={t("contact.form.servicePlaceholder")} />
                     </SelectTrigger>
                     <SelectContent className="bg-popover text-popover-foreground">
                       {serviceOptions.map((o) => (
