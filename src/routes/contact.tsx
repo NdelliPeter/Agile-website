@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import contactImg from "@/assets/NS_Agile meeting room.jpeg";
+import contactImg from "@/assets/Porte Djerba.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

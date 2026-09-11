@@ -210,8 +210,8 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
               ))}
 
             </nav>
-            {/* <div className="mt-4 flex items-center justify-between gap-2">
-              <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
+            <div className="mt-4 flex items-center justify-between gap-2">
+              {/* <div className="inline-flex items-center rounded-full border border-border p-0.5 text-xs font-medium">
                 {(["en", "fr"] as const).map((l) => (
                   <button
                     key={l}
@@ -225,16 +225,16 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                     {t(`common.lang.${l}`)}
                   </button>
                 ))}
-              </div>
-              <button
+              </div> */}
+              {/* <button
                 type="button"
                 onClick={toggleTheme}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
-              </button>
-            </div> */}
+              </button> */}
+            </div>
             <Link
               to="/contact"
               className="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground"

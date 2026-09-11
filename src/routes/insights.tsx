@@ -129,7 +129,7 @@ function InsightsPage() {
             <div className="md:col-span-5 md:pt-2">
               <div className="inline-flex items-center tracking-[0.08px] gap-2 font-display text-[15px] font-bold uppercase text-primary">
                 <span className="inline-block h-1.5 w-6 bg-primary" />
-                {t("ui.insights.featured")} · {articles[0].keyword}
+                01 {t("ui.insights.featured")} · {articles[0].keyword}
               </div>
               <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-foreground md:text-[40px] md:leading-[1.1]">
                 {articles[0].title}
