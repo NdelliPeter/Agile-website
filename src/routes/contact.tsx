@@ -97,6 +97,7 @@ function ContactPage() {
               src={contactImg}
               alt=""
               loading="lazy"
+              height="450px"
               className="mt-10 aspect-[16/10] w-full object-cover"
             />
           </div>

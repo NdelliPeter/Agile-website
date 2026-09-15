@@ -85,12 +85,12 @@
       "intro": "Every engagement follows a disciplined sequence so outcomes are predictable, auditable, and built to last.",
       "steps": [
         {
-          "label": "Discover",
+          "label": "Identify",
           "detail": "Listen, scope, and map your regulatory and operational context."
         },
         {
-          "label": "Identify",
-          "detail": "Assess systems, risks and controls against OHADA, COBAC, CIMA, IFRS and COSUMAF."
+          "label": "Diagnose",
+          "detail": "Assess systems, risks and controls following OHADA, COBAC, CIMA, IFRS and COSUMAF requirements."
         },
         {
           "label": "Deliver",
@@ -103,7 +103,7 @@
       ]
     },
     "whyChooseUs": {
-      "heading": "Why Us?",
+      "heading": "Why Client Trust Us?",
       "paragraph": "We operate at the intersection of technical rigor and strategic foresight. AGILE provides deep, sector-specific expertise in the CEMAC regulatory landscape. We do not just audit; we engineer financial resilience. By combining a mastery of CIMA, COBAC, COSUMAF, and OHADA frameworks with a proactive approach to risk and performance management, we provide the technical architecture our partners need to move beyond compliance and drive sustainable institutional growth.",
       "advantages": {
         "heading": "Strategic Advantages",
@@ -344,7 +344,7 @@
     },
     "detail": {
       "mandateEyebrow": "The mandate",
-      "mandateHeading": "Why institutions *choose us* for this.",
+      "mandateHeading": "Why *Us*?",
       "deliverablesEyebrow": "Key deliverables",
       "processHeading": "How we deliver this engagement.",
       "faqHeading": "Common questions, *answered.*",
@@ -363,7 +363,7 @@
       "audit": {
         "title": "Audit & Assurance: Strengthening Institutional Integrity",
         "short": "We provide audit and assurance services that protect assets and support regulatory compliance. Our expertise covers statutory audits, financial diagnostics, due diligence, project reviews, PPP structuring, collateral security, and ESG audits. With deep knowledge of COBAC, CIMA, COSUMAF, and OHADA frameworks, we help banking and agro-industry clients improve transparency, reduce risk, and strengthen competitiveness.",
-        "detail": "Our Audit and Assurance Hub is engineered to secure financial information, enhance regulatory alignment, and facilitate high-stakes decision-making. We provide comprehensive assurance services that instill transparency, reliability, and robust control across the CEMAC region and beyond. By bridging technical precision with strategic insight, we help institutions protect assets, mature their governance models, and foster long-term stakeholder confidence in complex. \nCore Audit & Assurance Services; We deliver statutory audits for banks, insurers, microfinance institutions, and listed entities, ensuring rigorous adherence to OHADA requirements and sectoral standards. Our practice extends to complex accounting system diagnostics, where we evaluate internal control frameworks, audit trails, and the reliability of financial reporting. ",
+        "detail": "Our Audit and Assurance Hub is engineered to secure financial information, enhance regulatory alignment, and facilitate high-stakes decision-making. We provide comprehensive assurance services that instill transparency, reliability, and robust control across the CEMAC region and beyond. By bridging technical precision with strategic insight, we help institutions protect assets, mature their governance models, and foster long-term stakeholder confidence. \nWe deliver statutory audits for banks, insurers, microfinance institutions, and listed entities, ensuring rigorous adherence to OHADA requirements and sectoral standards. Our practice extends to complex accounting system diagnostics, where we evaluate internal control frameworks, audit trails, and the reliability of financial reporting. ",
         "deliverables": [
           "Statutory Audit (CAC): Ensuring legal compliance through rigorous annual audits for the banking, insurance, and MFI industries.",
           "Systemic Diagnostics: Auditing the integrity of your accounting organization, internal control audit trails, and statement reliability.",
