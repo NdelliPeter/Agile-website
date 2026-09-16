@@ -117,15 +117,6 @@ function ServiceDetailPage() {
           }}
         />
 
-        {/* Decorative grid lines */}
-        {/* <div className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-            backgroundSize: "120px 120px",
-          }}
-        /> */}
-
         <div className="container-page relative z-10 flex min-h-[66vh] flex-col items-center justify-end pb-12 pt-28 text-center md:pb-16 md:pt-32">
           <Link
             to="/services"
