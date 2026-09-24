@@ -1,0 +1,112 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { AppLayout } from "@/app/components/AppLayout";
+import { useT } from "@/app/providers";
+import { SERVICE_KEYS, SERVICE_IMAGES } from "@/app/lib/services-data";
+
+const servicesHero = "/assets/ServiceHero.jpg";
+
+export default function ServicesClient() {
+  const t = useT();
+  return (
+    <AppLayout overlayHeader>
+      {/* HERO — focused banner with brand-aligned image */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={servicesHero}
+          alt=""
+          width={1920}
+          height={896}
+          className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/55 to-black/80" />
+        <div
+          className="absolute inset-0 mix-blend-multiply opacity-50"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(80,144,140,0.55) 0%, rgba(42,34,27,0.2) 55%, rgba(11,9,7,0.65) 100%)",
+          }}
+        />
+
+        <div className="container-page relative z-10 flex min-h-[62vh] flex-col justify-end pb-16 pt-36 md:min-h-[64vh] md:pb-20 md:pt-44">
+          <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-10">
+              <h1
+                className="display-2xl max-w-7xl text-white"
+                style={{
+                  fontSize: "clamp(2.25rem, 6vw, 4.375rem)",
+                  textShadow: "0 2px 30px rgba(0,0,0,0.45)",
+                }}
+              >
+                {t("services.overview.headline")}
+              </h1>
+            </div>
+            <div className="md:col-span-10">
+              <p className="max-w-7xl text-base leading-relaxed text-white/85 md:text-[17px]">
+                {t("services.overview.intro")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-20 md:py-28">
+        <div className="border-t py-0 border-border">
+          {SERVICE_KEYS.map((key, i) => {
+            const imageFirst = i % 2 === 1;
+            return (
+              <Link
+                key={key}
+                href={`/services/${key}`}
+                className="group grid grid-cols-1 items-center gap-8 border-b border-t border-border transition-colors hover:bg-secondary/40 md:grid-cols-12 md:px-3 md:gap-12 md:my-14"
+              >
+                <div className={`md:col-span-7 ${imageFirst ? "md:order-2" : ""}`}>
+                  <h3 className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl">
+                    {t(`services.items.${key}.title`)}
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground text-justify whitespace-pre-line">
+                    {t(`services.items.${key}.short`)}
+                  </p>
+                  <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                    {t("common.cta.readMore")}{" "}
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </div>
+                </div>
+                <div className={`md:col-span-5 ${imageFirst ? "md:order-1" : ""}`}>
+                  <img
+                    src={SERVICE_IMAGES[key]}
+                    alt=""
+                    loading="lazy"
+                    className={
+                      "aspect-[16/10] w-full object-cover " +
+                      (key === "humanCapital" ? "object-[center_25%]" : "")
+                    }
+                  />
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-secondary/30">
+        <div className="container-page flex flex-col items-start justify-between gap-6 py-16 md:flex-row md:items-end md:py-20">
+          <h2 className="display-md max-w-3xl text-foreground">
+            {t("services.overview.ctaHeadline")}
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-md font-bold text-primary-foreground hover:bg-[var(--brand-primary-hover)]"
+          >
+            {t("services.overview.ctaButton")} <ArrowUpRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </AppLayout>
+  );
+}

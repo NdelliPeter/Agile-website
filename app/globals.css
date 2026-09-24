@@ -1,0 +1,423 @@
+@import "tailwindcss" source(none);
+@source "../app";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AGILE design tokens — editorial, quietly premium.
+ * Heading: Fraunces (variable serif). Body: Inter.
+ * Light: warm cream + espresso + teal accent.
+ * Dark: deep espresso black + warm off-white + jewel teal.
+ * Reskin everything via :root and .dark.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-elevated: var(--brand-elevated);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-border: var(--brand-border);
+
+  --font-display: "Lato", sans-serif;
+  --font-sans: "Inter", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* AGILE brand — light */
+  --brand-primary: #50908c;
+  --brand-primary-hover: #3f7370;
+  --brand-tint: #e4edec;
+  --brand-ink: #2a221b;
+  --brand-bg: #f6f4f1;
+  --brand-surface: #ffffff;
+  --brand-elevated: #ffffff;
+  --brand-muted: #6e665c;
+  --brand-border: #e7e3dc;
+
+  /* shadcn semantic mappings (light) */
+  --background: #f6f4f1;
+  --foreground: #2a221b;
+  --card: #ffffff;
+  --card-foreground: #2a221b;
+  --popover: #ffffff;
+  --popover-foreground: #2a221b;
+  --primary: #50908c;
+  --primary-foreground: #ffffff;
+  --secondary: #e4edec;
+  --secondary-foreground: #2a221b;
+  --muted: #efebe3;
+  --muted-foreground: #6e665c;
+  --accent: #e4edec;
+  --accent-foreground: #2a221b;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border: #e7e3dc;
+  --input: #e7e3dc;
+  --ring: #50908c;
+}
+
+.dark {
+  /* AGILE brand — dark (deep warm espresso, jewel teal) */
+  --brand-primary: #6fb3ae;
+  --brand-primary-hover: #88c5c1;
+  --brand-tint: #1f302e;
+  --brand-ink: #ede8e0;
+  --brand-bg: #15120f;
+  --brand-surface: #1e1a16;
+  --brand-elevated: #242019;
+  --brand-muted: #a89f93;
+  --brand-border: #2e2922;
+
+  --background: #15120f;
+  --foreground: #ede8e0;
+  --card: #1e1a16;
+  --card-foreground: #ede8e0;
+  --popover: #1e1a16;
+  --popover-foreground: #ede8e0;
+  --primary: #6fb3ae;
+  --primary-foreground: #15120f;
+  --secondary: #1f302e;
+  --secondary-foreground: #ede8e0;
+  --muted: #242019;
+  --muted-foreground: #a89f93;
+  --accent: #1f302e;
+  --accent-foreground: #ede8e0;
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: #ede8e0;
+  --border: #2e2922;
+  --input: #2e2922;
+  --ring: #6fb3ae;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-variation-settings:
+      "opsz" 120,
+      "SOFT" 50;
+  }
+
+  h2 {
+    font-variation-settings:
+      "opsz" 96,
+      "SOFT" 50;
+  }
+
+  h3 {
+    font-variation-settings:
+      "opsz" 48,
+      "SOFT" 50;
+  }
+
+  h4 {
+    font-variation-settings:
+      "opsz" 24,
+      "SOFT" 50;
+  }
+
+  /* Anchored scroll lands below the fixed header */
+  :where(section, h1, h2, h3, h4, [id]) {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    background: var(--brand-primary);
+    color: #fff;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: 80rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility hairline {
+  border-top: 1px solid var(--color-border);
+}
+
+@utility display-2xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-variation-settings:
+    "opsz" 144,
+    "SOFT" 50;
+}
+
+@utility display-xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-variation-settings:
+    "opsz" 144,
+    "SOFT" 50;
+}
+
+@utility display-lg {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-variation-settings:
+    "opsz" 96,
+    "SOFT" 50;
+}
+
+@utility display-md {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-size: clamp(1.375rem, 1.6vw + 0.8rem, 1.875rem);
+  font-variation-settings:
+    "opsz" 48,
+    "SOFT" 50;
+}
+
+@utility lead {
+  font-family: var(--font-sans);
+  font-size: clamp(1.0625rem, 0.5vw + 0.95rem, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-muted-foreground);
+  font-weight: 400;
+}
+
+@utility kicker {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility eyebrow-accent {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Reveal-on-scroll primitive — used with IntersectionObserver toggling
+   the [data-revealed="true"] attribute. */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &[data-revealed="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility grain {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+  }
+}
+
+/* Word-by-word reveal for split headlines */
+@utility word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em);
+  transition:
+    opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-revealed="true"] .word-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* Marquee for kinetic ticker */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-x 38s linear infinite;
+}
+
+/* --- Phase 6: imagery & motif ---------------------------------------- */
+
+/* Duotone treatment: lifts photos into the AGILE teal/espresso palette
+   while preserving subject legibility. Uses a soft tint overlay + slight
+   desaturation. Avoid on portraits where skin tone matters. */
+@utility duotone {
+  position: relative;
+  isolation: isolate;
+  filter: saturate(0.7) contrast(1.02);
+  background-color: var(--brand-ink);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--primary) 38%, transparent) 0%,
+      color-mix(in oklab, var(--brand-ink) 32%, transparent) 100%
+    );
+    mix-blend-mode: multiply;
+  }
+}
+
+/* When .duotone is applied directly to an <img>, the ::after pseudo
+   won't render — replicate via box-shadow inset + filter. */
+img.duotone {
+  filter: saturate(0.55) contrast(1.05) sepia(0.12) hue-rotate(135deg);
+}
+
+/* AGILE wheel as a quiet background motif (~4% opacity).
+   Inlined SVG so it works everywhere without an asset import. */
+@utility wheel-bg {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.045;
+    background-repeat: no-repeat;
+    background-position: right -120px center;
+    background-size: 620px 620px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%2350908C' stroke-width='1.2'><circle cx='100' cy='100' r='96'/><circle cx='100' cy='100' r='72'/><circle cx='100' cy='100' r='48'/><circle cx='100' cy='100' r='24'/></g><g stroke='%2350908C' stroke-width='1' transform='translate(100 100)'><line x1='0' y1='-96' x2='0' y2='96'/><line x1='-96' y1='0' x2='96' y2='0'/><line x1='-68' y1='-68' x2='68' y2='68'/><line x1='-68' y1='68' x2='68' y2='-68'/></g></svg>");
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
